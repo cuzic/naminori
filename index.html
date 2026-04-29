@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Naminori — いまここ道具箱</title>
+  <style>
+    :root {
+      --bg: #faf7f4;
+      --surface: #fff;
+      --primary: #c07030;
+      --primary-light: #f5ebe0;
+      --text: #2d2520;
+      --text-muted: #8a7a70;
+      --border: #e8ddd5;
+      --shadow: 0 4px 20px rgba(0,0,0,0.10);
+      --shadow-lg: 0 8px 40px rgba(0,0,0,0.15);
+      --radius: 20px;
+      --card-w: min(360px, calc(100vw - 48px));
+      --card-h: min(520px, calc(100svh - 220px));
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Noto Sans JP', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100svh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      overflow-x: hidden;
+    }
+
+    /* ── Header ── */
+    .app-header {
+      width: 100%;
+      padding: 20px 24px 12px;
+      text-align: center;
+    }
+    .app-title { font-size: 1.1rem; font-weight: 700; color: var(--primary); letter-spacing: 0.05em; }
+    .time-greeting { font-size: 0.85rem; color: var(--text-muted); margin-top: 2px; }
+
+    #app { width: 100%; flex: 1; display: flex; flex-direction: column; align-items: center; }
+
+    /* ══════════════════════════════
+       Screen 1: Emotion picker
+    ══════════════════════════════ */
+    #screen-emotion {
+      width: 100%; max-width: 420px;
+      padding: 8px 24px 32px;
+      display: flex; flex-direction: column; align-items: center;
+    }
+
+    .screen-label {
+      font-size: 1.1rem; font-weight: 600;
+      color: var(--text); margin-bottom: 24px; text-align: center;
+    }
+
+    .emotion-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 12px; width: 100%;
+    }
+
+    .emotion-btn {
+      background: var(--surface); border: 2px solid var(--border);
+      border-radius: 16px; padding: 18px 8px; cursor: pointer;
+      display: flex; flex-direction: column; align-items: center; gap: 8px;
+      transition: all 0.15s; user-select: none;
+    }
+    .emotion-btn:hover { border-color: #c8a080; background: #fdf5ee; }
+    .emotion-btn:active { transform: scale(0.95); }
+    .emotion-btn.selected { border-color: var(--primary); background: var(--primary-light); }
+
+    .emotion-icon { font-size: 2.2rem; line-height: 1; }
+    .emotion-label { font-size: 0.85rem; font-weight: 600; color: var(--text); }
+
+    .start-btn {
+      margin-top: 28px; width: 100%; max-width: 280px;
+      padding: 16px; background: var(--primary); color: #fff;
+      border: none; border-radius: 50px; font-size: 1rem; font-weight: 700;
+      cursor: pointer; opacity: 0.4; pointer-events: none;
+      transition: opacity 0.2s, transform 0.15s;
+    }
+    .start-btn.active { opacity: 1; pointer-events: auto; }
+    .start-btn:active { transform: scale(0.97); }
+
+    /* ══════════════════════════════
+       Screen 2: Card stack
+    ══════════════════════════════ */
+    #screen-cards {
+      width: 100%; flex: 1;
+      display: none; flex-direction: column; align-items: center;
+      padding: 0 0 16px;
+    }
+
+    .cards-meta {
+      font-size: 0.8rem; color: var(--text-muted);
+      margin-bottom: 12px; text-align: center;
+    }
+
+    .card-stack-wrap {
+      position: relative;
+      width: var(--card-w); height: var(--card-h);
+    }
+
+    .technique-card {
+      position: absolute; inset: 0;
+      background: var(--surface); border-radius: var(--radius);
+      box-shadow: var(--shadow-lg);
+      padding: 24px 22px 20px;
+      display: flex; flex-direction: column;
+      cursor: pointer;
+      transform-origin: bottom center;
+      transition: transform 0.3s cubic-bezier(.34,1.56,.64,1), box-shadow 0.3s;
+      user-select: none; will-change: transform; overflow: hidden;
+    }
+
+    .technique-card:nth-last-child(1) { z-index: 3; }
+    .technique-card:nth-last-child(2) {
+      z-index: 2;
+      transform: scale(0.95) translateY(12px);
+      pointer-events: none;
+    }
+    .technique-card:nth-last-child(3) {
+      z-index: 1;
+      transform: scale(0.90) translateY(24px);
+      pointer-events: none;
+    }
+
+    .technique-card.is-dragging { transition: none; cursor: grabbing; user-select: none; }
+
+    .technique-card.fly-left {
+      transition: transform 0.4s ease-in, opacity 0.4s;
+      transform: translateX(-140%) rotate(-22deg) !important;
+      opacity: 0;
+    }
+    .technique-card.fly-right {
+      transition: transform 0.4s ease-in, opacity 0.4s;
+      transform: translateX(140%) rotate(22deg) !important;
+      opacity: 0;
+    }
+
+    /* Swipe hint overlays */
+    .swipe-hint-left, .swipe-hint-right {
+      position: absolute; top: 24px;
+      border-radius: 8px; padding: 6px 14px;
+      font-size: 0.85rem; font-weight: 700;
+      pointer-events: none; opacity: 0;
+      transition: opacity 0.15s; z-index: 10;
+    }
+    .swipe-hint-left  { left: 16px;  background: #fee; color: #c00; border: 2px solid #c00; transform: rotate(-15deg); }
+    .swipe-hint-right { right: 16px; background: #efe; color: #080; border: 2px solid #080; transform: rotate(15deg); }
+
+    .card-approach {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 0.72rem; font-weight: 700;
+      padding: 4px 10px; border-radius: 50px;
+      margin-bottom: 12px; width: fit-content;
+    }
+
+    .card-icon { font-size: 2.6rem; margin-bottom: 10px; line-height: 1; }
+    .card-name { font-size: 1.35rem; font-weight: 700; margin-bottom: 8px; }
+    .card-tagline { font-size: 0.88rem; line-height: 1.65; color: var(--text-muted); margin-bottom: 14px; }
+
+    .card-step-preview {
+      background: var(--primary-light);
+      border-left: 3px solid var(--primary);
+      border-radius: 0 8px 8px 0;
+      padding: 10px 12px;
+      flex: 1;
+    }
+    .card-step-label {
+      font-size: 0.68rem; font-weight: 700; color: var(--primary);
+      margin-bottom: 4px; letter-spacing: 0.04em;
+    }
+    .card-step-text {
+      font-size: 0.82rem; line-height: 1.55; color: var(--text);
+    }
+
+    .card-footer {
+      margin-top: 14px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .card-duration {
+      font-size: 0.78rem; color: var(--text-muted);
+      display: flex; align-items: center; gap: 4px;
+    }
+    .card-tap-hint {
+      font-size: 0.78rem; color: var(--primary); font-weight: 700;
+    }
+
+    /* ── PC navigation buttons ── */
+    .card-nav {
+      display: flex; align-items: center; gap: 16px;
+      margin-top: 20px;
+    }
+
+    .nav-btn {
+      display: flex; align-items: center; gap: 6px;
+      padding: 10px 20px;
+      background: var(--surface);
+      border: 2px solid var(--border);
+      border-radius: 50px;
+      font-size: 0.85rem; font-weight: 600; color: var(--text-muted);
+      cursor: pointer; transition: all 0.15s; user-select: none;
+    }
+    .nav-btn:hover { border-color: var(--primary); color: var(--primary); background: var(--primary-light); }
+    .nav-btn:active { transform: scale(0.96); }
+
+    .swipe-guide {
+      margin-top: 8px;
+      font-size: 0.72rem; color: var(--text-muted); text-align: center;
+    }
+
+    .no-more-cards {
+      display: none; flex-direction: column; align-items: center;
+      padding: 40px 24px; text-align: center;
+    }
+    .no-more-cards .big-emoji { font-size: 3rem; margin-bottom: 16px; }
+    .no-more-cards p { color: var(--text-muted); line-height: 1.8; }
+    .retry-btn {
+      margin-top: 24px; padding: 14px 32px;
+      background: var(--primary); color: #fff;
+      border: none; border-radius: 50px;
+      font-size: 0.95rem; font-weight: 700; cursor: pointer;
+    }
+
+    /* ══════════════════════════════
+       Screen 3: Detail
+    ══════════════════════════════ */
+    #screen-detail {
+      width: 100%; max-width: 540px;
+      min-height: 100svh; background: var(--bg);
+      padding: 0 0 48px;
+      display: none; flex-direction: column;
+      overflow-y: auto;
+    }
+
+    .detail-header {
+      background: var(--surface);
+      padding: 20px 24px 20px;
+      border-bottom: 1px solid var(--border);
+      position: sticky; top: 0; z-index: 10;
+    }
+    .detail-back {
+      background: none; border: none;
+      color: var(--primary); font-size: 0.9rem; font-weight: 600;
+      cursor: pointer; padding: 0 0 12px;
+      display: flex; align-items: center; gap: 4px;
+    }
+    .detail-back:hover { text-decoration: underline; }
+    .detail-icon { font-size: 2.8rem; margin-bottom: 10px; line-height: 1; }
+    .detail-name { font-size: 1.4rem; font-weight: 700; margin-bottom: 8px; }
+    .detail-meta { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+
+    .detail-body { padding: 0 24px; }
+
+    /* Tagline callout */
+    .detail-tagline {
+      margin: 20px 0 0;
+      padding: 16px 20px;
+      background: var(--primary-light);
+      border-left: 4px solid var(--primary);
+      border-radius: 0 12px 12px 0;
+      font-size: 0.95rem; font-weight: 600;
+      line-height: 1.65; color: var(--text);
+    }
+
+    /* Background section */
+    .detail-section { margin-top: 24px; }
+    .detail-section-title {
+      font-size: 0.75rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.08em;
+      color: var(--text-muted); margin-bottom: 10px;
+    }
+    .detail-background {
+      font-size: 0.88rem; line-height: 1.8;
+      color: var(--text); padding: 14px 16px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+
+    /* Steps */
+    .step-item {
+      display: flex; gap: 14px;
+      margin-bottom: 14px; align-items: flex-start;
+      cursor: pointer;
+    }
+    .step-item:last-child { margin-bottom: 0; }
+
+    .step-num {
+      flex-shrink: 0; width: 30px; height: 30px;
+      border-radius: 50%;
+      background: var(--primary-light); color: var(--primary);
+      font-weight: 700; font-size: 0.85rem;
+      display: flex; align-items: center; justify-content: center;
+      transition: all 0.2s;
+    }
+    .step-item.done .step-num {
+      background: var(--primary); color: #fff;
+    }
+    .step-item.done .step-text {
+      color: var(--text-muted); text-decoration: line-through;
+      text-decoration-color: #bba;
+    }
+    .step-num .check { display: none; }
+    .step-item.done .step-num .check { display: block; }
+    .step-item.done .step-num .num { display: none; }
+
+    .step-text {
+      font-size: 0.93rem; line-height: 1.75;
+      padding-top: 4px; color: var(--text);
+      transition: color 0.2s;
+    }
+
+    /* Tips */
+    .tips-list { list-style: none; }
+    .tips-list li {
+      display: flex; gap: 10px; align-items: flex-start;
+      padding: 10px 14px; margin-bottom: 8px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      font-size: 0.88rem; line-height: 1.65;
+    }
+    .tips-list li::before {
+      content: "💡"; font-size: 1rem; flex-shrink: 0; margin-top: 1px;
+    }
+
+    .done-btn {
+      margin: 28px 0 0; width: 100%;
+      padding: 18px;
+      background: var(--primary); color: #fff;
+      border: none; border-radius: 50px;
+      font-size: 1rem; font-weight: 700;
+      cursor: pointer; transition: transform 0.15s, background 0.15s;
+    }
+    .done-btn:hover { background: #a06020; }
+    .done-btn:active { transform: scale(0.97); }
+
+    /* ── Approach badge colors ── */
+    .badge-dbt       { background: #fde8d8; color: #c04010; }
+    .badge-cbt       { background: #dde8ff; color: #1040b0; }
+    .badge-act       { background: #dff0e4; color: #106030; }
+    .badge-mind      { background: #e8e0f8; color: #4030a0; }
+    .badge-positive  { background: #fff0cc; color: #805000; }
+    .badge-self      { background: #fce0f0; color: #800050; }
+    .badge-behavior  { background: #e0f0f8; color: #006080; }
+    .badge-record    { background: #f0f0e8; color: #404020; }
+
+    /* ── Completion screen ── */
+    #screen-done {
+      display: none; flex-direction: column;
+      align-items: center; justify-content: center;
+      padding: 40px 32px; text-align: center; min-height: 60svh;
+    }
+    .done-emoji { font-size: 4rem; margin-bottom: 20px; }
+    .done-title { font-size: 1.4rem; font-weight: 700; margin-bottom: 12px; }
+    .done-msg { color: var(--text-muted); line-height: 1.8; margin-bottom: 32px; }
+    .back-home-btn {
+      padding: 16px 36px; background: var(--primary); color: #fff;
+      border: none; border-radius: 50px;
+      font-size: 1rem; font-weight: 700; cursor: pointer;
+    }
+
+    /* ── Keyboard hint (PC only) ── */
+    @media (pointer: fine) {
+      .swipe-guide::after {
+        content: ' ／ キーボード ← →';
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header class="app-header">
+  <div class="app-title">Naminori <span style="font-weight:400;font-size:0.8em;opacity:0.7;">いまここ道具箱</span></div>
+  <div class="time-greeting" id="time-greeting"></div>
+</header>
+
+<div id="app">
+
+  <!-- Screen 1: emotion picker -->
+  <section id="screen-emotion">
+    <p class="screen-label">今、どんな気持ちですか？</p>
+    <div class="emotion-grid">
+      <button class="emotion-btn" data-emotion="不安">
+        <span class="emotion-icon">😰</span>
+        <span class="emotion-label">不安・心配</span>
+      </button>
+      <button class="emotion-btn" data-emotion="落ち込み">
+        <span class="emotion-icon">😔</span>
+        <span class="emotion-label">落ち込み</span>
+      </button>
+      <button class="emotion-btn" data-emotion="イライラ">
+        <span class="emotion-icon">😤</span>
+        <span class="emotion-label">イライラ</span>
+      </button>
+      <button class="emotion-btn" data-emotion="空虚">
+        <span class="emotion-icon">😶</span>
+        <span class="emotion-label">空虚・虚無</span>
+      </button>
+      <button class="emotion-btn" data-emotion="孤独">
+        <span class="emotion-icon">🥺</span>
+        <span class="emotion-label">孤独・さみしい</span>
+      </button>
+      <button class="emotion-btn" data-emotion="疲れ">
+        <span class="emotion-icon">😩</span>
+        <span class="emotion-label">疲れ・消耗</span>
+      </button>
+    </div>
+    <button class="start-btn" id="start-btn">おすすめを見る →</button>
+  </section>
+
+  <!-- Screen 2: card stack -->
+  <section id="screen-cards">
+    <p class="cards-meta" id="cards-meta"></p>
+    <div class="card-stack-wrap" id="card-stack"></div>
+
+    <!-- PC navigation buttons -->
+    <div class="card-nav" id="card-nav">
+      <button class="nav-btn" id="nav-skip">← スキップ</button>
+      <button class="nav-btn" id="nav-next">次のカード →</button>
+    </div>
+    <p class="swipe-guide">ドラッグ・スワイプで次のカードへ</p>
+
+    <div class="no-more-cards" id="no-more-msg">
+      <div class="big-emoji">✨</div>
+      <p>今日のカードはここまで。<br>また明日も試してみてね。</p>
+      <button class="retry-btn" id="retry-btn">もう一度えらぶ</button>
+    </div>
+
+    <div class="no-more-cards" id="load-error-msg" style="display:none">
+      <div class="big-emoji">⚠️</div>
+      <p>データの読み込みに失敗しました。<br>ページを再読み込みしてください。</p>
+      <button class="retry-btn" onclick="location.reload()">再読み込み</button>
+    </div>
+  </section>
+
+  <!-- Screen 3: detail -->
+  <section id="screen-detail">
+    <div class="detail-header">
+      <button class="detail-back" id="detail-back-btn">← カードに戻る</button>
+      <div class="detail-icon" id="detail-icon"></div>
+      <div class="detail-name" id="detail-name"></div>
+      <div class="detail-meta">
+        <span class="card-approach" id="detail-badge"></span>
+        <span class="card-duration" id="detail-duration"></span>
+      </div>
+    </div>
+
+    <div class="detail-body">
+      <div class="detail-tagline" id="detail-tagline"></div>
+
+      <div class="detail-section" id="background-section">
+        <div class="detail-section-title">この技法について</div>
+        <div class="detail-background" id="detail-background"></div>
+      </div>
+
+      <div class="detail-section">
+        <div class="detail-section-title">やってみよう</div>
+        <div id="detail-steps-list"></div>
+      </div>
+
+      <div class="detail-section" id="tips-section">
+        <div class="detail-section-title">コツ・ヒント</div>
+        <ul class="tips-list" id="detail-tips"></ul>
+      </div>
+
+      <button class="done-btn" id="done-btn">✓ 完了した！</button>
+    </div>
+  </section>
+
+  <!-- Screen 4: completion -->
+  <section id="screen-done">
+    <div class="done-emoji">🌱</div>
+    <div class="done-title">よくできました！</div>
+    <div class="done-msg">一つ試せた。<br>それだけで今日は十分。</div>
+    <button class="back-home-btn" id="back-home-btn">別のカードを見る</button>
+  </section>
+
+</div>
+
+<script>
+(function() {
+  let allTechniques = [];
+  let deck = [];
+  let selectedEmotion = null;
+  let currentTimeSlot = '';
+
+  // ── Time slot ──
+  function detectTimeSlot() {
+    const h = new Date().getHours();
+    if (h >= 5  && h < 11) return '朝';
+    if (h >= 11 && h < 14) return '昼';
+    if (h >= 14 && h < 18) return '夕方';
+    if (h >= 18 && h < 23) return '夜';
+    return '深夜';
+  }
+
+  function timeGreeting(slot) {
+    const map = { '朝': 'おはよう ☀️', '昼': 'こんにちは 🌤', '夕方': 'お疲れさま 🌇', '夜': 'こんばんは 🌙', '深夜': 'まだ起きてるね 🌃' };
+    return map[slot] || '';
+  }
+
+  // ── Matching — no cap, show all matches ──
+  function buildDeck(emotion, timeSlot) {
+    const shuffled = [...allTechniques].sort(() => Math.random() - 0.5);
+    const tier1 = shuffled.filter(t => t.emotions.includes(emotion) && t.timeSlots.includes(timeSlot));
+    const tier2 = shuffled.filter(t => t.emotions.includes(emotion) && !t.timeSlots.includes(timeSlot));
+    const tier3 = shuffled.filter(t => !t.emotions.includes(emotion) && t.timeSlots.includes(timeSlot));
+    const seen = new Set();
+    const result = [];
+    for (const t of [...tier1, ...tier2, ...tier3]) {
+      if (!seen.has(t.id)) { seen.add(t.id); result.push(t); }
+    }
+    return result;
+  }
+
+  // ── Badge ──
+  const badgeClass = {
+    'DBT':              'badge-dbt',
+    'CBT':              'badge-cbt',
+    'ACT':              'badge-act',
+    'マインドフルネス':    'badge-mind',
+    'ポジティブ心理学':   'badge-positive',
+    'セルフコンパッション': 'badge-self',
+    '行動計画':          'badge-behavior',
+    '記録':              'badge-record',
+  };
+
+  // ── Card element ──
+  function buildCardEl(technique) {
+    const el = document.createElement('div');
+    el.className = 'technique-card';
+    el.dataset.id = technique.id;
+    const cls = badgeClass[technique.approach] || 'badge-record';
+    const firstStep = technique.steps && technique.steps[0]
+      ? (technique.steps[0].length > 52 ? technique.steps[0].slice(0, 52) + '…' : technique.steps[0])
+      : '';
+    const stepCount = technique.steps ? technique.steps.length : 0;
+    el.innerHTML = `
+      <div class="swipe-hint-left">スキップ</div>
+      <div class="swipe-hint-right">あとで</div>
+      <span class="card-approach ${cls}">${technique.approach}</span>
+      <div class="card-icon">${technique.icon}</div>
+      <div class="card-name">${technique.name}</div>
+      <div class="card-tagline">${technique.tagline}</div>
+      <div class="card-step-preview">
+        <div class="card-step-label">最初のステップ</div>
+        <div class="card-step-text">${firstStep}</div>
+      </div>
+      <div class="card-footer">
+        <span class="card-duration">⏱ 約${technique.duration}分 · 全${stepCount}ステップ</span>
+        <span class="card-tap-hint">詳しく見る →</span>
+      </div>
+    `;
+    return el;
+  }
+
+  function renderStack() {
+    const stack = document.getElementById('card-stack');
+    const nav = document.getElementById('card-nav');
+    stack.innerHTML = '';
+    document.getElementById('no-more-msg').style.display = 'none';
+
+    if (deck.length === 0) {
+      document.getElementById('no-more-msg').style.display = 'flex';
+      if (nav) nav.style.display = 'none';
+      return;
+    }
+
+    if (nav) nav.style.display = 'flex';
+
+    const visible = deck.slice(0, 3);
+    [...visible].reverse().forEach(t => stack.appendChild(buildCardEl(t)));
+
+    const topCard = stack.querySelector('.technique-card:last-child');
+    if (topCard) {
+      attachSwipe(topCard, () => openDetail(topCard.dataset.id));
+    }
+  }
+
+  function dismissTop(direction) {
+    const stack = document.getElementById('card-stack');
+    const top = stack.querySelector('.technique-card:last-child');
+    if (!top) return;
+    top.classList.add(direction === 'left' ? 'fly-left' : 'fly-right');
+    deck.shift();
+    setTimeout(() => { renderStack(); updateMeta(); }, 420);
+  }
+
+  function updateMeta() {
+    const meta = document.getElementById('cards-meta');
+    if (deck.length > 0) {
+      meta.textContent = `${selectedEmotion} × ${currentTimeSlot}（残り ${deck.length} 枚）`;
+    } else {
+      meta.textContent = '';
+    }
+  }
+
+  // ── Swipe / drag ──
+  function attachSwipe(card, onTap) {
+    let startX = 0, startY = 0, dx = 0;
+    let dragging = false;
+
+    const hintL = card.querySelector('.swipe-hint-left');
+    const hintR = card.querySelector('.swipe-hint-right');
+
+    function onStart(x, y) {
+      startX = x; startY = y; dx = 0; dragging = true;
+      card.classList.add('is-dragging');
+    }
+    function onMove(x, y) {
+      if (!dragging) return;
+      dx = x - startX;
+      const dy = y - startY;
+      if (Math.abs(dx) < Math.abs(dy) * 0.5 && Math.abs(dx) < 20) return;
+      card.style.transform = `translateX(${dx}px) rotate(${dx / 18}deg)`;
+      const ratio = Math.min(Math.abs(dx) / 80, 1);
+      hintL.style.opacity = dx < 0 ? ratio : 0;
+      hintR.style.opacity = dx > 0 ? ratio : 0;
+    }
+    function onEnd() {
+      if (!dragging) return;
+      dragging = false;
+      card.classList.remove('is-dragging');
+      hintL.style.opacity = 0;
+      hintR.style.opacity = 0;
+      if (Math.abs(dx) >= 80) {
+        dismissTop(dx < 0 ? 'left' : 'right');
+      } else if (Math.abs(dx) < 15 && onTap) {
+        card.style.transform = '';
+        onTap();
+      } else {
+        card.style.transform = '';
+      }
+    }
+
+    card.addEventListener('touchstart', (e) => onStart(e.touches[0].clientX, e.touches[0].clientY), { passive: true });
+    card.addEventListener('touchmove',  (e) => {
+      onMove(e.touches[0].clientX, e.touches[0].clientY);
+      if (Math.abs(dx) > 10) e.preventDefault();
+    }, { passive: false });
+    card.addEventListener('touchend',    onEnd, { passive: true });
+    card.addEventListener('touchcancel', onEnd, { passive: true });
+
+    card.addEventListener('mousedown', (e) => { onStart(e.clientX, e.clientY); });
+    window.addEventListener('mousemove', (e) => { if (dragging) onMove(e.clientX, e.clientY); });
+    window.addEventListener('mouseup',   () => { if (dragging) onEnd(); });
+  }
+
+  // ── Detail screen ──
+  function openDetail(id) {
+    const t = allTechniques.find(x => x.id === id);
+    if (!t) return;
+
+    document.getElementById('detail-icon').textContent = t.icon;
+    document.getElementById('detail-name').textContent = t.name;
+    document.getElementById('detail-tagline').textContent = t.tagline;
+
+    const cls = badgeClass[t.approach] || 'badge-record';
+    const badge = document.getElementById('detail-badge');
+    badge.className = `card-approach ${cls}`;
+    badge.textContent = t.approach;
+    document.getElementById('detail-duration').textContent = `⏱ 約${t.duration}分`;
+
+    // Background
+    const bgEl = document.getElementById('detail-background');
+    const bgSection = document.getElementById('background-section');
+    if (t.background) {
+      bgEl.textContent = t.background;
+      bgSection.style.display = '';
+    } else {
+      bgSection.style.display = 'none';
+    }
+
+    // Steps — tappable to mark done
+    const list = document.getElementById('detail-steps-list');
+    list.innerHTML = t.steps.map((step, i) =>
+      `<div class="step-item" data-step="${i}">
+        <div class="step-num">
+          <span class="num">${i + 1}</span>
+          <span class="check">✓</span>
+        </div>
+        <div class="step-text">${step}</div>
+      </div>`
+    ).join('');
+
+    list.querySelectorAll('.step-item').forEach(item => {
+      item.addEventListener('click', () => item.classList.toggle('done'));
+    });
+
+    // Tips
+    const tipsEl = document.getElementById('detail-tips');
+    const tipsSection = document.getElementById('tips-section');
+    if (t.tips && t.tips.length) {
+      tipsEl.innerHTML = t.tips.map(tip => `<li>${tip}</li>`).join('');
+      tipsSection.style.display = '';
+    } else {
+      tipsSection.style.display = 'none';
+    }
+
+    // Scroll to top
+    const detailEl = document.getElementById('screen-detail');
+    detailEl.scrollTop = 0;
+
+    showScreen('detail');
+  }
+
+  // ── Screen switching ──
+  const screens = ['screen-emotion', 'screen-cards', 'screen-detail', 'screen-done'];
+  function showScreen(name) {
+    screens.forEach(id => {
+      const el = document.getElementById(id);
+      if (!el) return;
+      el.style.display = (id === `screen-${name}`) ? 'flex' : 'none';
+    });
+  }
+
+  // ── Init ──
+  async function init() {
+    currentTimeSlot = detectTimeSlot();
+    document.getElementById('time-greeting').textContent = timeGreeting(currentTimeSlot);
+
+    if (window.__TECHNIQUES__) {
+      allTechniques = window.__TECHNIQUES__;
+    } else {
+      try {
+        const res = await fetch('./data.json');
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const json = await res.json();
+        allTechniques = json.techniques;
+      } catch (e) {
+        console.error('Failed to load data.json', e);
+        showScreen('cards');
+        document.getElementById('card-nav').style.display = 'none';
+        document.getElementById('load-error-msg').style.display = 'flex';
+        return;
+      }
+    }
+
+    showScreen('emotion');
+
+    // Emotion buttons
+    document.querySelectorAll('.emotion-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.emotion-btn').forEach(b => b.classList.remove('selected'));
+        btn.classList.add('selected');
+        selectedEmotion = btn.dataset.emotion;
+        document.getElementById('start-btn').classList.add('active');
+      });
+    });
+
+    document.getElementById('start-btn').addEventListener('click', () => {
+      if (!selectedEmotion) return;
+      deck = buildDeck(selectedEmotion, currentTimeSlot);
+      renderStack();
+      updateMeta();
+      showScreen('cards');
+    });
+
+    // PC nav buttons
+    document.getElementById('nav-skip').addEventListener('click', () => dismissTop('left'));
+    document.getElementById('nav-next').addEventListener('click', () => dismissTop('right'));
+
+    // Keyboard ← →
+    document.addEventListener('keydown', (e) => {
+      const cardsVisible = document.getElementById('screen-cards').style.display !== 'none';
+      if (!cardsVisible) return;
+      if (e.key === 'ArrowLeft')  { e.preventDefault(); dismissTop('left');  }
+      if (e.key === 'ArrowRight') { e.preventDefault(); dismissTop('right'); }
+    });
+
+    document.getElementById('detail-back-btn').addEventListener('click', () => showScreen('cards'));
+    document.getElementById('done-btn').addEventListener('click', () => showScreen('done'));
+    document.getElementById('back-home-btn').addEventListener('click', () => showScreen('cards'));
+
+    document.getElementById('retry-btn').addEventListener('click', () => {
+      selectedEmotion = null;
+      document.querySelectorAll('.emotion-btn').forEach(b => b.classList.remove('selected'));
+      document.getElementById('start-btn').classList.remove('active');
+      showScreen('emotion');
+    });
+  }
+
+  init();
+})();
+</script>
+</body>
+</html>
