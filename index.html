@@ -172,6 +172,30 @@
     }
     .aki-btn:hover { border-color: var(--primary); background: var(--primary-light); }
     .aki-btn:active { transform: scale(0.98); }
+    .aki-btn-neither {
+      background: transparent; border: 1px dashed var(--border);
+      border-radius: 12px; padding: 12px 20px;
+      font-size: 0.85rem; color: var(--text-muted);
+      cursor: pointer; text-align: center;
+      transition: all 0.15s; user-select: none; width: 100%;
+    }
+    .aki-btn-neither:hover { border-color: var(--primary); color: var(--primary); }
+
+    .aki-emo-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 10px; width: 100%;
+    }
+    .aki-emo-btn {
+      background: var(--surface); border: 2px solid var(--border);
+      border-radius: 14px; padding: 16px 6px;
+      cursor: pointer; display: flex; flex-direction: column;
+      align-items: center; gap: 7px;
+      transition: all 0.15s; user-select: none;
+    }
+    .aki-emo-btn:hover { border-color: var(--primary); background: var(--primary-light); }
+    .aki-emo-btn:active { transform: scale(0.95); }
+    .aki-emo-icon { font-size: 1.9rem; line-height: 1; }
+    .aki-emo-label { font-size: 0.73rem; font-weight: 600; color: var(--text); text-align: center; line-height: 1.3; }
 
     /* ══════════════════════
        S5: Emotion Result
@@ -626,6 +650,7 @@
       opts: [
         { label: '緊張・ドキドキ・ざわざわしている', next: 'nodeA' },
         { label: 'だるい・重い・疲れた感じがある', next: 'nodeB' },
+        { label: 'どちらとも言えない', grid: true },
       ],
     },
     nodeA: {
@@ -633,6 +658,7 @@
       opts: [
         { label: 'ざわざわ・心配・どうしよう…という感じ', result: 'anxiety' },
         { label: 'イライラ・もどかしい・腹が立つ感じ', result: 'irritated' },
+        { label: 'どちらとも言えない', grid: true },
       ],
     },
     nodeB: {
@@ -640,6 +666,7 @@
       opts: [
         { label: 'さみしい・誰かに会いたい・置いていかれた感じ', result: 'lonely' },
         { label: 'ただ重い・落ち込む・空っぽな感じ', next: 'nodeC' },
+        { label: 'どちらとも言えない', grid: true },
       ],
     },
     nodeC: {
@@ -647,6 +674,7 @@
       opts: [
         { label: '空っぽ・何もない・麻痺している感じ', result: 'empty' },
         { label: '落ち込み・悲しい・疲れ果てた感じ', result: 'depressed' },
+        { label: 'どちらとも言えない', grid: true },
       ],
     },
   };
@@ -1046,10 +1074,11 @@
     document.getElementById('aki-step').textContent = `ステップ ${STATE.akiStep + 1}`;
     document.getElementById('aki-question').textContent = node.q;
     const optsEl = document.getElementById('aki-options');
+    optsEl.className = 'aki-options';
     optsEl.innerHTML = '';
     node.opts.forEach(opt => {
       const btn = document.createElement('button');
-      btn.className = 'aki-btn';
+      btn.className = opt.grid ? 'aki-btn-neither' : 'aki-btn';
       btn.textContent = opt.label;
       btn.addEventListener('click', () => {
         if (opt.result) {
@@ -1059,7 +1088,27 @@
           STATE.akiNode = opt.next;
           STATE.akiStep++;
           renderAkiNode();
+        } else if (opt.grid) {
+          renderEmotionGrid();
         }
+      });
+      optsEl.appendChild(btn);
+    });
+  }
+
+  function renderEmotionGrid() {
+    document.getElementById('aki-step').textContent = '気持ちを選ぶ';
+    document.getElementById('aki-question').textContent = '今の気持ちに近いものを選んでください';
+    const optsEl = document.getElementById('aki-options');
+    optsEl.className = 'aki-options aki-emo-grid';
+    optsEl.innerHTML = '';
+    Object.entries(EMOTION_INFO).forEach(([id, info]) => {
+      const btn = document.createElement('button');
+      btn.className = 'aki-emo-btn';
+      btn.innerHTML = `<span class="aki-emo-icon">${info.icon}</span><span class="aki-emo-label">${info.ja}</span>`;
+      btn.addEventListener('click', () => {
+        STATE.emotion = id;
+        showEmotionResult();
       });
       optsEl.appendChild(btn);
     });
