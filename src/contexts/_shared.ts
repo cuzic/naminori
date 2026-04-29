@@ -18,4 +18,5 @@ export const SHARED_TECHNIQUES = [
   'gratitude-log',
   'decisional-balance',
   'problem-solving',
+  'reframing',
 ] as const;
