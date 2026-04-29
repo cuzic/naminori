@@ -13,6 +13,7 @@ export default defineContext({
       description: '運動習慣を作る・続ける',
       impulse: '体を動かしたい気持ち',
       behavior: '運動すること',
+      condition: '運動継続の困難',
       situation: '疲れて帰ってきたとき・天気が悪いとき',
       goal: '週○回運動すること',
       obstacle: '疲れ・面倒くさい・時間がない',

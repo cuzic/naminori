@@ -13,6 +13,7 @@ export default defineContext({
       description: '瞑想・マインドフルネスを日課にする',
       impulse: '静かに内省したい気持ち',
       behavior: '瞑想すること・呼吸に集中すること',
+      condition: 'ストレスや不安',
       situation: 'バタバタした日・頭がうるさいとき',
       goal: '毎朝○分瞑想すること',
       obstacle: '雑念・時間がない・効果が感じられない',

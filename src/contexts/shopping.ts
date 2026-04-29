@@ -13,6 +13,7 @@ export default defineContext({
       description: '衝動買い・買い物依存・オンライン購入',
       impulse: '買い物衝動',
       behavior: '買うこと・カートに入れること',
+      condition: '買い物依存症',
       situation: 'ストレス後・セール時・暇な時',
       bodyEffect: '財務状況・自己嫌悪・片付けへの影響',
       alternative: '24時間待つ・ウィッシュリストに入れるだけ・別のことに集中',

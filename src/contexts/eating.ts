@@ -21,6 +21,7 @@ export default defineContext({
       description: '過食・嘔吐・制限など摂食障害全般',
       impulse: '過食衝動',
       behavior: '食べること・嘔吐すること',
+      condition: '摂食障害',
       situation: '食後や一人になった時',
       bodyEffect: '消化器系・電解質バランスへの影響',
       alternative: '散歩・日記・冷水・セルフソージング',

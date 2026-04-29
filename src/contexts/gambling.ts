@@ -13,6 +13,7 @@ export default defineContext({
       description: 'パチンコ・競馬・オンラインカジノなど',
       impulse: 'ギャンブル衝動',
       behavior: 'ギャンブルをすること',
+      condition: 'ギャンブル依存症',
       situation: '負けを取り戻したい時・暇な時・給料日後',
       bodyEffect: '財務・人間関係・精神健康への影響',
       alternative: '財布を持たずに外出・別の刺激を探す・支援電話に電話',
