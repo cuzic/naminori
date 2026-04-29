@@ -246,8 +246,8 @@
        S5: Emotion Result
     ══════════════════════ */
     #sc-emotion {
-      flex-direction: column; align-items: center;
-      justify-content: center; min-height: 60svh;
+      flex: 1; flex-direction: column; align-items: center;
+      justify-content: center;
       text-align: center; padding: 32px 24px;
     }
     .er-icon { font-size: 5rem; margin-bottom: 16px; }
@@ -314,7 +314,7 @@
     }
     .card-step-label { font-size: 0.68rem; font-weight: 700; color: var(--primary); margin-bottom: 4px; letter-spacing: 0.04em; }
     .card-step-text { font-size: 0.82rem; line-height: 1.55; color: var(--text); }
-    .card-footer { margin-top: 14px; display: flex; align-items: center; justify-content: space-between; }
+    .card-footer { margin-top: auto; padding-top: 14px; display: flex; align-items: center; justify-content: space-between; }
     .card-duration { font-size: 0.78rem; color: var(--text-muted); display: flex; align-items: center; gap: 4px; }
     .card-tap-hint { font-size: 0.78rem; color: var(--primary); font-weight: 700; }
 
@@ -606,7 +606,7 @@
     <div class="onboarding-emoji">🌊</div>
     <h2 class="onboarding-title">いまここ道具箱へようこそ</h2>
     <ul class="onboarding-list">
-      <li>💡 <strong>103の技法カード</strong>から、今の気持ちに合うものを提案します</li>
+      <li>💡 <strong id="onboarding-count">107の技法カード</strong>から、今の気持ちに合うものを提案します</li>
       <li>🧠 CBT・ACT・DBTなど<strong>科学的根拠のある技法</strong>を集めました</li>
       <li>🤝 衝動・不安・依存など<strong>やめたい習慣</strong>にも、<strong>続けたい習慣</strong>にも</li>
       <li>🔒 記録はすべて<strong>このデバイスのみ</strong>に保存されます</li>
@@ -1047,7 +1047,6 @@
         <div class="card-step-label">最初のステップ</div>
         <div class="card-step-text">${firstStep}</div>
       </div>
-      <div style="flex:1"></div>
       <div class="card-footer">
         <span class="card-duration">⏱ 約${tc.duration}分 · 全${steps.length}ステップ</span>
         <span class="card-tap-hint">詳しく見る →</span>
@@ -1483,6 +1482,8 @@
     // Build lookup Maps for O(1) access
     techniqueMap = new Map(techniques.map(t => [t.id, t]));
     contextMap   = new Map(Object.entries(contexts));
+    const countEl = document.getElementById('onboarding-count');
+    if (countEl) countEl.textContent = `${techniques.length}の技法カード`;
 
     // Time greeting
     document.getElementById('app-time').textContent = timeGreeting(detectTimeSlot());
