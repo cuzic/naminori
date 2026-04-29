@@ -29,6 +29,8 @@ const VALID_TECHNIQUE_IDS = new Set([
   'assertive-refusal','time-out-request','recovery-disclosure','gradual-sharing','concrete-request',
   'emotion-signal','i-message','appreciation-express','reflective-question','online-boundary',
   'anger-iceberg','cognitive-reappraisal','pause-before-react',
+  'worry-time','worry-tree','good-enough','energy-audit','rest-types',
+  'strengths-inventory','connection-plan','self-focus','detachment',
 ]);
 
 interface JournalEntry {

@@ -41,4 +41,13 @@ export const SHARED_TECHNIQUES = [
   'anger-iceberg',
   'cognitive-reappraisal',
   'pause-before-react',
+  'worry-time',
+  'worry-tree',
+  'good-enough',
+  'energy-audit',
+  'rest-types',
+  'strengths-inventory',
+  'connection-plan',
+  'self-focus',
+  'detachment',
 ] as const;

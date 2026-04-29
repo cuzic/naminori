@@ -1,0 +1,32 @@
+import { defineContext } from '../lib/context';
+import { behavioralBase } from './_behavioral';
+
+export default defineContext({
+  ...behavioralBase,
+  id: 'perfectionism',
+  icon: '🎯',
+  sortOrder: 16,
+  applicableTechniques: [
+    'good-enough', 'cognitive-reappraisal', 'self-compassion-3steps',
+    'defusion', 'radical-acceptance', 'reframing', 'values-compass',
+    'wise-mind', 'decatastrophize', 'letter-to-self',
+    'loving-kindness', 'kind-words', 'growth-mindset',
+    'three-good-things', 'gratitude-visit', 'problem-solving',
+    'decisional-balance', 'emotional-granularity', 'pause-before-react',
+    'breathing-478', 'grounding-54321', 'body-scan', 'compassion-break',
+  ],
+  i18n: {
+    ja: {
+      label: '完璧主義をやわらげる',
+      description: '「十分よい」を認められるようになる',
+      impulse: '完璧にしなければという衝動',
+      behavior: '完璧を手放して行動すること',
+      condition: '完璧主義',
+      situation: 'ミスが怖くて動けないとき・自分を責め続けているとき',
+      goal: '「十分よい」で完了できるようになること',
+      obstacle: '全か無か思考・自己批判・先延ばし',
+      trigger: '評価される場面・失敗したとき・人と比較したとき',
+      reward: '行動できる喜び・自己批判の減少・完了の達成感',
+    },
+  },
+});
