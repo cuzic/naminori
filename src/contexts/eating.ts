@@ -8,9 +8,12 @@ export default defineContext({
   sortOrder: 1,
   applicableTechniques: [
     ...BEHAVIORAL_TECHNIQUES,
-    'please-skills',
-    'meal-rhythm',
-    'body-image-work',
+    'mindful-eating',
+    'hunger-scale',
+    'body-image-diary',
+    'body-neutral',
+    'food-freedom',
+    'scale-detox',
   ],
   i18n: {
     ja: {

@@ -3,15 +3,14 @@ import { SHARED_TECHNIQUES } from './_shared';
 // Techniques for substance-based addictions (alcohol, drugs, smoking, caffeine)
 export const SUBSTANCE_TECHNIQUES = [
   ...SHARED_TECHNIQUES,
-  'tipp-skill',
+  'tipp',
   'halt-check',
   'urge-delay',
   'stimulus-control',
-  'please-skills',
+  'please-check',
   'opposite-action',
-  'distress-tolerance',
-  'pros-cons-matrix',
-  'social-support-call',
+  'pros-cons-urge',
+  'ask-support',
   'behavioral-substitution',
 ] as const;
 

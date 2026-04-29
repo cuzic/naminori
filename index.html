@@ -98,6 +98,10 @@
       font-size: 0.9rem; font-weight: 700;
       margin-bottom: 24px;
     }
+    .welcome-disclaimer {
+      margin-top: 20px; font-size: 0.72rem; color: var(--text-muted);
+      line-height: 1.7; max-width: 320px; text-align: center;
+    }
 
     /* ══════════════════════
        S2: Direction
@@ -449,6 +453,27 @@
       border: none; font-size: 0.9rem; cursor: pointer; text-align: center;
     }
     .journal-skip-btn:hover { color: var(--primary); text-decoration: underline; }
+    .journal-privacy {
+      font-size: 0.72rem; color: var(--text-muted); text-align: center;
+      padding: 6px 0 2px; line-height: 1.5;
+    }
+    .crisis-footer {
+      margin-top: auto; width: 100%; padding: 14px 20px 20px;
+      background: #fff8f5; border-top: 1px solid #f0d8d0;
+      display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
+    }
+    .crisis-footer-label {
+      font-size: 0.75rem; color: var(--text-muted); font-weight: 600;
+      white-space: nowrap;
+    }
+    .crisis-link {
+      flex: 1; min-width: 140px; padding: 10px 12px;
+      background: #fff; border: 1px solid #e8c4b8; border-radius: 10px;
+      color: #c04040; text-decoration: none; font-size: 0.75rem;
+      line-height: 1.5; text-align: center; transition: background 0.15s;
+    }
+    .crisis-link:hover { background: #fff0ee; }
+    .crisis-link strong { display: block; font-size: 0.9rem; letter-spacing: 0.04em; }
 
     /* ══════════════════════
        S9: Done
@@ -486,6 +511,7 @@
     <div class="wb-msg" id="wb-msg"></div>
     <div class="streak-badge" id="wb-streak"></div>
     <button class="primary-btn" id="wb-start">始める →</button>
+    <p class="welcome-disclaimer">このアプリは軽度〜中等度の習慣・衝動の問題に取り組む方向けです。重篤な依存症・精神疾患のある方は専門家にご相談ください。</p>
   </section>
 
   <!-- S2: Direction -->
@@ -604,9 +630,15 @@
       <div class="journal-prompt">どうでしたか？</div>
       <div class="journal-warm" id="journal-warm"></div>
       <textarea class="journal-textarea" id="journal-textarea" placeholder="感じたこと、気づいたことを自由に…（入力しなくてもOK）"></textarea>
+      <div class="journal-privacy">入力内容はAI応答生成のためAnthropicに送信されます。保存はされません。</div>
       <button class="journal-send-btn" id="journal-send-btn">Claude に気持ちを話す</button>
       <div class="journal-response" id="journal-response"></div>
       <button class="journal-skip-btn" id="journal-done-btn">終わりにする →</button>
+    </div>
+    <div class="crisis-footer">
+      <span class="crisis-footer-label">つらいときは</span>
+      <a href="tel:0120279338" class="crisis-link">よりそいホットライン<br><strong>0120-279-338</strong></a>
+      <a href="tel:0120783556" class="crisis-link">いのちの電話<br><strong>0120-783-556</strong></a>
     </div>
   </section>
 
@@ -767,13 +799,40 @@
   // ── Screen management ──
   const ALL_SCREENS = ['sc-welcome', 'sc-direction', 'sc-context', 'sc-akinator', 'sc-emotion', 'sc-cards', 'sc-detail', 'sc-journal', 'sc-done'];
 
-  function show(id) {
+  // Screens that should push a new history entry (not replace)
+  const PUSH_SCREENS = new Set(['sc-direction', 'sc-context', 'sc-akinator', 'sc-emotion', 'sc-cards', 'sc-detail', 'sc-journal']);
+
+  let _suppressHashChange = false;
+
+  function show(id, { replace = false } = {}) {
     ALL_SCREENS.forEach(sid => {
       const el = document.getElementById(sid);
       if (el) el.style.display = sid === id ? 'flex' : 'none';
     });
     window.scrollTo(0, 0);
+
+    // Update URL hash without triggering popstate handler
+    _suppressHashChange = true;
+    const hash = '#' + id;
+    if (replace || !PUSH_SCREENS.has(id)) {
+      history.replaceState({ screen: id }, '', hash);
+    } else {
+      history.pushState({ screen: id }, '', hash);
+    }
+    _suppressHashChange = false;
   }
+
+  window.addEventListener('popstate', e => {
+    if (_suppressHashChange) return;
+    const screen = e.state?.screen || location.hash.replace('#', '') || 'sc-welcome';
+    if (ALL_SCREENS.includes(screen)) {
+      ALL_SCREENS.forEach(sid => {
+        const el = document.getElementById(sid);
+        if (el) el.style.display = sid === screen ? 'flex' : 'none';
+      });
+      window.scrollTo(0, 0);
+    }
+  });
 
   // ── Badge ──
   const BADGE = {
@@ -975,6 +1034,26 @@
     show('sc-journal');
   }
 
+  // ── Journal history (localStorage) ──
+  const JOURNAL_HISTORY_KEY = 'nm_journal_history';
+  const MAX_HISTORY = 30;
+
+  function loadJournalHistory() {
+    try { return JSON.parse(localStorage.getItem(JOURNAL_HISTORY_KEY) || '[]'); } catch { return []; }
+  }
+
+  function saveJournalEntry(techniqueId, techniqueName, text) {
+    const history = loadJournalHistory();
+    history.unshift({
+      date: new Date().toLocaleDateString('ja-JP', { month: 'numeric', day: 'numeric' }),
+      techniqueId,
+      techniqueName,
+      text: text.slice(0, 300),
+    });
+    if (history.length > MAX_HISTORY) history.splice(MAX_HISTORY);
+    try { localStorage.setItem(JOURNAL_HISTORY_KEY, JSON.stringify(history)); } catch {}
+  }
+
   async function submitJournal() {
     const userText = document.getElementById('journal-textarea').value.trim();
     if (!userText) return;
@@ -988,6 +1067,9 @@
     const vars = getCtxVars(STATE.contextId);
     const name = t(ja.name || STATE.currentTech, vars);
 
+    // Save to history (exclude current entry from digest, it's the current session)
+    const historyForDigest = loadJournalHistory().slice(0, 5);
+
     const respEl = document.getElementById('journal-response');
     respEl.style.display = 'block';
     respEl.textContent = '…';
@@ -996,13 +1078,20 @@
       const res = await fetch('/api/chat', {
         method: 'POST',
         headers: { 'content-type': 'application/json' },
-        body: JSON.stringify({ techniqueName: name, userText }),
+        body: JSON.stringify({
+          techniqueName: STATE.currentTech,
+          userText,
+          journalHistory: historyForDigest,
+        }),
       });
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       const data = await res.json();
       respEl.textContent = data.text || '（応答なし）';
+
+      // Save after successful response
+      saveJournalEntry(STATE.currentTech, name, userText);
     } catch (e) {
-      respEl.textContent = '⚠️ 応答できませんでした: ' + e.message;
+      respEl.textContent = '⚠️ 応答できませんでした。時間をおいて再度お試しください。';
     }
 
     btn.disabled = false;

@@ -3,17 +3,16 @@ import { SHARED_TECHNIQUES } from './_shared';
 // Techniques for behavioral addictions (eating, gambling, smartphone, shopping, sexual)
 export const BEHAVIORAL_TECHNIQUES = [
   ...SHARED_TECHNIQUES,
-  'tipp-skill',
+  'tipp',
   'halt-check',
   'urge-delay',
   'stimulus-control',
   'opposite-action',
-  'distress-tolerance',
-  'pros-cons-matrix',
-  'social-support-call',
+  'pros-cons-urge',
+  'ask-support',
   'emotion-check-in',
   'behavioral-chain',
-  'please-skills',
+  'please-check',
   'behavioral-substitution',
 ] as const;
 
