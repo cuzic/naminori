@@ -422,23 +422,6 @@
       font-size: 0.9rem; line-height: 1.8; color: var(--text);
     }
     .journal-response::before { content: "🌿 Claude "; font-weight: 700; color: var(--primary); }
-    .apikey-prompt {
-      display: none; background: #f8f4f0;
-      border: 1px dashed var(--border); border-radius: 12px;
-      padding: 14px 16px; font-size: 0.85rem; color: var(--text-muted); line-height: 1.6;
-    }
-    .apikey-prompt strong { color: var(--text); display: block; margin-bottom: 8px; }
-    .apikey-input-row { display: flex; gap: 8px; margin-top: 10px; }
-    .apikey-input {
-      flex: 1; padding: 10px 12px; border: 1px solid var(--border);
-      border-radius: 10px; font-size: 0.85rem; font-family: monospace;
-      background: var(--surface); color: var(--text);
-    }
-    .apikey-set-btn {
-      padding: 10px 16px; background: var(--primary); color: #fff;
-      border: none; border-radius: 10px; font-size: 0.85rem;
-      font-weight: 700; cursor: pointer; white-space: nowrap;
-    }
     .journal-skip-btn {
       padding: 12px; background: transparent; color: var(--text-muted);
       border: none; font-size: 0.9rem; cursor: pointer; text-align: center;
@@ -596,15 +579,7 @@
       <div class="journal-prompt">どうでしたか？</div>
       <div class="journal-warm" id="journal-warm"></div>
       <textarea class="journal-textarea" id="journal-textarea" placeholder="感じたこと、気づいたことを自由に…（入力しなくてもOK）"></textarea>
-      <button class="journal-send-btn" id="journal-send-btn" style="display:none">Claude に気持ちを話す</button>
-      <div class="apikey-prompt" id="journal-apikey-prompt">
-        <strong>Claude AI に繋ぐにはAPIキーが必要です</strong>
-        Anthropic の API キーを設定すると、Claude が温かい返事をしてくれます。
-        <div class="apikey-input-row">
-          <input class="apikey-input" id="journal-apikey-input" type="password" placeholder="sk-ant-…">
-          <button class="apikey-set-btn" id="journal-apikey-set-btn">保存</button>
-        </div>
-      </div>
+      <button class="journal-send-btn" id="journal-send-btn">Claude に気持ちを話す</button>
       <div class="journal-response" id="journal-response"></div>
       <button class="journal-skip-btn" id="journal-done-btn">終わりにする →</button>
     </div>
@@ -969,17 +944,10 @@
     respEl.style.display = 'none';
     respEl.textContent = '';
 
-    const apiKey = S.get('api_key');
-    document.getElementById('journal-send-btn').style.display = apiKey ? 'block' : 'none';
-    document.getElementById('journal-apikey-prompt').style.display = apiKey ? 'none' : 'block';
-    if (!apiKey) document.getElementById('journal-apikey-input').value = '';
-
     show('sc-journal');
   }
 
   async function submitJournal() {
-    const apiKey = S.get('api_key');
-    if (!apiKey) return;
     const userText = document.getElementById('journal-textarea').value.trim();
     if (!userText) return;
 
@@ -997,26 +965,14 @@
     respEl.textContent = '…';
 
     try {
-      const res = await fetch('https://api.anthropic.com/v1/messages', {
+      const res = await fetch('/api/chat', {
         method: 'POST',
-        headers: {
-          'x-api-key': apiKey,
-          'anthropic-version': '2023-06-01',
-          'content-type': 'application/json',
-          'anthropic-dangerous-direct-browser-calls': 'true',
-        },
-        body: JSON.stringify({
-          model: 'claude-haiku-4-5-20251001',
-          max_tokens: 400,
-          messages: [{
-            role: 'user',
-            content: `あなたは受容的で温かい支援者です。ユーザーが「${name}」という技法を試みました。\n\nユーザーの感想:\n"${userText}"\n\n3〜4文で、優しく受け止めてください。評価・判断をせず、ただ共感してください。日本語で。`,
-          }],
-        }),
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({ techniqueName: name, userText }),
       });
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       const data = await res.json();
-      respEl.textContent = data.content?.[0]?.text || '（応答なし）';
+      respEl.textContent = data.text || '（応答なし）';
     } catch (e) {
       respEl.textContent = '⚠️ 応答できませんでした: ' + e.message;
     }
@@ -1224,14 +1180,6 @@
 
     // Journal
     document.getElementById('journal-send-btn').addEventListener('click', submitJournal);
-    document.getElementById('journal-apikey-set-btn').addEventListener('click', () => {
-      const key = document.getElementById('journal-apikey-input').value.trim();
-      if (key) {
-        S.set('api_key', key);
-        document.getElementById('journal-send-btn').style.display = 'block';
-        document.getElementById('journal-apikey-prompt').style.display = 'none';
-      }
-    });
     document.getElementById('journal-done-btn').addEventListener('click', () => showDone());
 
     // Done
