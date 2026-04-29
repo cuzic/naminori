@@ -58,4 +58,11 @@ export const SHARED_TECHNIQUES = [
   'community-find',
   'self-distancing',
   'rumination-interrupt',
+  'rain-meditation',
+  'three-minute-breathing',
+  'savoring',
+  'woop',
+  'core-beliefs',
+  'exception-finding',
+  'act-matrix',
 ] as const;

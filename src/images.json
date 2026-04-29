@@ -719,6 +719,41 @@
       "name": "rumination-interrupt",
       "prompt": "A circular spiral of soft flowing lines suddenly interrupted by a gentle beam of light breaking the loop, against a misty background. Soft watercolor illustration, warm pastel earth tones, gentle natural lighting. No text, no letters, no numbers.",
       "aspectRatio": "4:3"
+    },
+    {
+      "name": "rain-meditation",
+      "prompt": "Soft rain falling on a still pond surface, each drop creating gentle ripples, misty atmosphere, a sense of quiet presence. Soft watercolor illustration, warm pastel earth tones, gentle natural lighting. No text, no letters, no numbers.",
+      "aspectRatio": "4:3"
+    },
+    {
+      "name": "three-minute-breathing",
+      "prompt": "A delicate sand timer with sand suspended mid-flow, soft golden light passing through it, surrounded by calm muted air. Soft watercolor illustration, warm pastel earth tones, gentle natural lighting. No text, no letters, no numbers.",
+      "aspectRatio": "4:3"
+    },
+    {
+      "name": "savoring",
+      "prompt": "A pair of hands cradling a warm ceramic cup of tea, steam rising gently, soft afternoon light, a moment of quiet enjoyment. Soft watercolor illustration, warm pastel earth tones, gentle natural lighting. No text, no letters, no numbers.",
+      "aspectRatio": "4:3"
+    },
+    {
+      "name": "woop",
+      "prompt": "A shooting star arcing across a gentle night sky, a small figure below looking up with hands clasped, soft moonlight. Soft watercolor illustration, warm pastel earth tones, gentle natural lighting. No text, no letters, no numbers.",
+      "aspectRatio": "4:3"
+    },
+    {
+      "name": "core-beliefs",
+      "prompt": "A large smooth stone half-buried in soft earth, with a small seedling growing from a crack in its surface, gentle morning light. Soft watercolor illustration, warm pastel earth tones, gentle natural lighting. No text, no letters, no numbers.",
+      "aspectRatio": "4:3"
+    },
+    {
+      "name": "exception-finding",
+      "prompt": "A magnifying glass hovering over a single bright patch of sunlight in a shadowed forest floor, illuminating small wildflowers. Soft watercolor illustration, warm pastel earth tones, gentle natural lighting. No text, no letters, no numbers.",
+      "aspectRatio": "4:3"
+    },
+    {
+      "name": "act-matrix",
+      "prompt": "A simple compass rose on aged paper, its four directions softly glowing, surrounded by gentle watercolor washes of direction and space. Soft watercolor illustration, warm pastel earth tones, gentle natural lighting. No text, no letters, no numbers.",
+      "aspectRatio": "4:3"
     }
   ]
 }

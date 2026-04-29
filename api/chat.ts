@@ -34,6 +34,7 @@ const VALID_TECHNIQUE_IDS = new Set([
   'exposure-ladder','inner-critic','shame-resilience','work-detach',
   'needs-inventory','community-find',
   'self-distancing','rumination-interrupt',
+  'rain-meditation','three-minute-breathing','savoring','woop','core-beliefs','exception-finding','act-matrix',
 ]);
 
 interface JournalEntry {
