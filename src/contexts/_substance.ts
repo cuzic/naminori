@@ -12,6 +12,7 @@ export const SUBSTANCE_TECHNIQUES = [
   'distress-tolerance',
   'pros-cons-matrix',
   'social-support-call',
+  'behavioral-substitution',
 ] as const;
 
 export const substanceBase = {

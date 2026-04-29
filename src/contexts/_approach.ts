@@ -16,6 +16,7 @@ export const APPROACH_TECHNIQUES = [
   'please-skills',
   'social-support-call',
   'cope-ahead',
+  'reinforcement-management',
 ] as const;
 
 export const approachBase = {

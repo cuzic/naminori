@@ -16,4 +16,6 @@ export const SHARED_TECHNIQUES = [
   'half-smile',
   '3gt',
   'gratitude-log',
+  'decisional-balance',
+  'problem-solving',
 ] as const;
