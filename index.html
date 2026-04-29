@@ -185,91 +185,40 @@
     .ctx-label { font-size: 0.86rem; font-weight: 600; color: var(--text); text-align: left; line-height: 1.35; }
 
     /* ══════════════════════
-       S4: Akinator
+       S4: Cards (filter bar)
     ══════════════════════ */
-    #sc-akinator { flex-direction: column; align-items: center; }
-    .aki-wrap {
-      width: 100%; max-width: 380px;
-      padding: 0 24px 32px;
-      display: flex; flex-direction: column; align-items: center;
+    .cards-top-bar {
+      width: 100%; max-width: var(--card-w);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 4px; margin-bottom: 6px;
     }
-    .aki-step-label {
-      font-size: 0.75rem; font-weight: 700; color: var(--primary);
-      letter-spacing: 0.08em; margin-bottom: 16px; text-transform: uppercase;
+    .cards-back-link {
+      background: none; border: none; color: var(--text-muted);
+      font-size: 0.82rem; cursor: pointer; padding: 4px 0;
     }
-    .aki-question {
-      font-size: 1.15rem; font-weight: 600; color: var(--text);
-      text-align: center; line-height: 1.6; margin-bottom: 28px;
+    .cards-back-link:hover { color: var(--primary); }
+    .cards-filter-bar {
+      width: 100%; max-width: var(--card-w);
+      display: flex; flex-wrap: wrap; gap: 6px;
+      margin-bottom: 10px; padding: 0 4px;
     }
-    .aki-options {
-      width: 100%; display: flex; flex-direction: column; gap: 14px;
+    .filter-chip {
+      background: var(--surface); border: 1.5px solid var(--border);
+      border-radius: 20px; padding: 5px 12px;
+      font-size: 0.78rem; font-weight: 600; color: var(--text-muted);
+      cursor: pointer; transition: all 0.15s; user-select: none; white-space: nowrap;
     }
-    .aki-btn {
-      background: var(--surface); border: 2px solid var(--border);
-      border-radius: var(--radius-md); padding: 20px 24px;
-      font-size: 0.95rem; font-weight: 600; color: var(--text);
-      cursor: pointer; text-align: left;
-      transition: all 0.15s; user-select: none;
-      line-height: 1.4;
+    .filter-chip:hover { border-color: var(--primary); color: var(--primary); }
+    .filter-chip.active {
+      background: var(--primary); border-color: var(--primary);
+      color: #fff;
     }
-    .aki-btn:hover { border-color: var(--primary); background: var(--primary-light); }
-    .aki-btn:active { transform: scale(0.98); }
-    .aki-btn:focus-visible,
-    .aki-btn-neither:focus-visible,
-    .aki-emo-btn:focus-visible { outline: 3px solid var(--primary); outline-offset: 3px; }
-    .aki-btn-neither {
-      background: transparent; border: 1px dashed var(--border);
-      border-radius: var(--radius-card); padding: 12px 20px;
-      font-size: 0.85rem; color: var(--text-muted);
-      cursor: pointer; text-align: center;
-      transition: all 0.15s; user-select: none; width: 100%;
+    .filter-chip-sep {
+      width: 1px; background: var(--border); margin: 2px 2px; align-self: stretch;
     }
-    .aki-btn-neither:hover { border-color: var(--primary); color: var(--primary); }
-
-    .aki-emo-grid {
-      display: flex; flex-direction: column;
-      gap: 14px; width: 100%;
-    }
-    .aki-emo-group { display: flex; flex-direction: column; gap: 8px; }
-    .aki-emo-group-label {
-      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.06em;
-      color: var(--text-muted); text-transform: uppercase; padding: 0 2px;
-    }
-    .aki-emo-row {
-      display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px;
-    }
-    .aki-emo-btn {
-      background: var(--surface); border: 2px solid var(--border);
-      border-radius: 14px; padding: 14px 6px;
-      cursor: pointer; display: flex; flex-direction: column;
-      align-items: center; gap: 6px;
-      transition: all 0.15s; user-select: none;
-    }
-    .aki-emo-btn:hover { border-color: var(--primary); background: var(--primary-light); }
-    .aki-emo-btn:active { transform: scale(0.95); }
-    .aki-emo-btn.positive { border-color: #b8e4b8; background: #f0faf0; }
-    .aki-emo-btn.positive:hover { border-color: var(--primary); background: var(--primary-light); }
-    @media (prefers-color-scheme: dark) {
-      .aki-emo-btn.positive { border-color: #2a4a2a; background: #1a2e1a; }
-    }
-    .aki-emo-icon { font-size: 1.8rem; line-height: 1; }
-    .aki-emo-label { font-size: 0.78rem; font-weight: 600; color: var(--text); text-align: center; line-height: 1.3; }
 
     /* ══════════════════════
-       S5: Emotion Result
-    ══════════════════════ */
-    #sc-emotion {
-      flex: 1; flex-direction: column; align-items: center;
-      justify-content: center;
-      text-align: center; padding: 32px 24px;
-    }
-    .er-icon { font-size: 5rem; margin-bottom: 16px; }
-    .er-label { font-size: 1.6rem; font-weight: 700; margin-bottom: 8px; }
-    .er-desc { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 32px; }
-    .er-buttons { display: flex; flex-direction: column; gap: 12px; width: 100%; max-width: 280px; }
-
-    /* ══════════════════════
-       S6: Cards
+       S5: Cards
     ══════════════════════ */
     #sc-cards {
       width: 100%; flex: 1;
@@ -673,31 +622,13 @@
   </section>
 
   <!-- S4: Akinator -->
-  <section id="sc-akinator" style="display:none">
-    <div class="aki-wrap">
-      <div class="screen-back" style="width:100%">
-        <button class="back-link" data-to="context">← 戻る</button>
-      </div>
-      <div class="aki-step-label" id="aki-step">ステップ 1</div>
-      <div class="aki-question" id="aki-question"></div>
-      <div class="aki-options" id="aki-options"></div>
-    </div>
-  </section>
-
-  <!-- S5: Emotion result -->
-  <section id="sc-emotion" style="display:none">
-    <div class="er-icon" id="er-icon"></div>
-    <div class="er-label" id="er-label"></div>
-    <div class="er-desc">今、こんな気持ちかな？</div>
-    <div class="er-buttons">
-      <button class="primary-btn btn-interactive" id="er-confirm">そう！カードを見る</button>
-      <button class="secondary-btn btn-interactive" id="er-retry">違う、やり直す</button>
-    </div>
-  </section>
-
-  <!-- S6: Cards -->
+  <!-- S4: Cards -->
   <section id="sc-cards" style="display:none">
-    <p class="cards-meta" id="cards-meta"></p>
+    <div class="cards-top-bar">
+      <button class="cards-back-link" id="cards-back-btn">← 選び直す</button>
+      <p class="cards-meta" id="cards-meta"></p>
+    </div>
+    <div class="cards-filter-bar" id="cards-filter-bar"></div>
     <div class="card-stack-wrap" id="card-stack"></div>
     <div class="card-nav" id="card-nav">
       <button class="nav-btn btn-interactive" id="nav-skip">← 使わない</button>
@@ -815,11 +746,10 @@
   const STATE = {
     direction: null,
     contextId: null,
-    emotion: null,
     deck: [],
     currentTech: null,
-    akiNode: 'root',
-    akiStep: 0,
+    filterApproaches: new Set(),
+    filterDuration: null,
   };
 
   // ── Storage ──
@@ -828,81 +758,11 @@
     set: (k, v) => { try { localStorage.setItem('nm_' + k, JSON.stringify(v)); } catch {} },
   };
 
-  // ── Akinator tree ──
-  const AKI = {
-    root: {
-      q: '今どんな感じ？',
-      opts: [
-        { label: 'ざわざわ・不安・落ち着かない', next: 'nodeA' },
-        { label: 'だるい・重い・疲れた', next: 'nodeB' },
-        { label: 'どちらとも言えない', grid: true },
-      ],
-    },
-    nodeA: {
-      q: 'どちらに近い？',
-      opts: [
-        { label: '心配・どうしよう・怖い', result: 'anxiety' },
-        { label: 'イライラ・もどかしい・腹が立つ', result: 'irritated' },
-        { label: 'どちらとも言えない', grid: true },
-      ],
-    },
-    nodeB: {
-      q: 'どちらに近い？',
-      opts: [
-        { label: 'さみしい・誰かに会いたい・置いていかれた', result: 'lonely' },
-        { label: 'ただ重い・落ち込む・空っぽ', next: 'nodeC' },
-        { label: 'どちらとも言えない', grid: true },
-      ],
-    },
-    nodeC: {
-      q: 'もう少し絞ると？',
-      opts: [
-        { label: '空っぽ・何もない・麻痺している', result: 'empty' },
-        { label: '落ち込み・悲しい・疲れ果てた', result: 'depressed' },
-        { label: 'どちらとも言えない', grid: true },
-      ],
-    },
-  };
-
-  const EMOTION_INFO = {
-    // group: hard
-    anxiety:   { ja: '不安・緊張',    icon: '😰', group: 'hard' },
-    fear:      { ja: '恐れ・パニック', icon: '😱', group: 'hard' },
-    irritated: { ja: 'イライラ',      icon: '😤', group: 'hard' },
-    anger:     { ja: '怒り',          icon: '😠', group: 'hard' },
-    depressed: { ja: '落ち込み・憂鬱', icon: '😔', group: 'hard' },
-    sad:       { ja: '悲しみ',        icon: '😢', group: 'hard' },
-    lonely:    { ja: '孤独・さみしい', icon: '🥺', group: 'hard' },
-    empty:     { ja: '空虚・虚無感',  icon: '😶', group: 'hard' },
-    exhausted: { ja: '疲れ・燃え尽き', icon: '😩', group: 'hard' },
-    shame:     { ja: '恥・罪悪感',    icon: '😳', group: 'hard' },
-    hopeless:  { ja: '絶望・無力感',  icon: '💔', group: 'hard' },
-    bored:     { ja: '退屈・無気力',  icon: '😑', group: 'hard' },
-    // group: positive
-    calm:      { ja: '穏やか',        icon: '😌', group: 'positive' },
-    hopeful:   { ja: '希望・やる気',  icon: '🌱', group: 'positive' },
-    joyful:    { ja: '嬉しい・楽しい', icon: '😊', group: 'positive' },
-    grateful:  { ja: '感謝',          icon: '🙏', group: 'positive' },
-  };
-
-  const EMOTION_KEYS = {
-    anxiety:   ['anxiety'],
-    fear:      ['anxiety', 'fear'],
-    irritated: ['irritated'],
-    anger:     ['anger', 'irritated'],
-    depressed: ['depressed'],
-    sad:       ['sad', 'depressed'],
-    lonely:    ['lonely'],
-    empty:     ['empty'],
-    exhausted: ['exhausted', 'depressed'],
-    shame:     ['shame'],
-    hopeless:  ['hopeless', 'depressed', 'empty'],
-    bored:     ['bored', 'empty'],
-    calm:      ['calm'],
-    hopeful:   ['hopeful'],
-    joyful:    ['joyful'],
-    grateful:  ['grateful'],
-  };
+  const DURATION_FILTERS = [
+    { id: 'short',  label: '〜5分',  test: d => d <= 5 },
+    { id: 'medium', label: '6〜10分', test: d => d > 5 && d <= 10 },
+    { id: 'long',   label: '10分+',  test: d => d > 10 },
+  ];
 
   // ── Template engine ──
   function t(text, vars) {
@@ -974,10 +834,10 @@
   }
 
   // ── Screen management ──
-  const ALL_SCREENS = ['sc-welcome', 'sc-direction', 'sc-context', 'sc-akinator', 'sc-emotion', 'sc-cards', 'sc-detail', 'sc-journal', 'sc-done'];
+  const ALL_SCREENS = ['sc-welcome', 'sc-direction', 'sc-context', 'sc-cards', 'sc-detail', 'sc-journal', 'sc-done'];
 
   // Screens that should push a new history entry (not replace)
-  const PUSH_SCREENS = new Set(['sc-direction', 'sc-context', 'sc-akinator', 'sc-emotion', 'sc-cards', 'sc-detail', 'sc-journal']);
+  const PUSH_SCREENS = new Set(['sc-direction', 'sc-context', 'sc-cards', 'sc-detail', 'sc-journal']);
 
   let _suppressHashChange = false;
 
@@ -1038,7 +898,6 @@
   function buildDeck() {
     const ctx = contextMap.get(STATE.contextId);
     const applicable = ctx ? new Set(ctx.applicableTechniques) : null;
-    const eKeys = EMOTION_KEYS[STATE.emotion] || [STATE.emotion];
     const slot = detectTimeSlot();
 
     let pool = (applicable
@@ -1046,17 +905,76 @@
       : [...techniques]
     ).sort(() => Math.random() - 0.5);
 
-    let t1 = pool.filter(tc => eKeys.some(e => tc.emotions.includes(e)) && tc.timeSlots.includes(slot));
-    const t2 = pool.filter(tc => eKeys.some(e => tc.emotions.includes(e)) && !tc.timeSlots.includes(slot));
-    const t3 = pool.filter(tc => !eKeys.some(e => tc.emotions.includes(e)));
-
-    // 深夜は短時間技法（5分以下）を先頭に優先表示
-    if (slot === 'midnight') {
-      t1 = [...t1.filter(tc => tc.duration <= 5), ...t1.filter(tc => tc.duration > 5)];
+    // Apply approach filter (OR within selected approaches)
+    if (STATE.filterApproaches.size > 0) {
+      pool = pool.filter(tc => STATE.filterApproaches.has(tc.approach));
     }
 
-    const seen = new Set();
-    return [...t1, ...t2, ...t3].filter(tc => seen.has(tc.id) ? false : seen.add(tc.id));
+    // Apply duration filter
+    if (STATE.filterDuration) {
+      const df = DURATION_FILTERS.find(d => d.id === STATE.filterDuration);
+      if (df) pool = pool.filter(tc => df.test(tc.duration));
+    }
+
+    // 深夜は短時間技法を先頭に
+    if (slot === 'midnight') {
+      pool = [...pool.filter(tc => tc.duration <= 5), ...pool.filter(tc => tc.duration > 5)];
+    }
+
+    return pool;
+  }
+
+  function renderFilterChips() {
+    const bar = document.getElementById('cards-filter-bar');
+    if (!bar) return;
+    bar.innerHTML = '';
+
+    const ctx = contextMap.get(STATE.contextId);
+    const applicable = ctx ? new Set(ctx.applicableTechniques) : null;
+    const pool = applicable ? techniques.filter(tc => applicable.has(tc.id)) : techniques;
+
+    // Collect available approaches
+    const approaches = [...new Set(pool.map(tc => tc.approach).filter(Boolean))].sort();
+
+    // Approach chips
+    approaches.forEach(ap => {
+      const chip = document.createElement('button');
+      chip.className = 'filter-chip' + (STATE.filterApproaches.has(ap) ? ' active' : '');
+      chip.textContent = ap;
+      chip.addEventListener('click', () => {
+        if (STATE.filterApproaches.has(ap)) STATE.filterApproaches.delete(ap);
+        else STATE.filterApproaches.add(ap);
+        applyFilters();
+      });
+      bar.appendChild(chip);
+    });
+
+    // Separator
+    if (approaches.length) {
+      const sep = document.createElement('div');
+      sep.className = 'filter-chip-sep';
+      bar.appendChild(sep);
+    }
+
+    // Duration chips — only show buckets that exist in pool
+    DURATION_FILTERS.forEach(df => {
+      if (!pool.some(tc => df.test(tc.duration))) return;
+      const chip = document.createElement('button');
+      chip.className = 'filter-chip' + (STATE.filterDuration === df.id ? ' active' : '');
+      chip.textContent = df.label;
+      chip.addEventListener('click', () => {
+        STATE.filterDuration = STATE.filterDuration === df.id ? null : df.id;
+        applyFilters();
+      });
+      bar.appendChild(chip);
+    });
+  }
+
+  function applyFilters() {
+    STATE.deck = buildDeck();
+    renderStack();
+    updateCardsMeta();
+    renderFilterChips();
   }
 
   // ── Card element ──
@@ -1123,10 +1041,7 @@
     if (!meta) return;
     const vars = getCtxVars(STATE.contextId);
     const ctxLabel = vars.label || STATE.contextId || '';
-    const emoInfo = EMOTION_INFO[STATE.emotion];
-    meta.textContent = STATE.deck.length > 0
-      ? `${ctxLabel} × ${emoInfo ? emoInfo.ja : (STATE.emotion || '')}`
-      : '';
+    meta.textContent = STATE.deck.length > 0 ? `${ctxLabel} · ${STATE.deck.length}枚` : '';
   }
 
   // ── Swipe ──
@@ -1412,94 +1327,6 @@
     show('sc-welcome');
   }
 
-  // ── Akinator ──
-  function showAkinator() {
-    STATE.akiNode = 'root';
-    STATE.akiStep = 0;
-    renderAkiNode();
-    show('sc-akinator');
-  }
-
-  function renderAkiNode() {
-    const node = AKI[STATE.akiNode];
-    if (!node) return;
-    document.getElementById('aki-step').textContent = `ステップ ${STATE.akiStep + 1}`;
-    document.getElementById('aki-question').textContent = node.q;
-    const optsEl = document.getElementById('aki-options');
-    optsEl.className = 'aki-options';
-    optsEl.innerHTML = '';
-    node.opts.forEach(opt => {
-      const btn = document.createElement('button');
-      btn.className = opt.grid ? 'aki-btn-neither' : 'aki-btn';
-      btn.textContent = opt.label;
-      btn.addEventListener('click', () => {
-        if (opt.result) {
-          STATE.emotion = opt.result;
-          showEmotionResult();
-        } else if (opt.next) {
-          STATE.akiNode = opt.next;
-          STATE.akiStep++;
-          renderAkiNode();
-        } else if (opt.grid) {
-          renderEmotionGrid();
-        }
-      });
-      optsEl.appendChild(btn);
-    });
-  }
-
-  function renderEmotionGrid() {
-    document.getElementById('aki-step').textContent = '気持ちを選ぶ';
-    document.getElementById('aki-question').textContent = '今の気持ちに近いものを選んでください';
-    const optsEl = document.getElementById('aki-options');
-    optsEl.className = 'aki-options aki-emo-grid';
-    optsEl.innerHTML = '';
-
-    function makeBtn(id, info) {
-      const btn = document.createElement('button');
-      btn.className = 'aki-emo-btn' + (info.group === 'positive' ? ' positive' : '');
-      btn.innerHTML = `<span class="aki-emo-icon">${info.icon}</span><span class="aki-emo-label">${wbr(info.ja)}</span>`;
-      btn.addEventListener('click', () => { STATE.emotion = id; showEmotionResult(); });
-      return btn;
-    }
-
-    const groups = [
-      { key: 'hard',     label: 'つらい気持ち',   entries: [] },
-      { key: 'positive', label: '前向きな気持ち', entries: [] },
-    ];
-    Object.entries(EMOTION_INFO).forEach(([id, info]) => {
-      const g = groups.find(g => g.key === info.group) || groups[0];
-      g.entries.push([id, info]);
-    });
-
-    groups.forEach(({ label, entries }) => {
-      if (!entries.length) return;
-      const group = document.createElement('div');
-      group.className = 'aki-emo-group';
-      const lbl = document.createElement('div');
-      lbl.className = 'aki-emo-group-label';
-      lbl.textContent = label;
-      group.appendChild(lbl);
-
-      const rows = [];
-      for (let i = 0; i < entries.length; i += 3) rows.push(entries.slice(i, i + 3));
-      rows.forEach(row => {
-        const rowEl = document.createElement('div');
-        rowEl.className = 'aki-emo-row';
-        row.forEach(([id, info]) => rowEl.appendChild(makeBtn(id, info)));
-        group.appendChild(rowEl);
-      });
-      optsEl.appendChild(group);
-    });
-  }
-
-  function showEmotionResult() {
-    const info = EMOTION_INFO[STATE.emotion] || { ja: STATE.emotion, icon: '❓' };
-    document.getElementById('er-icon').textContent = info.icon;
-    document.getElementById('er-label').textContent = info.ja;
-    show('sc-emotion');
-  }
-
   // ── Context screen ──
   function showContextScreen() {
     document.getElementById('context-label').textContent =
@@ -1515,8 +1342,14 @@
         btn.innerHTML = `<span class="ctx-icon">${ctx.icon}</span><span class="ctx-label">${wbr(vars.label || id)}</span>`;
         btn.addEventListener('click', () => {
           STATE.contextId = id;
+          STATE.filterApproaches = new Set();
+          STATE.filterDuration = null;
           S.set('last_context', id);
-          showAkinator();
+          STATE.deck = buildDeck();
+          renderStack();
+          updateCardsMeta();
+          renderFilterChips();
+          show('sc-cards');
         });
         grid.appendChild(btn);
       });
@@ -1573,10 +1406,12 @@
         const to = btn.dataset.to;
         if (to === 'direction') show('sc-direction');
         else if (to === 'context') showContextScreen();
-        else if (to === 'akinator') showAkinator();
         else if (to === 'cards') show('sc-cards');
       });
     });
+
+    // Cards back button
+    document.getElementById('cards-back-btn').addEventListener('click', () => showContextScreen());
 
     // Welcome back
     document.getElementById('wb-start').addEventListener('click', () => show('sc-direction'));
@@ -1589,15 +1424,6 @@
         showContextScreen();
       });
     });
-
-    // Emotion result
-    document.getElementById('er-confirm').addEventListener('click', () => {
-      STATE.deck = buildDeck();
-      renderStack();
-      updateCardsMeta();
-      show('sc-cards');
-    });
-    document.getElementById('er-retry').addEventListener('click', () => showAkinator());
 
     // Cards
     document.getElementById('nav-skip').addEventListener('click', () => dismissTop('left'));
