@@ -7,10 +7,18 @@ export default defineContext({
   icon: '🌡️',
   sortOrder: 15,
   applicableTechniques: [
-    ...BEHAVIORAL_TECHNIQUES,
-    'box-breathing',
+    'anger-iceberg',
+    'pause-before-react',
+    'cognitive-reappraisal',
+    'stop-skill',
+    'tipp',
     'emotion-labeling',
     'check-the-facts',
+    'box-breathing',
+    ...BEHAVIORAL_TECHNIQUES.filter(t => ![
+      'anger-iceberg', 'pause-before-react', 'cognitive-reappraisal',
+      'stop-skill', 'tipp', 'emotion-labeling', 'check-the-facts', 'box-breathing',
+    ].includes(t as string)),
   ],
   i18n: {
     ja: {

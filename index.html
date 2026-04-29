@@ -899,10 +899,21 @@
     const applicable = ctx ? new Set(ctx.applicableTechniques) : null;
     const slot = detectTimeSlot();
 
-    let pool = (applicable
+    const order = ctx ? ctx.applicableTechniques : [];
+    let pool = applicable
       ? techniques.filter(tc => applicable.has(tc.id))
-      : [...techniques]
-    ).sort(() => Math.random() - 0.5);
+      : [...techniques];
+
+    // First 5 stay in context order (most relevant first), rest shuffled
+    const STABLE = 5;
+    pool.sort((a, b) => {
+      const ia = order.indexOf(a.id);
+      const ib = order.indexOf(b.id);
+      if (ia < STABLE && ib < STABLE) return ia - ib;
+      if (ia < STABLE) return -1;
+      if (ib < STABLE) return 1;
+      return Math.random() - 0.5;
+    });
 
     // Apply approach filter (OR within selected approaches)
     if (STATE.filterApproaches.size > 0) {

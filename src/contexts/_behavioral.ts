@@ -1,20 +1,21 @@
 import { SHARED_TECHNIQUES } from './_shared';
 
 // Techniques for behavioral addictions (eating, gambling, smartphone, shopping, sexual)
+// Context-specific techniques listed first so they appear at the top of the deck
 export const BEHAVIORAL_TECHNIQUES = [
-  ...SHARED_TECHNIQUES,
-  'tipp',
   'halt-check',
   'urge-delay',
   'stimulus-control',
-  'opposite-action',
-  'pros-cons-urge',
-  'ask-support',
-  'emotion-check-in',
+  'tipp',
   'behavioral-chain',
-  'please-check',
+  'pros-cons-urge',
   'behavioral-substitution',
   'chain-break',
+  'emotion-check-in',
+  'please-check',
+  'ask-support',
+  'opposite-action',
+  ...SHARED_TECHNIQUES,
 ] as const;
 
 export const behavioralBase = {
