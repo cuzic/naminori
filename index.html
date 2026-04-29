@@ -411,7 +411,7 @@
       cursor: pointer; list-style: none; user-select: none;
       display: flex; justify-content: space-between; align-items: center;
     }
-    .background-details[open] > summary { border-radius: var(--radius-card) 12px 0 0; }
+    .background-details[open] > summary { border-radius: var(--radius-card) var(--radius-card) 0 0; }
     .background-details > summary::-webkit-details-marker { display: none; }
     .background-details > summary::after { content: '▸'; font-size: 0.8rem; color: var(--text-muted); transition: transform 0.2s; }
     .background-details[open] > summary::after { transform: rotate(90deg); }
@@ -612,7 +612,7 @@
       <li>🔒 記録はすべて<strong>このデバイスのみ</strong>に保存されます</li>
     </ul>
     <p class="onboarding-note">このアプリは日常的な習慣サポートが目的です。</p>
-    <button class="primary-btn onboarding-btn" id="onboarding-start-btn">はじめる →</button>
+    <button class="primary-btn btn-interactive onboarding-btn" id="onboarding-start-btn">はじめる →</button>
   </div>
 </div>
 
@@ -624,8 +624,8 @@
     <div class="wb-title" id="wb-title"></div>
     <div class="wb-msg" id="wb-msg"></div>
     <div class="streak-badge" id="wb-streak"></div>
-    <button class="primary-btn" id="wb-start">始める →</button>
-    <button class="secondary-btn" id="wb-resume" style="display:none;margin-top:8px;"></button>
+    <button class="primary-btn btn-interactive" id="wb-start">始める →</button>
+    <button class="secondary-btn btn-interactive" id="wb-resume" style="display:none;margin-top:8px;"></button>
     <p class="welcome-disclaimer">このアプリは軽度〜中等度の習慣・衝動の問題に取り組む方向けです。重篤な依存症・精神疾患のある方は専門家にご相談ください。</p>
   </section>
 
@@ -677,8 +677,8 @@
     <div class="er-label" id="er-label"></div>
     <div class="er-desc">今、こんな気持ちかな？</div>
     <div class="er-buttons">
-      <button class="primary-btn" id="er-confirm">そう！カードを見る</button>
-      <button class="secondary-btn" id="er-retry">違う、やり直す</button>
+      <button class="primary-btn btn-interactive" id="er-confirm">そう！カードを見る</button>
+      <button class="secondary-btn btn-interactive" id="er-retry">違う、やり直す</button>
     </div>
   </section>
 
@@ -687,19 +687,19 @@
     <p class="cards-meta" id="cards-meta"></p>
     <div class="card-stack-wrap" id="card-stack"></div>
     <div class="card-nav" id="card-nav">
-      <button class="nav-btn" id="nav-skip">← 使わない</button>
-      <button class="nav-btn" id="nav-next">気になる →</button>
+      <button class="nav-btn btn-interactive" id="nav-skip">← 使わない</button>
+      <button class="nav-btn btn-interactive" id="nav-next">気になる →</button>
     </div>
     <p class="swipe-guide">ドラッグ・スワイプで次のカードへ</p>
     <div class="no-more-cards" id="no-more-msg">
       <div class="big-emoji">✨</div>
       <p>今日のカードはここまで。<br>また来てね。</p>
-      <button class="retry-btn" id="retry-btn">はじめから選ぶ</button>
+      <button class="retry-btn btn-interactive" id="retry-btn">はじめから選ぶ</button>
     </div>
     <div class="no-more-cards" id="load-error-msg" style="display:none">
       <div class="big-emoji">⚠️</div>
       <p>データの読み込みに失敗しました。<br>ページを再読み込みしてください。</p>
-      <button class="retry-btn" onclick="location.reload()">再読み込み</button>
+      <button class="retry-btn btn-interactive" onclick="location.reload()">再読み込み</button>
     </div>
   </section>
 
@@ -735,7 +735,7 @@
       </div>
     </div>
     <div class="done-btn-wrap">
-      <button class="done-btn" id="done-btn">✓ 完了した！</button>
+      <button class="done-btn btn-interactive" id="done-btn">✓ 完了した！</button>
     </div>
   </section>
 
@@ -750,14 +750,14 @@
       <div class="journal-warm" id="journal-warm"></div>
       <textarea class="journal-textarea" id="journal-textarea" placeholder="どうだった？一言でも（例：「ちょっと楽になった」）"></textarea>
       <div class="journal-privacy">入力内容はAI応答生成のためAnthropicに送信されます。保存はされません。重篤な依存症・精神疾患のある方は専門家にご相談ください。</div>
-      <button class="journal-send-btn" id="journal-send-btn">Claude に気持ちを話す</button>
+      <button class="journal-send-btn btn-interactive" id="journal-send-btn">Claude に気持ちを話す</button>
       <div class="journal-response" id="journal-response" role="status" aria-live="polite" aria-label="Claudeからの応答"></div>
       <button class="journal-skip-btn" id="journal-done-btn">終わりにする →</button>
     </div>
     <div class="crisis-footer">
       <span class="crisis-footer-label">つらいときは</span>
-      <a href="tel:0120279338" class="crisis-link">よりそいホットライン<br><strong>0120-279-338</strong></a>
-      <a href="tel:0120783556" class="crisis-link">いのちの電話<br><strong>0120-783-556</strong></a>
+      <a href="tel:0120279338" class="crisis-link" rel="noopener noreferrer">よりそいホットライン<br><strong>0120-279-338</strong></a>
+      <a href="tel:0120783556" class="crisis-link" rel="noopener noreferrer">いのちの電話<br><strong>0120-783-556</strong></a>
     </div>
   </section>
 
@@ -960,6 +960,12 @@
       history.pushState({ screen: id }, '', hash);
     }
     _suppressHashChange = false;
+
+    requestAnimationFrame(() => {
+      const el = document.getElementById(id);
+      const first = el?.querySelector('button, [tabindex="0"], a, input, textarea');
+      first?.focus({ preventScroll: true });
+    });
   }
 
   window.addEventListener('popstate', e => {
