@@ -38,4 +38,7 @@ export const SHARED_TECHNIQUES = [
   'appreciation-express',
   'reflective-question',
   'online-boundary',
+  'anger-iceberg',
+  'cognitive-reappraisal',
+  'pause-before-react',
 ] as const;
