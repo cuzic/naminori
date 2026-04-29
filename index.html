@@ -756,6 +756,15 @@
   let techniques = [];
   let contexts = {};
 
+  const wbr = s => {
+    if (s.includes('・'))
+      return s.split('・').map(p => `<span style="white-space:nowrap">${p}</span>`).join('・<wbr>');
+    const m = s.match(/^(.+?)（(.+)）$/);
+    if (m)
+      return `<span style="white-space:nowrap">${m[1]}</span><wbr><span style="white-space:nowrap">（${m[2]}）</span>`;
+    return s;
+  };
+
   // ── State ──
   const STATE = {
     direction: null,
@@ -1337,7 +1346,7 @@
     Object.entries(EMOTION_INFO).forEach(([id, info]) => {
       const btn = document.createElement('button');
       btn.className = 'aki-emo-btn';
-      btn.innerHTML = `<span class="aki-emo-icon">${info.icon}</span><span class="aki-emo-label">${info.ja}</span>`;
+      btn.innerHTML = `<span class="aki-emo-icon">${info.icon}</span><span class="aki-emo-label">${wbr(info.ja)}</span>`;
       btn.addEventListener('click', () => {
         STATE.emotion = id;
         showEmotionResult();
@@ -1365,7 +1374,7 @@
         const vars = ctx.i18n?.ja || {};
         const btn = document.createElement('button');
         btn.className = 'context-btn';
-        btn.innerHTML = `<span class="ctx-icon">${ctx.icon}</span><span class="ctx-label">${vars.label || id}</span>`;
+        btn.innerHTML = `<span class="ctx-icon">${ctx.icon}</span><span class="ctx-label">${wbr(vars.label || id)}</span>`;
         btn.addEventListener('click', () => {
           STATE.contextId = id;
           S.set('last_context', id);
