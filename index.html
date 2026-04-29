@@ -227,20 +227,33 @@
     .aki-btn-neither:hover { border-color: var(--primary); color: var(--primary); }
 
     .aki-emo-grid {
-      display: grid; grid-template-columns: repeat(3, 1fr);
-      gap: 10px; width: 100%;
+      display: flex; flex-direction: column;
+      gap: 14px; width: 100%;
+    }
+    .aki-emo-group { display: flex; flex-direction: column; gap: 8px; }
+    .aki-emo-group-label {
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.06em;
+      color: var(--text-muted); text-transform: uppercase; padding: 0 2px;
+    }
+    .aki-emo-row {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px;
     }
     .aki-emo-btn {
       background: var(--surface); border: 2px solid var(--border);
-      border-radius: 14px; padding: 16px 6px;
+      border-radius: 14px; padding: 14px 6px;
       cursor: pointer; display: flex; flex-direction: column;
-      align-items: center; gap: 7px;
+      align-items: center; gap: 6px;
       transition: all 0.15s; user-select: none;
     }
     .aki-emo-btn:hover { border-color: var(--primary); background: var(--primary-light); }
     .aki-emo-btn:active { transform: scale(0.95); }
-    .aki-emo-icon { font-size: 1.9rem; line-height: 1; }
-    .aki-emo-label { font-size: 0.8rem; font-weight: 600; color: var(--text); text-align: center; line-height: 1.3; }
+    .aki-emo-btn.positive { border-color: #b8e4b8; background: #f0faf0; }
+    .aki-emo-btn.positive:hover { border-color: var(--primary); background: var(--primary-light); }
+    @media (prefers-color-scheme: dark) {
+      .aki-emo-btn.positive { border-color: #2a4a2a; background: #1a2e1a; }
+    }
+    .aki-emo-icon { font-size: 1.8rem; line-height: 1; }
+    .aki-emo-label { font-size: 0.78rem; font-weight: 600; color: var(--text); text-align: center; line-height: 1.3; }
 
     /* ══════════════════════
        S5: Emotion Result
@@ -852,19 +865,43 @@
   };
 
   const EMOTION_INFO = {
-    anxiety:   { ja: '不安・緊張',    icon: '😰' },
-    irritated: { ja: 'イライラ',      icon: '😤' },
-    lonely:    { ja: '孤独・さみしい', icon: '🥺' },
-    empty:     { ja: '空虚・虚無',    icon: '😶' },
-    depressed: { ja: '落ち込み・疲れ', icon: '😔' },
+    // group: hard
+    anxiety:   { ja: '不安・緊張',    icon: '😰', group: 'hard' },
+    fear:      { ja: '恐れ・パニック', icon: '😱', group: 'hard' },
+    irritated: { ja: 'イライラ',      icon: '😤', group: 'hard' },
+    anger:     { ja: '怒り',          icon: '😠', group: 'hard' },
+    depressed: { ja: '落ち込み・憂鬱', icon: '😔', group: 'hard' },
+    sad:       { ja: '悲しみ',        icon: '😢', group: 'hard' },
+    lonely:    { ja: '孤独・さみしい', icon: '🥺', group: 'hard' },
+    empty:     { ja: '空虚・虚無感',  icon: '😶', group: 'hard' },
+    exhausted: { ja: '疲れ・燃え尽き', icon: '😩', group: 'hard' },
+    shame:     { ja: '恥・罪悪感',    icon: '😳', group: 'hard' },
+    hopeless:  { ja: '絶望・無力感',  icon: '💔', group: 'hard' },
+    bored:     { ja: '退屈・無気力',  icon: '😑', group: 'hard' },
+    // group: positive
+    calm:      { ja: '穏やか',        icon: '😌', group: 'positive' },
+    hopeful:   { ja: '希望・やる気',  icon: '🌱', group: 'positive' },
+    joyful:    { ja: '嬉しい・楽しい', icon: '😊', group: 'positive' },
+    grateful:  { ja: '感謝',          icon: '🙏', group: 'positive' },
   };
 
   const EMOTION_KEYS = {
     anxiety:   ['anxiety'],
+    fear:      ['anxiety', 'fear'],
     irritated: ['irritated'],
+    anger:     ['anger', 'irritated'],
+    depressed: ['depressed'],
+    sad:       ['sad', 'depressed'],
     lonely:    ['lonely'],
     empty:     ['empty'],
-    depressed: ['depressed', 'exhausted'],
+    exhausted: ['exhausted', 'depressed'],
+    shame:     ['shame'],
+    hopeless:  ['hopeless', 'depressed', 'empty'],
+    bored:     ['bored', 'empty'],
+    calm:      ['calm'],
+    hopeful:   ['hopeful'],
+    joyful:    ['joyful'],
+    grateful:  ['grateful'],
   };
 
   // ── Template engine ──
@@ -1414,15 +1451,42 @@
     const optsEl = document.getElementById('aki-options');
     optsEl.className = 'aki-options aki-emo-grid';
     optsEl.innerHTML = '';
-    Object.entries(EMOTION_INFO).forEach(([id, info]) => {
+
+    function makeBtn(id, info) {
       const btn = document.createElement('button');
-      btn.className = 'aki-emo-btn';
+      btn.className = 'aki-emo-btn' + (info.group === 'positive' ? ' positive' : '');
       btn.innerHTML = `<span class="aki-emo-icon">${info.icon}</span><span class="aki-emo-label">${wbr(info.ja)}</span>`;
-      btn.addEventListener('click', () => {
-        STATE.emotion = id;
-        showEmotionResult();
+      btn.addEventListener('click', () => { STATE.emotion = id; showEmotionResult(); });
+      return btn;
+    }
+
+    const groups = [
+      { key: 'hard',     label: 'つらい気持ち',   entries: [] },
+      { key: 'positive', label: '前向きな気持ち', entries: [] },
+    ];
+    Object.entries(EMOTION_INFO).forEach(([id, info]) => {
+      const g = groups.find(g => g.key === info.group) || groups[0];
+      g.entries.push([id, info]);
+    });
+
+    groups.forEach(({ label, entries }) => {
+      if (!entries.length) return;
+      const group = document.createElement('div');
+      group.className = 'aki-emo-group';
+      const lbl = document.createElement('div');
+      lbl.className = 'aki-emo-group-label';
+      lbl.textContent = label;
+      group.appendChild(lbl);
+
+      const rows = [];
+      for (let i = 0; i < entries.length; i += 3) rows.push(entries.slice(i, i + 3));
+      rows.forEach(row => {
+        const rowEl = document.createElement('div');
+        rowEl.className = 'aki-emo-row';
+        row.forEach(([id, info]) => rowEl.appendChild(makeBtn(id, info)));
+        group.appendChild(rowEl);
       });
-      optsEl.appendChild(btn);
+      optsEl.appendChild(group);
     });
   }
 

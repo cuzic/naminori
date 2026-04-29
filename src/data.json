@@ -8,7 +8,9 @@
       "emotions": [
         "anxiety",
         "empty",
-        "irritated"
+        "irritated",
+        "anger",
+        "fear"
       ],
       "timeSlots": [
         "night",
@@ -43,7 +45,8 @@
       "duration": 3,
       "emotions": [
         "anxiety",
-        "irritated"
+        "irritated",
+        "anger"
       ],
       "timeSlots": [
         "midnight",
@@ -79,7 +82,9 @@
       "emotions": [
         "anxiety",
         "irritated",
-        "empty"
+        "empty",
+        "anger",
+        "fear"
       ],
       "timeSlots": [
         "morning",
@@ -118,7 +123,10 @@
         "depressed",
         "empty",
         "lonely",
-        "irritated"
+        "irritated",
+        "sad",
+        "anger",
+        "fear"
       ],
       "timeSlots": [
         "night",
@@ -159,7 +167,12 @@
         "lonely",
         "depressed",
         "exhausted",
-        "empty"
+        "empty",
+        "sad",
+        "shame",
+        "anger",
+        "fear",
+        "calm"
       ],
       "timeSlots": [
         "night",
@@ -200,7 +213,11 @@
         "depressed",
         "empty",
         "lonely",
-        "exhausted"
+        "exhausted",
+        "sad",
+        "shame",
+        "anger",
+        "fear"
       ],
       "timeSlots": [
         "morning",
@@ -238,7 +255,11 @@
       "emotions": [
         "depressed",
         "exhausted",
-        "lonely"
+        "lonely",
+        "sad",
+        "shame",
+        "anger",
+        "fear"
       ],
       "timeSlots": [
         "morning",
@@ -274,7 +295,11 @@
       "emotions": [
         "anxiety",
         "irritated",
-        "depressed"
+        "depressed",
+        "sad",
+        "shame",
+        "anger",
+        "fear"
       ],
       "timeSlots": [
         "morning",
@@ -383,7 +408,9 @@
       "emotions": [
         "anxiety",
         "depressed",
-        "irritated"
+        "irritated",
+        "shame",
+        "fear"
       ],
       "timeSlots": [
         "evening",
@@ -457,7 +484,8 @@
       "emotions": [
         "depressed",
         "lonely",
-        "exhausted"
+        "exhausted",
+        "shame"
       ],
       "timeSlots": [
         "morning",
@@ -495,7 +523,10 @@
       "emotions": [
         "anxiety",
         "depressed",
-        "irritated"
+        "irritated",
+        "shame",
+        "anger",
+        "fear"
       ],
       "timeSlots": [
         "noon",
@@ -530,7 +561,8 @@
       "duration": 10,
       "emotions": [
         "anxiety",
-        "depressed"
+        "depressed",
+        "fear"
       ],
       "timeSlots": [
         "morning",
@@ -567,7 +599,12 @@
         "anxiety",
         "depressed",
         "irritated",
-        "empty"
+        "empty",
+        "sad",
+        "shame",
+        "anger",
+        "fear",
+        "hopeless"
       ],
       "timeSlots": [
         "morning",
@@ -606,7 +643,11 @@
         "anxiety",
         "depressed",
         "irritated",
-        "lonely"
+        "lonely",
+        "sad",
+        "anger",
+        "fear",
+        "calm"
       ],
       "timeSlots": [
         "night",
@@ -641,7 +682,14 @@
       "emotions": [
         "empty",
         "depressed",
-        "lonely"
+        "lonely",
+        "sad",
+        "shame",
+        "fear",
+        "hopeless",
+        "bored",
+        "calm",
+        "hopeful"
       ],
       "timeSlots": [
         "morning",
@@ -676,7 +724,10 @@
       "emotions": [
         "empty",
         "exhausted",
-        "depressed"
+        "depressed",
+        "hopeless",
+        "bored",
+        "hopeful"
       ],
       "timeSlots": [
         "morning"
@@ -710,7 +761,8 @@
       "emotions": [
         "empty",
         "exhausted",
-        "lonely"
+        "lonely",
+        "hopeless"
       ],
       "timeSlots": [
         "evening",
@@ -745,7 +797,10 @@
       "emotions": [
         "anxiety",
         "exhausted",
-        "irritated"
+        "irritated",
+        "anger",
+        "fear",
+        "calm"
       ],
       "timeSlots": [
         "morning",
@@ -783,7 +838,10 @@
       "emotions": [
         "anxiety",
         "irritated",
-        "exhausted"
+        "exhausted",
+        "anger",
+        "fear",
+        "calm"
       ],
       "timeSlots": [
         "morning",
@@ -822,7 +880,11 @@
       "emotions": [
         "anxiety",
         "empty",
-        "irritated"
+        "irritated",
+        "sad",
+        "anger",
+        "fear",
+        "calm"
       ],
       "timeSlots": [
         "morning",
@@ -860,7 +922,11 @@
       "emotions": [
         "exhausted",
         "anxiety",
-        "empty"
+        "empty",
+        "sad",
+        "anger",
+        "fear",
+        "calm"
       ],
       "timeSlots": [
         "night",
@@ -895,7 +961,9 @@
       "duration": 5,
       "emotions": [
         "empty",
-        "anxiety"
+        "anxiety",
+        "calm",
+        "joyful"
       ],
       "timeSlots": [
         "morning",
@@ -932,7 +1000,13 @@
       "emotions": [
         "depressed",
         "empty",
-        "exhausted"
+        "exhausted",
+        "sad",
+        "hopeless",
+        "calm",
+        "hopeful",
+        "joyful",
+        "grateful"
       ],
       "timeSlots": [
         "night"
@@ -966,7 +1040,10 @@
       "emotions": [
         "depressed",
         "irritated",
-        "empty"
+        "empty",
+        "shame",
+        "hopeless",
+        "hopeful"
       ],
       "timeSlots": [
         "morning",
@@ -1001,7 +1078,11 @@
       "emotions": [
         "empty",
         "exhausted",
-        "lonely"
+        "lonely",
+        "hopeless",
+        "bored",
+        "hopeful",
+        "joyful"
       ],
       "timeSlots": [
         "morning",
@@ -1036,7 +1117,9 @@
       "emotions": [
         "depressed",
         "empty",
-        "lonely"
+        "lonely",
+        "hopeless",
+        "hopeful"
       ],
       "timeSlots": [
         "night"
@@ -1069,7 +1152,9 @@
       "duration": 3,
       "emotions": [
         "depressed",
-        "exhausted"
+        "exhausted",
+        "hopeless",
+        "hopeful"
       ],
       "timeSlots": [
         "night",
@@ -1104,7 +1189,13 @@
       "emotions": [
         "depressed",
         "lonely",
-        "exhausted"
+        "exhausted",
+        "sad",
+        "shame",
+        "hopeless",
+        "calm",
+        "joyful",
+        "grateful"
       ],
       "timeSlots": [
         "morning",
@@ -1140,7 +1231,13 @@
       "duration": 5,
       "emotions": [
         "lonely",
-        "depressed"
+        "depressed",
+        "sad",
+        "shame",
+        "hopeless",
+        "calm",
+        "joyful",
+        "grateful"
       ],
       "timeSlots": [
         "night",
@@ -1175,7 +1272,10 @@
       "emotions": [
         "depressed",
         "lonely",
-        "empty"
+        "empty",
+        "sad",
+        "shame",
+        "hopeless"
       ],
       "timeSlots": [
         "night",
@@ -1210,7 +1310,11 @@
       "emotions": [
         "depressed",
         "empty",
-        "exhausted"
+        "exhausted",
+        "sad",
+        "shame",
+        "hopeless",
+        "grateful"
       ],
       "timeSlots": [
         "morning",
@@ -1245,7 +1349,9 @@
       "duration": 3,
       "emotions": [
         "anxiety",
-        "exhausted"
+        "exhausted",
+        "bored",
+        "hopeful"
       ],
       "timeSlots": [
         "evening",
@@ -1279,7 +1385,8 @@
       "duration": 2,
       "emotions": [
         "anxiety",
-        "empty"
+        "empty",
+        "bored"
       ],
       "timeSlots": [
         "evening",
@@ -1314,7 +1421,9 @@
       "duration": 3,
       "emotions": [
         "exhausted",
-        "depressed"
+        "depressed",
+        "bored",
+        "hopeful"
       ],
       "timeSlots": [
         "morning",
@@ -1382,7 +1491,9 @@
       "duration": 5,
       "emotions": [
         "exhausted",
-        "depressed"
+        "depressed",
+        "bored",
+        "joyful"
       ],
       "timeSlots": [
         "morning"
@@ -1419,7 +1530,9 @@
         "irritated",
         "empty",
         "lonely",
-        "exhausted"
+        "exhausted",
+        "sad",
+        "anger"
       ],
       "timeSlots": [
         "night"
@@ -1487,7 +1600,9 @@
       "duration": 2,
       "emotions": [
         "exhausted",
-        "depressed"
+        "depressed",
+        "bored",
+        "hopeful"
       ],
       "timeSlots": [
         "night"
@@ -1555,7 +1670,8 @@
       "emotions": [
         "depressed",
         "exhausted",
-        "empty"
+        "empty",
+        "hopeful"
       ],
       "timeSlots": [
         "night"
@@ -1589,7 +1705,9 @@
       "emotions": [
         "anxiety",
         "irritated",
-        "exhausted"
+        "exhausted",
+        "sad",
+        "anger"
       ],
       "timeSlots": [
         "morning",
@@ -1627,7 +1745,9 @@
       "emotions": [
         "irritated",
         "lonely",
-        "depressed"
+        "depressed",
+        "sad",
+        "anger"
       ],
       "timeSlots": [
         "morning",
@@ -1699,7 +1819,11 @@
       "emotions": [
         "anxiety",
         "irritated",
-        "exhausted"
+        "exhausted",
+        "sad",
+        "anger",
+        "fear",
+        "calm"
       ],
       "timeSlots": [
         "night",
@@ -1734,7 +1858,11 @@
       "emotions": [
         "empty",
         "depressed",
-        "anxiety"
+        "anxiety",
+        "shame",
+        "fear",
+        "hopeless",
+        "calm"
       ],
       "timeSlots": [
         "morning",
@@ -1772,7 +1900,9 @@
       "emotions": [
         "anxiety",
         "empty",
-        "exhausted"
+        "exhausted",
+        "hopeless",
+        "calm"
       ],
       "timeSlots": [
         "morning",
@@ -1810,7 +1940,10 @@
       "emotions": [
         "anxiety",
         "irritated",
-        "empty"
+        "empty",
+        "sad",
+        "calm",
+        "joyful"
       ],
       "timeSlots": [
         "morning",
@@ -1847,7 +1980,9 @@
         "depressed",
         "exhausted",
         "irritated",
-        "anxiety"
+        "anxiety",
+        "sad",
+        "shame"
       ],
       "timeSlots": [
         "morning",
@@ -1885,7 +2020,13 @@
       "emotions": [
         "depressed",
         "empty",
-        "exhausted"
+        "exhausted",
+        "hopeless",
+        "bored",
+        "calm",
+        "hopeful",
+        "joyful",
+        "grateful"
       ],
       "timeSlots": [
         "night",
@@ -1921,7 +2062,10 @@
       "emotions": [
         "empty",
         "depressed",
-        "exhausted"
+        "exhausted",
+        "bored",
+        "calm",
+        "joyful"
       ],
       "timeSlots": [
         "noon",
@@ -1956,7 +2100,14 @@
       "emotions": [
         "empty",
         "depressed",
-        "lonely"
+        "lonely",
+        "sad",
+        "hopeless",
+        "bored",
+        "calm",
+        "hopeful",
+        "joyful",
+        "grateful"
       ],
       "timeSlots": [
         "evening",
@@ -1991,7 +2142,14 @@
       "emotions": [
         "empty",
         "lonely",
-        "depressed"
+        "depressed",
+        "sad",
+        "hopeless",
+        "bored",
+        "calm",
+        "hopeful",
+        "joyful",
+        "grateful"
       ],
       "timeSlots": [
         "morning",
@@ -2026,7 +2184,10 @@
       "emotions": [
         "lonely",
         "depressed",
-        "anxiety"
+        "anxiety",
+        "sad",
+        "hopeless",
+        "grateful"
       ],
       "timeSlots": [
         "noon",
@@ -2060,7 +2221,10 @@
       "emotions": [
         "lonely",
         "anxiety",
-        "empty"
+        "empty",
+        "sad",
+        "hopeless",
+        "grateful"
       ],
       "timeSlots": [
         "noon",
@@ -2198,7 +2362,8 @@
       "emotions": [
         "exhausted",
         "depressed",
-        "empty"
+        "empty",
+        "bored"
       ],
       "timeSlots": [
         "morning"
@@ -2367,7 +2532,12 @@
       "emotions": [
         "depressed",
         "irritated",
-        "empty"
+        "empty",
+        "sad",
+        "shame",
+        "anger",
+        "fear",
+        "hopeless"
       ],
       "timeSlots": [
         "night",
@@ -2476,7 +2646,9 @@
       "emotions": [
         "anxiety",
         "irritated",
-        "depressed"
+        "depressed",
+        "anger",
+        "fear"
       ],
       "timeSlots": [
         "morning",
@@ -2512,7 +2684,10 @@
       "emotions": [
         "depressed",
         "empty",
-        "exhausted"
+        "exhausted",
+        "sad",
+        "hopeless",
+        "hopeful"
       ],
       "timeSlots": [
         "morning",
@@ -2546,7 +2721,12 @@
       "duration": 5,
       "emotions": [
         "anxiety",
-        "exhausted"
+        "exhausted",
+        "sad",
+        "anger",
+        "fear",
+        "hopeless",
+        "hopeful"
       ],
       "timeSlots": [
         "morning",
@@ -2690,7 +2870,9 @@
         "anxiety",
         "depressed",
         "empty",
-        "exhausted"
+        "exhausted",
+        "shame",
+        "fear"
       ],
       "timeSlots": [
         "morning",
@@ -2763,7 +2945,11 @@
       "emotions": [
         "depressed",
         "empty",
-        "exhausted"
+        "exhausted",
+        "sad",
+        "hopeless",
+        "bored",
+        "hopeful"
       ],
       "timeSlots": [
         "morning",
@@ -2867,7 +3053,8 @@
       "duration": 5,
       "emotions": [
         "anxiety",
-        "depressed"
+        "depressed",
+        "fear"
       ],
       "timeSlots": [
         "morning",
@@ -2970,7 +3157,8 @@
       "duration": 5,
       "emotions": [
         "anxiety",
-        "depressed"
+        "depressed",
+        "hopeful"
       ],
       "timeSlots": [
         "morning",
@@ -3002,7 +3190,8 @@
       "duration": 5,
       "emotions": [
         "depressed",
-        "exhausted"
+        "exhausted",
+        "bored"
       ],
       "timeSlots": [
         "morning",
@@ -3034,7 +3223,8 @@
       "duration": 10,
       "emotions": [
         "anxiety",
-        "exhausted"
+        "exhausted",
+        "bored"
       ],
       "timeSlots": [
         "morning",
@@ -3068,7 +3258,8 @@
       "emotions": [
         "exhausted",
         "depressed",
-        "empty"
+        "empty",
+        "bored"
       ],
       "timeSlots": [
         "morning",
@@ -3101,7 +3292,8 @@
       "duration": 5,
       "emotions": [
         "anxiety",
-        "exhausted"
+        "exhausted",
+        "hopeful"
       ],
       "timeSlots": [
         "morning"
@@ -3271,7 +3463,8 @@
       "duration": 15,
       "emotions": [
         "depressed",
-        "empty"
+        "empty",
+        "anger"
       ],
       "timeSlots": [
         "morning",
@@ -3517,7 +3710,9 @@
         "depressed",
         "anxiety",
         "irritated",
-        "empty"
+        "empty",
+        "shame",
+        "anger"
       ],
       "timeSlots": [
         "morning",
@@ -3553,7 +3748,11 @@
       "emotions": [
         "depressed",
         "empty",
-        "exhausted"
+        "exhausted",
+        "hopeless",
+        "bored",
+        "hopeful",
+        "joyful"
       ],
       "timeSlots": [
         "morning",
@@ -3587,7 +3786,12 @@
       "emotions": [
         "depressed",
         "lonely",
-        "empty"
+        "empty",
+        "sad",
+        "hopeless",
+        "calm",
+        "joyful",
+        "grateful"
       ],
       "timeSlots": [
         "morning",
@@ -3621,7 +3825,10 @@
       "emotions": [
         "depressed",
         "empty",
-        "exhausted"
+        "exhausted",
+        "hopeless",
+        "hopeful",
+        "joyful"
       ],
       "timeSlots": [
         "morning",
@@ -3652,8 +3859,20 @@
       "icon": "🔬",
       "approach": "CBT",
       "duration": 8,
-      "emotions": ["anxiety", "empty", "irritated", "sad", "shame"],
-      "timeSlots": ["evening", "night", "morning"],
+      "emotions": [
+        "anxiety",
+        "empty",
+        "irritated",
+        "sad",
+        "shame",
+        "anger",
+        "fear"
+      ],
+      "timeSlots": [
+        "evening",
+        "night",
+        "morning"
+      ],
       "i18n": {
         "ja": {
           "name": "感情粒度トレーニング",
@@ -3680,8 +3899,16 @@
       "icon": "⚓",
       "approach": "CBT",
       "duration": 15,
-      "emotions": ["anxiety", "irritated", "empty"],
-      "timeSlots": ["morning", "evening", "night"],
+      "emotions": [
+        "anxiety",
+        "irritated",
+        "empty"
+      ],
+      "timeSlots": [
+        "morning",
+        "evening",
+        "night"
+      ],
       "i18n": {
         "ja": {
           "name": "条件付けコーピング",
@@ -3708,8 +3935,20 @@
       "icon": "🫁",
       "approach": "マインドフルネス",
       "duration": 3,
-      "emotions": ["anxiety", "irritated", "empty"],
-      "timeSlots": ["morning", "evening", "night", "midnight"],
+      "emotions": [
+        "anxiety",
+        "irritated",
+        "empty",
+        "sad",
+        "anger",
+        "fear"
+      ],
+      "timeSlots": [
+        "morning",
+        "evening",
+        "night",
+        "midnight"
+      ],
       "i18n": {
         "ja": {
           "name": "ソマティック・リセット",
@@ -3736,8 +3975,17 @@
       "icon": "⛓️",
       "approach": "DBT",
       "duration": 2,
-      "emotions": ["anxiety", "empty", "irritated"],
-      "timeSlots": ["night", "midnight", "evening"],
+      "emotions": [
+        "anxiety",
+        "empty",
+        "irritated",
+        "anger"
+      ],
+      "timeSlots": [
+        "night",
+        "midnight",
+        "evening"
+      ],
       "i18n": {
         "ja": {
           "name": "行動連鎖の遮断",
