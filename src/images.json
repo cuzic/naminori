@@ -514,6 +514,211 @@
       "name": "best-possible-self",
       "prompt": "A person standing on a hilltop at sunrise, arms relaxed, looking toward a bright horizon. Soft watercolor illustration, warm pastel earth tones, gentle natural lighting. No text, no letters, no numbers.",
       "aspectRatio": "4:3"
+    },
+    {
+      "name": "emotional-granularity",
+      "prompt": "A detailed color spectrum wheel with many subtle gradient hues, each shade softly blending into the next, like a refined emotional palette. Soft watercolor illustration, warm pastel earth tones, gentle natural lighting. No text, no letters, no numbers.",
+      "aspectRatio": "4:3"
+    },
+    {
+      "name": "coping-anchor",
+      "prompt": "A small decorative anchor resting on a calm shoreline at dusk, golden light reflecting on gentle waves. Soft watercolor illustration, warm pastel earth tones, gentle natural lighting. No text, no letters, no numbers.",
+      "aspectRatio": "4:3"
+    },
+    {
+      "name": "somatic-reset",
+      "prompt": "A person gently shaking both hands outward, releasing tension, soft motion blur around the fingertips, standing in soft morning light. Soft watercolor illustration, warm pastel earth tones, gentle natural lighting. No text, no letters, no numbers.",
+      "aspectRatio": "4:3"
+    },
+    {
+      "name": "chain-break",
+      "prompt": "A single chain link breaking apart with a gentle burst of light, other links falling away softly. Soft watercolor illustration, warm pastel earth tones, gentle natural lighting. No text, no letters, no numbers.",
+      "aspectRatio": "4:3"
+    },
+    {
+      "name": "nvc",
+      "prompt": "Two pairs of hands reaching toward each other with a small glowing heart between them, against a soft misty background. Soft watercolor illustration, warm pastel earth tones, gentle natural lighting. No text, no letters, no numbers.",
+      "aspectRatio": "4:3"
+    },
+    {
+      "name": "assertion-training",
+      "prompt": "A figure standing upright and centered with arms relaxed at sides, surrounded by gentle golden light, embodying calm confidence. Soft watercolor illustration, warm pastel earth tones, gentle natural lighting. No text, no letters, no numbers.",
+      "aspectRatio": "4:3"
+    },
+    {
+      "name": "boundary-message",
+      "prompt": "A low white wooden fence with wildflowers growing on one side, a clear open path beyond, soft morning mist. Soft watercolor illustration, warm pastel earth tones, gentle natural lighting. No text, no letters, no numbers.",
+      "aspectRatio": "4:3"
+    },
+    {
+      "name": "active-listening",
+      "prompt": "Two figures sitting across from each other, one leaning forward attentively, gentle warm light glowing between them. Soft watercolor illustration, warm pastel earth tones, gentle natural lighting. No text, no letters, no numbers.",
+      "aspectRatio": "4:3"
+    },
+    {
+      "name": "repair-talk",
+      "prompt": "Two hands reaching toward each other across a small gap, soft light illuminating where they almost touch. Soft watercolor illustration, warm pastel earth tones, gentle natural lighting. No text, no letters, no numbers.",
+      "aspectRatio": "4:3"
+    },
+    {
+      "name": "sensory-refuge",
+      "prompt": "A cozy nook with a soft knitted blanket, a small candle flame, and a potted plant on a windowsill in gentle afternoon light. Soft watercolor illustration, warm pastel earth tones, gentle natural lighting. No text, no letters, no numbers.",
+      "aspectRatio": "4:3"
+    },
+    {
+      "name": "social-script",
+      "prompt": "A soft speech bubble floating in warm air with a winding gentle path drawn inside it, suggesting a conversation route. Soft watercolor illustration, warm pastel earth tones, gentle natural lighting. No text, no letters, no numbers.",
+      "aspectRatio": "4:3"
+    },
+    {
+      "name": "assertive-refusal",
+      "prompt": "A person calmly extending a hand palm-forward in a gentle but firm gesture, a soft protective aura surrounding them, warm light. Soft watercolor illustration, warm pastel earth tones, gentle natural lighting. No text, no letters, no numbers.",
+      "aspectRatio": "4:3"
+    },
+    {
+      "name": "time-out-request",
+      "prompt": "A figure gently stepping back from a conversation with one hand raised peacefully, creating space, soft light streaming in from the side. Soft watercolor illustration, warm pastel earth tones, gentle natural lighting. No text, no letters, no numbers.",
+      "aspectRatio": "4:3"
+    },
+    {
+      "name": "recovery-disclosure",
+      "prompt": "A person carefully opening a small glowing box, soft golden light spilling out, another figure nearby receiving the light warmly. Soft watercolor illustration, warm pastel earth tones, gentle natural lighting. No text, no letters, no numbers.",
+      "aspectRatio": "4:3"
+    },
+    {
+      "name": "gradual-sharing",
+      "prompt": "Concentric ripple circles on a still pond at dawn, each ring expanding gently outward from a single drop, reflecting warm sky. Soft watercolor illustration, warm pastel earth tones, gentle natural lighting. No text, no letters, no numbers.",
+      "aspectRatio": "4:3"
+    },
+    {
+      "name": "concrete-request",
+      "prompt": "A simple notepad with one specific item circled in soft pencil, a gentle ray of light highlighting it, surrounded by warm calm light. Soft watercolor illustration, warm pastel earth tones, gentle natural lighting. No text, no letters, no numbers.",
+      "aspectRatio": "4:3"
+    },
+    {
+      "name": "emotion-signal",
+      "prompt": "A simple thermometer with a warm gradient from cool blue at bottom to soft orange at top, glowing gently against a muted background. Soft watercolor illustration, warm pastel earth tones, gentle natural lighting. No text, no letters, no numbers.",
+      "aspectRatio": "4:3"
+    },
+    {
+      "name": "i-message",
+      "prompt": "A speech bubble containing a small glowing heart at its center, floating above a figure's chest, warm golden light. Soft watercolor illustration, warm pastel earth tones, gentle natural lighting. No text, no letters, no numbers.",
+      "aspectRatio": "4:3"
+    },
+    {
+      "name": "appreciation-express",
+      "prompt": "One hand gently offering a single wildflower to an open waiting hand, soft afternoon light illuminating the exchange. Soft watercolor illustration, warm pastel earth tones, gentle natural lighting. No text, no letters, no numbers.",
+      "aspectRatio": "4:3"
+    },
+    {
+      "name": "reflective-question",
+      "prompt": "A delicate magnifying glass hovering over a calm pool, revealing soft glowing details beneath the surface. Soft watercolor illustration, warm pastel earth tones, gentle natural lighting. No text, no letters, no numbers.",
+      "aspectRatio": "4:3"
+    },
+    {
+      "name": "online-boundary",
+      "prompt": "A smartphone lying face-down on a wooden surface beside a small potted succulent, soft warm evening light creating a calm and peaceful scene. Soft watercolor illustration, warm pastel earth tones, gentle natural lighting. No text, no letters, no numbers.",
+      "aspectRatio": "4:3"
+    },
+    {
+      "name": "anger-iceberg",
+      "prompt": "A majestic iceberg in calm arctic waters, only a small peak visible above the waterline, deep blue hues below, soft misty sky above. Soft watercolor illustration, warm pastel earth tones, gentle natural lighting. No text, no letters, no numbers.",
+      "aspectRatio": "4:3"
+    },
+    {
+      "name": "cognitive-reappraisal",
+      "prompt": "A glass prism catching white light and refracting it into a gentle rainbow spectrum, resting on a sunlit windowsill. Soft watercolor illustration, warm pastel earth tones, gentle natural lighting. No text, no letters, no numbers.",
+      "aspectRatio": "4:3"
+    },
+    {
+      "name": "pause-before-react",
+      "prompt": "An hourglass with sand suspended mid-fall, frozen in a quiet moment of time, soft golden morning light. Soft watercolor illustration, warm pastel earth tones, gentle natural lighting. No text, no letters, no numbers.",
+      "aspectRatio": "4:3"
+    },
+    {
+      "name": "worry-time",
+      "prompt": "A simple calendar page with one soft circle drawn around a morning time slot, a warm cup of tea resting beside it. Soft watercolor illustration, warm pastel earth tones, gentle natural lighting. No text, no letters, no numbers.",
+      "aspectRatio": "4:3"
+    },
+    {
+      "name": "worry-tree",
+      "prompt": "A gentle tree with two main branches diverging left and right, soft leaves catching morning light filtering through. Soft watercolor illustration, warm pastel earth tones, gentle natural lighting. No text, no letters, no numbers.",
+      "aspectRatio": "4:3"
+    },
+    {
+      "name": "good-enough",
+      "prompt": "A hand drawing a simple imperfect circle in pencil on white paper, a gentle glow around it suggesting completion and acceptance. Soft watercolor illustration, warm pastel earth tones, gentle natural lighting. No text, no letters, no numbers.",
+      "aspectRatio": "4:3"
+    },
+    {
+      "name": "energy-audit",
+      "prompt": "A simple battery icon softly glowing at half charge, warm golden light emanating from its sides, against a muted earthy background. Soft watercolor illustration, warm pastel earth tones, gentle natural lighting. No text, no letters, no numbers.",
+      "aspectRatio": "4:3"
+    },
+    {
+      "name": "rest-types",
+      "prompt": "Seven small vignettes arranged in a gentle circle, each showing a different kind of rest: sleeping, reading, painting, sitting in nature, talking, meditating, stargazing under soft light. Soft watercolor illustration, warm pastel earth tones, gentle natural lighting. No text, no letters, no numbers.",
+      "aspectRatio": "4:3"
+    },
+    {
+      "name": "strengths-inventory",
+      "prompt": "An open wooden box revealing various glowing gems and small treasures inside, warm light spilling out, resting on soft cloth. Soft watercolor illustration, warm pastel earth tones, gentle natural lighting. No text, no letters, no numbers.",
+      "aspectRatio": "4:3"
+    },
+    {
+      "name": "connection-plan",
+      "prompt": "A hand-drawn map with soft dots connected by gentle curving paths, one path highlighted with warm golden light. Soft watercolor illustration, warm pastel earth tones, gentle natural lighting. No text, no letters, no numbers.",
+      "aspectRatio": "4:3"
+    },
+    {
+      "name": "self-focus",
+      "prompt": "A single wildflower standing centered in a soft meadow, gentle light focusing on it while the background softly blurs away. Soft watercolor illustration, warm pastel earth tones, gentle natural lighting. No text, no letters, no numbers.",
+      "aspectRatio": "4:3"
+    },
+    {
+      "name": "detachment",
+      "prompt": "Two birds sitting on the same branch with a gentle space between them, both gazing calmly into the distance, warm golden light. Soft watercolor illustration, warm pastel earth tones, gentle natural lighting. No text, no letters, no numbers.",
+      "aspectRatio": "4:3"
+    },
+    {
+      "name": "exposure-ladder",
+      "prompt": "A simple wooden ladder ascending a gentle misty hillside, each rung softly illuminated, leading toward warm light above. Soft watercolor illustration, warm pastel earth tones, gentle natural lighting. No text, no letters, no numbers.",
+      "aspectRatio": "4:3"
+    },
+    {
+      "name": "inner-critic",
+      "prompt": "Two overlapping speech bubbles side by side, one shadowed and one glowing warmly, against a soft muted background. Soft watercolor illustration, warm pastel earth tones, gentle natural lighting. No text, no letters, no numbers.",
+      "aspectRatio": "4:3"
+    },
+    {
+      "name": "shame-resilience",
+      "prompt": "A ceramic vase with golden cracks running through it in kintsugi style, the golden seams glowing warmly, soft light from the side. Soft watercolor illustration, warm pastel earth tones, gentle natural lighting. No text, no letters, no numbers.",
+      "aspectRatio": "4:3"
+    },
+    {
+      "name": "work-detach",
+      "prompt": "A figure gently closing a door behind them, stepping from an indoor space into soft outdoor daylight, a peaceful transition. Soft watercolor illustration, warm pastel earth tones, gentle natural lighting. No text, no letters, no numbers.",
+      "aspectRatio": "4:3"
+    },
+    {
+      "name": "needs-inventory",
+      "prompt": "A small open notebook showing simple gentle icons representing basic human needs — a sun, a water drop, a heart, an open hand — in soft morning light. Soft watercolor illustration, warm pastel earth tones, gentle natural lighting. No text, no letters, no numbers.",
+      "aspectRatio": "4:3"
+    },
+    {
+      "name": "community-find",
+      "prompt": "A warm cluster of glowing lights nestled in a gentle valley at dusk, suggesting a welcoming village, soft mist in the surrounding air. Soft watercolor illustration, warm pastel earth tones, gentle natural lighting. No text, no letters, no numbers.",
+      "aspectRatio": "4:3"
+    },
+    {
+      "name": "self-distancing",
+      "prompt": "A figure gently holding a small snow globe and observing the scene within it from a calm distance, soft afternoon light. Soft watercolor illustration, warm pastel earth tones, gentle natural lighting. No text, no letters, no numbers.",
+      "aspectRatio": "4:3"
+    },
+    {
+      "name": "rumination-interrupt",
+      "prompt": "A circular spiral of soft flowing lines suddenly interrupted by a gentle beam of light breaking the loop, against a misty background. Soft watercolor illustration, warm pastel earth tones, gentle natural lighting. No text, no letters, no numbers.",
+      "aspectRatio": "4:3"
     }
   ]
 }
