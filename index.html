@@ -16,6 +16,16 @@
       --shadow: 0 4px 20px rgba(0,0,0,0.10);
       --shadow-lg: 0 8px 40px rgba(0,0,0,0.15);
       --radius: 20px;
+      --radius-pill: 50px;
+      --radius-card: 12px;
+      --radius-md:   16px;
+      --primary-dark: #a06020;
+      --detail-hero-gradient: linear-gradient(135deg, #7c6fc4 0%, #b09ee0 50%, #e0c8f0 100%);
+      --crisis-footer-bg:     #f5ede8;
+      --crisis-footer-border: #e8d0c8;
+      --crisis-link-bg:       #fff;
+      --crisis-link-border:   #e8d0c8;
+      --crisis-link-color:    var(--text);
       --card-w: min(360px, calc(100vw - 48px));
       --card-h: min(520px, calc(100svh - 220px));
     }
@@ -30,11 +40,20 @@
         --border: #3a2f26;
         --shadow: 0 4px 20px rgba(0,0,0,0.40);
         --shadow-lg: 0 8px 40px rgba(0,0,0,0.55);
+        --detail-hero-gradient: linear-gradient(135deg, #3d2f6e 0%, #5a4490 50%, #7a5eaa 100%);
+        --crisis-footer-bg:     #211810;
+        --crisis-footer-border: #3a2520;
+        --crisis-link-bg:       #2a1c18;
+        --crisis-link-border:   #5a3830;
+        --crisis-link-color:    #e08080;
       }
-      .detail-hero { background: linear-gradient(135deg, #3d2f6e 0%, #5a4490 50%, #7a5eaa 100%); }
-      .crisis-footer { background: #211810; border-top-color: #3a2520; }
-      .crisis-link { background: #2a1c18; border-color: #5a3830; color: #e08080; }
-      .crisis-link:hover { background: #321e1a; }
+    }
+
+    .btn-interactive {
+      transition: transform 0.15s;
+    }
+    .btn-interactive:active {
+      transform: scale(0.97);
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
@@ -82,21 +101,19 @@
 
     .primary-btn {
       padding: 16px 32px; background: var(--primary); color: #fff;
-      border: none; border-radius: 50px;
+      border: none; border-radius: var(--radius-pill);
       font-size: 1rem; font-weight: 700; cursor: pointer;
       transition: transform 0.15s, background 0.15s; width: 100%; max-width: 280px;
     }
-    .primary-btn:hover { background: #a06020; }
-    .primary-btn:active { transform: scale(0.97); }
+    .primary-btn:hover { background: var(--primary-dark); }
     .primary-btn:focus-visible { outline: 3px solid var(--primary); outline-offset: 3px; }
     .secondary-btn {
       padding: 12px 24px; background: transparent; color: var(--text-muted);
-      border: 2px solid var(--border); border-radius: 50px;
+      border: 2px solid var(--border); border-radius: var(--radius-pill);
       font-size: 0.9rem; font-weight: 600; cursor: pointer;
       transition: all 0.15s; width: 100%; max-width: 280px;
     }
     .secondary-btn:hover { border-color: var(--primary); color: var(--primary); }
-    .secondary-btn:active { transform: scale(0.97); }
     .secondary-btn:focus-visible { outline: 3px solid var(--primary); outline-offset: 3px; }
 
     /* ══════════════════════
@@ -113,7 +130,7 @@
     .streak-badge {
       display: none;
       background: var(--primary-light); color: var(--primary);
-      border-radius: 50px; padding: 8px 20px;
+      border-radius: var(--radius-pill); padding: 8px 20px;
       font-size: 0.9rem; font-weight: 700;
       margin-bottom: 24px;
     }
@@ -156,14 +173,13 @@
     }
     .context-btn {
       background: var(--surface); border: 2px solid var(--border);
-      border-radius: 16px; padding: 18px 12px;
+      border-radius: var(--radius-md); padding: 18px 12px;
       cursor: pointer; display: flex; flex-direction: row;
       align-items: center; gap: 12px;
       transition: all 0.15s; user-select: none;
       min-height: 64px;
     }
     .context-btn:hover { border-color: var(--primary); background: var(--primary-light); }
-    .context-btn:active { transform: scale(0.97); }
     .context-btn:focus-visible { outline: 3px solid var(--primary); outline-offset: 3px; }
     .ctx-icon { font-size: 1.8rem; flex-shrink: 0; }
     .ctx-label { font-size: 0.86rem; font-weight: 600; color: var(--text); text-align: left; line-height: 1.35; }
@@ -190,7 +206,7 @@
     }
     .aki-btn {
       background: var(--surface); border: 2px solid var(--border);
-      border-radius: 16px; padding: 20px 24px;
+      border-radius: var(--radius-md); padding: 20px 24px;
       font-size: 0.95rem; font-weight: 600; color: var(--text);
       cursor: pointer; text-align: left;
       transition: all 0.15s; user-select: none;
@@ -203,7 +219,7 @@
     .aki-emo-btn:focus-visible { outline: 3px solid var(--primary); outline-offset: 3px; }
     .aki-btn-neither {
       background: transparent; border: 1px dashed var(--border);
-      border-radius: 12px; padding: 12px 20px;
+      border-radius: var(--radius-card); padding: 12px 20px;
       font-size: 0.85rem; color: var(--text-muted);
       cursor: pointer; text-align: center;
       transition: all 0.15s; user-select: none; width: 100%;
@@ -285,7 +301,7 @@
     .card-approach {
       display: inline-flex; align-items: center;
       font-size: 0.72rem; font-weight: 700;
-      padding: 4px 10px; border-radius: 50px;
+      padding: 4px 10px; border-radius: var(--radius-pill);
       margin-bottom: 12px; width: fit-content;
     }
     .card-icon { font-size: 2.6rem; margin-bottom: 10px; line-height: 1; }
@@ -306,12 +322,11 @@
     .nav-btn {
       display: flex; align-items: center; gap: 6px;
       padding: 10px 20px; background: var(--surface);
-      border: 2px solid var(--border); border-radius: 50px;
+      border: 2px solid var(--border); border-radius: var(--radius-pill);
       font-size: 0.85rem; font-weight: 600; color: var(--text-muted);
       cursor: pointer; transition: all 0.15s;
     }
     .nav-btn:hover { border-color: var(--primary); color: var(--primary); background: var(--primary-light); }
-    .nav-btn:active { transform: scale(0.96); }
     .swipe-guide { margin-top: 8px; font-size: 0.72rem; color: var(--text-muted); text-align: center; }
 
     .no-more-cards {
@@ -323,7 +338,7 @@
     .retry-btn {
       margin-top: 24px; padding: 14px 32px;
       background: var(--primary); color: #fff;
-      border: none; border-radius: 50px;
+      border: none; border-radius: var(--radius-pill);
       font-size: 0.95rem; font-weight: 700; cursor: pointer;
     }
 
@@ -340,7 +355,7 @@
     .detail-hero {
       position: relative; width: 100%;
       aspect-ratio: 4/3; max-height: 300px;
-      background: linear-gradient(135deg, #7c6fc4 0%, #b09ee0 50%, #e0c8f0 100%);
+      background: var(--detail-hero-gradient);
       overflow: hidden; flex-shrink: 0;
     }
     .detail-hero-img {
@@ -389,14 +404,14 @@
       background: var(--surface); border: 1px solid var(--border);
       border-radius: 0 0 12px 12px; margin-top: 0;
     }
-    .background-details { border-radius: 12px; overflow: hidden; }
+    .background-details { border-radius: var(--radius-card); overflow: hidden; }
     .background-details > summary {
       padding: 10px 16px; background: var(--surface);
-      border: 1px solid var(--border); border-radius: 12px;
+      border: 1px solid var(--border); border-radius: var(--radius-card);
       cursor: pointer; list-style: none; user-select: none;
       display: flex; justify-content: space-between; align-items: center;
     }
-    .background-details[open] > summary { border-radius: 12px 12px 0 0; }
+    .background-details[open] > summary { border-radius: var(--radius-card) 12px 0 0; }
     .background-details > summary::-webkit-details-marker { display: none; }
     .background-details > summary::after { content: '▸'; font-size: 0.8rem; color: var(--text-muted); transition: transform 0.2s; }
     .background-details[open] > summary::after { transform: rotate(90deg); }
@@ -432,11 +447,10 @@
     .done-btn {
       width: 100%;
       padding: 18px; background: var(--primary); color: #fff;
-      border: none; border-radius: 50px; font-size: 1rem; font-weight: 700;
+      border: none; border-radius: var(--radius-pill); font-size: 1rem; font-weight: 700;
       cursor: pointer; transition: transform 0.15s, background 0.15s;
     }
-    .done-btn:hover { background: #a06020; }
-    .done-btn:active { transform: scale(0.97); }
+    .done-btn:hover { background: var(--primary-dark); }
 
     /* ── Badge colors ── */
     .badge-dbt      { background: #fde8d8; color: #c04010; }
@@ -473,7 +487,7 @@
     .journal-textarea {
       width: 100%; min-height: 120px;
       background: var(--surface); border: 2px solid var(--border);
-      border-radius: 12px; padding: 14px 16px;
+      border-radius: var(--radius-card); padding: 14px 16px;
       font-family: inherit; font-size: 0.95rem; line-height: 1.7;
       color: var(--text); resize: vertical;
       transition: border-color 0.15s;
@@ -481,15 +495,14 @@
     .journal-textarea:focus { outline: none; border-color: var(--primary); }
     .journal-send-btn {
       padding: 14px; background: var(--primary); color: #fff;
-      border: none; border-radius: 50px; font-size: 0.95rem; font-weight: 700;
+      border: none; border-radius: var(--radius-pill); font-size: 0.95rem; font-weight: 700;
       cursor: pointer; transition: transform 0.15s, background 0.15s; width: 100%;
     }
-    .journal-send-btn:hover { background: #a06020; }
-    .journal-send-btn:active { transform: scale(0.97); }
+    .journal-send-btn:hover { background: var(--primary-dark); }
     .journal-send-btn:disabled { opacity: 0.5; cursor: not-allowed; }
     .journal-response {
       display: none; background: var(--surface); border: 1px solid var(--border);
-      border-radius: 12px; padding: 16px 18px;
+      border-radius: var(--radius-card); padding: 16px 18px;
       font-size: 0.9rem; line-height: 1.8; color: var(--text);
     }
     .journal-response-label { font-weight: 700; color: var(--primary); }
@@ -505,7 +518,7 @@
     }
     .crisis-footer {
       margin-top: auto; width: 100%; padding: 14px 20px 20px;
-      background: #fff8f5; border-top: 1px solid #f0d8d0;
+      background: var(--crisis-footer-bg); border-top: 1px solid var(--crisis-footer-border);
       display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
     }
     .crisis-footer-label {
@@ -514,11 +527,11 @@
     }
     .crisis-link {
       flex: 1; min-width: 140px; padding: 10px 12px;
-      background: #fff; border: 1px solid #e8c4b8; border-radius: 10px;
-      color: #c04040; text-decoration: none; font-size: 0.75rem;
+      background: var(--crisis-link-bg); border: 1px solid var(--crisis-link-border); border-radius: 10px;
+      color: var(--crisis-link-color); text-decoration: none; font-size: 0.75rem;
       line-height: 1.5; text-align: center; transition: background 0.15s;
     }
-    .crisis-link:hover { background: #fff0ee; }
+    .crisis-link:hover { background: var(--crisis-link-bg); filter: brightness(0.92); }
     .crisis-link strong { display: block; font-size: 0.9rem; letter-spacing: 0.04em; }
 
     /* ══════════════════════
@@ -533,7 +546,7 @@
     .done-msg { color: var(--text-muted); line-height: 1.8; margin-bottom: 32px; font-size: 0.95rem; }
     .back-home-btn {
       padding: 16px 36px; background: var(--primary); color: #fff;
-      border: none; border-radius: 50px; font-size: 1rem; font-weight: 700; cursor: pointer;
+      border: none; border-radius: var(--radius-pill); font-size: 1rem; font-weight: 700; cursor: pointer;
     }
 
     @media (pointer: fine) {
@@ -1077,6 +1090,7 @@
   // ── Swipe ──
   function attachSwipe(card, onTap) {
     let sx = 0, sy = 0, dx = 0, dragging = false;
+    let rafId = null;
     const hL = card.querySelector('.swipe-hint-left');
     const hR = card.querySelector('.swipe-hint-right');
     const onStart = (x, y) => { sx = x; sy = y; dx = 0; dragging = true; card.classList.add('is-dragging'); };
@@ -1085,10 +1099,13 @@
       dx = x - sx;
       const dy = y - sy;
       if (Math.abs(dx) < Math.abs(dy) * 0.5 && Math.abs(dx) < 20) return;
-      card.style.transform = `translateX(${dx}px) rotate(${dx / CARD_ROTATE_DIV}deg)`;
-      const r = Math.min(Math.abs(dx) / SWIPE_THRESHOLD, 1);
-      hL.style.opacity = dx < 0 ? r : 0;
-      hR.style.opacity = dx > 0 ? r : 0;
+      if (rafId) cancelAnimationFrame(rafId);
+      rafId = requestAnimationFrame(() => {
+        card.style.transform = `translateX(${dx}px) rotate(${dx / CARD_ROTATE_DIV}deg)`;
+        const r = Math.min(Math.abs(dx) / SWIPE_THRESHOLD, 1);
+        hL.style.opacity = dx < 0 ? r : 0;
+        hR.style.opacity = dx > 0 ? r : 0;
+      });
     };
     const onEnd = () => {
       if (!dragging) return;
@@ -1105,8 +1122,15 @@
     card.addEventListener('touchend', onEnd, { passive: true });
     card.addEventListener('touchcancel', onEnd, { passive: true });
     card.addEventListener('mousedown', e => onStart(e.clientX, e.clientY));
-    window.addEventListener('mousemove', e => { if (dragging) onMove(e.clientX, e.clientY); });
-    window.addEventListener('mouseup', () => { if (dragging) onEnd(); });
+    const onWindowMouseMove = e => { if (dragging) onMove(e.clientX, e.clientY); };
+    const onWindowMouseUp = () => { if (dragging) onEnd(); };
+    window.addEventListener('mousemove', onWindowMouseMove);
+    window.addEventListener('mouseup', onWindowMouseUp);
+    return function cleanup() {
+      window.removeEventListener('mousemove', onWindowMouseMove);
+      window.removeEventListener('mouseup', onWindowMouseUp);
+      if (rafId) { cancelAnimationFrame(rafId); rafId = null; }
+    };
   }
 
   // ── Detail screen ──
@@ -1201,61 +1225,82 @@
     try { localStorage.setItem(JOURNAL_HISTORY_KEY, JSON.stringify(history)); } catch {}
   }
 
-  async function submitJournal() {
-    const userText = document.getElementById('journal-textarea').value.trim();
-    if (!userText) {
-      const ta = document.getElementById('journal-textarea');
+  function validateJournalInput() {
+    const ta = document.getElementById('journal-textarea');
+    const text = ta.value.trim();
+    if (!text) {
       ta.placeholder = '一言でもOKです（例：「ちょっと落ち着いた」）';
       ta.style.borderColor = 'var(--primary)';
       ta.focus();
-      return;
+      return null;
     }
+    ta.style.borderColor = '';
+    return text;
+  }
 
+  const JOURNAL_BTN_LABEL = 'Claude に気持ちを話す';
+
+  function setJournalUIState(state, payload) {
     const btn = document.getElementById('journal-send-btn');
-    btn.disabled = true;
-    btn.textContent = '送信中…';
-
-    const tc = techniqueMap.get(STATE.currentTech);
-    const ja = tc?.i18n?.ja || {};
-    const vars = getCtxVars(STATE.contextId);
-    const name = t(ja.name || STATE.currentTech, vars);
-
-    // Save to history (exclude current entry from digest, it's the current session)
-    const historyForDigest = loadJournalHistory().slice(0, 5);
-
     const respEl = document.getElementById('journal-response');
-    respEl.style.display = 'block';
-    respEl.innerHTML = '<span class="journal-response-label" aria-hidden="true">Claude</span> …';
-
-    try {
-      const res = await fetch('/api/chat', {
-        method: 'POST',
-        headers: { 'content-type': 'application/json' },
-        body: JSON.stringify({
-          techniqueName: STATE.currentTech,
-          userText,
-          journalHistory: historyForDigest,
-        }),
-      });
-      if (!res.ok) throw new Error(`HTTP ${res.status}`);
-      const data = await res.json();
-      const text = data.text || '（応答なし）';
-      respEl.innerHTML = `<span class="journal-response-label" aria-hidden="true">Claude</span> ${text}`;
-
-      // Save after successful response
-      saveJournalEntry(STATE.currentTech, name, userText);
-    } catch (e) {
-      respEl.innerHTML = '⚠️ 応答できませんでした。<button id="retry-journal-btn" style="margin-left:6px;color:var(--primary);background:none;border:none;cursor:pointer;font-size:inherit;text-decoration:underline;">もう一度試す</button>';
-      document.getElementById('retry-journal-btn')?.addEventListener('click', () => {
+    if (state === 'loading') {
+      btn.disabled = true;
+      btn.textContent = '送信中…';
+      respEl.style.display = 'block';
+      respEl.innerHTML = '<span class="journal-response-label" aria-hidden="true">Claude</span> …';
+    } else if (state === 'success') {
+      btn.disabled = false;
+      btn.textContent = JOURNAL_BTN_LABEL;
+      respEl.style.display = 'block';
+      respEl.innerHTML = `<span class="journal-response-label" aria-hidden="true">Claude</span> ${payload ?? '（応答なし）'}`;
+    } else if (state === 'error') {
+      btn.disabled = false;
+      btn.textContent = JOURNAL_BTN_LABEL;
+      respEl.style.display = 'block';
+      respEl.innerHTML = '⚠️ 応答できませんでした。<button style="margin-left:6px;color:var(--primary);background:none;border:none;cursor:pointer;font-size:inherit;text-decoration:underline;">もう一度試す</button>';
+      respEl.querySelector('button').addEventListener('click', () => {
         respEl.style.display = 'none';
-        btn.disabled = false;
-        btn.textContent = 'Claude に気持ちを話す';
         submitJournal();
       });
+    } else { // 'idle'
+      btn.disabled = false;
+      btn.textContent = JOURNAL_BTN_LABEL;
+      respEl.style.display = 'none';
+      respEl.innerHTML = '';
     }
+  }
 
-    btn.disabled = false;
-    btn.textContent = 'Claude に気持ちを話す';
+  async function callChatAPI(techniqueId, userText, history) {
+    const res = await fetch('/api/chat', {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify({
+        techniqueName: techniqueId,
+        userText,
+        journalHistory: history,
+      }),
+    });
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const data = await res.json();
+    return data.text || '（応答なし）';
+  }
+
+  async function submitJournal() {
+    const userText = validateJournalInput();
+    if (!userText) return;
+
+    setJournalUIState('loading');
+    const tc = techniqueMap?.get(STATE.currentTech) ?? techniques.find(x => x.id === STATE.currentTech);
+    const name = tc?.i18n?.ja?.name ?? STATE.currentTech;
+    const history = loadJournalHistory().slice(0, 5);
+
+    try {
+      const text = await callChatAPI(STATE.currentTech, userText, history);
+      saveJournalEntry(STATE.currentTech, name, userText);
+      setJournalUIState('success', text);
+    } catch (e) {
+      setJournalUIState('error');
+    }
   }
 
   function showDone() {
