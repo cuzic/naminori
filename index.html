@@ -19,6 +19,23 @@
       --card-w: min(360px, calc(100vw - 48px));
       --card-h: min(520px, calc(100svh - 220px));
     }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #1c1714;
+        --surface: #272018;
+        --primary: #d4844a;
+        --primary-light: #2e2218;
+        --text: #ede5dc;
+        --text-muted: #9a8a7e;
+        --border: #3a2f26;
+        --shadow: 0 4px 20px rgba(0,0,0,0.40);
+        --shadow-lg: 0 8px 40px rgba(0,0,0,0.55);
+      }
+      .detail-hero { background: linear-gradient(135deg, #3d2f6e 0%, #5a4490 50%, #7a5eaa 100%); }
+      .crisis-footer { background: #211810; border-top-color: #3a2520; }
+      .crisis-link { background: #2a1c18; border-color: #5a3830; color: #e08080; }
+      .crisis-link:hover { background: #321e1a; }
+    }
 
     * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
 
@@ -130,21 +147,22 @@
     ══════════════════════ */
     #sc-context { flex-direction: column; align-items: center; }
     .context-grid {
-      width: 100%; max-width: 380px;
-      display: grid; grid-template-columns: repeat(3, 1fr);
+      width: 100%; max-width: 420px;
+      display: grid; grid-template-columns: repeat(2, 1fr);
       gap: 12px; padding: 0 24px 32px;
     }
     .context-btn {
       background: var(--surface); border: 2px solid var(--border);
-      border-radius: 16px; padding: 16px 8px;
-      cursor: pointer; display: flex; flex-direction: column;
-      align-items: center; gap: 8px;
+      border-radius: 16px; padding: 18px 12px;
+      cursor: pointer; display: flex; flex-direction: row;
+      align-items: center; gap: 12px;
       transition: all 0.15s; user-select: none;
+      min-height: 64px;
     }
     .context-btn:hover { border-color: var(--primary); background: var(--primary-light); }
-    .context-btn:active { transform: scale(0.95); }
-    .ctx-icon { font-size: 2rem; }
-    .ctx-label { font-size: 0.75rem; font-weight: 600; color: var(--text); text-align: center; line-height: 1.3; }
+    .context-btn:active { transform: scale(0.97); }
+    .ctx-icon { font-size: 1.8rem; flex-shrink: 0; }
+    .ctx-label { font-size: 0.82rem; font-weight: 600; color: var(--text); text-align: left; line-height: 1.35; }
 
     /* ══════════════════════
        S4: Akinator
@@ -360,8 +378,21 @@
     }
     .detail-background {
       font-size: 0.88rem; line-height: 1.8; padding: 14px 16px;
-      background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 0 0 12px 12px; margin-top: 0;
     }
+    .background-details { border-radius: 12px; overflow: hidden; }
+    .background-details > summary {
+      padding: 10px 16px; background: var(--surface);
+      border: 1px solid var(--border); border-radius: 12px;
+      cursor: pointer; list-style: none; user-select: none;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .background-details[open] > summary { border-radius: 12px 12px 0 0; }
+    .background-details > summary::-webkit-details-marker { display: none; }
+    .background-details > summary::after { content: '▸'; font-size: 0.8rem; color: var(--text-muted); transition: transform 0.2s; }
+    .background-details[open] > summary::after { transform: rotate(90deg); }
+    .details-hint { font-size: 0.72rem; color: var(--text-muted); font-weight: 400; }
     .step-item { display: flex; gap: 14px; margin-bottom: 14px; align-items: flex-start; cursor: pointer; }
     .step-item:last-child { margin-bottom: 0; }
     .step-num {
@@ -493,6 +524,45 @@
     @media (pointer: fine) {
       .swipe-guide::after { content: ' ／ キーボード ← →'; }
     }
+
+    /* Onboarding overlay */
+    #onboarding-overlay {
+      position: fixed; inset: 0; z-index: 1000;
+      background: rgba(0,0,0,0.55); backdrop-filter: blur(4px);
+      display: flex; align-items: center; justify-content: center;
+      padding: 24px;
+    }
+    .onboarding-card {
+      background: var(--surface); border-radius: 24px;
+      padding: 32px 28px; max-width: 400px; width: 100%;
+      box-shadow: var(--shadow-lg); text-align: center;
+    }
+    .onboarding-emoji { font-size: 3rem; margin-bottom: 12px; }
+    .onboarding-title { font-size: 1.2rem; font-weight: 700; margin-bottom: 20px; color: var(--text); }
+    .onboarding-list {
+      list-style: none; text-align: left; margin-bottom: 16px;
+    }
+    .onboarding-list li {
+      font-size: 0.88rem; line-height: 1.7; padding: 8px 0;
+      border-bottom: 1px solid var(--border); color: var(--text);
+    }
+    .onboarding-list li:last-child { border-bottom: none; }
+    .onboarding-note {
+      font-size: 0.72rem; color: var(--text-muted); line-height: 1.6;
+      margin-bottom: 24px;
+    }
+    .onboarding-btn { width: 100%; }
+
+    /* Badge toast */
+    #badge-toast {
+      position: fixed; bottom: 80px; left: 50%; transform: translateX(-50%) translateY(12px);
+      background: rgba(30,20,14,0.92); color: #fff; border-radius: 10px;
+      padding: 10px 18px; font-size: 0.82rem; line-height: 1.5; max-width: 320px;
+      text-align: center; pointer-events: none; opacity: 0; transition: all 0.2s;
+      z-index: 999; white-space: pre-wrap;
+    }
+    #badge-toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+    .badge-tappable { cursor: pointer; }
   </style>
 </head>
 <body>
@@ -501,6 +571,22 @@
   <div class="app-title">Naminori <span class="app-sub">いまここ道具箱</span></div>
   <div class="app-time" id="app-time"></div>
 </header>
+
+<!-- Onboarding overlay (初回のみ) -->
+<div id="onboarding-overlay" style="display:none">
+  <div class="onboarding-card">
+    <div class="onboarding-emoji">🌊</div>
+    <h2 class="onboarding-title">いまここ道具箱へようこそ</h2>
+    <ul class="onboarding-list">
+      <li>💡 <strong>103の技法カード</strong>から、今の気持ちに合うものを提案します</li>
+      <li>🧠 CBT・ACT・DBTなど<strong>科学的根拠のある技法</strong>を集めました</li>
+      <li>🤝 衝動・不安・依存など<strong>やめたい習慣</strong>にも、<strong>続けたい習慣</strong>にも</li>
+      <li>🔒 記録はすべて<strong>このデバイスのみ</strong>に保存されます</li>
+    </ul>
+    <p class="onboarding-note">重篤な依存症・精神疾患のある方は、専門家へのご相談もあわせてご検討ください。</p>
+    <button class="primary-btn onboarding-btn" id="onboarding-start-btn">はじめる →</button>
+  </div>
+</div>
 
 <div id="app">
 
@@ -572,8 +658,8 @@
     <p class="cards-meta" id="cards-meta"></p>
     <div class="card-stack-wrap" id="card-stack"></div>
     <div class="card-nav" id="card-nav">
-      <button class="nav-btn" id="nav-skip">← スキップ</button>
-      <button class="nav-btn" id="nav-next">次のカード →</button>
+      <button class="nav-btn" id="nav-skip">← 使わない</button>
+      <button class="nav-btn" id="nav-next">気になる →</button>
     </div>
     <p class="swipe-guide">ドラッグ・スワイプで次のカードへ</p>
     <div class="no-more-cards" id="no-more-msg">
@@ -605,8 +691,10 @@
     <div class="detail-body">
       <div class="detail-tagline" id="detail-tagline"></div>
       <div class="detail-section" id="background-section">
-        <div class="detail-section-title">この技法について</div>
-        <div class="detail-background" id="detail-background"></div>
+        <details class="background-details">
+          <summary class="detail-section-title">なぜ効くのか <span class="details-hint">（タップで開く）</span></summary>
+          <div class="detail-background" id="detail-background"></div>
+        </details>
       </div>
       <div class="detail-section">
         <div class="detail-section-title">やってみよう</div>
@@ -678,34 +766,34 @@
   // ── Akinator tree ──
   const AKI = {
     root: {
-      q: '今の体の感覚に近いのは？',
+      q: '今どんな感じ？',
       opts: [
-        { label: '緊張・ドキドキ・ざわざわしている', next: 'nodeA' },
-        { label: 'だるい・重い・疲れた感じがある', next: 'nodeB' },
+        { label: 'ざわざわ・不安・落ち着かない', next: 'nodeA' },
+        { label: 'だるい・重い・疲れた', next: 'nodeB' },
         { label: 'どちらとも言えない', grid: true },
       ],
     },
     nodeA: {
-      q: 'その感覚はどちらに近い？',
+      q: 'どちらに近い？',
       opts: [
-        { label: 'ざわざわ・心配・どうしよう…という感じ', result: 'anxiety' },
-        { label: 'イライラ・もどかしい・腹が立つ感じ', result: 'irritated' },
+        { label: '心配・どうしよう・怖い', result: 'anxiety' },
+        { label: 'イライラ・もどかしい・腹が立つ', result: 'irritated' },
         { label: 'どちらとも言えない', grid: true },
       ],
     },
     nodeB: {
-      q: '今の気持ちはどちらに近い？',
+      q: 'どちらに近い？',
       opts: [
-        { label: 'さみしい・誰かに会いたい・置いていかれた感じ', result: 'lonely' },
-        { label: 'ただ重い・落ち込む・空っぽな感じ', next: 'nodeC' },
+        { label: 'さみしい・誰かに会いたい・置いていかれた', result: 'lonely' },
+        { label: 'ただ重い・落ち込む・空っぽ', next: 'nodeC' },
         { label: 'どちらとも言えない', grid: true },
       ],
     },
     nodeC: {
       q: 'もう少し絞ると？',
       opts: [
-        { label: '空っぽ・何もない・麻痺している感じ', result: 'empty' },
-        { label: '落ち込み・悲しい・疲れ果てた感じ', result: 'depressed' },
+        { label: '空っぽ・何もない・麻痺している', result: 'empty' },
+        { label: '落ち込み・悲しい・疲れ果てた', result: 'depressed' },
         { label: 'どちらとも言えない', grid: true },
       ],
     },
@@ -840,6 +928,16 @@
     'マインドフルネス': 'badge-mind', 'ポジティブ心理学': 'badge-positive',
     'セルフコンパッション': 'badge-self', '行動計画': 'badge-behavior', '記録': 'badge-record',
   };
+  const BADGE_DESC = {
+    'DBT': '弁証法的行動療法 — 感情調節・苦痛耐性を高める技法',
+    'CBT': '認知行動療法 — 思考パターンと行動を変えていく技法',
+    'ACT': 'アクセプタンス&コミットメント療法 — 価値に沿った行動を選ぶ技法',
+    'マインドフルネス': '今この瞬間に意識を向ける実践',
+    'ポジティブ心理学': '強みや幸福感を育む科学的なアプローチ',
+    'セルフコンパッション': '自分自身に優しく寄り添う実践',
+    '行動計画': '具体的な行動変容を計画・実行する技法',
+    '記録': '気づきを記録して自己理解を深める技法',
+  };
 
   // ── Deck building ──
   function buildDeck() {
@@ -853,9 +951,14 @@
       : [...techniques]
     ).sort(() => Math.random() - 0.5);
 
-    const t1 = pool.filter(tc => eKeys.some(e => tc.emotions.includes(e)) && tc.timeSlots.includes(slot));
+    let t1 = pool.filter(tc => eKeys.some(e => tc.emotions.includes(e)) && tc.timeSlots.includes(slot));
     const t2 = pool.filter(tc => eKeys.some(e => tc.emotions.includes(e)) && !tc.timeSlots.includes(slot));
     const t3 = pool.filter(tc => !eKeys.some(e => tc.emotions.includes(e)));
+
+    // 深夜は短時間技法（5分以下）を先頭に優先表示
+    if (slot === 'midnight') {
+      t1 = [...t1.filter(tc => tc.duration <= 5), ...t1.filter(tc => tc.duration > 5)];
+    }
 
     const seen = new Set();
     return [...t1, ...t2, ...t3].filter(tc => seen.has(tc.id) ? false : seen.add(tc.id));
@@ -873,10 +976,11 @@
     const steps = (ja.steps || []).map(s => t(s, vars));
     const firstStep = steps[0] ? (steps[0].length > 55 ? steps[0].slice(0, 55) + '…' : steps[0]) : '';
     const cls = BADGE[tc.approach] || 'badge-record';
+    const badgeDesc = BADGE_DESC[tc.approach] || '';
     el.innerHTML = `
-      <div class="swipe-hint-left">スキップ</div>
-      <div class="swipe-hint-right">あとで</div>
-      <span class="card-approach ${cls}">${tc.approach}</span>
+      <div class="swipe-hint-left">使わない</div>
+      <div class="swipe-hint-right">気になる</div>
+      <span class="card-approach ${cls} badge-tappable" title="${badgeDesc}" data-desc="${badgeDesc}">${tc.approach}</span>
       <div class="card-icon">${tc.icon}</div>
       <div class="card-name">${name}</div>
       <div class="card-tagline">${tagline}</div>
@@ -924,7 +1028,7 @@
     const ctxLabel = vars.label || STATE.contextId || '';
     const emoInfo = EMOTION_INFO[STATE.emotion];
     meta.textContent = STATE.deck.length > 0
-      ? `${ctxLabel} × ${emoInfo ? emoInfo.ja : (STATE.emotion || '')}（残り ${STATE.deck.length} 枚）`
+      ? `${ctxLabel} × ${emoInfo ? emoInfo.ja : (STATE.emotion || '')}`
       : '';
   }
 
@@ -983,8 +1087,10 @@
     heroImg.style.display = '';
     heroImg.src = `assets/images/${id}.jpg`;
     const badge = document.getElementById('detail-badge');
-    badge.className = `card-approach ${BADGE[tc.approach] || 'badge-record'}`;
+    badge.className = `card-approach ${BADGE[tc.approach] || 'badge-record'} badge-tappable`;
     badge.textContent = tc.approach;
+    badge.title = BADGE_DESC[tc.approach] || '';
+    badge.dataset.desc = BADGE_DESC[tc.approach] || '';
 
     const bgEl = document.getElementById('detail-background');
     const bgSec = document.getElementById('background-section');
@@ -1110,6 +1216,18 @@
   }
 
   // ── Welcome back ──
+  function showOnboarding() {
+    const overlay = document.getElementById('onboarding-overlay');
+    if (overlay) overlay.style.display = 'flex';
+  }
+
+  function closeOnboarding() {
+    const overlay = document.getElementById('onboarding-overlay');
+    if (overlay) overlay.style.display = 'none';
+    S.set('onboarded', true);
+    show('sc-direction');
+  }
+
   function showWelcomeBack(lastVisit) {
     const days = getDaysSince(lastVisit);
     let emoji, title, msg;
@@ -1245,8 +1363,13 @@
 
     // Streak / welcome back
     const lastVisit = recordVisit();
-    if (lastVisit) showWelcomeBack(lastVisit);
-    else show('sc-direction');
+    if (lastVisit) {
+      showWelcomeBack(lastVisit);
+    } else if (!S.get('onboarded')) {
+      showOnboarding();
+    } else {
+      show('sc-direction');
+    }
 
     // ── Event listeners ──
 
@@ -1263,6 +1386,7 @@
 
     // Welcome back
     document.getElementById('wb-start').addEventListener('click', () => show('sc-direction'));
+    document.getElementById('onboarding-start-btn').addEventListener('click', closeOnboarding);
 
     // Direction
     document.querySelectorAll('.direction-card').forEach(btn => {
@@ -1300,8 +1424,31 @@
     document.getElementById('journal-done-btn').addEventListener('click', () => showDone());
 
     // Done
-    document.getElementById('back-home-btn').addEventListener('click', () => show('sc-cards'));
+    document.getElementById('back-home-btn').addEventListener('click', () => {
+      if (STATE.deck.length > 0) show('sc-cards');
+      else show('sc-direction');
+    });
   }
+
+  // Badge tap → Toast tooltip
+  let toastTimer = null;
+  document.addEventListener('click', e => {
+    const badge = e.target.closest('.badge-tappable');
+    if (!badge) return;
+    const desc = badge.dataset.desc;
+    if (!desc) return;
+    e.stopPropagation();
+    let toast = document.getElementById('badge-toast');
+    if (!toast) {
+      toast = document.createElement('div');
+      toast.id = 'badge-toast';
+      document.body.appendChild(toast);
+    }
+    toast.textContent = desc;
+    toast.classList.add('show');
+    if (toastTimer) clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => toast.classList.remove('show'), 3000);
+  });
 
   init();
 })();
