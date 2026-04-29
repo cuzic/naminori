@@ -55,11 +55,15 @@ export default async function handler(req: Request): Promise<Response> {
   }
 
   let techniqueName: string;
+  let techniqueDisplayName: string = '';
+  let techniqueDesc: string = '';
   let userText: string;
   let journalHistory: JournalEntry[] = [];
   try {
     const body = await req.json();
     techniqueName = body.techniqueName;
+    techniqueDisplayName = typeof body.techniqueDisplayName === 'string' ? body.techniqueDisplayName.slice(0, 100) : '';
+    techniqueDesc = typeof body.techniqueDesc === 'string' ? body.techniqueDesc.slice(0, 300) : '';
     userText = body.userText;
     journalHistory = Array.isArray(body.journalHistory) ? body.journalHistory.slice(0, 5) : [];
   } catch {
@@ -84,6 +88,8 @@ export default async function handler(req: Request): Promise<Response> {
   }
 
   const digest = buildDigest(journalHistory);
+  const displayName = techniqueDisplayName || techniqueName;
+  const descLine = techniqueDesc ? `\n【技法の概要】${techniqueDesc}` : '';
 
   const res = await fetch('https://api.anthropic.com/v1/messages', {
     method: 'POST',
@@ -100,10 +106,10 @@ export default async function handler(req: Request): Promise<Response> {
 【重要】もしユーザーが自傷・自殺・消えたい・死にたいなどの言葉を使った場合は、必ず以下を伝えてください：
 「今すぐ話せる場所があります。よりそいホットライン（0120-279-338）やいのちの電話（0120-783-556）に電話してみてください。あなたは一人じゃありません。」
 
-通常の対応では：評価・判断をせず、ただ共感し、ユーザーの取り組みを温かく受け止めてください。3〜4文で、日本語で返答してください。`,
+通常の対応では：評価・判断をせず、ただ共感し、ユーザーの取り組みを温かく受け止めてください。技法の内容を踏まえた上で、3〜4文で、日本語で返答してください。`,
       messages: [{
         role: 'user',
-        content: `ユーザーが「${techniqueName}」という技法を試みました。${digest}\n\nユーザーの今日の感想:\n"${userText}"`,
+        content: `ユーザーが「${displayName}」という技法を試みました。${descLine}${digest}\n\nユーザーの今日の感想:\n"${userText}"`,
       }],
     }),
   });

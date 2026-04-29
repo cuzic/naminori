@@ -1312,12 +1312,14 @@
     }
   }
 
-  async function callChatAPI(techniqueId, userText, history) {
+  async function callChatAPI(techniqueId, techName, techDesc, userText, history) {
     const res = await fetch('/api/chat', {
       method: 'POST',
       headers: { 'content-type': 'application/json' },
       body: JSON.stringify({
         techniqueName: techniqueId,
+        techniqueDisplayName: techName,
+        techniqueDesc: techDesc,
         userText,
         journalHistory: history,
       }),
@@ -1334,10 +1336,11 @@
     setJournalUIState('loading');
     const tc = techniqueMap?.get(STATE.currentTech) ?? techniques.find(x => x.id === STATE.currentTech);
     const name = tc?.i18n?.ja?.name ?? STATE.currentTech;
+    const tagline = applyCtx(tc?.i18n?.ja?.tagline ?? '', STATE.context);
     const history = loadJournalHistory().slice(0, 5);
 
     try {
-      const text = await callChatAPI(STATE.currentTech, userText, history);
+      const text = await callChatAPI(STATE.currentTech, name, tagline, userText, history);
       saveJournalEntry(STATE.currentTech, name, userText);
       setJournalUIState('success', text);
     } catch (e) {
