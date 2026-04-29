@@ -1,5 +1,6 @@
-import { readdir, mkdir } from 'node:fs/promises';
+import { readdir, mkdir, cp } from 'node:fs/promises';
 import { join } from 'node:path';
+import { existsSync } from 'node:fs';
 
 const ROOT = join(import.meta.dir, '..');
 const SRC = join(ROOT, 'src');
@@ -41,6 +42,12 @@ window.__CONTEXTS__ = ${JSON.stringify(contexts)};
   const html = template.replace('</head>', `${injection}\n</head>`);
   await Bun.write(join(DIST, 'index.html'), html);
   console.log(`Built: dist/index.html (${contexts ? Object.keys(contexts).length : 0} contexts)`);
+
+  const assetsDir = join(SRC, 'assets');
+  if (existsSync(assetsDir)) {
+    await cp(assetsDir, join(DIST, 'assets'), { recursive: true });
+    console.log('Copied: src/assets → dist/assets');
+  }
 }
 
 build().catch(e => { console.error(e); process.exit(1); });

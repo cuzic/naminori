@@ -307,19 +307,41 @@
       flex-direction: column;
       overflow-y: auto;
     }
-    .detail-header {
-      background: var(--surface); padding: 16px 24px 18px;
-      border-bottom: 1px solid var(--border);
-      position: sticky; top: 0; z-index: 10;
+    .detail-hero {
+      position: relative; width: 100%;
+      aspect-ratio: 4/3; max-height: 300px;
+      background: linear-gradient(135deg, #7c6fc4 0%, #b09ee0 50%, #e0c8f0 100%);
+      overflow: hidden; flex-shrink: 0;
     }
-    .detail-back {
-      background: none; border: none; color: var(--primary);
-      font-size: 0.9rem; font-weight: 600; cursor: pointer;
-      padding: 0 0 10px; display: flex; align-items: center; gap: 4px;
+    .detail-hero-img {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%; object-fit: cover;
+      transition: opacity 0.4s;
     }
-    .detail-icon { font-size: 2.8rem; margin-bottom: 10px; line-height: 1; }
-    .detail-name { font-size: 1.4rem; font-weight: 700; margin-bottom: 8px; }
+    .detail-back-hero {
+      position: absolute; top: 12px; left: 12px; z-index: 20;
+      background: rgba(0,0,0,0.35); color: #fff !important;
+      backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+      border: none; border-radius: 20px;
+      font-size: 0.85rem; font-weight: 600; cursor: pointer;
+      padding: 6px 14px; display: flex; align-items: center; gap: 4px;
+    }
+    .detail-hero-overlay {
+      position: absolute; inset: 0; z-index: 10;
+      background: linear-gradient(to top, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.18) 55%, transparent 100%);
+      display: flex; flex-direction: column; justify-content: flex-end;
+      padding: 16px 20px 18px;
+    }
+    .detail-icon { font-size: 2.2rem; margin-bottom: 6px; line-height: 1; filter: drop-shadow(0 1px 2px rgba(0,0,0,0.4)); }
+    .detail-name { font-size: 1.35rem; font-weight: 700; margin-bottom: 8px; color: #fff; text-shadow: 0 1px 4px rgba(0,0,0,0.5); }
     .detail-meta { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+    .detail-meta .card-approach,
+    .detail-meta .card-duration {
+      background: rgba(255,255,255,0.2) !important;
+      color: rgba(255,255,255,0.92) !important;
+      border-color: rgba(255,255,255,0.3) !important;
+      backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px);
+    }
     .detail-body { padding: 0 24px; }
     .detail-tagline {
       margin: 20px 0 0; padding: 16px 20px;
@@ -542,13 +564,16 @@
 
   <!-- S7: Detail -->
   <section id="sc-detail" style="display:none">
-    <div class="detail-header">
-      <button class="detail-back" id="detail-back-btn">← カードに戻る</button>
-      <div class="detail-icon" id="detail-icon"></div>
-      <div class="detail-name" id="detail-name"></div>
-      <div class="detail-meta">
-        <span class="card-approach" id="detail-badge"></span>
-        <span class="card-duration" id="detail-duration"></span>
+    <div class="detail-hero" id="detail-hero">
+      <button class="detail-back detail-back-hero" id="detail-back-btn">← 戻る</button>
+      <img class="detail-hero-img" id="detail-hero-img" src="" alt="" loading="lazy" onerror="this.style.display='none'">
+      <div class="detail-hero-overlay">
+        <div class="detail-icon" id="detail-icon"></div>
+        <div class="detail-name" id="detail-name"></div>
+        <div class="detail-meta">
+          <span class="card-approach" id="detail-badge"></span>
+          <span class="card-duration" id="detail-duration"></span>
+        </div>
       </div>
     </div>
     <div class="detail-body">
@@ -895,6 +920,9 @@
     document.getElementById('detail-name').textContent = name;
     document.getElementById('detail-tagline').textContent = tagline;
     document.getElementById('detail-duration').textContent = `⏱ 約${tc.duration}分`;
+    const heroImg = document.getElementById('detail-hero-img');
+    heroImg.style.display = '';
+    heroImg.src = `assets/images/${id}.jpg`;
     const badge = document.getElementById('detail-badge');
     badge.className = `card-approach ${BADGE[tc.approach] || 'badge-record'}`;
     badge.textContent = tc.approach;

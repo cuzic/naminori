@@ -5,10 +5,18 @@
   "scripts": {
     "build": "bun scripts/build.ts",
     "dev": "bun --watch scripts/build.ts",
-    "serve": "bun --bun scripts/serve.ts"
+    "serve": "bun --bun scripts/serve.ts",
+    "images:prompts": "bun scripts/generate-image-batch.ts",
+    "images:generate": "bun scripts/generate-image-prompts.ts",
+    "images:submit": "bun scripts/submit-image-batch.ts",
+    "images:status": "bun scripts/check-batch-status.ts",
+    "images:download": "bun scripts/download-images.ts"
   },
   "devDependencies": {
     "typescript": "^5.0.0",
     "bun-types": "latest"
+  },
+  "dependencies": {
+    "zod": "^3.23.0"
   }
 }
