@@ -19,4 +19,5 @@ export const SHARED_TECHNIQUES = [
   'decisional-balance',
   'problem-solving',
   'reframing',
+  'gratitude-visit',
 ] as const;

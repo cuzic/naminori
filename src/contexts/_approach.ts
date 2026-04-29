@@ -18,6 +18,7 @@ export const APPROACH_TECHNIQUES = [
   'cope-ahead',
   'reinforcement-management',
   'strengths-use',
+  'best-possible-self',
 ] as const;
 
 export const approachBase = {
