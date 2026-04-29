@@ -244,21 +244,14 @@
       transition: transform 0.3s cubic-bezier(.34,1.56,.64,1), box-shadow 0.3s;
       user-select: none; will-change: transform; overflow: hidden;
     }
-    .technique-card:nth-last-child(1) { z-index: 3; }
-    .technique-card:nth-last-child(2) { z-index: 2; transform: scale(var(--stack-depth-scale, 0.95)) translateY(12px); pointer-events: none; }
-    .technique-card:nth-last-child(3) { z-index: 1; transform: scale(0.90) translateY(24px); pointer-events: none; }
+    .technique-card { z-index: 1; }
     .technique-card.is-dragging { transition: none; cursor: grabbing; }
-    .technique-card.fly-left { transition: transform 0.4s ease-in, opacity 0.4s; transform: translateX(-140%) rotate(-22deg) !important; opacity: 0; }
-    .technique-card.fly-right { transition: transform 0.4s ease-in, opacity 0.4s; transform: translateX(140%) rotate(22deg) !important; opacity: 0; }
-
-    .swipe-hint-left, .swipe-hint-right {
-      position: absolute; top: 24px;
-      border-radius: 8px; padding: 6px 14px;
-      font-size: 0.85rem; font-weight: 700;
-      pointer-events: none; opacity: 0; transition: opacity 0.15s; z-index: 10;
-    }
-    .swipe-hint-left  { left: 16px;  background: #fee; color: #c00; border: 2px solid #c00; transform: rotate(-15deg); }
-    .swipe-hint-right { right: 16px; background: #efe; color: #080; border: 2px solid #080; transform: rotate(15deg); }
+    .technique-card.slide-exit-left  { transition: transform 0.22s ease-in, opacity 0.22s; transform: translateX(-110%) !important; opacity: 0; }
+    .technique-card.slide-exit-right { transition: transform 0.22s ease-in, opacity 0.22s; transform: translateX(110%) !important; opacity: 0; }
+    @keyframes slideFromRight { from { transform: translateX(60%); opacity: 0; } to { transform: none; opacity: 1; } }
+    @keyframes slideFromLeft  { from { transform: translateX(-60%); opacity: 0; } to { transform: none; opacity: 1; } }
+    .technique-card.enter-from-right { animation: slideFromRight 0.22s ease-out forwards; }
+    .technique-card.enter-from-left  { animation: slideFromLeft  0.22s ease-out forwards; }
 
     .card-approach {
       display: inline-flex; align-items: center;
@@ -280,16 +273,17 @@
     .card-duration { font-size: 0.78rem; color: var(--text-muted); display: flex; align-items: center; gap: 4px; }
     .card-tap-hint { font-size: 0.78rem; color: var(--primary); font-weight: 700; }
 
-    .card-nav { display: flex; align-items: center; gap: 16px; margin-top: 20px; }
+    .card-nav { display: flex; align-items: center; justify-content: space-between; width: var(--card-w); margin-top: 16px; }
     .nav-btn {
-      display: flex; align-items: center; gap: 6px;
-      padding: 10px 20px; background: var(--surface);
+      padding: 10px 18px; background: var(--surface);
       border: 2px solid var(--border); border-radius: var(--radius-pill);
-      font-size: 0.85rem; font-weight: 600; color: var(--text-muted);
+      font-size: 0.9rem; font-weight: 600; color: var(--text-muted);
       cursor: pointer; transition: all 0.15s;
     }
-    .nav-btn:hover { border-color: var(--primary); color: var(--primary); background: var(--primary-light); }
-    .swipe-guide { margin-top: 8px; font-size: 0.72rem; color: var(--text-muted); text-align: center; }
+    .nav-btn:hover:not(:disabled) { border-color: var(--primary); color: var(--primary); background: var(--primary-light); }
+    .nav-btn:disabled { opacity: 0.3; cursor: default; }
+    .card-counter { font-size: 0.82rem; color: var(--text-muted); font-variant-numeric: tabular-nums; }
+    .swipe-guide { margin-top: 6px; font-size: 0.7rem; color: var(--text-muted); text-align: center; }
 
     .no-more-cards {
       display: none; flex-direction: column; align-items: center;
@@ -631,10 +625,11 @@
     <div class="cards-filter-bar" id="cards-filter-bar"></div>
     <div class="card-stack-wrap" id="card-stack"></div>
     <div class="card-nav" id="card-nav">
-      <button class="nav-btn btn-interactive" id="nav-skip">← 使わない</button>
-      <button class="nav-btn btn-interactive" id="nav-next">気になる →</button>
+      <button class="nav-btn btn-interactive" id="nav-skip">← 前へ</button>
+      <span class="card-counter" id="card-counter"></span>
+      <button class="nav-btn btn-interactive" id="nav-next">次へ →</button>
     </div>
-    <p class="swipe-guide">ドラッグ・スワイプで次のカードへ</p>
+    <p class="swipe-guide">スワイプで前後のカードへ</p>
     <div class="no-more-cards" id="no-more-msg">
       <div class="big-emoji">✨</div>
       <p>今日のカードはここまで。<br>また来てね。</p>
@@ -747,6 +742,7 @@
     direction: null,
     contextId: null,
     deck: [],
+    cardIndex: 0,
     currentTech: null,
     filterApproaches: new Set(),
     filterDuration: null,
@@ -971,6 +967,7 @@
   }
 
   function applyFilters() {
+    STATE.cardIndex = 0;
     STATE.deck = buildDeck();
     renderStack();
     updateCardsMeta();
@@ -991,8 +988,6 @@
     const cls = BADGE[tc.approach] || 'badge-record';
     const badgeDesc = BADGE_DESC[tc.approach] || '';
     el.innerHTML = `
-      <div class="swipe-hint-left">使わない</div>
-      <div class="swipe-hint-right">気になる</div>
       <span class="card-approach ${cls} badge-tappable" title="${badgeDesc}" data-desc="${badgeDesc}">${tc.approach}</span>
       <div class="card-icon">${tc.icon}</div>
       <div class="card-name">${name}</div>
@@ -1010,30 +1005,52 @@
   }
 
   // ── Card stack ──
-  function renderStack() {
+  function renderStack(enterDir) {
     const stack = document.getElementById('card-stack');
     const nav = document.getElementById('card-nav');
     const noMore = document.getElementById('no-more-msg');
+    const old = stack.querySelector('.technique-card');
+    if (old) { old._cleanup?.(); delete old._cleanup; }
     stack.innerHTML = '';
     noMore.style.display = 'none';
+
     if (STATE.deck.length === 0) {
       noMore.style.display = 'flex';
       if (nav) nav.style.display = 'none';
       return;
     }
     if (nav) nav.style.display = 'flex';
-    [...STATE.deck.slice(0, 3)].reverse().forEach(tc => stack.appendChild(buildCardEl(tc)));
-    const top = stack.querySelector('.technique-card:last-child');
-    if (top) top._cleanup = attachSwipe(top, () => openDetail(top.dataset.id));
+
+    const tc = STATE.deck[STATE.cardIndex];
+    if (!tc) return;
+    const card = buildCardEl(tc);
+    if (enterDir) card.classList.add(enterDir === 'next' ? 'enter-from-right' : 'enter-from-left');
+    stack.appendChild(card);
+    card._cleanup = attachSwipe(card, () => openDetail(tc.id));
+    updateNavButtons();
   }
 
-  function dismissTop(dir) {
-    const top = document.querySelector('#card-stack .technique-card:last-child');
-    if (!top) return;
-    top._cleanup?.(); delete top._cleanup;
-    top.classList.add(dir === 'left' ? 'fly-left' : 'fly-right');
-    STATE.deck.shift();
-    setTimeout(() => { renderStack(); updateCardsMeta(); }, 420);
+  function updateNavButtons() {
+    const skipBtn = document.getElementById('nav-skip');
+    const nextBtn = document.getElementById('nav-next');
+    const counter = document.getElementById('card-counter');
+    if (skipBtn) skipBtn.disabled = STATE.cardIndex <= 0;
+    if (nextBtn) nextBtn.disabled = STATE.cardIndex >= STATE.deck.length - 1;
+    if (counter) counter.textContent = STATE.deck.length ? `${STATE.cardIndex + 1} / ${STATE.deck.length}` : '';
+  }
+
+  function navigate(delta) {
+    const newIdx = STATE.cardIndex + delta;
+    if (newIdx < 0 || newIdx >= STATE.deck.length) return;
+    const current = document.querySelector('#card-stack .technique-card');
+    const dir = delta > 0 ? 'next' : 'prev';
+    if (current) {
+      current._cleanup?.(); delete current._cleanup;
+      current.classList.add(delta > 0 ? 'slide-exit-left' : 'slide-exit-right');
+      setTimeout(() => { STATE.cardIndex = newIdx; renderStack(dir); updateCardsMeta(); }, 200);
+    } else {
+      STATE.cardIndex = newIdx; renderStack(dir); updateCardsMeta();
+    }
   }
 
   function updateCardsMeta() {
@@ -1044,12 +1061,10 @@
     meta.textContent = STATE.deck.length > 0 ? `${ctxLabel} · ${STATE.deck.length}枚` : '';
   }
 
-  // ── Swipe ──
+  // ── Swipe (carousel navigation) ──
   function attachSwipe(card, onTap) {
     let sx = 0, sy = 0, dx = 0, dragging = false;
     let rafId = null;
-    const hL = card.querySelector('.swipe-hint-left');
-    const hR = card.querySelector('.swipe-hint-right');
     const onStart = (x, y) => { sx = x; sy = y; dx = 0; dragging = true; card.classList.add('is-dragging'); };
     const onMove = (x, y) => {
       if (!dragging) return;
@@ -1058,21 +1073,17 @@
       if (Math.abs(dx) < Math.abs(dy) * 0.5 && Math.abs(dx) < 20) return;
       if (rafId) cancelAnimationFrame(rafId);
       rafId = requestAnimationFrame(() => {
-        card.style.transform = `translateX(${dx}px) rotate(${dx / CARD_ROTATE_DIV}deg)`;
-        const r = Math.min(Math.abs(dx) / SWIPE_THRESHOLD, 1);
-        hL.style.opacity = dx < 0 ? r : 0;
-        hR.style.opacity = dx > 0 ? r : 0;
+        card.style.transform = `translateX(${dx * 0.35}px)`;
       });
     };
     const onEnd = () => {
       if (!dragging) return;
       dragging = false;
       card.classList.remove('is-dragging');
-      hL.style.opacity = 0; hR.style.opacity = 0;
+      card.style.transform = '';
       const swipeThreshold = Math.min(SWIPE_THRESHOLD, window.innerWidth * SWIPE_WIDTH_RATIO);
-      if (Math.abs(dx) >= swipeThreshold) dismissTop(dx < 0 ? 'left' : 'right');
-      else if (Math.abs(dx) < SWIPE_TAP_MAX && onTap) { card.style.transform = ''; onTap(); }
-      else card.style.transform = '';
+      if (Math.abs(dx) >= swipeThreshold) navigate(dx < 0 ? 1 : -1);
+      else if (Math.abs(dx) < SWIPE_TAP_MAX && onTap) onTap();
     };
     card.addEventListener('touchstart', e => onStart(e.touches[0].clientX, e.touches[0].clientY), { passive: true });
     card.addEventListener('touchmove', e => { onMove(e.touches[0].clientX, e.touches[0].clientY); if (Math.abs(dx) > 10) e.preventDefault(); }, { passive: false });
@@ -1344,6 +1355,7 @@
           STATE.contextId = id;
           STATE.filterApproaches = new Set();
           STATE.filterDuration = null;
+          STATE.cardIndex = 0;
           S.set('last_context', id);
           STATE.deck = buildDeck();
           renderStack();
@@ -1426,13 +1438,13 @@
     });
 
     // Cards
-    document.getElementById('nav-skip').addEventListener('click', () => dismissTop('left'));
-    document.getElementById('nav-next').addEventListener('click', () => dismissTop('right'));
+    document.getElementById('nav-skip').addEventListener('click', () => navigate(-1));
+    document.getElementById('nav-next').addEventListener('click', () => navigate(1));
     document.getElementById('retry-btn').addEventListener('click', () => show('sc-direction'));
     document.addEventListener('keydown', e => {
       if (document.getElementById('sc-cards').style.display === 'none') return;
-      if (e.key === 'ArrowLeft')  { e.preventDefault(); dismissTop('left'); }
-      if (e.key === 'ArrowRight') { e.preventDefault(); dismissTop('right'); }
+      if (e.key === 'ArrowLeft')  { e.preventDefault(); navigate(-1); }
+      if (e.key === 'ArrowRight') { e.preventDefault(); navigate(1); }
     });
 
     // Detail
