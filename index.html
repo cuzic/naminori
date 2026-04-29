@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Naminori — いまここ道具箱</title>
   <style>
     :root {
@@ -88,6 +88,7 @@
     }
     .primary-btn:hover { background: #a06020; }
     .primary-btn:active { transform: scale(0.97); }
+    .primary-btn:focus-visible { outline: 3px solid var(--primary); outline-offset: 3px; }
     .secondary-btn {
       padding: 12px 24px; background: transparent; color: var(--text-muted);
       border: 2px solid var(--border); border-radius: 50px;
@@ -96,6 +97,7 @@
     }
     .secondary-btn:hover { border-color: var(--primary); color: var(--primary); }
     .secondary-btn:active { transform: scale(0.97); }
+    .secondary-btn:focus-visible { outline: 3px solid var(--primary); outline-offset: 3px; }
 
     /* ══════════════════════
        S1: Welcome Back
@@ -138,6 +140,7 @@
     }
     .direction-card:hover { border-color: var(--primary); box-shadow: var(--shadow); transform: translateY(-2px); }
     .direction-card:active { transform: scale(0.98); }
+    .direction-card:focus-visible { outline: 3px solid var(--primary); outline-offset: 3px; }
     .dir-icon { font-size: 2.4rem; }
     .dir-title { font-size: 1.1rem; font-weight: 700; color: var(--text); }
     .dir-desc { font-size: 0.82rem; color: var(--text-muted); line-height: 1.5; }
@@ -161,8 +164,9 @@
     }
     .context-btn:hover { border-color: var(--primary); background: var(--primary-light); }
     .context-btn:active { transform: scale(0.97); }
+    .context-btn:focus-visible { outline: 3px solid var(--primary); outline-offset: 3px; }
     .ctx-icon { font-size: 1.8rem; flex-shrink: 0; }
-    .ctx-label { font-size: 0.82rem; font-weight: 600; color: var(--text); text-align: left; line-height: 1.35; }
+    .ctx-label { font-size: 0.86rem; font-weight: 600; color: var(--text); text-align: left; line-height: 1.35; }
 
     /* ══════════════════════
        S4: Akinator
@@ -194,6 +198,9 @@
     }
     .aki-btn:hover { border-color: var(--primary); background: var(--primary-light); }
     .aki-btn:active { transform: scale(0.98); }
+    .aki-btn:focus-visible,
+    .aki-btn-neither:focus-visible,
+    .aki-emo-btn:focus-visible { outline: 3px solid var(--primary); outline-offset: 3px; }
     .aki-btn-neither {
       background: transparent; border: 1px dashed var(--border);
       border-radius: 12px; padding: 12px 20px;
@@ -217,7 +224,7 @@
     .aki-emo-btn:hover { border-color: var(--primary); background: var(--primary-light); }
     .aki-emo-btn:active { transform: scale(0.95); }
     .aki-emo-icon { font-size: 1.9rem; line-height: 1; }
-    .aki-emo-label { font-size: 0.73rem; font-weight: 600; color: var(--text); text-align: center; line-height: 1.3; }
+    .aki-emo-label { font-size: 0.8rem; font-weight: 600; color: var(--text); text-align: center; line-height: 1.3; }
 
     /* ══════════════════════
        S5: Emotion Result
@@ -282,7 +289,8 @@
       margin-bottom: 12px; width: fit-content;
     }
     .card-icon { font-size: 2.6rem; margin-bottom: 10px; line-height: 1; }
-    .card-name { font-size: 1.35rem; font-weight: 700; margin-bottom: 8px; }
+    .card-name { font-size: 1.35rem; font-weight: 700; margin-bottom: 4px; }
+    .card-name-sub { font-size: 0.78rem; color: var(--text-muted); margin-bottom: 8px; line-height: 1.4; }
     .card-tagline { font-size: 0.88rem; line-height: 1.65; color: var(--text-muted); margin-bottom: 14px; }
     .card-step-preview {
       background: var(--primary-light); border-left: 3px solid var(--primary);
@@ -478,7 +486,8 @@
       border-radius: 12px; padding: 16px 18px;
       font-size: 0.9rem; line-height: 1.8; color: var(--text);
     }
-    .journal-response::before { content: "🌿 Claude "; font-weight: 700; color: var(--primary); }
+    .journal-response-label { font-weight: 700; color: var(--primary); }
+    .journal-response-label::before { content: "🌿 "; }
     .journal-skip-btn {
       padding: 12px; background: transparent; color: var(--text-muted);
       border: none; font-size: 0.9rem; cursor: pointer; text-align: center;
@@ -583,7 +592,7 @@
       <li>🤝 衝動・不安・依存など<strong>やめたい習慣</strong>にも、<strong>続けたい習慣</strong>にも</li>
       <li>🔒 記録はすべて<strong>このデバイスのみ</strong>に保存されます</li>
     </ul>
-    <p class="onboarding-note">重篤な依存症・精神疾患のある方は、専門家へのご相談もあわせてご検討ください。</p>
+    <p class="onboarding-note">このアプリは日常的な習慣サポートが目的です。</p>
     <button class="primary-btn onboarding-btn" id="onboarding-start-btn">はじめる →</button>
   </div>
 </div>
@@ -597,6 +606,7 @@
     <div class="wb-msg" id="wb-msg"></div>
     <div class="streak-badge" id="wb-streak"></div>
     <button class="primary-btn" id="wb-start">始める →</button>
+    <button class="secondary-btn" id="wb-resume" style="display:none;margin-top:8px;"></button>
     <p class="welcome-disclaimer">このアプリは軽度〜中等度の習慣・衝動の問題に取り組む方向けです。重篤な依存症・精神疾患のある方は専門家にご相談ください。</p>
   </section>
 
@@ -608,8 +618,8 @@
     <div class="direction-grid">
       <button class="direction-card" data-dir="resist">
         <span class="dir-icon">🌊</span>
-        <span class="dir-title">衝動に抵抗したい</span>
-        <span class="dir-desc">過食・飲酒・タバコ・スマホ・ギャンブルなど、やめたい・止めたい気持ち</span>
+        <span class="dir-title">なんか止めたい・減らしたい</span>
+        <span class="dir-desc">過食・飲酒・タバコ・スマホ・ゲーム・エナジードリンクなど、減らしたい・気になっている習慣</span>
       </button>
       <button class="direction-card" data-dir="approach">
         <span class="dir-icon">🌱</span>
@@ -717,10 +727,10 @@
       <div class="journal-tech-name" id="journal-tech-name"></div>
       <div class="journal-prompt">どうでしたか？</div>
       <div class="journal-warm" id="journal-warm"></div>
-      <textarea class="journal-textarea" id="journal-textarea" placeholder="感じたこと、気づいたことを自由に…（入力しなくてもOK）"></textarea>
-      <div class="journal-privacy">入力内容はAI応答生成のためAnthropicに送信されます。保存はされません。</div>
+      <textarea class="journal-textarea" id="journal-textarea" placeholder="どうだった？一言でも（例：「ちょっと楽になった」）"></textarea>
+      <div class="journal-privacy">入力内容はAI応答生成のためAnthropicに送信されます。保存はされません。重篤な依存症・精神疾患のある方は専門家にご相談ください。</div>
       <button class="journal-send-btn" id="journal-send-btn">Claude に気持ちを話す</button>
-      <div class="journal-response" id="journal-response"></div>
+      <div class="journal-response" id="journal-response" role="status" aria-live="polite" aria-label="Claudeからの応答"></div>
       <button class="journal-skip-btn" id="journal-done-btn">終わりにする →</button>
     </div>
     <div class="crisis-footer">
@@ -983,6 +993,7 @@
       <span class="card-approach ${cls} badge-tappable" title="${badgeDesc}" data-desc="${badgeDesc}">${tc.approach}</span>
       <div class="card-icon">${tc.icon}</div>
       <div class="card-name">${name}</div>
+      ${tagline ? `<div class="card-name-sub">${tagline.split(/[。、]/)[0]}</div>` : ''}
       <div class="card-tagline">${tagline}</div>
       <div class="card-step-preview">
         <div class="card-step-label">最初のステップ</div>
@@ -1053,7 +1064,8 @@
       dragging = false;
       card.classList.remove('is-dragging');
       hL.style.opacity = 0; hR.style.opacity = 0;
-      if (Math.abs(dx) >= 80) dismissTop(dx < 0 ? 'left' : 'right');
+      const swipeThreshold = Math.min(80, window.innerWidth * 0.22);
+      if (Math.abs(dx) >= swipeThreshold) dismissTop(dx < 0 ? 'left' : 'right');
       else if (Math.abs(dx) < 15 && onTap) { card.style.transform = ''; onTap(); }
       else card.style.transform = '';
     };
@@ -1135,7 +1147,7 @@
     document.getElementById('journal-textarea').value = '';
     const respEl = document.getElementById('journal-response');
     respEl.style.display = 'none';
-    respEl.textContent = '';
+    respEl.innerHTML = '';
 
     show('sc-journal');
   }
@@ -1162,7 +1174,13 @@
 
   async function submitJournal() {
     const userText = document.getElementById('journal-textarea').value.trim();
-    if (!userText) return;
+    if (!userText) {
+      const ta = document.getElementById('journal-textarea');
+      ta.placeholder = '一言でもOKです（例：「ちょっと落ち着いた」）';
+      ta.style.borderColor = 'var(--primary)';
+      ta.focus();
+      return;
+    }
 
     const btn = document.getElementById('journal-send-btn');
     btn.disabled = true;
@@ -1178,7 +1196,7 @@
 
     const respEl = document.getElementById('journal-response');
     respEl.style.display = 'block';
-    respEl.textContent = '…';
+    respEl.innerHTML = '<span class="journal-response-label" aria-hidden="true">Claude</span> …';
 
     try {
       const res = await fetch('/api/chat', {
@@ -1192,12 +1210,19 @@
       });
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       const data = await res.json();
-      respEl.textContent = data.text || '（応答なし）';
+      const text = data.text || '（応答なし）';
+      respEl.innerHTML = `<span class="journal-response-label" aria-hidden="true">Claude</span> ${text}`;
 
       // Save after successful response
       saveJournalEntry(STATE.currentTech, name, userText);
     } catch (e) {
-      respEl.textContent = '⚠️ 応答できませんでした。時間をおいて再度お試しください。';
+      respEl.innerHTML = '⚠️ 応答できませんでした。<button id="retry-journal-btn" style="margin-left:6px;color:var(--primary);background:none;border:none;cursor:pointer;font-size:inherit;text-decoration:underline;">もう一度試す</button>';
+      document.getElementById('retry-journal-btn')?.addEventListener('click', () => {
+        respEl.style.display = 'none';
+        btn.disabled = false;
+        btn.textContent = 'Claude に気持ちを話す';
+        submitJournal();
+      });
     }
 
     btn.disabled = false;
@@ -1247,6 +1272,22 @@
     if (streak >= 2) { streakEl.textContent = `🔥 ${streak}週連続`; streakEl.style.display = 'block'; }
     else if (streak === 1) { streakEl.textContent = '✨ 今週も来たね'; streakEl.style.display = 'block'; }
     else streakEl.style.display = 'none';
+
+    // 前回テーマへのショートカット
+    const lastCtxId = S.get('last_context');
+    const resumeBtn = document.getElementById('wb-resume');
+    if (lastCtxId && contexts[lastCtxId]) {
+      const ctxLabel = contexts[lastCtxId]?.i18n?.ja?.label || lastCtxId;
+      resumeBtn.textContent = `前回（${ctxLabel}）を続ける →`;
+      resumeBtn.style.display = 'block';
+      resumeBtn.onclick = () => {
+        STATE.direction = contexts[lastCtxId].direction;
+        STATE.contextId = lastCtxId;
+        showAkinator();
+      };
+    } else {
+      resumeBtn.style.display = 'none';
+    }
 
     show('sc-welcome');
   }
