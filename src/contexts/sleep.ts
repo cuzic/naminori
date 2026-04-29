@@ -6,7 +6,7 @@ export default defineContext({
   id: 'sleep',
   icon: '😴',
   sortOrder: 10,
-  applicableTechniques: [...approachBase.applicableTechniques],
+  applicableTechniques: approachBase.applicableTechniques.filter(t => t !== 'two-minute-rule'),
   i18n: {
     ja: {
       label: '睡眠を整える',
