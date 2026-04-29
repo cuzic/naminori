@@ -56,4 +56,6 @@ export const SHARED_TECHNIQUES = [
   'work-detach',
   'needs-inventory',
   'community-find',
+  'self-distancing',
+  'rumination-interrupt',
 ] as const;

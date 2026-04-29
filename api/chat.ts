@@ -33,6 +33,7 @@ const VALID_TECHNIQUE_IDS = new Set([
   'strengths-inventory','connection-plan','self-focus','detachment',
   'exposure-ladder','inner-critic','shame-resilience','work-detach',
   'needs-inventory','community-find',
+  'self-distancing','rumination-interrupt',
 ]);
 
 interface JournalEntry {
