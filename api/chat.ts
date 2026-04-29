@@ -26,6 +26,8 @@ const VALID_TECHNIQUE_IDS = new Set([
   'gratitude-visit','best-possible-self',
   'emotional-granularity','coping-anchor','somatic-reset','chain-break',
   'nvc','assertion-training','boundary-message','active-listening','repair-talk','sensory-refuge','social-script',
+  'assertive-refusal','time-out-request','recovery-disclosure','gradual-sharing','concrete-request',
+  'emotion-signal','i-message','appreciation-express','reflective-question','online-boundary',
 ]);
 
 interface JournalEntry {
