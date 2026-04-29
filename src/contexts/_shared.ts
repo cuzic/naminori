@@ -21,4 +21,11 @@ export const SHARED_TECHNIQUES = [
   'emotional-granularity',
   'coping-anchor',
   'somatic-reset',
+  'nvc',
+  'assertion-training',
+  'boundary-message',
+  'active-listening',
+  'repair-talk',
+  'sensory-refuge',
+  'social-script',
 ] as const;
