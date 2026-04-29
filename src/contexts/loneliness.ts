@@ -7,7 +7,7 @@ export default defineContext({
   icon: '🫂',
   sortOrder: 20,
   applicableTechniques: [
-    'connection-plan', 'nvc', 'social-script', 'active-listening',
+    'connection-plan', 'community-find', 'nvc', 'social-script', 'active-listening',
     'gradual-sharing', 'recovery-disclosure', 'assertion-training',
     'loving-kindness', 'gratitude-visit', 'giving-act',
     'appreciation-express', 'reflective-question', 'concrete-request',

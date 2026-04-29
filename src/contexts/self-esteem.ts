@@ -7,7 +7,7 @@ export default defineContext({
   icon: '🌱',
   sortOrder: 19,
   applicableTechniques: [
-    'strengths-inventory', 'three-good-things', 'self-compassion-3steps',
+    'strengths-inventory', 'inner-critic', 'shame-resilience', 'three-good-things', 'self-compassion-3steps',
     'best-possible-self', 'loving-kindness', 'gratitude-visit',
     'letter-to-self', 'kind-words', 'growth-mindset', 'use-strength',
     'strengths-use', 'three-wins', 'why-recover', 'values-compass',

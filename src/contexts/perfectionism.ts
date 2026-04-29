@@ -7,7 +7,7 @@ export default defineContext({
   icon: '🎯',
   sortOrder: 16,
   applicableTechniques: [
-    'good-enough', 'cognitive-reappraisal', 'self-compassion-3steps',
+    'good-enough', 'inner-critic', 'shame-resilience', 'cognitive-reappraisal', 'self-compassion-3steps',
     'defusion', 'radical-acceptance', 'reframing', 'values-compass',
     'wise-mind', 'decatastrophize', 'letter-to-self',
     'loving-kindness', 'kind-words', 'growth-mindset',

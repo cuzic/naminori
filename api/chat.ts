@@ -31,6 +31,8 @@ const VALID_TECHNIQUE_IDS = new Set([
   'anger-iceberg','cognitive-reappraisal','pause-before-react',
   'worry-time','worry-tree','good-enough','energy-audit','rest-types',
   'strengths-inventory','connection-plan','self-focus','detachment',
+  'exposure-ladder','inner-critic','shame-resilience','work-detach',
+  'needs-inventory','community-find',
 ]);
 
 interface JournalEntry {

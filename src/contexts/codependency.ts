@@ -7,7 +7,7 @@ export default defineContext({
   icon: '🔗',
   sortOrder: 21,
   applicableTechniques: [
-    'self-focus', 'detachment', 'boundary-message', 'wise-mind',
+    'self-focus', 'detachment', 'needs-inventory', 'boundary-message', 'wise-mind',
     'nvc', 'values-compass', 'emotion-labeling', 'radical-acceptance',
     'assertion-training', 'emotional-granularity', 'self-compassion-3steps',
     'defusion', 'cognitive-reappraisal', 'decisional-balance',

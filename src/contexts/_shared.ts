@@ -50,4 +50,10 @@ export const SHARED_TECHNIQUES = [
   'connection-plan',
   'self-focus',
   'detachment',
+  'exposure-ladder',
+  'inner-critic',
+  'shame-resilience',
+  'work-detach',
+  'needs-inventory',
+  'community-find',
 ] as const;

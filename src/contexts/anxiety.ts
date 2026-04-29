@@ -7,7 +7,7 @@ export default defineContext({
   icon: '😰',
   sortOrder: 17,
   applicableTechniques: [
-    'worry-time', 'worry-tree', 'breathing-478', 'grounding-54321',
+    'worry-time', 'worry-tree', 'exposure-ladder', 'breathing-478', 'grounding-54321',
     'cognitive-reappraisal', 'defusion', 'body-scan', 'cope-ahead',
     'check-the-facts', 'decatastrophize', 'radical-acceptance',
     'pause-before-react', 'box-breathing', 'somatic-reset',

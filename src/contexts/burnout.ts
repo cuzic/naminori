@@ -7,7 +7,7 @@ export default defineContext({
   icon: '🔥',
   sortOrder: 18,
   applicableTechniques: [
-    'energy-audit', 'rest-types', 'body-scan', 'values-compass',
+    'energy-audit', 'work-detach', 'rest-types', 'body-scan', 'values-compass',
     'self-compassion-3steps', 'boundary-message', 'please-check',
     'problem-solving', 'gratitude-visit', 'three-good-things',
     'loving-kindness', 'perma-check', 'flow-activity',
