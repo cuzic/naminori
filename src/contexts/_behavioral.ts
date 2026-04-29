@@ -14,6 +14,7 @@ export const BEHAVIORAL_TECHNIQUES = [
   'behavioral-chain',
   'please-check',
   'behavioral-substitution',
+  'chain-break',
 ] as const;
 
 export const behavioralBase = {

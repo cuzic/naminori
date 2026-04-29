@@ -18,4 +18,7 @@ export const SHARED_TECHNIQUES = [
   'problem-solving',
   'reframing',
   'gratitude-visit',
+  'emotional-granularity',
+  'coping-anchor',
+  'somatic-reset',
 ] as const;

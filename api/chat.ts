@@ -24,6 +24,7 @@ const VALID_TECHNIQUE_IDS = new Set([
   'emotion-check-in','self-monitoring','problem-solving','reinforcement-management',
   'behavioral-substitution','decisional-balance','reframing','strengths-use',
   'gratitude-visit','best-possible-self',
+  'emotional-granularity','coping-anchor','somatic-reset','chain-break',
 ]);
 
 interface JournalEntry {

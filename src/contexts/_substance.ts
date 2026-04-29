@@ -12,6 +12,7 @@ export const SUBSTANCE_TECHNIQUES = [
   'pros-cons-urge',
   'ask-support',
   'behavioral-substitution',
+  'chain-break',
 ] as const;
 
 export const substanceBase = {
