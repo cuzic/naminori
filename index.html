@@ -267,7 +267,7 @@
       user-select: none; will-change: transform; overflow: hidden;
     }
     .technique-card:nth-last-child(1) { z-index: 3; }
-    .technique-card:nth-last-child(2) { z-index: 2; transform: scale(0.95) translateY(12px); pointer-events: none; }
+    .technique-card:nth-last-child(2) { z-index: 2; transform: scale(var(--stack-depth-scale, 0.95)) translateY(12px); pointer-events: none; }
     .technique-card:nth-last-child(3) { z-index: 1; transform: scale(0.90) translateY(24px); pointer-events: none; }
     .technique-card.is-dragging { transition: none; cursor: grabbing; }
     .technique-card.fly-left { transition: transform 0.4s ease-in, opacity 0.4s; transform: translateX(-140%) rotate(-22deg) !important; opacity: 0; }
@@ -294,7 +294,7 @@
     .card-tagline { font-size: 0.88rem; line-height: 1.65; color: var(--text-muted); margin-bottom: 14px; }
     .card-step-preview {
       background: var(--primary-light); border-left: 3px solid var(--primary);
-      border-radius: 0 8px 8px 0; padding: 10px 12px; flex: 1;
+      border-radius: 0 8px 8px 0; padding: 10px 12px;
     }
     .card-step-label { font-size: 0.68rem; font-weight: 700; color: var(--primary); margin-bottom: 4px; letter-spacing: 0.04em; }
     .card-step-text { font-size: 0.82rem; line-height: 1.55; color: var(--text); }
@@ -333,7 +333,7 @@
     #sc-detail {
       width: 100%; max-width: 540px;
       min-height: 100svh; background: var(--bg);
-      padding: 0 0 48px;
+      padding: 0 0 90px;
       flex-direction: column;
       overflow-y: auto;
     }
@@ -423,8 +423,14 @@
       font-size: 0.88rem; line-height: 1.65;
     }
     .tips-list li::before { content: "💡"; font-size: 1rem; flex-shrink: 0; margin-top: 1px; }
+    .done-btn-wrap {
+      position: fixed; bottom: 0; z-index: 50;
+      left: 50%; transform: translateX(-50%);
+      width: min(100%, 540px);
+      background: var(--bg); padding: 12px 24px 20px;
+    }
     .done-btn {
-      margin: 28px 0 0; width: 100%;
+      width: 100%;
       padding: 18px; background: var(--primary); color: #fff;
       border: none; border-radius: 50px; font-size: 1rem; font-weight: 700;
       cursor: pointer; transition: transform 0.15s, background 0.15s;
@@ -714,6 +720,8 @@
         <div class="detail-section-title">コツ・ヒント</div>
         <ul class="tips-list" id="detail-tips"></ul>
       </div>
+    </div>
+    <div class="done-btn-wrap">
       <button class="done-btn" id="done-btn">✓ 完了した！</button>
     </div>
   </section>
@@ -752,9 +760,21 @@
 
 <script>
 (function () {
+  // ── Named constants (magic numbers) ──
+  const SWIPE_THRESHOLD   = 80;       // px — minimum drag to dismiss card
+  const SWIPE_WIDTH_RATIO = 0.22;     // fallback threshold as fraction of viewport
+  const SWIPE_TAP_MAX     = 15;       // px — max drag still counted as tap
+  const CARD_ROTATE_DIV   = 18;       // divisor for tilt angle during drag
+  const STEP_PREVIEW_LEN  = 55;       // max chars of first-step text on card face
+  const JOURNAL_HIST_MAX  = 30;       // max journal entries stored in localStorage
+  const STACK_DEPTH_SCALE = 0.95;     // scale factor for back-cards in the stack
+  document.documentElement.style.setProperty('--stack-depth-scale', STACK_DEPTH_SCALE);
+
   // ── Data ──
   let techniques = [];
   let contexts = {};
+  let techniqueMap = new Map();
+  let contextMap   = new Map();
 
   const wbr = s => {
     if (s.includes('・'))
@@ -841,7 +861,7 @@
   }
 
   function getCtxVars(ctxId) {
-    return (ctxId && contexts[ctxId]?.i18n?.ja) || {};
+    return (ctxId && contextMap.get(ctxId)?.i18n?.ja) || {};
   }
 
   function applyCtx(text, ctxId) {
@@ -960,7 +980,7 @@
 
   // ── Deck building ──
   function buildDeck() {
-    const ctx = contexts[STATE.contextId];
+    const ctx = contextMap.get(STATE.contextId);
     const applicable = ctx ? new Set(ctx.applicableTechniques) : null;
     const eKeys = EMOTION_KEYS[STATE.emotion] || [STATE.emotion];
     const slot = detectTimeSlot();
@@ -993,7 +1013,7 @@
     const name = t(ja.name || tc.id, vars);
     const tagline = t(ja.tagline || '', vars);
     const steps = (ja.steps || []).map(s => t(s, vars));
-    const firstStep = steps[0] ? (steps[0].length > 55 ? steps[0].slice(0, 55) + '…' : steps[0]) : '';
+    const firstStep = steps[0] ? (steps[0].length > STEP_PREVIEW_LEN ? steps[0].slice(0, STEP_PREVIEW_LEN) + '…' : steps[0]) : '';
     const cls = BADGE[tc.approach] || 'badge-record';
     const badgeDesc = BADGE_DESC[tc.approach] || '';
     el.innerHTML = `
@@ -1008,6 +1028,7 @@
         <div class="card-step-label">最初のステップ</div>
         <div class="card-step-text">${firstStep}</div>
       </div>
+      <div style="flex:1"></div>
       <div class="card-footer">
         <span class="card-duration">⏱ 約${tc.duration}分 · 全${steps.length}ステップ</span>
         <span class="card-tap-hint">詳しく見る →</span>
@@ -1030,12 +1051,13 @@
     if (nav) nav.style.display = 'flex';
     [...STATE.deck.slice(0, 3)].reverse().forEach(tc => stack.appendChild(buildCardEl(tc)));
     const top = stack.querySelector('.technique-card:last-child');
-    if (top) attachSwipe(top, () => openDetail(top.dataset.id));
+    if (top) top._cleanup = attachSwipe(top, () => openDetail(top.dataset.id));
   }
 
   function dismissTop(dir) {
     const top = document.querySelector('#card-stack .technique-card:last-child');
     if (!top) return;
+    top._cleanup?.(); delete top._cleanup;
     top.classList.add(dir === 'left' ? 'fly-left' : 'fly-right');
     STATE.deck.shift();
     setTimeout(() => { renderStack(); updateCardsMeta(); }, 420);
@@ -1063,8 +1085,8 @@
       dx = x - sx;
       const dy = y - sy;
       if (Math.abs(dx) < Math.abs(dy) * 0.5 && Math.abs(dx) < 20) return;
-      card.style.transform = `translateX(${dx}px) rotate(${dx / 18}deg)`;
-      const r = Math.min(Math.abs(dx) / 80, 1);
+      card.style.transform = `translateX(${dx}px) rotate(${dx / CARD_ROTATE_DIV}deg)`;
+      const r = Math.min(Math.abs(dx) / SWIPE_THRESHOLD, 1);
       hL.style.opacity = dx < 0 ? r : 0;
       hR.style.opacity = dx > 0 ? r : 0;
     };
@@ -1073,9 +1095,9 @@
       dragging = false;
       card.classList.remove('is-dragging');
       hL.style.opacity = 0; hR.style.opacity = 0;
-      const swipeThreshold = Math.min(80, window.innerWidth * 0.22);
+      const swipeThreshold = Math.min(SWIPE_THRESHOLD, window.innerWidth * SWIPE_WIDTH_RATIO);
       if (Math.abs(dx) >= swipeThreshold) dismissTop(dx < 0 ? 'left' : 'right');
-      else if (Math.abs(dx) < 15 && onTap) { card.style.transform = ''; onTap(); }
+      else if (Math.abs(dx) < SWIPE_TAP_MAX && onTap) { card.style.transform = ''; onTap(); }
       else card.style.transform = '';
     };
     card.addEventListener('touchstart', e => onStart(e.touches[0].clientX, e.touches[0].clientY), { passive: true });
@@ -1089,7 +1111,7 @@
 
   // ── Detail screen ──
   function openDetail(id) {
-    const tc = techniques.find(x => x.id === id);
+    const tc = techniqueMap.get(id);
     if (!tc) return;
     STATE.currentTech = id;
     const ja = tc.i18n?.ja || {};
@@ -1120,11 +1142,10 @@
 
     const list = document.getElementById('detail-steps-list');
     list.innerHTML = steps.map((s, i) => `
-      <div class="step-item" data-step="${i}">
+      <div class="step-item" role="checkbox" aria-checked="false" data-step="${i}">
         <div class="step-num"><span class="num">${i + 1}</span><span class="check">✓</span></div>
         <div class="step-text">${s}</div>
       </div>`).join('');
-    list.querySelectorAll('.step-item').forEach(item => item.addEventListener('click', () => item.classList.toggle('done')));
 
     const tipsEl = document.getElementById('detail-tips');
     const tipsSec = document.getElementById('tips-section');
@@ -1146,7 +1167,7 @@
   ];
 
   function openJournal() {
-    const tc = techniques.find(x => x.id === STATE.currentTech);
+    const tc = techniqueMap.get(STATE.currentTech);
     const ja = tc?.i18n?.ja || {};
     const vars = getCtxVars(STATE.contextId);
     const name = t(ja.name || STATE.currentTech, vars);
@@ -1163,7 +1184,6 @@
 
   // ── Journal history (localStorage) ──
   const JOURNAL_HISTORY_KEY = 'nm_journal_history';
-  const MAX_HISTORY = 30;
 
   function loadJournalHistory() {
     try { return JSON.parse(localStorage.getItem(JOURNAL_HISTORY_KEY) || '[]'); } catch { return []; }
@@ -1177,7 +1197,7 @@
       techniqueName,
       text: text.slice(0, 300),
     });
-    if (history.length > MAX_HISTORY) history.splice(MAX_HISTORY);
+    if (history.length > JOURNAL_HIST_MAX) history.splice(JOURNAL_HIST_MAX);
     try { localStorage.setItem(JOURNAL_HISTORY_KEY, JSON.stringify(history)); } catch {}
   }
 
@@ -1195,7 +1215,7 @@
     btn.disabled = true;
     btn.textContent = '送信中…';
 
-    const tc = techniques.find(x => x.id === STATE.currentTech);
+    const tc = techniqueMap.get(STATE.currentTech);
     const ja = tc?.i18n?.ja || {};
     const vars = getCtxVars(STATE.contextId);
     const name = t(ja.name || STATE.currentTech, vars);
@@ -1285,12 +1305,13 @@
     // 前回テーマへのショートカット
     const lastCtxId = S.get('last_context');
     const resumeBtn = document.getElementById('wb-resume');
-    if (lastCtxId && contexts[lastCtxId]) {
-      const ctxLabel = contexts[lastCtxId]?.i18n?.ja?.label || lastCtxId;
+    const lastCtx = lastCtxId ? contextMap.get(lastCtxId) : null;
+    if (lastCtxId && lastCtx) {
+      const ctxLabel = lastCtx?.i18n?.ja?.label || lastCtxId;
       resumeBtn.textContent = `前回（${ctxLabel}）を続ける →`;
       resumeBtn.style.display = 'block';
       resumeBtn.onclick = () => {
-        STATE.direction = contexts[lastCtxId].direction;
+        STATE.direction = lastCtx.direction;
         STATE.contextId = lastCtxId;
         showAkinator();
       };
@@ -1408,6 +1429,10 @@
     // Load contexts
     contexts = window.__CONTEXTS__ || {};
 
+    // Build lookup Maps for O(1) access
+    techniqueMap = new Map(techniques.map(t => [t.id, t]));
+    contextMap   = new Map(Object.entries(contexts));
+
     // Time greeting
     document.getElementById('app-time').textContent = timeGreeting(detectTimeSlot());
 
@@ -1468,6 +1493,15 @@
     // Detail
     document.getElementById('detail-back-btn').addEventListener('click', () => show('sc-cards'));
     document.getElementById('done-btn').addEventListener('click', () => openJournal());
+
+    // Step completion — delegated listener (one-time, avoids per-openDetail memory leak)
+    document.getElementById('detail-steps-list').addEventListener('click', e => {
+      const item = e.target.closest('.step-item');
+      if (item) {
+        const isDone = item.classList.toggle('done');
+        item.setAttribute('aria-checked', isDone);
+      }
+    });
 
     // Journal
     document.getElementById('journal-send-btn').addEventListener('click', submitJournal);
