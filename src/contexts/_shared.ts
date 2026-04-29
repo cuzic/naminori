@@ -1,0 +1,19 @@
+// Techniques available to ALL contexts regardless of direction
+export const SHARED_TECHNIQUES = [
+  'urge-surfing',
+  'stop-skill',
+  'accepts-skill',
+  'self-soothing',
+  'mindful-breathing',
+  'body-scan',
+  'grounding-5-4-3-2-1',
+  'self-compassion-break',
+  'values-clarify',
+  'cognitive-defusion',
+  'wise-mind',
+  'cope-ahead',
+  'radical-acceptance',
+  'half-smile',
+  '3gt',
+  'gratitude-log',
+] as const;

@@ -1,0 +1,14 @@
+{
+  "name": "naminori",
+  "version": "0.1.0",
+  "description": "Naminori — いまここ道具箱",
+  "scripts": {
+    "build": "bun scripts/build.ts",
+    "dev": "bun --watch scripts/build.ts",
+    "serve": "bun --bun scripts/serve.ts"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "bun-types": "latest"
+  }
+}
