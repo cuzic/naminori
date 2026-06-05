@@ -220,13 +220,189 @@ const METAPHORS: Record<string, string> = {
     'A handwritten letter being sealed with wax, a ribbon tied, ready to be delivered.',
   'best-possible-self':
     'A person standing on a hilltop at sunrise, arms relaxed, looking toward a bright horizon.',
+
+  // ── Productivity / habits (existing techniques) ──
+  'fresh-start':
+    'A blank page in an open notebook, first light of dawn through a window, a single pen ready.',
+  'identity-statement':
+    'A mirror showing a person standing tall, confident posture, warm morning light.',
+  'motivation-source':
+    'A compass pointing toward a distant mountain peak bathed in golden light.',
+  'pomodoro':
+    'A classic red tomato-shaped kitchen timer on a wooden desk, warm afternoon light.',
+  'task-aversion-check':
+    'A small closed door with light peeking from beneath it, a hand gently reaching toward the handle.',
+  'zeigarnik-start':
+    'A single knitting needle starting the first row of a new project, fresh yarn, warm light.',
+  'resentment-release':
+    'A clenched fist slowly opening to release a small bird into a bright sky.',
+  'attention-redirect':
+    'A spotlight beam gently turning from a shadowed corner toward a bright window with flowers outside.',
+  'freewriting':
+    'A pen moving across paper in flowing cursive, ink trails like ribbon in morning light.',
+  'quantity-first':
+    'A row of small clay pots in various stages, all in progress, hands joyfully at work.',
+  'bad-art-day':
+    'A cheerful imperfect clay pot on a sunny studio shelf, lopsided but charming.',
+  'creative-input':
+    'An open book beside a sketchpad, dried leaves and a feather around it, afternoon light streaming in.',
+  'reverse-brainstorm':
+    'An upside-down tree with roots in the sky and branches growing downward, flowering unexpectedly.',
+  'random-word':
+    'A book falling open to a random page, a single word glowing gently on the page, light and airy.',
+  'question-storming':
+    'A spiral of question marks made of flowers and leaves, soft pastel warm background.',
+  'mit-selection':
+    'Three smooth pebbles arranged in a row on a wooden surface, the largest one glowing softly in front.',
+  'deep-work-block':
+    'A person at a quiet desk, a "do not disturb" note on the door, warm focused lamp light.',
+  'shutdown-ritual':
+    'A laptop gently closing on a tidy desk at dusk, a single lamp switched off, soft evening light.',
+  'task-batching':
+    'Identical envelopes sorted into neat stacks by patient hands, clean wooden desk.',
+
+  // ── Work-life balance ──
+  'role-switching-ritual':
+    'A coat being gently hung on a hook as a different coat is taken down, soft threshold of a doorway.',
+  'digital-sunset':
+    'A smartphone placed face-down beside a warm glowing lamp at dusk, the world outside softly lit.',
+  'ideal-week-design':
+    'A weekly calendar on paper with soft colored blocks and tiny drawings, a cup of tea beside it.',
+  'off-identity':
+    'Several small illustrated tags hanging from a branch, each one a different pastel color for a hobby or role.',
+
+  // ── Time management ──
+  'time-audit':
+    'An open planner with colored blocks and a classic pocket watch beside it on a wooden table.',
+  'eisenhower-matrix':
+    'Four hand-drawn quadrants on paper with tiny illustrations in each, soft pencil lines on a sunny desk.',
+  'time-blocking':
+    'A weekly planner with colored rectangles filling the page in neat rows, organized and calm.',
+  'parkinson-defense':
+    'An hourglass with a bold line marked partway down, a hand poised to flip it before the sand runs out.',
+
+  // ── Decision making ──
+  '10-10-10':
+    'Three concentric rings of light expanding outward on water, each one farther and brighter than the last.',
+  'regret-minimization':
+    'An elderly person sitting peacefully in a rocking chair on a porch, gazing at a golden horizon.',
+  'satisficing':
+    'A hand reaching into a basket of apples and gently lifting one out — not the biggest, just the right one.',
+  'coin-flip-test':
+    'A single coin spinning in the air, caught in morning light, someone watching with a curious expression.',
+  'decision-journal':
+    'An open notebook with small dated entries, each illuminated by warm candlelight on a wooden desk.',
+  'option-reduction':
+    'A row of coat hooks with just one coat hanging neatly, simple and tidy, bright morning light.',
+
+  // ── Grief ──
+  'grief-wave':
+    'A person standing at the shore as a large wave washes gently over their feet, eyes closed, at peace.',
+  'continuing-bonds':
+    'A thread of golden light connecting two hands across distance, one near, one fading softly into the horizon.',
+  'dual-process-grief':
+    'A path that splits in two — one leading toward a soft rain, one toward sunlight — and quietly merges again.',
+  'loss-letter':
+    'A sealed letter resting on a wooden surface beside dried flowers and a closed photograph album.',
+  'grief-ritual':
+    'A single candle lit on a small table with a photograph, soft flowers, and a folded piece of paper.',
+  'meaning-reconstruction':
+    'A mosaic being assembled from broken colorful pieces, each fragment becoming part of a larger beautiful picture.',
+
+  // ── Trauma ──
+  'safe-place':
+    'A small cozy cottage in a sunlit meadow with warm light in the windows and soft clouds above.',
+  'window-of-tolerance':
+    'A wide open window with a golden frame, a gentle breeze moving soft curtains, the outside world calm.',
+  'titration':
+    'A single drop of water falling from a leaf into a still pond, ripples expanding gently outward.',
+  'pendulation':
+    'A pendulum swinging gently between two glowing lights — one warm amber, one soft cool blue.',
+  'resource-installation':
+    'A small jar filled with glowing golden light, carefully sealed and held in two gentle hands.',
+  'tapping':
+    'Fingertips gently tapping the edge of a hand in a rhythmic, peaceful gesture, soft warm background.',
+
+  // ── Impostor syndrome ──
+  'achievement-evidence':
+    'A corkboard with handwritten letters, small photographs, and notes pinned with care, warm afternoon light.',
+  'impostor-normalize':
+    'Multiple silhouettes of people, each with a tiny shared thought bubble, soft warm earth tones.',
+  'competence-journal':
+    'An open journal with tally marks and small hand-drawn stars on a sunny table, a gentle pen nearby.',
+  'feedback-portfolio':
+    'An open folder with letters and warm notes inside, tied with a ribbon, afternoon light falling across it.',
+  'luck-vs-skill':
+    'A hand-drawn pie chart divided into sections, a pencil and gentle annotations on a warm wooden desk.',
+
+  // ── Body image ──
+  'functional-appreciation':
+    'Bare feet walking through soft green grass, close-up of ankles in motion, morning dew.',
+  'media-fast':
+    'A phone resting face-down among wildflowers in a meadow, the sky wide and clear above.',
+  'mirror-exposure':
+    'A simple oval mirror on a wooden table, a person standing calmly before it, soft unhurried light.',
+  'size-diversity-exposure':
+    'Different-sized smooth stones arranged naturally on a riverbank, each one beautiful in its own way.',
+  'body-story':
+    'An open illustrated book with gentle body silhouettes at different life stages, warm watercolor style.',
+
+  // ── Chronic pain ──
+  'pain-pacing':
+    'A turtle walking steadily along a forest path, consistent and calm, soft dappled light through trees.',
+  'pain-diary':
+    'A small notebook open to a simple chart with gentle colored lines, a pencil and a warm mug beside it.',
+  'pain-neuroscience':
+    'A simplified nervous system illustrated as a glowing network of lights, soft and warm amber tones.',
+  'activity-window':
+    'A window with golden sunlight streaming through at just the right angle, a bird perching at that moment.',
+  'pleasant-activity-plan':
+    'A small illustrated calendar with cheerful doodles — a book, a flower, a tea cup — marking joyful activities.',
+
+  // ── Energy management ──
+  'ultradian-rhythm':
+    'A golden sine wave drawn on paper, peaks and valleys evenly spaced, a small sun at each peak.',
+  'energy-map':
+    'A gentle wave chart on paper, peaks marked with small suns and valleys with moons, a warm desk.',
+  'drain-gain-list':
+    'Two vessels: one being filled from a small glowing stream, the other overflowing with soft golden light.',
+  'micro-recovery':
+    'A tiny bird perched on a branch, eyes gently closed, resting briefly before taking flight again.',
+  'cognitive-load-diet':
+    'A cluttered desk being gently simplified, items floating away one by one into clear air.',
+
+  // ── Breathing ──
+  'diaphragm-breathing':
+    'A hand resting gently on a rising abdomen, person lying peacefully, soft warm light from above.',
+  'resonance-breathing':
+    'Ocean waves rolling in and out in perfect rhythm, steady and calm, warm golden hour light.',
+  'alternate-nostril':
+    'A figure in gentle meditation, fingertips softly touching one side of the nose, warm peaceful light.',
+  'physiological-sigh':
+    'A person exhaling a long visible breath like mist in cold morning air, shoulders visibly dropping in relief.',
+  'coherent-breathing':
+    'Sound waves illustrated as perfectly symmetrical flowing curves, soft blue and warm gold.',
+  'breath-counting':
+    'A person sitting quietly, fingers gently counting on one hand, eyes softly closed, serene warm setting.',
 };
 
 async function main() {
   const data: { techniques: { id: string }[] } =
     await Bun.file(join(ROOT, 'src', 'data.json')).json();
 
-  const images = data.techniques.map(tc => {
+  // Find existing image files to skip
+  const imagesDir = join(ROOT, 'src', 'assets', 'images');
+  const existingFiles = new Set<string>();
+  try {
+    const glob = new Bun.Glob('*.{jpg,jpeg,png,webp}');
+    for await (const file of glob.scan(imagesDir)) {
+      existingFiles.add(file.replace(/\.[^.]+$/, ''));
+    }
+  } catch {
+    // Directory may not exist yet
+  }
+
+  const allImages = data.techniques.map(tc => {
     const metaphor = METAPHORS[tc.id];
     if (!metaphor) {
       console.warn(`⚠ No metaphor for: ${tc.id} — using fallback`);
@@ -242,10 +418,18 @@ async function main() {
     };
   });
 
-  const missing = images.filter(i => !METAPHORS[i.name]);
-  if (missing.length > 0) {
-    console.warn(`\n⚠ ${missing.length} technique(s) missing metaphor:`);
-    missing.forEach(i => console.warn(`  - ${i.name}`));
+  const missingMetaphor = allImages.filter(i => !METAPHORS[i.name]);
+  if (missingMetaphor.length > 0) {
+    console.warn(`\n⚠ ${missingMetaphor.length} technique(s) missing metaphor:`);
+    missingMetaphor.forEach(i => console.warn(`  - ${i.name}`));
+  }
+
+  // Only generate images that don't exist yet
+  const images = allImages.filter(i => !existingFiles.has(i.name));
+  const skipped = allImages.length - images.length;
+
+  if (skipped > 0) {
+    console.log(`⏭ Skipping ${skipped} already-generated images`);
   }
 
   await Bun.write(
@@ -253,7 +437,7 @@ async function main() {
     JSON.stringify({ images }, null, 2),
   );
 
-  console.log(`\n✓ Generated src/images.json — ${images.length} prompts`);
+  console.log(`\n✓ Generated src/images.json — ${images.length} prompts (${allImages.length} total)`);
 }
 
 main().catch(console.error);

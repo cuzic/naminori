@@ -4012,8 +4012,19 @@
       "icon": "🕊️",
       "approach": "つながり",
       "duration": 10,
-      "emotions": ["anger", "irritated", "lonely", "sad", "shame", "hopeless"],
-      "timeSlots": ["morning", "noon", "evening"],
+      "emotions": [
+        "anger",
+        "irritated",
+        "lonely",
+        "sad",
+        "shame",
+        "hopeless"
+      ],
+      "timeSlots": [
+        "morning",
+        "noon",
+        "evening"
+      ],
       "i18n": {
         "ja": {
           "name": "非暴力コミュニケーション",
@@ -4039,8 +4050,18 @@
       "icon": "✋",
       "approach": "つながり",
       "duration": 8,
-      "emotions": ["anxiety", "shame", "fear", "lonely", "exhausted"],
-      "timeSlots": ["morning", "noon", "evening"],
+      "emotions": [
+        "anxiety",
+        "shame",
+        "fear",
+        "lonely",
+        "exhausted"
+      ],
+      "timeSlots": [
+        "morning",
+        "noon",
+        "evening"
+      ],
       "i18n": {
         "ja": {
           "name": "アサーション訓練",
@@ -4066,8 +4087,19 @@
       "icon": "🛡️",
       "approach": "つながり",
       "duration": 5,
-      "emotions": ["exhausted", "anger", "irritated", "shame", "anxiety"],
-      "timeSlots": ["morning", "noon", "evening", "night"],
+      "emotions": [
+        "exhausted",
+        "anger",
+        "irritated",
+        "shame",
+        "anxiety"
+      ],
+      "timeSlots": [
+        "morning",
+        "noon",
+        "evening",
+        "night"
+      ],
       "i18n": {
         "ja": {
           "name": "境界線メッセージ",
@@ -4093,8 +4125,18 @@
       "icon": "👂",
       "approach": "つながり",
       "duration": 10,
-      "emotions": ["lonely", "sad", "calm", "grateful", "hopeful"],
-      "timeSlots": ["morning", "noon", "evening"],
+      "emotions": [
+        "lonely",
+        "sad",
+        "calm",
+        "grateful",
+        "hopeful"
+      ],
+      "timeSlots": [
+        "morning",
+        "noon",
+        "evening"
+      ],
       "i18n": {
         "ja": {
           "name": "積極的傾聴",
@@ -4120,8 +4162,17 @@
       "icon": "🤝",
       "approach": "つながり",
       "duration": 15,
-      "emotions": ["shame", "sad", "lonely", "hopeless"],
-      "timeSlots": ["morning", "noon", "evening"],
+      "emotions": [
+        "shame",
+        "sad",
+        "lonely",
+        "hopeless"
+      ],
+      "timeSlots": [
+        "morning",
+        "noon",
+        "evening"
+      ],
       "i18n": {
         "ja": {
           "name": "修復会話",
@@ -4148,8 +4199,20 @@
       "icon": "🏡",
       "approach": "マインドフルネス",
       "duration": 3,
-      "emotions": ["exhausted", "anxiety", "anger", "fear", "hopeless"],
-      "timeSlots": ["morning", "noon", "evening", "night", "midnight"],
+      "emotions": [
+        "exhausted",
+        "anxiety",
+        "anger",
+        "fear",
+        "hopeless"
+      ],
+      "timeSlots": [
+        "morning",
+        "noon",
+        "evening",
+        "night",
+        "midnight"
+      ],
       "i18n": {
         "ja": {
           "name": "感覚の避難所",
@@ -4175,8 +4238,17 @@
       "icon": "📋",
       "approach": "つながり",
       "duration": 5,
-      "emotions": ["anxiety", "fear", "lonely", "shame"],
-      "timeSlots": ["morning", "noon", "evening"],
+      "emotions": [
+        "anxiety",
+        "fear",
+        "lonely",
+        "shame"
+      ],
+      "timeSlots": [
+        "morning",
+        "noon",
+        "evening"
+      ],
       "i18n": {
         "ja": {
           "name": "会話スクリプト",
@@ -4202,8 +4274,17 @@
       "icon": "🙅",
       "approach": "つながり",
       "duration": 5,
-      "emotions": ["anxiety", "fear", "shame", "exhausted"],
-      "timeSlots": ["morning", "noon", "evening"],
+      "emotions": [
+        "anxiety",
+        "fear",
+        "shame",
+        "exhausted"
+      ],
+      "timeSlots": [
+        "morning",
+        "noon",
+        "evening"
+      ],
       "i18n": {
         "ja": {
           "name": "断る練習",
@@ -4228,8 +4309,18 @@
       "icon": "⏸️",
       "approach": "つながり",
       "duration": 3,
-      "emotions": ["anger", "irritated", "anxiety", "fear"],
-      "timeSlots": ["morning", "noon", "evening", "night"],
+      "emotions": [
+        "anger",
+        "irritated",
+        "anxiety",
+        "fear"
+      ],
+      "timeSlots": [
+        "morning",
+        "noon",
+        "evening",
+        "night"
+      ],
       "i18n": {
         "ja": {
           "name": "タイムアウト要求",
@@ -4254,8 +4345,17 @@
       "icon": "🌱",
       "approach": "つながり",
       "duration": 15,
-      "emotions": ["shame", "fear", "anxiety", "lonely"],
-      "timeSlots": ["morning", "noon", "evening"],
+      "emotions": [
+        "shame",
+        "fear",
+        "anxiety",
+        "lonely"
+      ],
+      "timeSlots": [
+        "morning",
+        "noon",
+        "evening"
+      ],
       "i18n": {
         "ja": {
           "name": "回復を打ち明ける",
@@ -4280,8 +4380,17 @@
       "icon": "🪞",
       "approach": "つながり",
       "duration": 8,
-      "emotions": ["lonely", "shame", "anxiety", "hopeful"],
-      "timeSlots": ["morning", "noon", "evening"],
+      "emotions": [
+        "lonely",
+        "shame",
+        "anxiety",
+        "hopeful"
+      ],
+      "timeSlots": [
+        "morning",
+        "noon",
+        "evening"
+      ],
       "i18n": {
         "ja": {
           "name": "段階的自己開示",
@@ -4306,8 +4415,17 @@
       "icon": "📝",
       "approach": "つながり",
       "duration": 5,
-      "emotions": ["anxiety", "exhausted", "lonely", "hopeful"],
-      "timeSlots": ["morning", "noon", "evening"],
+      "emotions": [
+        "anxiety",
+        "exhausted",
+        "lonely",
+        "hopeful"
+      ],
+      "timeSlots": [
+        "morning",
+        "noon",
+        "evening"
+      ],
       "i18n": {
         "ja": {
           "name": "具体的なお願い",
@@ -4332,8 +4450,19 @@
       "icon": "🌡️",
       "approach": "つながり",
       "duration": 3,
-      "emotions": ["anxiety", "exhausted", "sad", "hopeless"],
-      "timeSlots": ["morning", "noon", "evening", "night", "midnight"],
+      "emotions": [
+        "anxiety",
+        "exhausted",
+        "sad",
+        "hopeless"
+      ],
+      "timeSlots": [
+        "morning",
+        "noon",
+        "evening",
+        "night",
+        "midnight"
+      ],
       "i18n": {
         "ja": {
           "name": "感情温度を伝える",
@@ -4358,8 +4487,17 @@
       "icon": "💬",
       "approach": "つながり",
       "duration": 5,
-      "emotions": ["anger", "irritated", "sad", "shame"],
-      "timeSlots": ["morning", "noon", "evening"],
+      "emotions": [
+        "anger",
+        "irritated",
+        "sad",
+        "shame"
+      ],
+      "timeSlots": [
+        "morning",
+        "noon",
+        "evening"
+      ],
       "i18n": {
         "ja": {
           "name": "Iメッセージ",
@@ -4384,8 +4522,17 @@
       "icon": "🙏",
       "approach": "つながり",
       "duration": 5,
-      "emotions": ["grateful", "hopeful", "calm", "lonely"],
-      "timeSlots": ["morning", "noon", "evening"],
+      "emotions": [
+        "grateful",
+        "hopeful",
+        "calm",
+        "lonely"
+      ],
+      "timeSlots": [
+        "morning",
+        "noon",
+        "evening"
+      ],
       "i18n": {
         "ja": {
           "name": "感謝を言葉にする",
@@ -4410,8 +4557,17 @@
       "icon": "❓",
       "approach": "つながり",
       "duration": 8,
-      "emotions": ["lonely", "calm", "hopeful", "sad"],
-      "timeSlots": ["morning", "noon", "evening"],
+      "emotions": [
+        "lonely",
+        "calm",
+        "hopeful",
+        "sad"
+      ],
+      "timeSlots": [
+        "morning",
+        "noon",
+        "evening"
+      ],
       "i18n": {
         "ja": {
           "name": "深める質問",
@@ -4436,8 +4592,18 @@
       "icon": "📱",
       "approach": "つながり",
       "duration": 5,
-      "emotions": ["anxiety", "exhausted", "irritated", "hopeless"],
-      "timeSlots": ["morning", "noon", "evening", "night"],
+      "emotions": [
+        "anxiety",
+        "exhausted",
+        "irritated",
+        "hopeless"
+      ],
+      "timeSlots": [
+        "morning",
+        "noon",
+        "evening",
+        "night"
+      ],
       "i18n": {
         "ja": {
           "name": "オンライン境界線",
@@ -4564,8 +4730,17 @@
       "icon": "🗓️",
       "approach": "CBT",
       "duration": 10,
-      "emotions": ["anxious", "hopeless", "fear"],
-      "timeSlots": ["morning", "afternoon", "evening", "night"],
+      "emotions": [
+        "anxious",
+        "hopeless",
+        "fear"
+      ],
+      "timeSlots": [
+        "morning",
+        "afternoon",
+        "evening",
+        "night"
+      ],
       "i18n": {
         "ja": {
           "name": "不安タイム",
@@ -4588,8 +4763,18 @@
       "icon": "🌳",
       "approach": "CBT",
       "duration": 7,
-      "emotions": ["anxious", "hopeless", "fear", "sad"],
-      "timeSlots": ["morning", "afternoon", "evening", "night"],
+      "emotions": [
+        "anxious",
+        "hopeless",
+        "fear",
+        "sad"
+      ],
+      "timeSlots": [
+        "morning",
+        "afternoon",
+        "evening",
+        "night"
+      ],
       "i18n": {
         "ja": {
           "name": "心配の仕分け",
@@ -4612,8 +4797,18 @@
       "icon": "✅",
       "approach": "CBT",
       "duration": 8,
-      "emotions": ["shame", "anxious", "hopeless", "fear"],
-      "timeSlots": ["morning", "afternoon", "evening", "night"],
+      "emotions": [
+        "shame",
+        "anxious",
+        "hopeless",
+        "fear"
+      ],
+      "timeSlots": [
+        "morning",
+        "afternoon",
+        "evening",
+        "night"
+      ],
       "i18n": {
         "ja": {
           "name": "「十分よい」を決める",
@@ -4636,8 +4831,17 @@
       "icon": "🔋",
       "approach": "ポジティブ心理学",
       "duration": 10,
-      "emotions": ["hopeless", "sad", "exhausted"],
-      "timeSlots": ["morning", "afternoon", "evening", "night"],
+      "emotions": [
+        "hopeless",
+        "sad",
+        "exhausted"
+      ],
+      "timeSlots": [
+        "morning",
+        "afternoon",
+        "evening",
+        "night"
+      ],
       "i18n": {
         "ja": {
           "name": "エネルギー収支チェック",
@@ -4660,8 +4864,17 @@
       "icon": "🛋️",
       "approach": "ポジティブ心理学",
       "duration": 8,
-      "emotions": ["hopeless", "sad", "lonely"],
-      "timeSlots": ["morning", "afternoon", "evening", "night"],
+      "emotions": [
+        "hopeless",
+        "sad",
+        "lonely"
+      ],
+      "timeSlots": [
+        "morning",
+        "afternoon",
+        "evening",
+        "night"
+      ],
       "i18n": {
         "ja": {
           "name": "7種類の休息",
@@ -4684,8 +4897,17 @@
       "icon": "💪",
       "approach": "ポジティブ心理学",
       "duration": 10,
-      "emotions": ["hopeless", "sad", "shame"],
-      "timeSlots": ["morning", "afternoon", "evening", "night"],
+      "emotions": [
+        "hopeless",
+        "sad",
+        "shame"
+      ],
+      "timeSlots": [
+        "morning",
+        "afternoon",
+        "evening",
+        "night"
+      ],
       "i18n": {
         "ja": {
           "name": "強みのインベントリ",
@@ -4708,8 +4930,17 @@
       "icon": "🗺️",
       "approach": "つながり",
       "duration": 10,
-      "emotions": ["lonely", "sad", "hopeless"],
-      "timeSlots": ["morning", "afternoon", "evening", "night"],
+      "emotions": [
+        "lonely",
+        "sad",
+        "hopeless"
+      ],
+      "timeSlots": [
+        "morning",
+        "afternoon",
+        "evening",
+        "night"
+      ],
       "i18n": {
         "ja": {
           "name": "つながりプラン",
@@ -4732,8 +4963,18 @@
       "icon": "🎯",
       "approach": "ACT",
       "duration": 8,
-      "emotions": ["anxious", "shame", "hopeless", "fear"],
-      "timeSlots": ["morning", "afternoon", "evening", "night"],
+      "emotions": [
+        "anxious",
+        "shame",
+        "hopeless",
+        "fear"
+      ],
+      "timeSlots": [
+        "morning",
+        "afternoon",
+        "evening",
+        "night"
+      ],
       "i18n": {
         "ja": {
           "name": "自分に焦点を当てる",
@@ -4756,8 +4997,18 @@
       "icon": "🕊️",
       "approach": "DBT",
       "duration": 10,
-      "emotions": ["anxious", "sad", "shame", "fear"],
-      "timeSlots": ["morning", "afternoon", "evening", "night"],
+      "emotions": [
+        "anxious",
+        "sad",
+        "shame",
+        "fear"
+      ],
+      "timeSlots": [
+        "morning",
+        "afternoon",
+        "evening",
+        "night"
+      ],
       "i18n": {
         "ja": {
           "name": "愛情ある距離感",
@@ -4780,8 +5031,16 @@
       "icon": "🪜",
       "approach": "CBT",
       "duration": 15,
-      "emotions": ["fear", "anxious", "hopeless"],
-      "timeSlots": ["morning", "afternoon", "evening"],
+      "emotions": [
+        "fear",
+        "anxious",
+        "hopeless"
+      ],
+      "timeSlots": [
+        "morning",
+        "afternoon",
+        "evening"
+      ],
       "i18n": {
         "ja": {
           "name": "段階的曝露",
@@ -4805,8 +5064,18 @@
       "icon": "🗣️",
       "approach": "CBT",
       "duration": 10,
-      "emotions": ["shame", "hopeless", "sad", "fear"],
-      "timeSlots": ["morning", "afternoon", "evening", "night"],
+      "emotions": [
+        "shame",
+        "hopeless",
+        "sad",
+        "fear"
+      ],
+      "timeSlots": [
+        "morning",
+        "afternoon",
+        "evening",
+        "night"
+      ],
       "i18n": {
         "ja": {
           "name": "内なる批判者と話す",
@@ -4829,8 +5098,18 @@
       "icon": "🛡️",
       "approach": "ポジティブ心理学",
       "duration": 12,
-      "emotions": ["shame", "hopeless", "fear", "sad"],
-      "timeSlots": ["morning", "afternoon", "evening", "night"],
+      "emotions": [
+        "shame",
+        "hopeless",
+        "fear",
+        "sad"
+      ],
+      "timeSlots": [
+        "morning",
+        "afternoon",
+        "evening",
+        "night"
+      ],
       "i18n": {
         "ja": {
           "name": "恥の回復力",
@@ -4853,8 +5132,15 @@
       "icon": "🔌",
       "approach": "マインドフルネス",
       "duration": 8,
-      "emotions": ["hopeless", "anxious", "sad"],
-      "timeSlots": ["evening", "night"],
+      "emotions": [
+        "hopeless",
+        "anxious",
+        "sad"
+      ],
+      "timeSlots": [
+        "evening",
+        "night"
+      ],
       "i18n": {
         "ja": {
           "name": "仕事の切り離しルーティン",
@@ -4877,8 +5163,18 @@
       "icon": "📋",
       "approach": "ACT",
       "duration": 10,
-      "emotions": ["hopeless", "sad", "lonely", "shame"],
-      "timeSlots": ["morning", "afternoon", "evening", "night"],
+      "emotions": [
+        "hopeless",
+        "sad",
+        "lonely",
+        "shame"
+      ],
+      "timeSlots": [
+        "morning",
+        "afternoon",
+        "evening",
+        "night"
+      ],
       "i18n": {
         "ja": {
           "name": "自分のニーズ確認",
@@ -4901,8 +5197,16 @@
       "icon": "🏘️",
       "approach": "つながり",
       "duration": 15,
-      "emotions": ["lonely", "hopeless", "sad"],
-      "timeSlots": ["morning", "afternoon", "evening"],
+      "emotions": [
+        "lonely",
+        "hopeless",
+        "sad"
+      ],
+      "timeSlots": [
+        "morning",
+        "afternoon",
+        "evening"
+      ],
       "i18n": {
         "ja": {
           "name": "コミュニティを探す",
@@ -4925,8 +5229,18 @@
       "icon": "🔭",
       "approach": "CBT",
       "duration": 8,
-      "emotions": ["sad", "shame", "hopeless", "fear", "anger"],
-      "timeSlots": ["morning", "afternoon", "evening"],
+      "emotions": [
+        "sad",
+        "shame",
+        "hopeless",
+        "fear",
+        "anger"
+      ],
+      "timeSlots": [
+        "morning",
+        "afternoon",
+        "evening"
+      ],
       "i18n": {
         "ja": {
           "name": "自己距離化",
@@ -4949,8 +5263,17 @@
       "icon": "⛔",
       "approach": "CBT",
       "duration": 5,
-      "emotions": ["sad", "hopeless", "shame", "anxious"],
-      "timeSlots": ["morning", "afternoon", "evening"],
+      "emotions": [
+        "sad",
+        "hopeless",
+        "shame",
+        "anxious"
+      ],
+      "timeSlots": [
+        "morning",
+        "afternoon",
+        "evening"
+      ],
       "i18n": {
         "ja": {
           "name": "反芻中断法",
@@ -4973,8 +5296,19 @@
       "icon": "🌧️",
       "approach": "マインドフルネス",
       "duration": 10,
-      "emotions": ["fear", "shame", "sad", "anxious", "hopeless"],
-      "timeSlots": ["morning", "afternoon", "evening", "night"],
+      "emotions": [
+        "fear",
+        "shame",
+        "sad",
+        "anxious",
+        "hopeless"
+      ],
+      "timeSlots": [
+        "morning",
+        "afternoon",
+        "evening",
+        "night"
+      ],
       "i18n": {
         "ja": {
           "name": "RAIN瞑想",
@@ -4997,8 +5331,18 @@
       "icon": "⏳",
       "approach": "マインドフルネス",
       "duration": 3,
-      "emotions": ["anxious", "hopeless", "sad", "fear"],
-      "timeSlots": ["morning", "afternoon", "evening", "night"],
+      "emotions": [
+        "anxious",
+        "hopeless",
+        "sad",
+        "fear"
+      ],
+      "timeSlots": [
+        "morning",
+        "afternoon",
+        "evening",
+        "night"
+      ],
       "i18n": {
         "ja": {
           "name": "3分間呼吸空間法",
@@ -5021,8 +5365,18 @@
       "icon": "🍵",
       "approach": "ポジティブ心理学",
       "duration": 5,
-      "emotions": ["hopeless", "sad", "calm", "grateful"],
-      "timeSlots": ["morning", "afternoon", "evening", "night"],
+      "emotions": [
+        "hopeless",
+        "sad",
+        "calm",
+        "grateful"
+      ],
+      "timeSlots": [
+        "morning",
+        "afternoon",
+        "evening",
+        "night"
+      ],
       "i18n": {
         "ja": {
           "name": "サバリング",
@@ -5045,8 +5399,17 @@
       "icon": "🌠",
       "approach": "ポジティブ心理学",
       "duration": 12,
-      "emotions": ["hopeless", "sad", "calm", "hopeful"],
-      "timeSlots": ["morning", "afternoon", "evening"],
+      "emotions": [
+        "hopeless",
+        "sad",
+        "calm",
+        "hopeful"
+      ],
+      "timeSlots": [
+        "morning",
+        "afternoon",
+        "evening"
+      ],
       "i18n": {
         "ja": {
           "name": "WOOPワーク",
@@ -5069,8 +5432,17 @@
       "icon": "🪨",
       "approach": "CBT",
       "duration": 15,
-      "emotions": ["shame", "hopeless", "sad", "fear"],
-      "timeSlots": ["morning", "afternoon", "evening"],
+      "emotions": [
+        "shame",
+        "hopeless",
+        "sad",
+        "fear"
+      ],
+      "timeSlots": [
+        "morning",
+        "afternoon",
+        "evening"
+      ],
       "i18n": {
         "ja": {
           "name": "コア信念に触れる",
@@ -5093,8 +5465,17 @@
       "icon": "🔍",
       "approach": "CBT",
       "duration": 8,
-      "emotions": ["hopeless", "sad", "anxious"],
-      "timeSlots": ["morning", "afternoon", "evening", "night"],
+      "emotions": [
+        "hopeless",
+        "sad",
+        "anxious"
+      ],
+      "timeSlots": [
+        "morning",
+        "afternoon",
+        "evening",
+        "night"
+      ],
       "i18n": {
         "ja": {
           "name": "例外探し",
@@ -5117,8 +5498,17 @@
       "icon": "🧭",
       "approach": "ACT",
       "duration": 12,
-      "emotions": ["hopeless", "sad", "anxious", "fear"],
-      "timeSlots": ["morning", "afternoon", "evening"],
+      "emotions": [
+        "hopeless",
+        "sad",
+        "anxious",
+        "fear"
+      ],
+      "timeSlots": [
+        "morning",
+        "afternoon",
+        "evening"
+      ],
       "i18n": {
         "ja": {
           "name": "ACTマトリクス",
@@ -5133,6 +5523,2345 @@
           ],
           "tips": [
             "遠ざかる動きに気づくだけで、近づく動きを選べるようになる。"
+          ]
+        }
+      }
+    },
+    {
+      "id": "fresh-start",
+      "icon": "🌅",
+      "approach": "ポジティブ心理学",
+      "duration": 5,
+      "emotions": [
+        "hopeful",
+        "exhausted",
+        "calm"
+      ],
+      "timeSlots": [
+        "morning"
+      ],
+      "i18n": {
+        "ja": {
+          "name": "フレッシュスタートを使う",
+          "tagline": "節目の日は、変わるためのエネルギーが自然と高まっている。その波に乗る。",
+          "background": "Dai, Milkman & Riisの研究（2014, Management Science）は、新年・誕生日・月曜日・月初めなどの「時間的ランドマーク」後にジム来館が33〜47%増加することを実証しました。このFresh Start Effectは3つの心理メカニズムで機能します：①過去の失敗を「前の章」として棚上げできる、②自分を大局的に捉え直せる、③「新しい自分」というアイデンティティを持てる。この効果は特定の日だけでなく、自分が意識的に「節目」として意味づけた日にも同様に働きます。",
+          "steps": [
+            "今日または近いうちの「節目」を探します。月曜日・月初め・誕生日・季節の変わり目・何かが終わった日など、どんな小さな節目でもOKです。",
+            "「その節目の前の自分」と「その節目からの自分」を分けて考えます。過去の失敗や「続かなかったこと」は前の章の話として、一旦脇に置きます。",
+            "「新しい章の自分」として、一つ取り組みたいことを具体的に書きます。",
+            "その取り組みの最初の小さな一歩を今日か明日に実行します。節目を「スタートの合図」として意識的に使うことで、動き出しやすくなります。"
+          ],
+          "tips": [
+            "「本物の節目」じゃなくていい。「今日から新しい週」と自分で決めた日でも効果があります",
+            "うまくいかなかった時期のことを「失敗」ではなく「前の章」と呼ぶだけで、再挑戦への抵抗が和らぎます"
+          ]
+        }
+      }
+    },
+    {
+      "id": "identity-statement",
+      "icon": "🪞",
+      "approach": "行動計画",
+      "duration": 5,
+      "emotions": [
+        "hopeful",
+        "calm",
+        "depressed"
+      ],
+      "timeSlots": [
+        "morning",
+        "evening"
+      ],
+      "i18n": {
+        "ja": {
+          "name": "アイデンティティ宣言",
+          "tagline": "「〇〇をしなければ」より「〇〇な人間だ」の方が、行動は長続きする。",
+          "background": "James Clearの『Atomic Habits』が提唱するアイデンティティベースの習慣形成は、行動目標（〇〇をする）よりもアイデンティティ目標（〇〇な人間である）から設計する手法です。「私はランナーだ」と自己定義した人は「運動しなければ」と思う人より継続率が大きく上がります。これはアイデンティティと行動の一貫性を保とうとする心理的動機によるもので、小さな行動の積み重ねが「証拠」となりアイデンティティをさらに強化する好循環を作ります。",
+          "steps": [
+            "取り組みたい習慣や変化を一つ思い浮かべます（例：運動を続けたい、スマホを減らしたい）。",
+            "その習慣を「すでに持っている人」はどんな人かを考えます（例：体を大切にする人、自分の時間を管理できる人）。",
+            "「私は〇〇な人間だ」という一文を書きます。完璧に信じなくていい。「〜になりつつある人間だ」でもOK。",
+            "今日、そのアイデンティティを1回だけ「証明する」小さな行動をします（例：水を1杯飲む、1行だけ書く）。",
+            "寝る前に「今日、〇〇な人間らしい行動を1つした」と確認します。"
+          ],
+          "tips": [
+            "行動の結果よりも「どんな人間でありたいか」に焦点を当てると、モチベーションが外圧に左右されにくくなります",
+            "小さな行動でいい。アイデンティティは1回の大きな行動より、毎日の小さな証拠の積み重ねで作られます"
+          ]
+        }
+      }
+    },
+    {
+      "id": "motivation-source",
+      "icon": "🔍",
+      "approach": "ACT",
+      "duration": 10,
+      "emotions": [
+        "exhausted",
+        "hopeless",
+        "depressed",
+        "calm"
+      ],
+      "timeSlots": [
+        "morning",
+        "evening"
+      ],
+      "i18n": {
+        "ja": {
+          "name": "動機の源泉を探る",
+          "tagline": "「しなければ」から「したい」へ。動機がどこから来るかを変えると、行動が変わる。",
+          "background": "Deci & Ryanの自己決定理論（SDT）のOIT（有機的統合理論）は、動機を「外的（罰回避・報酬）→取り入れ的（恥・義務感）→同定的（自分にとって重要）→内発的（それ自体が楽しい）」の連続体として捉えます。研究では、同定的・内発的動機が高いほど行動が長続きし、外的・取り入れ的動機では「やる気がなくなった時点で崩壊」しやすいことが一貫して示されています。「なぜそれをしたいか」を掘り下げることで、外的プレッシャーへの依存から脱し、自分ごとの動機を育てます。",
+          "steps": [
+            "取り組みたいこと（または取り組めていないこと）を一つ書きます。",
+            "「なぜそれをしたいか（またはすべきと思っているか）」を正直に書きます。",
+            "その答えに対して「なぜそれが自分にとって大切か？」と問い直します。",
+            "さらに「その先に何があるか？本当に大切にしているものは何か？」と掘り下げます。",
+            "最後の答えを読んで、「他人・プレッシャー・恥」から来ているか「自分の価値観・大切にしたいもの」から来ているかを確認します。自分の内側からの動機が見つかれば、それを一文で書き留めます。"
+          ],
+          "tips": [
+            "「〜しなければ」という言葉が多い場合、動機が外側にある可能性があります。「〜したい、なぜなら」に言い換えてみましょう",
+            "内側の動機がすぐ見つからなくても大丈夫。「少しだけ自分に関係ある気がする」という感覚があれば、そこから育てることができます"
+          ]
+        }
+      }
+    },
+    {
+      "id": "pomodoro",
+      "icon": "🍅",
+      "approach": "行動計画",
+      "duration": 30,
+      "emotions": [
+        "exhausted",
+        "anxiety",
+        "calm"
+      ],
+      "timeSlots": [
+        "morning",
+        "afternoon",
+        "evening"
+      ],
+      "i18n": {
+        "ja": {
+          "name": "ポモドーロ・テクニック",
+          "tagline": "25分だけ集中する。タイマーが「終わり」を保証してくれるから、始めやすくなる。",
+          "background": "Francesco Cirillo が1980年代に開発した時間管理法で、仕事を「25分の集中＋5分の休憩」に分割します。先延ばしが起きる大きな原因の一つは「終わりが見えない不安」です。タイマーを25分にセットすることで「この25分だけ」という心理的安全を作り、圧倒される感覚を和らげます。時間の区切りが明確になると集中の質も上がり、ポモドーロを1個こなすたびに達成感が積み重なります。",
+          "steps": [
+            "取り掛かるタスクを一つ選び、紙かメモに書きます。",
+            "タイマーを25分にセットします。",
+            "タイマーが鳴るまで、そのタスクだけに集中します。他のことが気になったらメモして後回しにします。",
+            "タイマーが鳴ったら5分休憩します。立つ・水を飲む・窓の外を見るなど、画面から離れます。",
+            "これを1セットとして繰り返します。4セットこなしたら15〜30分の長い休憩を取ります。"
+          ],
+          "tips": [
+            "25分が長すぎると感じたら、まず10分から始めてもOKです",
+            "「ポモドーロを1個やる」が目標。完璧主義が和らぎます"
+          ]
+        }
+      }
+    },
+    {
+      "id": "task-aversion-check",
+      "icon": "🔬",
+      "approach": "CBT",
+      "duration": 5,
+      "emotions": [
+        "anxiety",
+        "exhausted",
+        "depressed"
+      ],
+      "timeSlots": [
+        "morning",
+        "afternoon",
+        "evening"
+      ],
+      "i18n": {
+        "ja": {
+          "name": "タスク嫌悪感チェック",
+          "tagline": "先延ばしは怠けではない。タスクに結びついた「ある感情」を避けているだけ。",
+          "background": "Timothy PychylとFuschia Siroisの研究は、先延ばしの本質が「時間管理の問題」ではなく「タスクに付随するネガティブな感情の回避」であることを示しています。退屈・不安・不明瞭・意味のなさ・失敗への恐れのどれかがあるとき、私たちは無意識に回避します。その感情を具体的に特定するだけで、取るべき対処が変わります。",
+          "steps": [
+            "先延ばしにしているタスクを一つ書きます。",
+            "そのタスクを思い浮かべて、どの感情が一番強いか選びます：退屈 / 不安・プレッシャー / やり方が不明瞭 / 失敗・批判への恐れ / 意味が感じられない",
+            "退屈なら：好きな音楽をかける・別の場所でやる・誰かと一緒にやる。",
+            "不明瞭なら：「最初の一アクション」だけを書き出す（例：「ファイルを開く」）。",
+            "失敗への恐れなら：「完成品じゃなくていい、下書きでいい」と決めて手をつける。",
+            "意味がないなら：このタスクが何につながるか一行書く。"
+          ],
+          "tips": [
+            "感情の種類が変われば、対処法も変わります。毎回同じ「やる気待ち」をやめられます",
+            "「なぜ嫌なのか」を言語化するだけで、少し距離が取れることがあります"
+          ]
+        }
+      }
+    },
+    {
+      "id": "zeigarnik-start",
+      "icon": "⚡",
+      "approach": "行動計画",
+      "duration": 1,
+      "emotions": [
+        "exhausted",
+        "anxiety",
+        "hopeless"
+      ],
+      "timeSlots": [
+        "morning",
+        "afternoon",
+        "evening"
+      ],
+      "i18n": {
+        "ja": {
+          "name": "ゼイガルニク・スタート",
+          "tagline": "30秒だけ手をつける。始めた仕事は、脳が勝手に続きを引き寄せる。",
+          "background": "心理学者Bluma Zeigarnikは1927年、「人は完了したタスクより未完了のタスクをよく覚えている」ことを発見しました（ゼイガルニク効果）。未完のタスクは脳に「開いたループ」を作り、完了しようとする心理的張力を生みます。これを先延ばし対策に使う技法が「ゼイガルニク・スタート」です。たった30秒だけ手をつけて「開いたループ」を作ることで、脳が自然と続きへ引き寄せられます。2分ルールよりさらに短く、心理的ハードルが極限まで低い。",
+          "steps": [
+            "先延ばしにしているタスクを一つ選びます。",
+            "「30秒だけ」と自分に約束します。それ以上やる必要はありません。",
+            "30秒だけ手をつけます。ファイルを開く・最初の一行を書く・材料を出す——それだけでOK。",
+            "タイマーが鳴ったらやめていいです。続けたければ続ける。"
+          ],
+          "tips": [
+            "「やめていい」という許可が、始めるハードルを下げます",
+            "開いたループは脳が勝手に気にし続けます。席を離れても頭の中で整理が進んでいることが多い"
+          ]
+        }
+      }
+    },
+    {
+      "id": "resentment-release",
+      "icon": "🕊️",
+      "approach": "ACT",
+      "duration": 12,
+      "emotions": [
+        "angry",
+        "sad",
+        "exhausted"
+      ],
+      "timeSlots": [
+        "evening"
+      ],
+      "i18n": {
+        "ja": {
+          "name": "うらみを手放す",
+          "tagline": "恨み続けることは、自分が毒を飲んで相手が死ぬのを待つようなもの。",
+          "background": "Robert EnrightやFred Luskinらの研究は、慢性的な恨みが血圧・コルチゾール・免疫機能に悪影響を与える一方、心理的な「赦し」が身体・精神の健康を改善することを示しています。ここでの「手放す」は、相手の行為を許容することでも、忘れることでも、和解することでもありません。自分自身がその怒りを抱え続けることのコストを認識し、痛みへの執着を解放する選択です。",
+          "steps": [
+            "今も怒りや恨みを感じている出来事・相手を一つ選び、何が起きたか簡潔に書きます。",
+            "何が傷ついたかを具体的に書きます。信頼・公平さ・尊厳・安全——どれが侵されましたか？",
+            "この恨みを「持ち続けること」が自分に何をもたらしているか書きます。（睡眠・気分・エネルギー・他の関係への影響）",
+            "「手放す ≠ 許す・忘れる・認める」と確認します。起きたことは間違いだった。それはそのまま認めていい。",
+            "次の一文を声に出すか、書きます：「私はこの怒りを握り続けることをやめる。相手のためではなく、自分の平和のために。」",
+            "恨みが戻ってきたら、また4・5を繰り返します。一度で完全に終わらなくていい。"
+          ],
+          "tips": [
+            "「手放す」は一度の決断ではなく、何度も選び直すプロセスです",
+            "深い傷には時間がかかります。今日少しだけ緩められれば、それで十分です"
+          ]
+        }
+      }
+    },
+    {
+      "id": "attention-redirect",
+      "icon": "👁️",
+      "approach": "CBT",
+      "duration": 5,
+      "emotions": [
+        "anxiety",
+        "fear",
+        "shame"
+      ],
+      "timeSlots": [
+        "morning",
+        "afternoon",
+        "evening"
+      ],
+      "i18n": {
+        "ja": {
+          "name": "注意を外に向ける",
+          "tagline": "「うまくやれているか」ではなく「相手は何を話しているか」に意識を向けると、不安が和らぐ。",
+          "background": "Clark & Wellsの社交不安の認知モデルでは、社会的場面での「内向き注意」——自分の表情・声の震え・顔の赤みを内側から監視すること——が不安を維持・悪化させることが示されています。皮肉なことに「うまくやろう」と自分に集中するほど、パフォーマンスも不安も悪化します。注意を意図的に「外」（相手の言葉・表情・場の空気）に向け直すことで、この悪循環を断ち切れます。",
+          "steps": [
+            "社交的な場面（会話・会議・食事など）に入る前に「今日は注意を外に向ける練習をする」と決めます。",
+            "「自分がどう見えているか」という考えが浮かんだら、意識を相手に移します。「この人は今何を感じているか？ 何を伝えようとしているか？」",
+            "相手の言葉・表情・しぐさに集中します。完璧に理解しなくていい。目の前の人に興味を向けるだけ。",
+            "終わったあと、「自分を監視していた時間」と「相手に集中していた時間」の比率をざっくり振り返ります。"
+          ],
+          "tips": [
+            "不安の症状（動悸・顔の熱さ）に気づいても、注意をすぐ外に戻してOKです",
+            "最初は難しくても、繰り返すほど自然になります。練習が必要なスキルです"
+          ]
+        }
+      }
+    },
+    {
+      "id": "freewriting",
+      "icon": "🖊️",
+      "approach": "記録",
+      "duration": 5,
+      "emotions": [
+        "exhausted",
+        "anxiety",
+        "calm",
+        "hopeful"
+      ],
+      "timeSlots": [
+        "morning",
+        "evening"
+      ],
+      "i18n": {
+        "ja": {
+          "name": "自由書き",
+          "tagline": "うまく書こうとしない。3分間、判断なしに書き続けると、頭の中のノイズが外に出る。",
+          "background": "James Pennebaker の表現的筆記研究では、判断なしに書くことがストレス軽減・創造性向上・問題解決能力の向上に効果があることが示されています。Julia Cameron が「モーニングページ」として広めたこの技法は、内なる批評家を黙らせて創造的な流れを開ける手法です。「うまく書く」ではなく「書き続ける」ことが目的で、文章の質は関係ありません。",
+          "steps": [
+            "紙またはメモアプリを開きます。",
+            "タイマーを3〜5分にセットします。",
+            "書き始めます。テーマは何でもいい。「何も思いつかない」と書いてもOK。止まらないことだけがルールです。",
+            "書いたものは読み返さなくていい。批判しなくていい。捨ててもいい。",
+            "終わったら、少しだけ気持ちが軽くなっているか確認します。"
+          ],
+          "tips": [
+            "「正しく書こう」という衝動が出たら、その衝動ごと書き出してしまいましょう",
+            "毎朝続けると、頭のノイズが習慣的に排出され、日中の創造的な集中が深まります"
+          ]
+        }
+      }
+    },
+    {
+      "id": "quantity-first",
+      "icon": "🏺",
+      "approach": "行動計画",
+      "duration": 20,
+      "emotions": [
+        "anxiety",
+        "hopeless",
+        "calm"
+      ],
+      "timeSlots": [
+        "morning",
+        "afternoon",
+        "evening"
+      ],
+      "i18n": {
+        "ja": {
+          "name": "量の練習",
+          "tagline": "よい作品を作ろうとするより、たくさん作ろうとする方が、結果として質が上がる。",
+          "background": "Bayles & Orlandの『Art & Fear』に記録された陶芸実験では、「質で評価されるグループ」と「量で評価されるグループ」に分けたところ、最も質の高い作品はすべて量グループから生まれました。完成させることの積み重ねが技術と判断力を育てるからです。「よいものを作ろう」という意識が創造を止める。「とにかく1つ完成させる」という練習がその呪いを解きます。",
+          "steps": [
+            "今取り組んでいる（または取り組みたい）創造的な活動を一つ決めます。（絵・文章・音楽・料理・工作など）",
+            "「よいものを作る」ではなく「1つ完成させる」を今日の目標にします。",
+            "時間を決めます（20〜30分）。その時間内で1つ仕上げます。",
+            "完成したら、批評せずに「できた」と記録します。よかった点を1つだけ書きます。",
+            "これを繰り返します。10個作ったとき、最初の1個より確実に上手くなっています。"
+          ],
+          "tips": [
+            "完成の基準を下げていい。「最後まで作った」だけで完成です",
+            "捨ててもいい。作ることの練習が目的なので、残す必要はありません"
+          ]
+        }
+      }
+    },
+    {
+      "id": "creative-input",
+      "icon": "🌊",
+      "approach": "行動計画",
+      "duration": 60,
+      "emotions": [
+        "exhausted",
+        "depressed",
+        "calm"
+      ],
+      "timeSlots": [
+        "morning",
+        "afternoon",
+        "evening"
+      ],
+      "i18n": {
+        "ja": {
+          "name": "創造的インプット",
+          "tagline": "アウトプットが枯れるのは、インプットが枯れているから。役に立たなそうな体験が燃料になる。",
+          "background": "Julia Cameron が「アーティストデート」として提唱し、Stuart Brown の遊び研究でも支持されているこの概念は、創造的なアウトプットには意図的なインプットが必要だということを示しています。「役に立つ」インプット（勉強・情報収集）ではなく、「楽しい・美しい・不思議」な体験こそが創造の燃料になります。義務感なく何かを体験することが、創造の井戸を満たします。",
+          "steps": [
+            "今週1時間、「義務のないインプット」のための時間を確保します。",
+            "行き先・活動を決めます。美術館・本屋・音楽ライブ・散歩・映画・手芸店・公園——「楽しそう」と感じるもの。",
+            "スマホをしまって、その体験だけに集中します。メモしなくていい。SNSに上げなくていい。",
+            "終わったあと、心に残ったもの・感じたことを一言だけ書きます。"
+          ],
+          "tips": [
+            "「生産的でない」と感じる罪悪感が出たら、それがインプット不足のサインです",
+            "一人でいくのがポイント。誰かに合わせなくていい時間が創造の井戸を満たします"
+          ]
+        }
+      }
+    },
+    {
+      "id": "bad-art-day",
+      "icon": "🙃",
+      "approach": "行動計画",
+      "duration": 15,
+      "emotions": [
+        "anxiety",
+        "exhausted",
+        "calm"
+      ],
+      "timeSlots": [
+        "morning",
+        "afternoon",
+        "evening"
+      ],
+      "i18n": {
+        "ja": {
+          "name": "へたでいい実験",
+          "tagline": "わざと下手に作る。完璧主義のスイッチを切る一番簡単な方法。",
+          "background": "Brené Brownの創造性研究や多くのアート教育者が指摘するように、創造的なブロックの多くは「よいものを作らなければ」というプレッシャーから生まれます。「へたでいい実験」はそのプレッシャーを逆手に取り、意図的にひどいものを作ることで「失敗」の定義を壊します。目的はよいものを作ることではなく、「動き始めること」と「創ることへの恐れを減らすこと」です。",
+          "steps": [
+            "今日は「下手に作ること」が目標だと決めます。うまくなろうとしない。",
+            "何を作ってもいいです。絵・文章・曲・料理——何でも。",
+            "わざと下手に、雑に、おかしく作ります。完成させることだけ考えます。",
+            "できたものを見て、「ちゃんとへたにできた」と確認します。",
+            "次回、「普通に」作るとき、ハードルが下がっていることに気づくはずです。"
+          ],
+          "tips": [
+            "「これは練習じゃない、実験だ」と思うと気が楽になります",
+            "誰にも見せなくていい。作って、捨てていい"
+          ]
+        }
+      }
+    },
+    {
+      "id": "reverse-brainstorm",
+      "icon": "🔄",
+      "approach": "CBT",
+      "duration": 10,
+      "emotions": [
+        "calm",
+        "hopeful",
+        "exhausted"
+      ],
+      "timeSlots": [
+        "morning",
+        "afternoon",
+        "evening"
+      ],
+      "i18n": {
+        "ja": {
+          "name": "逆転発想",
+          "tagline": "「どうすれば最悪になるか」を先に考える。逆転させると、思いつかなかったアイデアが出てくる。",
+          "background": "Edward de Bonoらが提唱する逆ブレインストーミングは、問いの方向を意図的に逆にすることで、脳の「いつもの思考ルート」を迂回する発想法です。「よくするには？」と問うと、すでに知っている解決策しか出てきません。「最悪にするには？」と問うと、普段は意識しない構造が見えてきます。その逆転が、斬新なアイデアの入口になります。",
+          "steps": [
+            "解決したい問題・アイデアを出したいテーマを一行で書きます。",
+            "問いを逆にします。「どうすれば〇〇をもっと悪く（最悪に・失敗するように）できるか？」",
+            "制限なしに「最悪リスト」を3〜5分で書き出します。おかしいアイデアでもOK。",
+            "リストを一つずつ逆転させます。「〜すると最悪」→「逆にすると〜」",
+            "逆転リストの中に、使えそうなアイデアの種を探します。"
+          ],
+          "tips": [
+            "最悪リストは笑えるくらい極端な方が、逆転したときに面白いアイデアになります",
+            "行き詰まったときほど有効です。「普通に考える」のをやめる許可を自分に与えましょう"
+          ]
+        }
+      }
+    },
+    {
+      "id": "random-word",
+      "icon": "🎲",
+      "approach": "行動計画",
+      "duration": 8,
+      "emotions": [
+        "calm",
+        "hopeful",
+        "exhausted"
+      ],
+      "timeSlots": [
+        "morning",
+        "afternoon",
+        "evening"
+      ],
+      "i18n": {
+        "ja": {
+          "name": "ランダムワード法",
+          "tagline": "関係ないものと強制的につなげる。脳の「いつもの道」を外れると、新しい発想が現れる。",
+          "background": "Edward de Bonoのランダム刺激法は、心理学の「概念のリモートアソシエーション」研究に基づいています。人は問題を考えるとき、既存の思考パターンを繰り返す傾向があります。まったく無関係なランダムな刺激を強制的に組み合わせることで、この習慣的なルートから外れ、普段は結びつかない概念同士がつながります。「関係ない」と感じるほど、新しいアイデアの可能性が広がります。",
+          "steps": [
+            "アイデアを出したいテーマを書きます。",
+            "ランダムな言葉を一つ選びます。（今見えているものをランダムに指差す・辞書をどこかで開く・スマホの時刻の秒数を辞書のページにする、など）",
+            "そのランダムな言葉の特徴・連想・イメージを5つ書き出します。",
+            "それぞれの特徴を、テーマに強引に結びつけてみます。「〇〇（テーマ）が△△（特徴）だとしたら？」",
+            "出てきたアイデアの中から、面白そうなものを1つ選んで膨らませます。"
+          ],
+          "tips": [
+            "「関係ない」と思ったほど成功です。無理矢理つなげることが目的です",
+            "子どもに「今見えてるもの言って」と頼むのもいいランダム刺激になります"
+          ]
+        }
+      }
+    },
+    {
+      "id": "question-storming",
+      "icon": "❓",
+      "approach": "行動計画",
+      "duration": 6,
+      "emotions": [
+        "calm",
+        "hopeful",
+        "anxiety"
+      ],
+      "timeSlots": [
+        "morning",
+        "afternoon",
+        "evening"
+      ],
+      "i18n": {
+        "ja": {
+          "name": "問いの嵐",
+          "tagline": "答えを出す前に、問いを増やす。問いが変わると、見えていなかった解決策が現れる。",
+          "background": "Hal Gregersen（MITスローン）の研究では、「答えを出す前に問いだけを4分間書き続けるグループ」は、すぐに解決策を考えたグループより革新的な解決策に至ることが示されました。私たちは無意識に「すでに知っている問いの形」しか問わない傾向があります。問いの量を増やすことで、問題の見え方そのものを変えます。",
+          "steps": [
+            "考えたいテーマ・問題を一行で書きます。",
+            "タイマーを4分にセットします。",
+            "その間、「答え」は一切書かず、「問い」だけを書き続けます。「なぜ？」「もし〜だったら？」「誰が？」「いつ？」「逆に？」——どんな問いでもOK。",
+            "タイマーが鳴ったら、書いた問いを読み返します。",
+            "最も「おっ」と思った問いを1つ選び、それに答えてみます。"
+          ],
+          "tips": [
+            "問いが20個を超えたあたりから、「普段は問わない問い」が出始めます",
+            "「こんなこと聞いていいの？」という問いこそ書き出してください"
+          ]
+        }
+      }
+    },
+    {
+      "id": "mit-selection",
+      "icon": "🎯",
+      "approach": "行動計画",
+      "duration": 5,
+      "emotions": [
+        "exhausted",
+        "anxiety",
+        "calm"
+      ],
+      "timeSlots": [
+        "morning"
+      ],
+      "i18n": {
+        "ja": {
+          "name": "今日のタスク3選",
+          "tagline": "何でもできる日より、3つしかできない日の方が、大切なことが進む。",
+          "background": "Leo BabutaのMIT（Most Important Tasks）とパレート法則（成果の80%は20%の行動から生まれる）に基づく朝の意思決定技法です。「全部やろう」とするとエネルギーが分散し、重要なタスクほど後回しになります。1日の始めに最重要タスクを3つに絞り込むことで、優先度が明確になり、どんなに忙しくなっても「今日やるべきこと」がぶれません。",
+          "steps": [
+            "朝、タスクリストや頭の中にあるやることを全部書き出します。",
+            "その中から「今日これだけは終わらせたい」タスクを3つ選びます。緊急度だけでなく重要度で選ぶのがポイントです。",
+            "選んだ3つを紙やメモの一番上に書きます。これが今日のゴールです。",
+            "他のタスクが割り込んできても、まず3つを優先します。",
+            "1日の終わりに3つの達成状況を確認します。できたものに印をつけます。"
+          ],
+          "tips": [
+            "3つのうち1つを「これができれば今日は成功」という「最重要の1つ」にするとさらに効果的です",
+            "会議や急な依頼で3つが崩れても、「3つのうち何が生き残れるか」を考えると混乱しにくくなります"
+          ]
+        }
+      }
+    },
+    {
+      "id": "deep-work-block",
+      "icon": "🧱",
+      "approach": "行動計画",
+      "duration": 90,
+      "emotions": [
+        "calm",
+        "exhausted"
+      ],
+      "timeSlots": [
+        "morning",
+        "afternoon"
+      ],
+      "i18n": {
+        "ja": {
+          "name": "ディープワーク・ブロック",
+          "tagline": "重要な仕事は、守られた時間の中でしか生まれない。1〜2時間、割り込みをゼロにする。",
+          "background": "Cal Newportの「Deep Work」理論では、認知的に高度な仕事（思考・執筆・コーディング・分析）は、集中が分断されない長い時間枠（90分〜2時間）でしか達成できないと示されています。メール・通知・雑談による割り込みは、集中状態への復帰に平均23分かかるという研究もあります。ポモドーロが「着手」のための技法なら、ディープワーク・ブロックは「重要な仕事を守る」ための設計です。",
+          "steps": [
+            "1週間のカレンダーを開き、「ディープワーク用」の枠を1〜2時間、週2〜3回確保します。",
+            "その時間が来たら：スマホを別の部屋に置く・通知をすべてオフ・メールは閉じる。",
+            "その枠でやるタスクを事前に1つ決めておきます。時間になったら考えない。",
+            "ブロック中に割り込みが来たら「〇〇時に終わるので、その後に話しましょう」と返します。",
+            "終わったら通常モードに戻ります。メールチェック・返信などはこの後で。"
+          ],
+          "tips": [
+            "最初は60分から始めて、慣れたら延ばします",
+            "「ディープワーク中」のサイン（付箋・ステータス設定）があると、周囲への説明が楽になります"
+          ]
+        }
+      }
+    },
+    {
+      "id": "shutdown-ritual",
+      "icon": "🔒",
+      "approach": "行動計画",
+      "duration": 10,
+      "emotions": [
+        "exhausted",
+        "anxiety",
+        "calm"
+      ],
+      "timeSlots": [
+        "evening",
+        "night"
+      ],
+      "i18n": {
+        "ja": {
+          "name": "シャットダウン・ルーティン",
+          "tagline": "仕事を「終えた」と脳に宣言しないと、頭はずっと仕事し続ける。",
+          "background": "Cal Newportが提唱するシャットダウン・ルーティンは、仕事を完全に閉じるための行動的な儀式です。未完のタスクが頭に残り続けるゼイガルニク効果により、仕事を「終わった」と宣言しない限り、脳はオフタイムも仕事を処理し続けます。具体的な終了手順を踏むことで、脳に「今日の仕事は完全に終わった」と認識させ、休息・家族・趣味への完全な移行を可能にします。",
+          "steps": [
+            "タスクリストを開き、今日の残タスクを確認します。",
+            "未完のタスクを明日のリストまたはカレンダーに移します。「今日やり残した」ではなく「明日やる」に変換します。",
+            "明日の最初のタスクを1つだけ決めてメモします。明日の自分へのバトンです。",
+            "メール・Slack・タスクアプリを閉じます。",
+            "「シャットダウン・コンプリート」と声に出すか、心の中で宣言します。これが脳への終了シグナルです。"
+          ],
+          "tips": [
+            "毎日同じ言葉で締めると、その言葉が「切り替えのスイッチ」になっていきます",
+            "最初はぎこちなくても大丈夫。2週間続けると効果を感じ始める人が多いです"
+          ]
+        }
+      }
+    },
+    {
+      "id": "task-batching",
+      "icon": "📦",
+      "approach": "行動計画",
+      "duration": 5,
+      "emotions": [
+        "exhausted",
+        "calm"
+      ],
+      "timeSlots": [
+        "morning"
+      ],
+      "i18n": {
+        "ja": {
+          "name": "タスクのバッチ処理",
+          "tagline": "似た仕事はまとめてやる。その都度やると、切り替えコストが積み重なる。",
+          "background": "コンテキストスイッチング（異なる種類の作業を切り替えること）には認知的コストがかかり、生産性を最大40%低下させるという研究があります。メールを1通来るたびに読む・電話をその都度かける・資料を思い出したときに作るという「都度処理」は、このコストを最大化します。同じ種類のタスクをまとめてひとつの時間枠でこなす「バッチ処理」は、切り替えコストを最小化し、集中の質を上げます。",
+          "steps": [
+            "自分の仕事を「種類」で分類します。（例：メール返信・電話・資料作成・ミーティング準備・調べ物・経費処理）",
+            "それぞれを処理する「専用の時間枠」を決めます。（例：メールは朝10時と夕方5時のみ）",
+            "その時間枠以外では、その種類の作業に手をつけません。通知が来ても後回し。",
+            "専用枠の時間になったら、まとめて一気に処理します。",
+            "1週間試して、どのバッチが効果的か振り返ります。"
+          ],
+          "tips": [
+            "「メールは1日2回」だけでも、集中時間が大幅に増える人が多いです",
+            "最初は不安かもしれません。「緊急なら電話してくる」という前提を持つと楽になります"
+          ]
+        }
+      }
+    },
+    {
+      "id": "role-switching-ritual",
+      "icon": "🎭",
+      "approach": "行動計画",
+      "duration": 10,
+      "emotions": [
+        "exhausted",
+        "anxious",
+        "sad"
+      ],
+      "timeSlots": [
+        "evening",
+        "night"
+      ],
+      "i18n": {
+        "ja": {
+          "name": "役割切り替え儀式",
+          "tagline": "「仕事の自分」から「プライベートの自分」へ。切り替えは意図的に行うことで初めて起動する。",
+          "background": "心理的デタッチメント研究（ゾンネンタークら）によると、退勤後に仕事から心理的に離れられる人は、翌日の活力・幸福感・仕事のパフォーマンスすべてが高いことが示されています。効果的な切り替えのカギは「移行儀式（transition ritual）」です。着替える・散歩する・音楽をかけるなど、一貫した行動を繰り返すことで脳は「今から別の役割になる」と学習し、自動的に切り替えが起動するようになります。",
+          "steps": [
+            "仕事の終わりを告げる行動を1つ決める。例：「今日のタスクリストを閉じる」「ノートを閉じる」「パソコンの電源を切る」",
+            "その直後に「移行儀式」を行う。例：着替える・顔を洗う・コーヒーを入れる・5分散歩する。一貫性が大事で、内容は何でもOK。",
+            "儀式の間に仕事の考えが浮かんでも「それは明日の仕事」と一言で流す。",
+            "儀式が終わったら、プライベートの自分として何か一つ好きなことをする。"
+          ],
+          "tips": [
+            "儀式は2〜3分でも十分。複雑にしない",
+            "毎日同じ順番で行うと1〜2週間で自動化される"
+          ]
+        }
+      }
+    },
+    {
+      "id": "digital-sunset",
+      "icon": "🌅",
+      "approach": "行動計画",
+      "duration": 5,
+      "emotions": [
+        "anxious",
+        "exhausted"
+      ],
+      "timeSlots": [
+        "evening",
+        "night"
+      ],
+      "i18n": {
+        "ja": {
+          "name": "デジタル日没",
+          "tagline": "通知が届く限り、脳はオフになれない。画面を閉じる時刻を決めれば、夜が自分のものになる。",
+          "background": "スマートフォンやPCの仕事通知が夜間も届く環境では、脳の警戒系（扁桃体・前帯状皮質）が常に働き続け、副交感神経への切り替えが妨げられます。研究では、就寝2時間前の通知オフが睡眠の質・翌朝の認知機能・気分を有意に改善することが示されています。「日没のように毎日同じ時刻に終わる」というシンプルなルールが、最も継続しやすい境界線になります。",
+          "steps": [
+            "「デジタル日没」の時刻を決める。例：20時、または就寝2時間前。",
+            "その時刻にスマートフォンの仕事関連アプリ（メール・Slack・チャットツール）の通知をオフにする。または機内モードにする。",
+            "できれば端末を寝室以外の場所に置く（目に見えないと衝動が減る）。",
+            "「緊急の連絡は電話で」というルールを周囲に事前に伝えておく。"
+          ],
+          "tips": [
+            "最初は不安になっても、翌朝確認すれば大抵問題ない",
+            "週末だけから始めてもOK。慣れたら平日に広げる"
+          ]
+        }
+      }
+    },
+    {
+      "id": "ideal-week-design",
+      "icon": "📅",
+      "approach": "行動計画",
+      "duration": 30,
+      "emotions": [
+        "exhausted",
+        "hopeless",
+        "anxious"
+      ],
+      "timeSlots": [
+        "morning",
+        "afternoon"
+      ],
+      "i18n": {
+        "ja": {
+          "name": "理想週デザイン",
+          "tagline": "空白は必ずノイズで埋まる。先に「大切なもの」をカレンダーに入れてしまう。",
+          "background": "マイケル・ハイアットが提唱する「理想の週（Ideal Week）」は、週をゼロベースで設計する手法です。ほとんどの人は週を「反応」で生きており——割り込み・会議・依頼——最も重要なもの（家族・健康・趣味・回復）が後回しになります。先に重要なブロックをカレンダーに入れることで、仕事が侵食できるスペースを物理的に制限します。完璧に守れなくても「北極星」として機能するだけで十分です。",
+          "steps": [
+            "白紙のカレンダー（1週間分）を用意する。紙でも、スプレッドシートでもOK。",
+            "まず仕事以外の最重要事項を入れる。睡眠・運動・家族・趣味・回復の時間を先にブロックする。",
+            "次に仕事の集中ブロック（深い仕事）を入れる。会議は残ったスペースに入れる。",
+            "この「理想の週」を見えるところに貼る。毎週日曜か月曜に、現実の週をこれに近づける計画を立てる。"
+          ],
+          "tips": [
+            "最初は理想の70%できれば十分",
+            "毎月見直して季節や状況に合わせて更新する"
+          ]
+        }
+      }
+    },
+    {
+      "id": "off-identity",
+      "icon": "🪴",
+      "approach": "ポジティブ心理学",
+      "duration": 15,
+      "emotions": [
+        "hopeless",
+        "sad",
+        "exhausted"
+      ],
+      "timeSlots": [
+        "morning",
+        "afternoon",
+        "evening"
+      ],
+      "i18n": {
+        "ja": {
+          "name": "オフのアイデンティティ",
+          "tagline": "仕事以外の「自分が何者か」を知っていると、仕事から離れるのが怖くなくなる。",
+          "background": "バーンアウト研究者クリスティーナ・マスラックの研究によると、仕事以外のアイデンティティが豊かな人ほど燃え尽きにくく、ウェルビーイングが高い傾向があります。仕事が「自分のすべて」になると、オフタイムに空虚感・罪悪感が生じ、休めない状態が続きます。意識的に仕事以外の役割（趣味人・友人・自然愛好家・料理家）を育てることが、持続可能なワークライフバランスの土台になります。",
+          "steps": [
+            "「仕事以外の自分」の役割を3〜5つ書き出す。例：ランナー・読書家・親・料理好き・自然愛好家。",
+            "その役割を最後に体験したのはいつか確認する。",
+            "今週、そのうちの一つを意図的に「実行」するスケジュールをカレンダーに入れる。",
+            "実行後に「この役割で自分はどう感じたか」を一言メモする。"
+          ],
+          "tips": [
+            "趣味が分からない人は「子供の頃に好きだったこと」を思い出してみる",
+            "新しいことを始めなくていい。すでに好きなことに少し時間を使うだけでOK"
+          ]
+        }
+      }
+    },
+    {
+      "id": "time-audit",
+      "icon": "🕵️",
+      "approach": "行動計画",
+      "duration": 20,
+      "emotions": [
+        "exhausted",
+        "anxious",
+        "hopeless"
+      ],
+      "timeSlots": [
+        "morning",
+        "afternoon",
+        "evening"
+      ],
+      "i18n": {
+        "ja": {
+          "name": "時間監査",
+          "tagline": "実際の時間の使い方を記録するだけで、何を変えるべきかが見えてくる。",
+          "background": "「時間がない」という感覚の多くは、実際にどこに時間を使っているかを把握していないことから生じます。心理学者のダン・アリエリーらの研究では、人は自分の時間の使い方を実際より40〜50%楽観的に見積もる傾向があることが示されています。1週間の実際の時間ログを取ることで、無意識の「時間の漏れ」に気づき、優先順位の再配置が可能になります。",
+          "steps": [
+            "1週間（または1日）、実際に何をしていたかを30分単位で記録する。スマートフォンのメモ・紙・スプレッドシートのどれでもOK。",
+            "週末に記録を分類する。「集中作業・会議・メール対応・SNS・移動・休憩・その他」など。",
+            "各カテゴリに使った時間を合計し、自分が思っていた時間と比較する。",
+            "「大切だが後回しにしていたこと」に使えた時間はどれくらいあったか確認する。次週に1つだけ時間配分を変える。"
+          ],
+          "tips": [
+            "完璧に記録しなくてもOK。概算でも傾向は見える",
+            "1週間が難しければ平日1日だけでも十分な気づきが得られる"
+          ]
+        }
+      }
+    },
+    {
+      "id": "eisenhower-matrix",
+      "icon": "🗂️",
+      "approach": "認知行動療法",
+      "duration": 10,
+      "emotions": [
+        "anxious",
+        "exhausted",
+        "hopeless"
+      ],
+      "timeSlots": [
+        "morning",
+        "afternoon"
+      ],
+      "i18n": {
+        "ja": {
+          "name": "アイゼンハワーマトリクス",
+          "tagline": "「緊急」と「重要」は違う。仕分けるだけで、何に集中すべきかが明確になる。",
+          "background": "第34代米国大統領ドワイト・アイゼンハワーが実践し、スティーブン・コヴィーが『7つの習慣』で普及させた優先順位付けの枠組みです。「緊急×重要」の4象限で仕事を仕分けることで、本当に重要だが緊急でないもの（第2象限）に時間を確保できます。多くの人は「緊急×重要でない」ことに時間を奪われており、本来最重要の活動が後回しになっています。",
+          "steps": [
+            "今抱えているタスクをすべて書き出す。",
+            "各タスクを「緊急か/重要か」の2軸で4象限に仕分ける。①緊急×重要（今すぐやる）②重要×緊急でない（計画してやる）③緊急×重要でない（委譲・後回し）④緊急でない×重要でない（やめる）",
+            "②象限のタスクに今週の時間をブロックする。これが最重要。",
+            "③④象限のタスクを削るか委譲できないか検討する。"
+          ],
+          "tips": [
+            "「緊急」に見えるものの多くは実は③。本当に重要か問い直す",
+            "週次で行うと優先順位が整理されやすい"
+          ]
+        }
+      }
+    },
+    {
+      "id": "time-blocking",
+      "icon": "🟦",
+      "approach": "行動計画",
+      "duration": 15,
+      "emotions": [
+        "anxious",
+        "exhausted"
+      ],
+      "timeSlots": [
+        "morning"
+      ],
+      "i18n": {
+        "ja": {
+          "name": "タイムブロッキング",
+          "tagline": "カレンダーに「作業の予定」を入れないと、会議と割り込みに1日が消える。",
+          "background": "Cal Newportが提唱するタイムブロッキングは、カレンダーに集中作業のブロックを先に確保する手法です。従来のタスクリスト管理との違いは「いつやるか」まで決める点です。研究では、実行意図（Implementation Intention）——「何を・いつ・どこで」を具体的に決めること——がタスクの完了率を2〜3倍高めることが示されています。特に「深い仕事」の時間を会議より先に入れることが核心です。",
+          "steps": [
+            "明日または今週のカレンダーを開く。",
+            "最も集中力が高い時間帯（多くの人は午前中）に、最重要の集中作業ブロックを入れる。最低90分。",
+            "次に、会議・メール確認・雑務の時間帯を決める。集中ブロック以外に配置する。",
+            "ブロック中は通知をオフにする。割り込みが入ったら「X時からのブロックがあるので、Y時以降でもいいですか」と伝える。"
+          ],
+          "tips": [
+            "最初は1日1〜2ブロックから。完璧なスケジュールより継続できる量が大事",
+            "ブロックが崩れた翌日はリセットして再設定。崩れること自体は普通"
+          ]
+        }
+      }
+    },
+    {
+      "id": "parkinson-defense",
+      "icon": "⏳",
+      "approach": "行動計画",
+      "duration": 5,
+      "emotions": [
+        "anxious",
+        "exhausted"
+      ],
+      "timeSlots": [
+        "morning",
+        "afternoon"
+      ],
+      "i18n": {
+        "ja": {
+          "name": "パーキンソン対策",
+          "tagline": "仕事は与えられた時間をすべて使い切る。だから先に「終わり」を決める。",
+          "background": "パーキンソンの法則（Parkinson's Law）とは、「仕事は与えられた時間をすべて満たすまで膨張する」という法則です。1955年に歴史家C・N・パーキンソンが提唱しました。この法則を逆用して、人為的な短い締め切りを設けることで作業効率が大幅に向上します。「完了させる力」は才能ではなく、制約を設計することで引き出せます。",
+          "steps": [
+            "取り組むタスクにかかる時間を推測する。",
+            "その推測時間より20〜30%短い締め切りを人為的に設ける。例：「1時間かかりそうなメールを40分で書く」",
+            "タイマーをセットして開始する。「完璧」より「完了」を目標にする。",
+            "制限時間内に終わらなければ、残りは次の作業枠に回す。終わらないことを恥じない。"
+          ],
+          "tips": [
+            "ポモドーロ技法と組み合わせると効果的",
+            "まず小さなタスクで試して感覚をつかむ"
+          ]
+        }
+      }
+    },
+    {
+      "id": "10-10-10",
+      "icon": "⏰",
+      "approach": "認知行動療法",
+      "duration": 5,
+      "emotions": [
+        "anxious",
+        "hopeless",
+        "sad"
+      ],
+      "timeSlots": [
+        "morning",
+        "afternoon",
+        "evening",
+        "night"
+      ],
+      "i18n": {
+        "ja": {
+          "name": "10-10-10ルール",
+          "tagline": "今の感情は、10年後の自分には関係ない。時間軸を変えると、答えが見えてくる。",
+          "background": "ビジネスライターのスージー・ウェルチが提唱するこのルールは、感情的な判断バイアスを時間の視点で和らげる手法です。行動経済学の研究では、意思決定に感情が強く影響する「ホット状態」では判断が歪むことが示されています。「10分後・10ヶ月後・10年後」という3つの時間軸で後悔を想像することで、一時的な感情と長期的な価値観を切り離し、より冷静な選択が可能になります。",
+          "steps": [
+            "今迷っている決断を書き出す。",
+            "「10分後」——この選択をした直後、どう感じるか？（短期の感情的反応）",
+            "「10ヶ月後」——10ヶ月後、この選択についてどう思っているか？（中期の影響）",
+            "「10年後」——10年後、この選択は人生にどんな意味を持つか？（長期の視点）",
+            "3つの時間軸で答えが同じ方向を向いているか確認する。向いていれば、それが答え。"
+          ],
+          "tips": [
+            "特に感情的になっているときに使うと効果的",
+            "「10年後に後悔しない方」を選ぶと決めると迷いが減る"
+          ]
+        }
+      }
+    },
+    {
+      "id": "regret-minimization",
+      "icon": "👴",
+      "approach": "ポジティブ心理学",
+      "duration": 10,
+      "emotions": [
+        "anxious",
+        "hopeless",
+        "sad"
+      ],
+      "timeSlots": [
+        "morning",
+        "afternoon",
+        "evening"
+      ],
+      "i18n": {
+        "ja": {
+          "name": "後悔最小化フレームワーク",
+          "tagline": "80歳の自分は、どちらの選択を後悔するか。それだけを問えばいい。",
+          "background": "Amazon創業者ジェフ・ベゾスが自社設立を決断する際に使ったことで広く知られるこの手法は、心理学的「後悔回避」の原理を活用しています。行動心理学の研究では、人は「したこと」より「しなかったこと」——挑戦しなかった・踏み出さなかった——を長期的により強く後悔することが示されています。80歳という時間軸は、現在のリスク・恐れ・他者の評価を相対化するのに十分な距離を提供します。",
+          "steps": [
+            "「80歳の自分がロッキングチェアに座って人生を振り返っている」場面をイメージする。",
+            "その場面で、「A（現状維持・やらない）」を選んだ80歳の自分はどう感じているか？",
+            "「B（行動・変化・挑戦）」を選んだ80歳の自分はどう感じているか？",
+            "後悔が少ない方を選ぶ。失敗してもやってみた後悔と、やらなかった後悔のどちらが小さいかで判断する。"
+          ],
+          "tips": [
+            "特に大きな人生の選択（転職・移住・挑戦）に向いている",
+            "リスクより「やらなかった後悔」の方が長く続く、という認知を持つだけで決断が楽になる"
+          ]
+        }
+      }
+    },
+    {
+      "id": "satisficing",
+      "icon": "✅",
+      "approach": "認知行動療法",
+      "duration": 5,
+      "emotions": [
+        "anxious",
+        "exhausted"
+      ],
+      "timeSlots": [
+        "morning",
+        "afternoon",
+        "evening"
+      ],
+      "i18n": {
+        "ja": {
+          "name": "サティスファイシング",
+          "tagline": "「最高の選択」より「十分に良い選択」。基準を先に決めれば、迷わなくなる。",
+          "background": "心理学者バリー・シュワルツの研究によると、完璧な選択を求める「マキシマイザー」は、ある程度の基準を満たせば選ぶ「サティスファイサー」より、決断後の満足度が低く後悔が多い傾向があります。ノーベル賞経済学者ハーバート・サイモンが提唱した「サティスファイシング（satisfy + suffice）」は、「十分に良い」閾値を事前に設定し、それを満たした最初の選択肢を選ぶ手法で、選択疲れと後悔を同時に軽減します。",
+          "steps": [
+            "今の選択において「これがあれば十分」という最低条件を3〜5個書き出す。",
+            "選択肢を順番に確認し、最低条件をすべて満たした最初のものを選ぶ。",
+            "「もっと良いものがあるかも」という考えが出たら、「十分に良い選択をした」と意識的に認める。",
+            "決断後は振り返らない。選択肢探しをやめることが、このフレームワークの核心。"
+          ],
+          "tips": [
+            "「最低条件」を決める前に「何が本当に重要か」を明確にすると機能しやすい",
+            "可逆な決断（後から変えられる）ほどサティスファイシングが向いている"
+          ]
+        }
+      }
+    },
+    {
+      "id": "coin-flip-test",
+      "icon": "🪙",
+      "approach": "マインドフルネス",
+      "duration": 2,
+      "emotions": [
+        "anxious",
+        "empty"
+      ],
+      "timeSlots": [
+        "morning",
+        "afternoon",
+        "evening",
+        "night"
+      ],
+      "i18n": {
+        "ja": {
+          "name": "コインフリップテスト",
+          "tagline": "コインが表か裏かより、その瞬間「ほっとしたか・がっかりしたか」が本音を教えてくれる。",
+          "background": "意思決定が難しいときは、しばしば「頭で考えすぎて本音がわからない」状態になっています。コインフリップテストは、ランダムな結果を見た瞬間の感情的反応（ほっとする・がっかりする）を手がかりに、無意識の優先順位を明確にする手法です。神経科学的には、体性マーカー仮説（ダマシオ）によって、こうした身体の感覚が実際の選好を反映することが示されています。",
+          "steps": [
+            "AとBの2択を決める。コインの表をA、裏をBに割り当てる。",
+            "コインを投げる（または「1・2・3」で心の中で決める）。",
+            "結果を見た瞬間の第一感情を確認する。「ほっとした」「よかった」→その選択が本音。「がっかりした」「えっ」→もう一方が本音。",
+            "その感情を手がかりに、自分が本当に何を望んでいるかを確認する。コインの結果に従う必要はない。"
+          ],
+          "tips": [
+            "感情の反応は「投げた瞬間」が最も正直。考える前の反射を見る",
+            "反応が曖昧なときは、2択の差があまりない＝どちらでも大丈夫というサイン"
+          ]
+        }
+      }
+    },
+    {
+      "id": "decision-journal",
+      "icon": "📓",
+      "approach": "行動計画",
+      "duration": 10,
+      "emotions": [
+        "anxious",
+        "hopeless"
+      ],
+      "timeSlots": [
+        "morning",
+        "afternoon",
+        "evening"
+      ],
+      "i18n": {
+        "ja": {
+          "name": "意思決定ジャーナル",
+          "tagline": "決断を記録して振り返る。それだけで、判断力は着実に育っていく。",
+          "background": "投資家シェーン・パリッシュが提唱する意思決定ジャーナルは、決断とその結果を記録・振り返ることで判断力を向上させる手法です。「振り返り」は単純だが実践者が少ないスキルです。後知恵バイアス（「最初からわかっていた」という錯覚）を防ぎ、自分の意思決定パターン——感情・情報・仮定——を客観視できるようになります。",
+          "steps": [
+            "決断する前に記録する：「何を決めたか」「なぜその選択をしたか」「他の選択肢は何か」「どんな結果を予想するか」",
+            "決断後1〜3ヶ月後に記録を読み返す。",
+            "実際の結果と予想を比較する。何が正しかったか、何が見えていなかったか。",
+            "パターンを見つける。「感情が高ぶっているときの判断は後悔が多い」「情報が少ないときは〜」など。"
+          ],
+          "tips": [
+            "専用ノートでも、スマートフォンのメモでもOK",
+            "週1〜2回の大きな決断から始めると負担が少ない"
+          ]
+        }
+      }
+    },
+    {
+      "id": "option-reduction",
+      "icon": "🔽",
+      "approach": "行動計画",
+      "duration": 10,
+      "emotions": [
+        "exhausted",
+        "anxious"
+      ],
+      "timeSlots": [
+        "morning"
+      ],
+      "i18n": {
+        "ja": {
+          "name": "選択肢削減",
+          "tagline": "意思決定疲れは選択の量から生まれる。日常の決断をルーティン化すると、大切な決断に力が残る。",
+          "background": "心理学者ロイ・バウマイスターの「自我消耗」研究によると、意思決定の回数が増えるほど、後続の判断の質が低下します。スティーブ・ジョブズが毎日同じ服を着たのも、バラク・オバマが毎朝の朝食を固定していたのも、この原則の実践です。繰り返し発生する日常の決断をルーティン化・自動化することで、重要な決断のための認知資源を温存できます。",
+          "steps": [
+            "1日の中で繰り返し発生する決断をリストアップする。例：朝食・服・通勤手段・昼食・運動の有無。",
+            "それぞれについて「デフォルトルール」を決める。例：「月・水・金は〇〇を食べる」「平日の服は前夜に決める」",
+            "決めたルールを1週間試す。",
+            "「本当に選びたい」と感じる決断はルーティン化しない。楽しい選択と煩わしい選択を区別する。"
+          ],
+          "tips": [
+            "完全な自動化より「選択肢を3つ以内に絞る」だけでも効果がある",
+            "一度に全部変えず、1〜2個からルーティン化を始める"
+          ]
+        }
+      }
+    },
+    {
+      "id": "grief-wave",
+      "icon": "🌊",
+      "approach": "マインドフルネス",
+      "duration": 10,
+      "emotions": [
+        "sad",
+        "hopeless",
+        "empty"
+      ],
+      "timeSlots": [
+        "morning",
+        "afternoon",
+        "evening",
+        "night",
+        "midnight"
+      ],
+      "i18n": {
+        "ja": {
+          "name": "悲嘆の波",
+          "tagline": "悲しみは消えるものではなく、波のように来ては引くもの。今の波に、ただ乗る。",
+          "background": "悲嘆研究者ジュリア・サミュエルをはじめ多くの研究者が示すように、悲しみは一直線に回復するのではなく、波のように繰り返しやって来ます。波に抵抗しようとすると苦しさが増し、逆に「来ても大丈夫」と迎え入れることで、波は少しずつ穏やかになっていきます。これはマインドフルネスの「受容」と衝動サーフィンを悲嘆に応用した実践です。",
+          "steps": [
+            "悲しみが押し寄せてきたことに気づく。「今、悲しみの波が来ている」と心の中で認める。",
+            "体のどこに感じるか確認する。胸・喉・目・お腹——感覚に場所をつける。",
+            "波と戦わず、砂浜から眺める観察者になる。「悲しみが来ている」とただ気づくだけでOK。",
+            "波は必ず引く。消えなくていい。小さくなるまで、ただ待つ。",
+            "波が少し引いたら、ゆっくりと深呼吸する。"
+          ],
+          "tips": [
+            "「早く泣き止まなければ」とは思わなくていい。波に乗り切ることが目標",
+            "波の頻度や大きさは時間とともに変わる。変化しないように見えても、変わっている"
+          ]
+        }
+      }
+    },
+    {
+      "id": "continuing-bonds",
+      "icon": "🧵",
+      "approach": "ポジティブ心理学",
+      "duration": 15,
+      "emotions": [
+        "sad",
+        "hopeless",
+        "empty"
+      ],
+      "timeSlots": [
+        "morning",
+        "evening",
+        "night"
+      ],
+      "i18n": {
+        "ja": {
+          "name": "継続する絆",
+          "tagline": "失った後も、その人・その関係との絆は終わらない。形を変えて続けていける。",
+          "background": "心理学者デニス・クラスらが提唱した「継続する絆（Continuing Bonds）」理論は、従来の「悲嘆を乗り越えて前に進む」モデルに異議を唱えます。失った人や関係から「切り離す」のではなく、内的な関係として維持し、変化させ続けることが健全な悲嘆プロセスであると示しています。これは特に死別・離別・喪失後の長期回復に効果が認められています。",
+          "steps": [
+            "失った人・関係・ものとの「今でも続いている絆」を考える。例：その人が教えてくれた価値観・共有した思い出・影響された行動。",
+            "その絆を「今の自分の生活」でどう続けるかを考える。例：その人が好きだった場所に行く・教わったことを誰かに伝える・記念日に手紙を書く。",
+            "自分なりの「絆の続け方」を一つ実践する。",
+            "絆が変わっていくことを許可する。「こうあるべき」という形はない。"
+          ],
+          "tips": [
+            "「忘れたくない」と「前に進む」は矛盾しない",
+            "失った人が「自分の中に生きている」と感じる方法を自由に探す"
+          ]
+        }
+      }
+    },
+    {
+      "id": "dual-process-grief",
+      "icon": "↔️",
+      "approach": "認知行動療法",
+      "duration": 10,
+      "emotions": [
+        "sad",
+        "hopeless",
+        "exhausted"
+      ],
+      "timeSlots": [
+        "morning",
+        "afternoon",
+        "evening"
+      ],
+      "i18n": {
+        "ja": {
+          "name": "二重過程モデル",
+          "tagline": "悲しみと向き合う時間と、前を向く時間。両方あっていい。どちらかだけではなくていい。",
+          "background": "心理学者ストローブとシュートが提唱した「悲嘆の二重過程モデル（DPM）」は、健全な回復には「喪失志向（悲しみに向き合う）」と「回復志向（新しい役割・生活への適応）」を行き来することが重要だと示しています。一方だけに固執すると回復が滞ります。「今日は悲しむ時間」と「今日は普通の活動をする時間」を意図的に分けることで、どちらの作業も安全に進められます。",
+          "steps": [
+            "今日の自分の状態を確認する。悲しみと向き合いたい気持ちが強いか、少し前を向きたい気持ちがあるか。",
+            "「喪失志向タイム」を設ける：感情を書く・写真を見る・泣く・故人のことを誰かに話すなど。",
+            "「回復志向タイム」を設ける：普通の日常活動・軽い運動・新しいことへの挑戦・社会的つながり。",
+            "二つの時間を意図的に分ける。「今は悲しむ時間」「今は普通の時間」と宣言してから入る。"
+          ],
+          "tips": [
+            "どちらの時間も正しい。「悲しんでいていいのか」「前を向いていいのか」どちらも正解",
+            "割合は日によって違う。今日は9:1でも、来月は5:5になっていくかもしれない"
+          ]
+        }
+      }
+    },
+    {
+      "id": "loss-letter",
+      "icon": "✉️",
+      "approach": "認知行動療法",
+      "duration": 20,
+      "emotions": [
+        "sad",
+        "hopeless",
+        "empty",
+        "anger"
+      ],
+      "timeSlots": [
+        "evening",
+        "night"
+      ],
+      "i18n": {
+        "ja": {
+          "name": "喪失への手紙",
+          "tagline": "言えなかった言葉を、今ここで書く。手紙は届かなくていい。書くことが、癒しになる。",
+          "background": "心理学者ジェームズ・ペネベーカーの研究によると、辛い体験を文章にすることで、感情的苦痛が軽減し、免疫機能まで改善することが示されています。喪失への手紙は、言えなかったこと・整理できていない感情・感謝や謝罪を表現する場を提供します。手紙を「送る」必要はありません。書くこと自体が処理の役割を果たします。",
+          "steps": [
+            "静かな場所と時間を確保する。",
+            "失った人・関係・もの宛に手紙を書き始める。「あなたへ」と書くだけで始められる。",
+            "言えなかったこと・感謝・怒り・後悔・思い出——何を書いてもいい。正しい内容はない。",
+            "書き終わったら、読み返す必要はない。保存しても、処分しても、どちらでも構わない。"
+          ],
+          "tips": [
+            "泣いてもいい。涙は感情が処理されているサイン",
+            "一度で全部書こうとしない。複数回に分けてもOK"
+          ]
+        }
+      }
+    },
+    {
+      "id": "grief-ritual",
+      "icon": "🕯️",
+      "approach": "ポジティブ心理学",
+      "duration": 15,
+      "emotions": [
+        "sad",
+        "empty",
+        "hopeless"
+      ],
+      "timeSlots": [
+        "morning",
+        "evening",
+        "night"
+      ],
+      "i18n": {
+        "ja": {
+          "name": "悲嘆の儀式",
+          "tagline": "喪失を悼む儀式を、自分で作る。それは記憶を守る場所になる。",
+          "background": "人類は古来から、喪失を悼む儀式（葬儀・年忌・追悼）を通じてグリーフを処理してきました。心理学研究では、個人的な儀式が感情の調節に効果的であることが示されています（ノートンとアリエリー、2014年）。特に「コントロール感の喪失」を感じている状態では、自分で設計した儀式が意味と構造を提供します。",
+          "steps": [
+            "自分にとって意味のある「追悼の形」を考える。例：毎年記念日に好きだった場所へ行く・写真の前にお茶を供える・その人が好きだった曲を聴く。",
+            "儀式を行う「時・場所・方法」を具体的に決める。",
+            "その儀式を一度実践する。",
+            "続けたければ続ける。変えたければ変える。形は自由に進化させていい。"
+          ],
+          "tips": [
+            "宗教的な儀式でなくていい。自分の心に響く形が最善",
+            "誰かと一緒に行う儀式は、つながりの感覚も提供してくれる"
+          ]
+        }
+      }
+    },
+    {
+      "id": "meaning-reconstruction",
+      "icon": "🔮",
+      "approach": "ポジティブ心理学",
+      "duration": 20,
+      "emotions": [
+        "hopeless",
+        "sad",
+        "empty"
+      ],
+      "timeSlots": [
+        "morning",
+        "afternoon",
+        "evening"
+      ],
+      "i18n": {
+        "ja": {
+          "name": "意味の再構築",
+          "tagline": "喪失は何かを奪う。でも、何かを生み出すこともある。その「何か」を、ゆっくり探す。",
+          "background": "心理学者ロバート・ネイマイヤーが提唱する「意味の再構築（Meaning Reconstruction）」は、悲嘆を「失われた意味を再建する過程」として捉えます。喪失によって揺らいだ「世界についての物語」を書き直すことで、喪失を自分の人生の一部として統合できるようになります。Post-Traumatic Growth（心的外傷後成長）の研究でも、喪失から意味を見出すことが長期的な回復と関連することが示されています。",
+          "steps": [
+            "「この喪失の前と後で、自分について変わったことは何か」を書き出す。",
+            "「この経験から、何を学んだか・気づいたか」を問う。答えを急がない。",
+            "「この喪失があったからこそ、大切になったものは何か」を考える。",
+            "書き出したことを、自分の人生の物語の一部として読む。喪失は物語を終わらせるのではなく、変えたのだ。"
+          ],
+          "tips": [
+            "「無理に意味を見出そう」としなくていい。早すぎる意味付けは回復を妨げることもある",
+            "答えが出るまでに、数ヶ月・数年かかることもある。プロセスを急がない"
+          ]
+        }
+      }
+    },
+    {
+      "id": "safe-place",
+      "icon": "🏡",
+      "approach": "マインドフルネス",
+      "duration": 10,
+      "emotions": [
+        "fear",
+        "anxious",
+        "hopeless"
+      ],
+      "timeSlots": [
+        "morning",
+        "afternoon",
+        "evening",
+        "night",
+        "midnight"
+      ],
+      "i18n": {
+        "ja": {
+          "name": "安全な場所のイメージ",
+          "tagline": "心の中に、いつでも戻れる安全な場所を作る。",
+          "background": "EMDR（眼球運動による脱感作と再処理）療法やソマティック・エクスペリエンシング（SE）で広く使われるこのテクニックは、トラウマ処理の前準備として重要です。安全な場所のイメージは、神経系を落ち着かせ、処理困難な感情に触れる際の「逃げ場」を提供します。繰り返し練習することで、ストレス時に素早くアクセスできるリソースになります。",
+          "steps": [
+            "目を閉じるか、視線を柔らかく下げる。深呼吸を2〜3回する。",
+            "「完全に安全で落ち着ける場所」をイメージする。実在する場所でも、想像の場所でもOK。自然・部屋・宇宙——どこでもいい。",
+            "その場所の細部を感じる。何が見えるか？音は？温度は？匂いは？感触は？",
+            "体の中に「安心・安全」の感覚が生まれたら、その感覚を味わう。場所と感覚を結びつける。",
+            "練習を終えるとき「この場所にはいつでも戻れる」と自分に伝える。"
+          ],
+          "tips": [
+            "練習を重ねると、30秒以内でその感覚にアクセスできるようになる",
+            "圧倒されそうな感情が出てきたら、この場所に戻ることが最初のステップ"
+          ]
+        }
+      }
+    },
+    {
+      "id": "window-of-tolerance",
+      "icon": "🪟",
+      "approach": "マインドフルネス",
+      "duration": 5,
+      "emotions": [
+        "fear",
+        "anxious",
+        "empty",
+        "hopeless"
+      ],
+      "timeSlots": [
+        "morning",
+        "afternoon",
+        "evening",
+        "night"
+      ],
+      "i18n": {
+        "ja": {
+          "name": "耐性の窓",
+          "tagline": "過覚醒でも解離でもなく、「ちょうど良い状態」に戻る方法を知る。",
+          "background": "神経科学者ダン・シーゲルが提唱した「耐性の窓（Window of Tolerance）」は、感情調節の適切なゾーンを説明するモデルです。トラウマを持つ人はこの窓が狭く、パニック（過覚醒）や感覚の麻痺（低覚醒・解離）に容易に陥ります。自分の状態を認識し、適切な調節戦略を使うことで、窓の中に戻れます。",
+          "steps": [
+            "今の自分の状態を確認する。①パニック・動悸・過呼吸・フラッシュバック（過覚醒）②ぼんやり・感覚がない・解離感（低覚醒）③落ち着いている・考えられる（最適ゾーン）",
+            "過覚醒なら：5-4-3-2-1グラウンディング・ゆっくり長く吐く呼吸・冷水を手に当てる",
+            "低覚醒なら：立ち上がって動く・顔を冷水で洗う・大きく息を吸う・軽い運動",
+            "最適ゾーンに戻ったら、今やっていることを続ける。"
+          ],
+          "tips": [
+            "自分の「窓の端のサイン」を事前に知っておくと対処が速くなる",
+            "トラウマ処理は最適ゾーンにいるときだけ行う"
+          ]
+        }
+      }
+    },
+    {
+      "id": "titration",
+      "icon": "💧",
+      "approach": "マインドフルネス",
+      "duration": 10,
+      "emotions": [
+        "fear",
+        "anxious",
+        "sad"
+      ],
+      "timeSlots": [
+        "morning",
+        "afternoon",
+        "evening"
+      ],
+      "i18n": {
+        "ja": {
+          "name": "タイトレーション",
+          "tagline": "一度に全部向き合わなくていい。少しずつ触れて、少しずつ離れる。それが安全な処理。",
+          "background": "ソマティック・エクスペリエンシング（SE）のピーター・ラヴィーンが提唱するタイトレーション（titration）は、化学で少量ずつ試薬を加える操作から名前が取られています。トラウマ記憶に「少量ずつ」接触し、その都度神経系を安定させることで、圧倒されずに処理が進みます。一気に向き合おうとすると再トラウマ化のリスクがあります。",
+          "steps": [
+            "トラウマ記憶の「端の部分」だけを意識する。最も辛い中心ではなく、少し手前。",
+            "10〜30秒だけその感覚・イメージに触れる。",
+            "「安全な場所」のイメージや体の安定感覚に戻る。完全に戻るまで待つ。",
+            "戻ったことを確認してから、また少し触れる。または今日はここで終わりにする。"
+          ],
+          "tips": [
+            "処理は「完全に向き合えた」より「少し触れて戻れた」の繰り返しで進む",
+            "専門家（トラウマセラピスト）と一緒に行うと安全性が高まる"
+          ]
+        }
+      }
+    },
+    {
+      "id": "pendulation",
+      "icon": "⚖️",
+      "approach": "マインドフルネス",
+      "duration": 10,
+      "emotions": [
+        "fear",
+        "anxious",
+        "sad"
+      ],
+      "timeSlots": [
+        "morning",
+        "afternoon",
+        "evening",
+        "night"
+      ],
+      "i18n": {
+        "ja": {
+          "name": "振り子",
+          "tagline": "辛い感覚と安全な感覚の間を行き来する。それが神経系を整える。",
+          "background": "ソマティック・エクスペリエンシング（SE）の中核的な技法であるペンデュレーション（振り子）は、辛い感覚と安全・心地よい感覚の間を意図的に行き来することで、神経系の弾力性を高めます。辛い感覚に触れ続けるのではなく、安全な感覚との間を振り子のように動くことで、体は「辛い感覚は永遠には続かない」ということを体験的に学びます。",
+          "steps": [
+            "体の中で「安全・心地よい」感覚がある部分を見つける。例：手のひらの温かさ・足の裏の重さ・呼吸のリズム。",
+            "その感覚に30秒ほど意識を向ける。",
+            "次に、気になる辛い感覚（緊張・重さ・痛み）がある部分に少し意識を向ける。",
+            "また安全な感覚の部分に戻る。完全に戻るまで待つ。",
+            "このサイクルを3〜5回繰り返す。"
+          ],
+          "tips": [
+            "辛い感覚に向かうときの時間は安全な感覚に戻る時間より短くていい",
+            "慣れると「安全な感覚」へのアクセスが速くなる"
+          ]
+        }
+      }
+    },
+    {
+      "id": "resource-installation",
+      "icon": "💎",
+      "approach": "ポジティブ心理学",
+      "duration": 10,
+      "emotions": [
+        "hopeless",
+        "fear",
+        "sad"
+      ],
+      "timeSlots": [
+        "morning",
+        "afternoon",
+        "evening"
+      ],
+      "i18n": {
+        "ja": {
+          "name": "リソース設置",
+          "tagline": "内なる強さや安心の記憶を、心の中に意図的に積み上げていく。",
+          "background": "EMDR療法の準備フェーズで用いられるリソース設置（Resource Installation）は、ポジティブな記憶・強さの感覚・サポートのイメージを意図的に活性化し、神経系に定着させる技法です。トラウマ処理の際に「引き出せるリソース」を事前に蓄えることが、安全な処理を可能にします。",
+          "steps": [
+            "「自分が強さや安心を感じた記憶」を一つ思い出す。例：困難を乗り越えた瞬間・誰かに守られた経験・自然の中で穏やかだった時間。",
+            "その記憶を鮮明にイメージする。何が見えるか・聞こえるか・感じるか。",
+            "その記憶が生み出す体の感覚（温かさ・力強さ・穏やかさ）に意識を向ける。",
+            "その感覚をゆっくりと味わう。「この感覚は今の自分の中にある」と確認する。"
+          ],
+          "tips": [
+            "リソースは一つでなくていい。複数積み上げるほど神経系が安定する",
+            "記憶がない場合は、信頼できる存在（実在する人・架空の人物・動物）をイメージするだけでもいい"
+          ]
+        }
+      }
+    },
+    {
+      "id": "tapping",
+      "icon": "👆",
+      "approach": "マインドフルネス",
+      "duration": 10,
+      "emotions": [
+        "fear",
+        "anxious",
+        "sad",
+        "anger"
+      ],
+      "timeSlots": [
+        "morning",
+        "afternoon",
+        "evening",
+        "night",
+        "midnight"
+      ],
+      "i18n": {
+        "ja": {
+          "name": "EFTタッピング",
+          "tagline": "指でトントンとたたくだけ。体に直接「大丈夫」を伝える方法。",
+          "background": "EFT（感情解放テクニック）タッピングは、鍼のツボ（経絡ポイント）を指でタッピングしながら、辛い感情や記憶を思い浮かべることで感情的苦痛を軽減する手法です。複数のランダム化比較試験でPTSD症状・不安・うつへの有効性が示されており、特にトラウマへのアクセスが難しい状態でも使いやすいのが特徴です。",
+          "steps": [
+            "今感じている辛さを0〜10で測る。",
+            "「こんな気持ちを感じているけれど、自分のことを完全に受け入れる」と3回言いながら、手の横（空手チョップする面）をトントンとたたく。",
+            "眉間の内側→目尻→目の下→鼻の下→顎→鎖骨の下→脇の下の順に、各ポイントを5〜7回ずつたたく。",
+            "一巡したら深呼吸して、辛さを0〜10で再測定する。変化を確認する。",
+            "苦痛が3以下になるまで繰り返す。"
+          ],
+          "tips": [
+            "たたく強さは気持ちいいくらいの強さで。痛くなくていい",
+            "外出先でも、手の横だけをたたく簡易版が使える"
+          ]
+        }
+      }
+    },
+    {
+      "id": "achievement-evidence",
+      "icon": "📋",
+      "approach": "認知行動療法",
+      "duration": 15,
+      "emotions": [
+        "anxious",
+        "hopeless",
+        "sad"
+      ],
+      "timeSlots": [
+        "morning",
+        "afternoon",
+        "evening"
+      ],
+      "i18n": {
+        "ja": {
+          "name": "実績の証拠集め",
+          "tagline": "「自分はできていない」という思い込みには、事実で反証する。",
+          "background": "認知行動療法における「思考記録」を応用したこの手法は、インポスター症候群の核心にある「自分は実力がない詐欺師だ」という認知に、具体的な証拠で反証します。心理学的に、否定的な自己評価は選択的注意により強化されますが（失敗は記憶し、成功は忘れる）、意図的に証拠をリスト化することでバランスを取り戻せます。",
+          "steps": [
+            "紙またはノートに二列を作る。左：「自分はできていない」という思考。右：「実際の証拠」",
+            "左の列に、今感じている「詐欺師的な考え」を書く。例：「自分だけ実力がない」「運良く評価されただけ」",
+            "右の列に、過去6〜12ヶ月間の具体的な成果・称賛・解決した問題・成長した点を書く。",
+            "証拠が思い出せない場合は：過去のメール・評価・感謝の言葉・成功したプロジェクトを振り返る。"
+          ],
+          "tips": [
+            "批判は細部まで記憶するのに、称賛は忘れやすい。意図的に記録が必要",
+            "週1回のペースで更新すると、成長の軌跡が可視化される"
+          ]
+        }
+      }
+    },
+    {
+      "id": "impostor-normalize",
+      "icon": "🌍",
+      "approach": "ポジティブ心理学",
+      "duration": 5,
+      "emotions": [
+        "anxious",
+        "sad",
+        "hopeless"
+      ],
+      "timeSlots": [
+        "morning",
+        "afternoon",
+        "evening"
+      ],
+      "i18n": {
+        "ja": {
+          "name": "インポスター正常化",
+          "tagline": "あなただけじゃない。高く評価される人ほど、この感覚を知っている。",
+          "background": "心理学者ポーリン・クランスとスジャン・アイムスが1978年に定義したインポスター症候群は、高成果者・女性・マイノリティ・新しい環境に入った人に特に多く見られます。研究では、高学歴・高成果の集団の約70%がこの感覚を経験したことがあると報告されています。マヤ・アンジェロウ・アインシュタイン・スティーブ・ジョブズも同様の感覚を持っていたと記録されています。",
+          "steps": [
+            "「インポスター症候群」という現象が広く存在することを知る。自分だけの問題ではない。",
+            "信頼できる同僚や友人に「こういう感覚を感じたことがある？」と聞いてみる。多くの人が同様の経験を話してくれる。",
+            "「この感覚を感じるのは、十分に頑張っている証拠かもしれない」というリフレームを試みる。",
+            "「私には実力がない」ではなく「インポスター症候群の症状が出ている」と言い換える。"
+          ],
+          "tips": [
+            "誰にでもあるが、公に話す人は少ないため「自分だけ」と思いやすい",
+            "高い基準を持つことと、実力がないことは別のこと"
+          ]
+        }
+      }
+    },
+    {
+      "id": "competence-journal",
+      "icon": "📔",
+      "approach": "ポジティブ心理学",
+      "duration": 5,
+      "emotions": [
+        "hopeless",
+        "sad",
+        "anxious"
+      ],
+      "timeSlots": [
+        "evening",
+        "night"
+      ],
+      "i18n": {
+        "ja": {
+          "name": "有能感日記",
+          "tagline": "毎日「うまくいったこと」を記録する。小さなことでいい。積み重ねが自信になる。",
+          "background": "ポジティブ心理学の「強みの活用」研究（セリグマン）と「感謝日記」の効果を応用した手法です。インポスター症候群を持つ人は、成功体験を「運」「たまたま」に帰属させ、すぐに忘れます。毎日「うまくできたこと・成長したこと・貢献できたこと」を記録することで、能力の証拠が蓄積され、自己評価のバランスが整っていきます。",
+          "steps": [
+            "毎日（できれば夜）、「今日うまくできたこと」を3つ書く。大きなことでなくていい。",
+            "各項目に「なぜうまくいったのか」を一行添える。「運が良かった」ではなく「自分の〇〇のおかげ」と書く。",
+            "週末に記録を読み返す。",
+            "1ヶ月後に全体を見返す。成長の軌跡が見えてくる。"
+          ],
+          "tips": [
+            "「小さすぎる」とは思わない。メールに素早く返信できた・会議でうまく話せた、これで十分",
+            "三日坊主になっても再開すればOK。継続より積み重ねが重要"
+          ]
+        }
+      }
+    },
+    {
+      "id": "feedback-portfolio",
+      "icon": "💌",
+      "approach": "ポジティブ心理学",
+      "duration": 10,
+      "emotions": [
+        "hopeless",
+        "sad",
+        "anxious"
+      ],
+      "timeSlots": [
+        "morning",
+        "afternoon",
+        "evening"
+      ],
+      "i18n": {
+        "ja": {
+          "name": "フィードバックポートフォリオ",
+          "tagline": "受け取った言葉を、捨てずに残す。自分が信じられないときの「証人」になる。",
+          "background": "インポスター症候群の特徴のひとつは、肯定的なフィードバックを「お世辞」「誤解」として却下し、批判を「真実」として重く受け止めることです。この認知バイアスを修正するために、受け取ったポジティブなフィードバックを意図的に収集・保存し、定期的に読み返す習慣が有効です。",
+          "steps": [
+            "過去に受け取った肯定的なフィードバックを集める。例：感謝のメール・評価コメント・「助かった」という言葉。",
+            "これらをひとつのフォルダ（メール・メモアプリ・ノート）にまとめる。",
+            "「今日のフィードバック」として新しいものを追加していく習慣を作る。",
+            "自分への批判的な思考が出てきたとき、このポートフォリオを開いて読み返す。"
+          ],
+          "tips": [
+            "受け取ったとき「これは嘘だ」と思っても保存する。後で見ると受け取れることが多い",
+            "月1回、全体を読み返す時間を作ると効果が高い"
+          ]
+        }
+      }
+    },
+    {
+      "id": "luck-vs-skill",
+      "icon": "🎯",
+      "approach": "認知行動療法",
+      "duration": 10,
+      "emotions": [
+        "anxious",
+        "hopeless",
+        "sad"
+      ],
+      "timeSlots": [
+        "morning",
+        "afternoon",
+        "evening"
+      ],
+      "i18n": {
+        "ja": {
+          "name": "運 vs 実力の分解",
+          "tagline": "「運が良かっただけ」は本当か？成功の要因を正直に分解してみる。",
+          "background": "帰属理論（ハイダー、ワイナー）によると、インポスター症候群を持つ人は「成功→外的要因（運・他者・環境）」「失敗→内的要因（自分の無能）」という非対称な帰属をしがちです。この技法は、成功要因を「運・タイミング・他者のサポート・自分のスキル・努力」に分解し、自分の貢献を正当に評価することで帰属の歪みを修正します。",
+          "steps": [
+            "最近の成功体験（褒められた・うまくいったこと）を一つ選ぶ。",
+            "その成功に関わった要因をすべて書き出す：「運」「タイミング」「他者のサポート」「自分のスキル」「自分の努力」「準備」",
+            "各要因がどれくらい貢献したか、パーセンテージで割り振る（合計100%）。",
+            "「自分のスキル＋努力＋準備」の合計を確認する。それが自分の実際の貢献。"
+          ],
+          "tips": [
+            "完全に正確でなくていい。「全部運」以外の何かが見えることが目標",
+            "失敗のときも同じ分解をすると、「全部自分のせい」という認知が緩む"
+          ]
+        }
+      }
+    },
+    {
+      "id": "functional-appreciation",
+      "icon": "🙏",
+      "approach": "ポジティブ心理学",
+      "duration": 5,
+      "emotions": [
+        "sad",
+        "anxious",
+        "hopeless"
+      ],
+      "timeSlots": [
+        "morning",
+        "afternoon",
+        "evening"
+      ],
+      "i18n": {
+        "ja": {
+          "name": "身体機能への感謝",
+          "tagline": "体がどう見えるかより、体が何をしてくれるかに目を向ける。",
+          "background": "ボディ・ニュートラリティの研究者やポジティブ心理学者は、外見評価から機能的評価への視点の移行が、ボディイメージを改善することを示しています。「体がどう見えるか」という評価的な関係から、「体が何をしてくれるか」という感謝的な関係へ移行することで、批判的な自己対話が減少します。完璧な体ではなく「機能している体」を基準にすることが出発点です。",
+          "steps": [
+            "今日一日、自分の体が何をしてくれたかを書き出す。例：歩いた・呼吸した・音楽を聴いた・誰かを抱きしめた・仕事をした。",
+            "それぞれの機能に対して「ありがとう」と言う。声に出さなくていい。心の中で。",
+            "「体の見た目」への思考が出てきたら、「体は何ができるか」に意識を戻す。",
+            "毎日一つ、体への感謝を書く習慣を作る。"
+          ],
+          "tips": [
+            "「体が美しいかどうか」を評価するのではなく、「体が機能しているか」に注目する",
+            "慢性痛や病気がある人は、まだ機能していることに感謝することから始められる"
+          ]
+        }
+      }
+    },
+    {
+      "id": "media-fast",
+      "icon": "📵",
+      "approach": "行動計画",
+      "duration": 1440,
+      "emotions": [
+        "sad",
+        "anxious",
+        "hopeless"
+      ],
+      "timeSlots": [
+        "morning",
+        "afternoon",
+        "evening"
+      ],
+      "i18n": {
+        "ja": {
+          "name": "メディアファスト",
+          "tagline": "比較の材料を見続ける限り、批判は続く。意図的にシャットアウトする期間を作る。",
+          "background": "社会比較理論（フェスティンガー）と、理想化されたボディイメージへの露出がボディイメージに与える影響の研究（グローガン）は、SNSや広告の「理想の体」への継続的な露出がボディ不満を高めることを示しています。1日〜1週間のメディアファストは、比較の連鎖を断ち、自己観察の機会を提供します。",
+          "steps": [
+            "外見理想化コンテンツを多く含むアカウント・チャンネルをリストアップする。例：フィットネス・ファッション・ビューティー系SNS。",
+            "期間を決める（1日・3日・1週間）。スマートフォンからSNSアプリを一時的に削除するか、通知をオフにする。",
+            "ファスト中、体について考える時間が減るか・変わるかに注目する。",
+            "ファスト終了後、戻るアカウントと戻らないアカウントを選ぶ。多様な体型が含まれているかを基準にする。"
+          ],
+          "tips": [
+            "最初は1日から試す。効果を感じたら延長する",
+            "完全にやめなくても「見る量を半分にする」だけでも効果がある"
+          ]
+        }
+      }
+    },
+    {
+      "id": "mirror-exposure",
+      "icon": "🪞",
+      "approach": "認知行動療法",
+      "duration": 10,
+      "emotions": [
+        "anxious",
+        "sad"
+      ],
+      "timeSlots": [
+        "morning",
+        "afternoon"
+      ],
+      "i18n": {
+        "ja": {
+          "name": "鏡エクスポージャー",
+          "tagline": "批判なしに見る。ただ観察する。それだけで、見方が変わっていく。",
+          "background": "摂食障害・ボディイメージ研究者トーマス・キャッシュらが開発した鏡エクスポージャー技法は、CBTの「回避とエクスポージャー」の原理を応用しています。鏡を避けることも執着して批判し続けることも回避の一形態です。「批判なく観察する」という新しい関わり方を練習することで、鏡が中立的な存在になっていきます。",
+          "steps": [
+            "鏡の前に立つ。",
+            "体を「評価」するのではなく、「記述」する。例：「お腹がある」「足が床についている」「肩が丸い」——良い/悪いの判断なしに。",
+            "批判的な言葉（醜い・太い・おかしい）が出てきたら、中立の言葉に置き換える。",
+            "3〜5分、ただ観察し続ける。最後に一つ「体に感謝できること」を見つける。"
+          ],
+          "tips": [
+            "最初は顔から始め、徐々に全身に広げても良い",
+            "批判が強く出るときは、セラピストと一緒に行う方が安全"
+          ]
+        }
+      }
+    },
+    {
+      "id": "size-diversity-exposure",
+      "icon": "🌈",
+      "approach": "認知行動療法",
+      "duration": 10,
+      "emotions": [
+        "sad",
+        "anxious"
+      ],
+      "timeSlots": [
+        "morning",
+        "afternoon",
+        "evening"
+      ],
+      "i18n": {
+        "ja": {
+          "name": "多様な体型への露出",
+          "tagline": "「正しい体」は一つではない。様々な体を見ることで、その認知が緩んでいく。",
+          "background": "ボディイメージ研究では、理想化された単一の体型への露出が「標準」への信念を強化することが示されています。逆に、様々な体型・年齢・能力の人々を継続的に見ることで（Body Positive メディア・HAES運動）、「正しい体」という単一の基準が相対化され、自己批判が減少します。",
+          "steps": [
+            "フォローしているアカウントを確認する。様々な体型・年齢・背景の人が含まれているか。",
+            "ボディポジティブ・ボディニュートラル・HAES（健康は体型とは別）関連のアカウントをいくつか探す。",
+            "1週間、様々な体型の人が普通に生活しているコンテンツを意識的に見る。",
+            "「この人たちは体の大きさに関係なく生きている」という観察を心に留める。"
+          ],
+          "tips": [
+            "「体の大きさ＝価値」という等式を意識的に解体していく作業",
+            "美化でも否定でもなく、「多様性が普通」というニュートラルな見方が目標"
+          ]
+        }
+      }
+    },
+    {
+      "id": "body-story",
+      "icon": "📖",
+      "approach": "ポジティブ心理学",
+      "duration": 20,
+      "emotions": [
+        "sad",
+        "hopeless",
+        "anxious"
+      ],
+      "timeSlots": [
+        "evening",
+        "night"
+      ],
+      "i18n": {
+        "ja": {
+          "name": "体のストーリー",
+          "tagline": "体は外見を審査されるものではなく、経験を記録してきたもの。物語として読み直す。",
+          "background": "ナラティブ療法（マイケル・ホワイト）と、ボディイメージ研究者リンジー・クロスフィールドらの研究を組み合わせた手法です。体を「外見の評価対象」ではなく「人生の経験の担い手」として捉え直すことで、外見への評価的な関係から物語的な関係へ移行します。体の傷跡・変化・記憶は、価値の低下ではなく生きてきた証になります。",
+          "steps": [
+            "紙に「自分の体の歴史」を書く。幼少期から現在まで、体と共に経験してきたことを。",
+            "傷跡・手術の跡・妊娠の跡・病気の痕跡——それぞれに「この体はここで何をしたか」を物語として書く。",
+            "体が外見評価の対象ではなく、「経験の記録者」として見えてくるか確認する。",
+            "書いたものを読み返し、自分の体への見方が少しでも変化したかに気づく。"
+          ],
+          "tips": [
+            "「好きになる」ではなく「体の歴史を尊重する」が目標",
+            "自分の子供や友人の体ならどう思うか——同じ優しさを自分に向ける練習"
+          ]
+        }
+      }
+    },
+    {
+      "id": "pain-pacing",
+      "icon": "🐢",
+      "approach": "行動計画",
+      "duration": 10,
+      "emotions": [
+        "hopeless",
+        "exhausted",
+        "sad"
+      ],
+      "timeSlots": [
+        "morning",
+        "afternoon"
+      ],
+      "i18n": {
+        "ja": {
+          "name": "ペーシング",
+          "tagline": "良い日に頑張りすぎると、翌日が辛くなる。一定のペースが、長期的な活動量を増やす。",
+          "background": "慢性疼痛のリハビリ研究では「ブーム&バスト（頑張りすぎ→ぐったり）サイクル」が回復を妨げる主要因のひとつとして示されています。良い日に限界まで活動し、翌日に活動できなくなるパターンを繰り返すことで、平均的な活動量が下がり、自信も低下します。ペーシングは、良い日も悪い日も「持続可能な量」を維持することで、このサイクルを断ちます。",
+          "steps": [
+            "自分の「安全な活動量のベースライン」を決める。例：今日どんなに調子が良くても、歩くのは15分まで。",
+            "調子が良い日でもベースラインを守る。「もう少しできる」と思っても止める。",
+            "調子が悪い日は、ベースラインを70〜80%に下げる（完全に休まない）。",
+            "2〜3週間ごとにベースラインを少しずつ引き上げる（5〜10%程度）。"
+          ],
+          "tips": [
+            "「良い日は活動し、悪い日は休む」より「毎日一定量」の方が長期的な回復が早い",
+            "タイマーを使って「時間が来たら終わり」にすると守りやすい"
+          ]
+        }
+      }
+    },
+    {
+      "id": "pain-diary",
+      "icon": "📊",
+      "approach": "行動計画",
+      "duration": 5,
+      "emotions": [
+        "hopeless",
+        "anxious",
+        "exhausted"
+      ],
+      "timeSlots": [
+        "morning",
+        "evening"
+      ],
+      "i18n": {
+        "ja": {
+          "name": "疼痛日記",
+          "tagline": "痛みのパターンを記録すると、コントロールできる部分が見えてくる。",
+          "background": "慢性疼痛管理において、疼痛日記は患者と医療者の双方にとって重要なツールです。痛みは「常に一定」ではなく、時間帯・活動・睡眠・感情・天気などと相関していることが多い。パターンを把握することで、悪化する引き金を減らし、回復を促す条件を増やすことができます。また「今日は昨日より少し良かった」という小さな変化に気づき、希望を保ちやすくなります。",
+          "steps": [
+            "毎日（朝・夕）に記録する：①痛みの強さ（0〜10）②痛みの場所③今日した活動④睡眠⑤気分・ストレスレベル",
+            "1〜2週間後に記録を振り返り、パターンを探す。「よく眠れた日は痛みが少ない」「特定の活動後に悪化する」など。",
+            "引き金となるパターンを1つ特定して、対策を試す。",
+            "記録を医療者に見せると、治療の方針決定に役立てられる。"
+          ],
+          "tips": [
+            "完璧に書けない日があってもOK。書けるときだけ書く",
+            "専用アプリ（PainScale・Chronicなど）を使うとグラフ化が楽"
+          ]
+        }
+      }
+    },
+    {
+      "id": "pain-neuroscience",
+      "icon": "🧠",
+      "approach": "認知行動療法",
+      "duration": 15,
+      "emotions": [
+        "fear",
+        "anxious",
+        "hopeless"
+      ],
+      "timeSlots": [
+        "morning",
+        "afternoon"
+      ],
+      "i18n": {
+        "ja": {
+          "name": "痛みの神経科学教育",
+          "tagline": "慢性痛は「壊れているサイン」ではなく、「過敏になった神経系」のサイン。知ると恐怖が減る。",
+          "background": "痛み科学者ロルフ・ゼ・モシェと理学療法士ローリー・モズリーが開発した痛みの神経科学教育（PNE: Pain Neuroscience Education）は、慢性痛の理解を変える強力なアプローチです。急性痛（組織損傷のシグナル）と慢性痛（神経系の過敏化）の違いを理解することで、「動くと壊れる」という恐怖回避が減り、活動量が回復します。",
+          "steps": [
+            "慢性痛の仕組みを理解する：急性痛は組織損傷のアラーム。慢性痛はアラームが過敏になった状態。痛みがあっても「損傷している」とは限らない。",
+            "「痛み＝危険」という等式を「痛み≠必ず危険」に更新する。",
+            "痛みが強くても、医師から活動を許可されている範囲で、少しずつ動く練習をする。",
+            "痛みを感じるたびに「これは神経系の過敏化だ。体が壊れているわけではない」と自分に伝える。"
+          ],
+          "tips": [
+            "痛みの科学的な理解は、専門家（ペインクリニック・理学療法士）から学ぶとより深まる",
+            "ローリー・モズリーの書籍「Explain Pain」（邦訳あり）が参考になる"
+          ]
+        }
+      }
+    },
+    {
+      "id": "activity-window",
+      "icon": "🪟",
+      "approach": "行動計画",
+      "duration": 10,
+      "emotions": [
+        "hopeless",
+        "exhausted"
+      ],
+      "timeSlots": [
+        "morning"
+      ],
+      "i18n": {
+        "ja": {
+          "name": "活動の窓",
+          "tagline": "痛みが少ない時間帯を知る。その時間に大切なことを集中させる。",
+          "background": "慢性疼痛では、痛みの強度が1日を通じて変動することが多い。この変動パターンを把握し、痛みが比較的穏やかな時間帯（「活動の窓」）に最も重要な活動を計画的に配置する戦略は、認知行動療法的疼痛管理の重要な要素です。",
+          "steps": [
+            "疼痛日記を使って「1日の中で痛みが最も少ない時間帯」を確認する（1〜2週間の記録が必要）。",
+            "その時間帯を「活動の窓」と名付け、カレンダーに記録する。",
+            "最も重要にしたいこと（仕事・家事・趣味・運動）をその時間帯に計画的に配置する。",
+            "他の時間帯は休息・軽作業・回復活動を中心にする。"
+          ],
+          "tips": [
+            "「調子がいいときに全部やる」という考えはペーシングの原則に反する。窓の中でも量を制限する",
+            "窓の時間帯は日によって変わることがある。柔軟に調整する"
+          ]
+        }
+      }
+    },
+    {
+      "id": "pleasant-activity-plan",
+      "icon": "🎨",
+      "approach": "ポジティブ心理学",
+      "duration": 15,
+      "emotions": [
+        "hopeless",
+        "sad",
+        "exhausted"
+      ],
+      "timeSlots": [
+        "morning",
+        "afternoon"
+      ],
+      "i18n": {
+        "ja": {
+          "name": "楽しい活動計画",
+          "tagline": "痛みに意識が集中しすぎると、痛みは大きくなる。楽しいことを増やすと、痛みの比率が下がる。",
+          "background": "慢性疼痛と気分の研究では、不活動・社会的引きこもり・楽しい活動の喪失が痛みの認知的増幅と抑うつを招くことが示されています（ターナーら）。楽しい活動は、脳内の疼痛抑制系（内因性オピオイド）を活性化し、痛みへの注意を分散させます。活動は「痛みが完全になくなったらやる」ではなく、「今の痛みの中でできる形でやる」ことが重要です。",
+          "steps": [
+            "「痛みがなければやりたいこと」をリストアップする。",
+            "各活動を「今の状態でも工夫すれば可能か」という視点で見直す。例：長距離ハイキング→近所の公園に5分座る。",
+            "小さな形でもできる活動を1週間のカレンダーに入れる。",
+            "活動後に「どれくらい楽しめたか・気分はどうか」をメモする。"
+          ],
+          "tips": [
+            "「本格的にやる」より「少しでもやる」が回復の第一歩",
+            "楽しさを感じられなくても、活動後の気分をチェックする（うつで楽しさが麻痺している場合もある）"
+          ]
+        }
+      }
+    },
+    {
+      "id": "ultradian-rhythm",
+      "icon": "🔄",
+      "approach": "行動計画",
+      "duration": 90,
+      "emotions": [
+        "exhausted",
+        "hopeless"
+      ],
+      "timeSlots": [
+        "morning",
+        "afternoon"
+      ],
+      "i18n": {
+        "ja": {
+          "name": "ウルトラディアンリズム",
+          "tagline": "脳は90分しか集中できない。それは欠点ではなく、体のリズム。乗れば楽になる。",
+          "background": "神経科学者ナサニエル・クライトマン（REM睡眠の発見者）が発見したウルトラディアンリズムは、覚醒中も約90〜120分ごとに集中力と覚醒レベルが波を描くことを示しています。このリズムを無視して長時間連続稼働すると、脳は強制的に「低覚醒状態（ぼんやり・集中困難）」に入り、効率が激減します。リズムに乗って15〜20分の休憩を挟むことで、次の90分の集中が高品質になります。",
+          "steps": [
+            "集中作業を90分（〜120分）タイマーでセットして始める。",
+            "タイマーが鳴ったら、作業の切れ目でなくても止める。",
+            "15〜20分の「本物の休憩」を取る。画面を見ない・軽く歩く・目を閉じる・軽いストレッチ。",
+            "休憩後、次の90分サイクルを始める。1日3〜4サイクルが上限の目安。"
+          ],
+          "tips": [
+            "「もう少しやれる」と思っても止めるのがコツ。休憩が次の集中を作る",
+            "休憩中にSNSを見るのは回復ではなく消費。目と脳を休ませる"
+          ]
+        }
+      }
+    },
+    {
+      "id": "energy-map",
+      "icon": "🗺️",
+      "approach": "行動計画",
+      "duration": 15,
+      "emotions": [
+        "exhausted",
+        "hopeless",
+        "anxious"
+      ],
+      "timeSlots": [
+        "morning",
+        "evening"
+      ],
+      "i18n": {
+        "ja": {
+          "name": "エネルギーマップ",
+          "tagline": "1日のエネルギーの波を記録すると、いつ何をすべきかが見えてくる。",
+          "background": "クロノバイオロジー（時間生物学）の研究では、人のエネルギー・認知機能・気分は1日を通じて予測可能なパターンを描くことが示されています（午前ピーク型・夜型など個人差あり）。このパターンを把握することで、最も重要な仕事を高エネルギー時間帯に配置し、低エネルギー時間帯を回復・軽作業に使う戦略的な日程設計が可能になります。",
+          "steps": [
+            "1週間、1〜2時間ごとに「エネルギーレベル（1〜10）」をメモする。スマートフォンのメモでOK。",
+            "1週間後にパターンを確認する。最もエネルギーが高い時間帯・低い時間帯はどこか。",
+            "高エネルギー時間帯に最重要の作業（集中が必要な仕事・創造的な作業）を配置する。",
+            "低エネルギー時間帯には回復（昼寝・散歩）または自動的にこなせる軽作業を配置する。"
+          ],
+          "tips": [
+            "多くの人の自然なピークは午前中、低谷は昼食後14〜16時頃",
+            "自分のリズムを知ると、「なぜこの時間は集中できないのか」という自責が減る"
+          ]
+        }
+      }
+    },
+    {
+      "id": "drain-gain-list",
+      "icon": "🔋",
+      "approach": "ポジティブ心理学",
+      "duration": 15,
+      "emotions": [
+        "exhausted",
+        "hopeless",
+        "sad"
+      ],
+      "timeSlots": [
+        "morning",
+        "afternoon",
+        "evening"
+      ],
+      "i18n": {
+        "ja": {
+          "name": "ドレイン&ゲインリスト",
+          "tagline": "エネルギーを奪うものと与えるものを知る。与えるものを増やすだけで、回復が始まる。",
+          "background": "エネルギー管理の研究者ジム・ローヤーとトニー・シュワルツ（「The Power of Full Engagement」）は、エネルギー管理を時間管理と切り離して考える重要性を示しています。同じ時間でも、エネルギーを消耗する活動と補充する活動がある。自分のドレイン（消耗）とゲイン（充電）のパターンを把握することが、持続可能なエネルギー管理の第一歩です。",
+          "steps": [
+            "二列のリストを作る：左「エネルギーを奪う活動」右「エネルギーを与える活動」",
+            "過去1週間の活動を思い出し、それぞれの列に書き込む。",
+            "右の列（ゲイン活動）を今週のスケジュールに1〜2個意図的に追加する。",
+            "左の列（ドレイン活動）のうち、削減・委譲・やめることができるものはないか検討する。"
+          ],
+          "tips": [
+            "社交がドレインの人もゲインの人もいる。他者の正解を自分に当てはめない",
+            "ゲイン活動は「やるべきこと」ではなく「やると元気になること」。義務感で選ばない"
+          ]
+        }
+      }
+    },
+    {
+      "id": "micro-recovery",
+      "icon": "☕",
+      "approach": "行動計画",
+      "duration": 5,
+      "emotions": [
+        "exhausted",
+        "anxious"
+      ],
+      "timeSlots": [
+        "morning",
+        "afternoon",
+        "evening"
+      ],
+      "i18n": {
+        "ja": {
+          "name": "マイクロリカバリー",
+          "tagline": "5分の本物の休息が、1時間の疲れた稼働より価値がある。小さな回復を1日に何度も。",
+          "background": "スポーツ科学の「回復インターバル」概念をビジネス・日常生活に応用した研究（ルールやゴーバーら）では、短くても質の高い休息を複数回取ることが、1日を通じたパフォーマンスとウェルビーイングを維持することが示されています。「大きな休日より小さな休息を毎日」という原則は、慢性的な疲労の蓄積を防ぎます。",
+          "steps": [
+            "1日に3〜5回、5分以内の「本物の回復」を意図的に挟む。",
+            "本物の回復の例：目を閉じる・窓の外を眺める・ゆっくり深呼吸する・立って少し歩く・温かい飲み物を飲む。",
+            "「回復ではないもの」：SNSを見る・メールを確認する・心配事を考える——これらは消費。",
+            "回復の前後でエネルギーレベルの変化を確認する。どの回復が最も効くか把握する。"
+          ],
+          "tips": [
+            "タイマーを1時間ごとにセットして「5分休憩のリマインダー」にすると継続しやすい",
+            "トイレに行くついでに窓の外を1分見るだけでもOK。完璧な休憩より習慣が大事"
+          ]
+        }
+      }
+    },
+    {
+      "id": "cognitive-load-diet",
+      "icon": "🧹",
+      "approach": "行動計画",
+      "duration": 20,
+      "emotions": [
+        "exhausted",
+        "anxious"
+      ],
+      "timeSlots": [
+        "morning",
+        "afternoon"
+      ],
+      "i18n": {
+        "ja": {
+          "name": "認知負荷ダイエット",
+          "tagline": "判断の回数を減らすだけで、脳のエネルギーが大切なことに使えるようになる。",
+          "background": "心理学者ロイ・バウマイスターの「自我消耗」研究と、判断負荷（Decision Fatigue）の研究によると、意思決定の総量がその日の後半の判断の質を低下させます。日常の小さな決断（何を食べるか・何を着るか・いつやるか）を意識的に減らすことで、重要な判断や創造的な仕事のためのエネルギーを温存できます。",
+          "steps": [
+            "1日に「何を決めているか」をリストアップする。食事・服・通勤ルート・昼食・返信の優先順位など。",
+            "それぞれについて「ルーティン化・自動化・デフォルト設定」できないか考える。",
+            "1〜2項目をルーティン化する。例：平日の朝食を3パターンに固定・服を前夜に選ぶ。",
+            "「決断をなくした分、何に集中したいか」を決める。認知的資源の配分先を意図的に選ぶ。"
+          ],
+          "tips": [
+            "全部をルーティン化しない。楽しい選択（週末の外食など）は残す",
+            "デフォルトを決めるだけで十分。「いつもこれ」という選択が脳を休ませる"
+          ]
+        }
+      }
+    },
+    {
+      "id": "diaphragm-breathing",
+      "icon": "🫁",
+      "approach": "マインドフルネス",
+      "duration": 5,
+      "emotions": [
+        "anxious",
+        "fear",
+        "exhausted"
+      ],
+      "timeSlots": [
+        "morning",
+        "afternoon",
+        "evening",
+        "night"
+      ],
+      "i18n": {
+        "ja": {
+          "name": "横隔膜呼吸",
+          "tagline": "お腹で呼吸する。それだけで、副交感神経のスイッチが入る。",
+          "background": "胸式呼吸（浅い呼吸）は交感神経を活性化し、腹式呼吸（横隔膜呼吸）は副交感神経を活性化します。横隔膜は迷走神経と密接に接続しており、深い腹式呼吸が迷走神経を直接刺激して「休息・消化モード」を起動することが神経科学的に確認されています。ストレス時の浅い呼吸のパターンを意識的に変えることが、最も即効性のある自律神経調整法のひとつです。",
+          "steps": [
+            "背すじを伸ばして座るか、仰向けに寝る。",
+            "片手をお腹（みぞおちと下腹の間）に置く。もう片方の手を胸に置く。",
+            "鼻からゆっくり息を吸う。お腹の手が持ち上がり、胸の手はほとんど動かないことを確認する。",
+            "口からゆっくり（吸うより2倍長く）息を吐く。お腹がへこんでいくのを感じる。",
+            "これを5〜10回繰り返す。"
+          ],
+          "tips": [
+            "最初は仰向けに寝た状態で練習する方が感覚をつかみやすい",
+            "お腹が動かない場合は、手で軽く押しながら吸うと横隔膜の動きを感じやすい"
+          ]
+        }
+      }
+    },
+    {
+      "id": "resonance-breathing",
+      "icon": "〰️",
+      "approach": "マインドフルネス",
+      "duration": 10,
+      "emotions": [
+        "anxious",
+        "exhausted",
+        "sad"
+      ],
+      "timeSlots": [
+        "morning",
+        "afternoon",
+        "evening"
+      ],
+      "i18n": {
+        "ja": {
+          "name": "共鳴呼吸",
+          "tagline": "1分間に6回の呼吸。それが心臓と脳が最もよく同期するリズム。",
+          "background": "共鳴呼吸（Resonance Breathing）またはコヒーレント呼吸は、1分間約5〜6回（1回あたり約10秒）の呼吸が、心拍変動（HRV）を最大化することが研究で示されています。HRVは自律神経の柔軟性の指標であり、高いほどストレス耐性・感情調節・心臓健康が良好です。この呼吸は、呼吸・心拍・血圧の波が共鳴（resonance）し、神経系が最も効率的に機能する状態を作り出します。",
+          "steps": [
+            "楽な姿勢で座る。",
+            "5秒かけて鼻から息を吸う。",
+            "5秒かけて口または鼻から息を吐く。",
+            "この10秒サイクルを5〜10分続ける。",
+            "慣れたら吸う時間と吐く時間を5.5秒ずつ（11秒サイクル）に調整してみる。"
+          ],
+          "tips": [
+            "アプリ（Resonance・HeartMath）のビジュアルガイドを使うと維持しやすい",
+            "毎日5〜10分続けると、安静時のHRVが改善されるという研究がある"
+          ]
+        }
+      }
+    },
+    {
+      "id": "alternate-nostril",
+      "icon": "👃",
+      "approach": "マインドフルネス",
+      "duration": 5,
+      "emotions": [
+        "anxious",
+        "exhausted",
+        "empty"
+      ],
+      "timeSlots": [
+        "morning",
+        "afternoon",
+        "evening"
+      ],
+      "i18n": {
+        "ja": {
+          "name": "交互鼻孔呼吸",
+          "tagline": "左右の鼻を交互に使う。ヨガの古典的な呼吸法が、現代科学でも効果が確認されている。",
+          "background": "ナーディ・ショーダナ（Nadi Shodhana）とも呼ばれる交互鼻孔呼吸は、ヨガの古典的なプラーナーヤーマ（呼吸法）です。現代の研究では、この呼吸が交感・副交感神経のバランスを整え、不安・血圧・ストレスホルモンを低下させることが確認されています。右脳と左脳の機能統合を促す可能性も研究されています。",
+          "steps": [
+            "右手の親指で右鼻孔を塞ぎ、左鼻孔から4秒吸う。",
+            "右手の薬指で左鼻孔も塞ぎ、4秒息を止める。",
+            "親指を外して右鼻孔から4〜8秒かけてゆっくり吐く。",
+            "右鼻孔から4秒吸い、再び両方塞いで4秒止め、左鼻孔から吐く。",
+            "これを1セットとして、5〜10セット繰り返す。"
+          ],
+          "tips": [
+            "食後2時間は避ける。空腹時または食前が最適",
+            "めまいや不快感を感じたら止めて、通常呼吸に戻る"
+          ]
+        }
+      }
+    },
+    {
+      "id": "physiological-sigh",
+      "icon": "😮‍💨",
+      "approach": "マインドフルネス",
+      "duration": 1,
+      "emotions": [
+        "anxious",
+        "fear",
+        "exhausted"
+      ],
+      "timeSlots": [
+        "morning",
+        "afternoon",
+        "evening",
+        "night",
+        "midnight"
+      ],
+      "i18n": {
+        "ja": {
+          "name": "生理的ため息",
+          "tagline": "2段階で吸って、長く吐く。30秒で緊張を解くための科学的な呼吸。",
+          "background": "スタンフォード大学のアンドリュー・フーバーマン教授とデイビッド・スピーゲル教授の研究（2023年）で、この「生理的ため息（Physiological Sigh）」がリアルタイムのストレス軽減において、他の呼吸法・瞑想法より最も即効性が高いことが示されました。二段階で吸うことで肺の肺胞を最大限に膨らませ、次の長い呼気で最大量のCO2を排出することで、急速に心拍を落ち着かせます。",
+          "steps": [
+            "鼻から普通に息を吸う（1〜2秒）。",
+            "吸いきったところで、もう一度素早く「鼻からスニッフ（鼻をすする）」をして、肺をさらに膨らませる。",
+            "口から細くゆっくりと、できる限り長く（4〜8秒）息を吐く。",
+            "1〜3回繰り返す。気持ちが落ち着いたら普通の呼吸に戻る。"
+          ],
+          "tips": [
+            "30秒以内で効果が感じられることが多い。最速の緊張解消法",
+            "パニックや強い不安のとき・スピーチ前・大事な会議前に特に有効"
+          ]
+        }
+      }
+    },
+    {
+      "id": "coherent-breathing",
+      "icon": "🌊",
+      "approach": "マインドフルネス",
+      "duration": 10,
+      "emotions": [
+        "anxious",
+        "exhausted",
+        "sad"
+      ],
+      "timeSlots": [
+        "morning",
+        "evening",
+        "night"
+      ],
+      "i18n": {
+        "ja": {
+          "name": "コヒーレント呼吸",
+          "tagline": "等間隔で、静かに、ただ呼吸する。自律神経が整い、心が落ち着く。",
+          "background": "心臓病専門家スティーヴン・エリオットが提唱したコヒーレント呼吸は、1分間5〜6回の等間隔の呼吸で自律神経のバランスを整える手法です。吸う時間と吐く時間を等しくすることで、心拍変動（HRV）の規則性が高まり、交感・副交感神経のバランスが整います。うつ・不安・PTSDへの補助療法としての研究もあります。",
+          "steps": [
+            "静かな場所で楽な姿勢を取る。",
+            "5〜6秒かけて鼻から吸う。",
+            "5〜6秒かけて鼻または口から吐く。",
+            "この等間隔リズムを10〜20分続ける。",
+            "終わったら、普通の呼吸に戻り、体の感覚の変化に気づく。"
+          ],
+          "tips": [
+            "メトロノームアプリ（1分間6クリック）を使うと吸う・吐くのタイミングがつかみやすい",
+            "毎朝または就寝前の10〜20分の実践で、数週間後に効果を感じる人が多い"
+          ]
+        }
+      }
+    },
+    {
+      "id": "breath-counting",
+      "icon": "🔢",
+      "approach": "マインドフルネス",
+      "duration": 5,
+      "emotions": [
+        "anxious",
+        "empty",
+        "exhausted"
+      ],
+      "timeSlots": [
+        "morning",
+        "afternoon",
+        "evening",
+        "night"
+      ],
+      "i18n": {
+        "ja": {
+          "name": "呼吸カウント",
+          "tagline": "1から10まで数えながら呼吸する。シンプルだが、今に引き戻す力がある。",
+          "background": "禅の伝統から来る呼吸カウントは、現代のマインドフルネス研究でも集中力・注意制御・現在感覚の訓練として効果が確認されています。「数える」という認知タスクを同時に行うことで、思考が過去・未来に流れるのを防ぎます。数を数え間違えたら1に戻るという規則が、自己批判なしに「今に戻る」練習になります。",
+          "steps": [
+            "楽な姿勢で座り、目を閉じる。",
+            "息を吸いながら「1」、吐きながら「2」と心の中で数える（または吐くごとに1〜10と数える方法でも可）。",
+            "10まで数えたら、また1から始める。",
+            "数え間違えた・忘れたことに気づいたら、批判なしに1に戻る。",
+            "5分間続ける。慣れたら10〜20分に延ばす。"
+          ],
+          "tips": [
+            "間違えることは「失敗」ではなく、「気づき」の練習。何度でも1に戻ればOK",
+            "思考が浮かんで数を忘れる頻度が減っていくのが、集中力向上のサイン"
           ]
         }
       }
