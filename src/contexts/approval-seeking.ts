@@ -32,6 +32,9 @@ export default defineContext({
     'locus-of-control',
     'decatastrophize',
     'immunity-to-change',
+    'fear-inventory',
+    'life-position',
+    'survival-strategy',
   ],
   i18n: {
     ja: {

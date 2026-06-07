@@ -23,6 +23,8 @@ export default defineContext({
     'self-distancing',
     'defusion',
     'cognitive-distortions',
+    'life-position',
+    'survival-strategy',
   ],
   i18n: {
     ja: {

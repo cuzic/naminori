@@ -87,6 +87,7 @@ export default defineContext({
     'core-beliefs',
     'exception-finding',
     'act-matrix',
+    'life-position',
   ],
   i18n: {
     ja: {

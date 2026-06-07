@@ -27,6 +27,9 @@ export default defineContext({
     'drama-triangle',
     'self-focus',
     'immunity-to-change',
+    'fear-inventory',
+    'life-position',
+    'survival-strategy',
   ],
   i18n: {
     ja: {

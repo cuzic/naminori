@@ -34,6 +34,9 @@ export default defineContext({
     'drama-triangle',
     'assertive-refusal',
     'immunity-to-change',
+    'fear-inventory',
+    'life-position',
+    'survival-strategy',
   ],
   i18n: {
     ja: {

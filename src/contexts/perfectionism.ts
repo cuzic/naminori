@@ -39,6 +39,9 @@ export default defineContext({
     'emotion-diary',
     'downward-arrow',
     'emotion-check-in',
+    'fear-inventory',
+    'life-position',
+    'survival-strategy',
   ],
   i18n: {
     ja: {

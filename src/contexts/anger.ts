@@ -34,6 +34,7 @@ export default defineContext({
     'progressive-relaxation',
     'grounding-54321',
     'body-scan',
+    'life-position',
   ],
   i18n: {
     ja: {

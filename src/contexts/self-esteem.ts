@@ -43,6 +43,9 @@ export default defineContext({
     'cognitive-distortions',
     'downward-arrow',
     'self-as-context',
+    'fear-inventory',
+    'life-position',
+    'survival-strategy',
   ],
   i18n: {
     ja: {

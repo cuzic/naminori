@@ -46,6 +46,7 @@ export default defineContext({
     'behavioral-chain',
     'trigger-review',
     'downward-arrow',
+    'fear-inventory',
   ],
   i18n: {
     ja: {

@@ -39,6 +39,8 @@ export default defineContext({
     'downward-arrow',
     'emotion-check-in',
     'behavioral-chain',
+    'fear-inventory',
+    'life-position',
   ],
   i18n: {
     ja: {

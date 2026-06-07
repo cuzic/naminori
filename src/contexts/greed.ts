@@ -26,6 +26,8 @@ export default defineContext({
     'perma-check',
     'giving-act',
     'immunity-to-change',
+    'fear-inventory',
+    'survival-strategy',
   ],
   i18n: {
     ja: {

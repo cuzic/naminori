@@ -34,6 +34,8 @@ export default defineContext({
     'trigger-review',
     'needs-inventory',
     'self-as-context',
+    'life-position',
+    'survival-strategy',
   ],
   i18n: {
     ja: {

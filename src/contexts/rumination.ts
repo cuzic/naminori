@@ -37,6 +37,7 @@ export default defineContext({
     'thought-record',
     'rain-meditation',
     'immunity-to-change',
+    'survival-strategy',
   ],
   i18n: {
     ja: {
