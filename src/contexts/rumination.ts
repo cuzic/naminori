@@ -34,6 +34,8 @@ export default defineContext({
     'kind-words',
     'three-good-things',
     'pause-before-react',
+    'thought-record',
+    'rain-meditation',
   ],
   i18n: {
     ja: {

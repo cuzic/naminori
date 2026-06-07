@@ -7,32 +7,25 @@ export default defineContext({
   icon: '⚡',
   sortOrder: 19,
   applicableTechniques: [
-    // 優先順位・計画
     'mit-selection',
     'task-batching',
     'weekly-review',
-    // 集中ブロック
     'deep-work-block',
     'pomodoro',
     'environment-design',
     'stimulus-control',
-    // 着手・先延ばし対策
     'zeigarnik-start',
     'two-minute-rule',
     'task-aversion-check',
     'implementation-intention',
     'if-then-planning',
-    // 仕事の終わり方
     'shutdown-ritual',
     'work-detach',
-    // エネルギー管理
     'energy-audit',
     'please-check',
-    // アイデア生成
     'question-storming',
     'reverse-brainstorm',
     'random-word',
-    // 習慣・継続
     'tiny-habits',
     'habit-stacking',
     'identity-statement',
@@ -40,10 +33,14 @@ export default defineContext({
     'self-monitoring',
     'todays-step',
     'reinforcement-management',
-    // 思考・問題解決
     'problem-solving',
     'growth-mindset',
     'values-compass',
+    'eisenhower-matrix',
+    'time-blocking',
+    'time-audit',
+    'parkinson-defense',
+    'ideal-week-design',
   ],
   i18n: {
     ja: {

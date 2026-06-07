@@ -24,6 +24,7 @@ export default defineContext({
     'rumination-interrupt',
     'check-the-facts',
     'perma-check',
+    'giving-act',
   ],
   i18n: {
     ja: {

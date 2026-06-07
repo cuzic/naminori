@@ -38,6 +38,7 @@ export default defineContext({
     'body-scan',
     'three-wins',
     'cognitive-reappraisal',
+    'mit-selection',
   ],
   i18n: {
     ja: {

@@ -24,6 +24,8 @@ export default defineContext({
     'wise-mind',
     'reframing',
     'check-the-facts',
+    'drama-triangle',
+    'self-focus',
   ],
   i18n: {
     ja: {

@@ -29,6 +29,8 @@ export default defineContext({
     'cognitive-reappraisal',
     'reframing',
     'wise-mind',
+    'locus-of-control',
+    'decatastrophize',
   ],
   i18n: {
     ja: {
