@@ -36,7 +36,11 @@
             "波のイメージが難しければ「雲」でも代用できる"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "notice",
+        "experiment"
+      ]
     },
     {
       "id": "tipp",
@@ -72,7 +76,11 @@
             "呼吸は吸うより吐く時間を長くすると鎮静効果が高まる"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "experiment",
+        "update"
+      ]
     },
     {
       "id": "stop-skill",
@@ -112,7 +120,11 @@
             "Pのステップは10秒考えるだけでも十分効果的"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "notice",
+        "experiment"
+      ]
     },
     {
       "id": "accepts",
@@ -156,7 +168,11 @@
             "Push awayは時間を決めて行うと罪悪感が生まれにくい"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "experiment",
+        "update"
+      ]
     },
     {
       "id": "self-soothing",
@@ -200,7 +216,11 @@
             "{{behavior}}で得ていた感覚の代わりになるものを探す"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "experiment",
+        "update"
+      ]
     },
     {
       "id": "emotion-labeling",
@@ -245,7 +265,10 @@
             "複数の感情が混在してもよく、全部書き出してみる"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "notice"
+      ]
     },
     {
       "id": "opposite-action",
@@ -285,7 +308,10 @@
             "逆行動を「実験」として気軽に試す姿勢が続けるコツ"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "experiment"
+      ]
     },
     {
       "id": "wise-mind",
@@ -326,7 +352,11 @@
             "焦らず、答えが来るまで何度でも問い直してよい"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "notice",
+        "update"
+      ]
     },
     {
       "id": "wait-10-min",
@@ -362,7 +392,10 @@
             "10分経って{{impulse}}が残ればさらに10分、を繰り返してよい"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "experiment"
+      ]
     },
     {
       "id": "please-check",
@@ -398,7 +431,11 @@
             "睡眠と食事の改善が最も即効性が高い"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "notice",
+        "update"
+      ]
     },
     {
       "id": "thought-record",
@@ -437,7 +474,11 @@
             "週に2〜3回続けると思考パターンが見えてくる"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "notice",
+        "challenge"
+      ]
     },
     {
       "id": "socratic-questions",
@@ -474,7 +515,10 @@
             "答えは「正しい答え」でなく「別の可能性」を探すだけでいい"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "challenge"
+      ]
     },
     {
       "id": "best-friend-test",
@@ -513,7 +557,11 @@
             "毎日続けると2週間で自己批判の声が和らぐ人が多い"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "challenge",
+        "update"
+      ]
     },
     {
       "id": "cognitive-distortions",
@@ -552,7 +600,11 @@
             "「また○○思考が来た」と声をかける習慣が効果的"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "notice",
+        "challenge"
+      ]
     },
     {
       "id": "behavioral-experiment",
@@ -588,7 +640,11 @@
             "小さな実験を積み重ねると信念が少しずつ変わっていく"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "challenge",
+        "experiment"
+      ]
     },
     {
       "id": "defusion",
@@ -632,7 +688,11 @@
             "消そうとせず、ただ観察することが唯一の目標"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "challenge",
+        "notice"
+      ]
     },
     {
       "id": "leaves-on-stream",
@@ -672,7 +732,11 @@
             "川の代わりに「空に流れる雲」でも同じ効果が得られる"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "notice",
+        "experiment"
+      ]
     },
     {
       "id": "values-compass",
@@ -714,7 +778,10 @@
             "価値観をスマホのメモに保存しておくと{{impulse}}時に見返せる"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "update"
+      ]
     },
     {
       "id": "commitment-action",
@@ -751,7 +818,11 @@
             "具体的な時間と場所を決めると実行率が大きく上がる"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "experiment",
+        "update"
+      ]
     },
     {
       "id": "acceptance",
@@ -787,7 +858,11 @@
             "感情に話しかけることは奇妙に見えて実は非常に有効"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "experiment",
+        "update"
+      ]
     },
     {
       "id": "breathing-478",
@@ -828,7 +903,11 @@
             "寝る前に行うと入眠を助ける効果もある"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "experiment",
+        "update"
+      ]
     },
     {
       "id": "box-breathing",
@@ -870,7 +949,11 @@
             "4秒が長く感じる場合は3秒から始めてよい"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "experiment",
+        "update"
+      ]
     },
     {
       "id": "grounding-54321",
@@ -912,7 +995,11 @@
             "5から始めて1まで全部できなくてもその過程で効果が出る"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "experiment",
+        "notice"
+      ]
     },
     {
       "id": "body-scan",
@@ -952,7 +1039,11 @@
             "眠くなってしまうのは体がリラックスしている証拠"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "notice",
+        "update"
+      ]
     },
     {
       "id": "mindful-eating",
@@ -990,7 +1081,11 @@
             "食前に3回深呼吸すると「食べるモード」に切り替えやすい"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "notice",
+        "experiment"
+      ]
     },
     {
       "id": "three-good-things",
@@ -1030,7 +1125,10 @@
             "書けない日は1つだけでも記録することを優先する"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "update"
+      ]
     },
     {
       "id": "growth-mindset",
@@ -1068,7 +1166,11 @@
             "記録を2週間続けると引き金のパターンが見えてくる"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "challenge",
+        "update"
+      ]
     },
     {
       "id": "use-strength",
@@ -1107,7 +1209,11 @@
             "強みを「回復のため」に使うと行動の意味が深まる"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "experiment",
+        "update"
+      ]
     },
     {
       "id": "why-recover",
@@ -1143,7 +1249,11 @@
             "理由は大きくなくていい、小さな日常の願いでいい"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "notice",
+        "update"
+      ]
     },
     {
       "id": "three-wins",
@@ -1179,7 +1289,11 @@
             "3つ見つからなければ2つでも1つでもOK"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "notice",
+        "update"
+      ]
     },
     {
       "id": "self-compassion-3steps",
@@ -1222,7 +1336,11 @@
             "胸に手を当てる物理的な動作が効果を高める"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "notice",
+        "update"
+      ]
     },
     {
       "id": "loving-kindness",
@@ -1262,7 +1380,11 @@
             "毎晩5分続けると2週間で孤独感が変わり始める人が多い"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "experiment",
+        "update"
+      ]
     },
     {
       "id": "letter-to-self",
@@ -1300,7 +1422,11 @@
             "書いた手紙を後日読み返すと回復の記録になる"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "challenge",
+        "update"
+      ]
     },
     {
       "id": "kind-words",
@@ -1340,7 +1466,11 @@
             "胸に手を当てながら言葉を届けると効果が高まる"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "challenge",
+        "update"
+      ]
     },
     {
       "id": "if-then-plan",
@@ -1376,7 +1506,10 @@
             "then部分は「今すぐできる体の動き」から始めると実行率が高い"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "experiment"
+      ]
     },
     {
       "id": "change-environment",
@@ -1412,7 +1545,10 @@
             "{{behavior}}しやすい経路（コンビニの前など）を変えるだけで効果大"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "experiment"
+      ]
     },
     {
       "id": "habit-stacking",
@@ -1448,7 +1584,11 @@
             "うまくいったら「また明日も」と当日のうちに次回を決める"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "experiment",
+        "update"
+      ]
     },
     {
       "id": "sleep-routine",
@@ -1482,7 +1622,11 @@
             "眠れなくても「横になる」だけで体の回復は起きている"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "experiment",
+        "update"
+      ]
     },
     {
       "id": "morning-walk",
@@ -1517,7 +1661,11 @@
             "雨の日は1分だけ外に出て空気を吸うだけでも意味がある"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "experiment",
+        "update"
+      ]
     },
     {
       "id": "emotion-diary",
@@ -1556,7 +1704,10 @@
             "1週間後に読み返すとパターンが見えやすい"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "notice"
+      ]
     },
     {
       "id": "trigger-review",
@@ -1591,7 +1742,10 @@
             "チェーンの早い段階（感情の時点）での介入が最も効果的"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "notice"
+      ]
     },
     {
       "id": "todays-step",
@@ -1626,7 +1780,11 @@
             "記録が積み重なると「私は変われる」という実感になる"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "notice",
+        "update"
+      ]
     },
     {
       "id": "hunger-scale",
@@ -1660,7 +1818,11 @@
             "最初は感覚が鈍くても、使い続けると精度が上がる"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "notice",
+        "experiment"
+      ]
     },
     {
       "id": "weekly-review",
@@ -1695,7 +1857,11 @@
             "過去の振り返りを読み返す時間も月に一度作るといい"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "notice",
+        "update"
+      ]
     },
     {
       "id": "dear-man",
@@ -1735,7 +1901,10 @@
             "断られても、頼んだこと自体が自己尊重の練習です"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "experiment"
+      ]
     },
     {
       "id": "give-skill",
@@ -1774,7 +1943,10 @@
             "感情が高まったら「少し休憩させて」と言っていいです"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "experiment"
+      ]
     },
     {
       "id": "fast-skill",
@@ -1809,7 +1981,11 @@
             "「ノー」と言えた回数を記録すると、自信が育ちます"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "experiment",
+        "update"
+      ]
     },
     {
       "id": "progressive-relaxation",
@@ -1848,7 +2024,11 @@
             "緊張→弛緩の「落差」に意識を向けるのがコツです"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "experiment",
+        "update"
+      ]
     },
     {
       "id": "self-as-context",
@@ -1890,7 +2070,11 @@
             "強い感情の最中より、少し落ち着いた後に練習すると習得しやすいです"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "notice",
+        "update"
+      ]
     },
     {
       "id": "present-moment",
@@ -1930,7 +2114,11 @@
             "過去・未来に引っ張られたら、静かに今に戻るだけでOKです"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "notice",
+        "update"
+      ]
     },
     {
       "id": "walking-meditation",
@@ -1969,7 +2157,11 @@
             "頭の中で「右・左・右・左」と唱えながら歩くと集中しやすいです"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "experiment",
+        "update"
+      ]
     },
     {
       "id": "compassion-break",
@@ -2010,7 +2202,11 @@
             "「怠けてる」と感じるかもしれません。それ自体がコンパッションを必要としているサインです"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "experiment",
+        "update"
+      ]
     },
     {
       "id": "perma-check",
@@ -2052,7 +2248,11 @@
             "触れられなかった要素は、明日の実験テーマにできます"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "notice",
+        "update"
+      ]
     },
     {
       "id": "flow-activity",
@@ -2090,7 +2290,11 @@
             "週に1回30分から始めると、生活に定着しやすいです"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "experiment",
+        "update"
+      ]
     },
     {
       "id": "meaning-work",
@@ -2132,7 +2336,11 @@
             "回復経験を誰かのために使うことを考えると、意味が見つかりやすいです"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "challenge",
+        "update"
+      ]
     },
     {
       "id": "giving-act",
@@ -2174,7 +2382,11 @@
             "「誰かに感謝を伝える」は最も手軽な貢献です"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "experiment",
+        "update"
+      ]
     },
     {
       "id": "tell-someone",
@@ -2211,7 +2423,11 @@
             "反応が悪くても、話したこと自体に意味があります"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "experiment",
+        "update"
+      ]
     },
     {
       "id": "ask-support",
@@ -2249,7 +2465,11 @@
             "断られることを前提に2〜3人リストを作っておくと準備が楽です"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "experiment",
+        "update"
+      ]
     },
     {
       "id": "lapse-plan",
@@ -2284,7 +2504,12 @@
             "3ヶ月に一度見直して、現状に合わせて更新します"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "notice",
+        "experiment",
+        "update"
+      ]
     },
     {
       "id": "wrap-plan",
@@ -2319,7 +2544,12 @@
             "信頼できる人に見せておくと、危機のときに動いてもらいやすいです"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "notice",
+        "experiment",
+        "update"
+      ]
     },
     {
       "id": "sleep-hygiene",
@@ -2352,7 +2582,11 @@
             "眠れなくても「横になって休む」だけで体は回復します"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "experiment",
+        "update"
+      ]
     },
     {
       "id": "tiny-habit",
@@ -2387,7 +2621,11 @@
             "できたら必ず自分を褒める。感情的な報酬が定着を加速します"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "experiment",
+        "update"
+      ]
     },
     {
       "id": "body-neutral",
@@ -2421,7 +2659,11 @@
             "体への批判的な言葉を「体はただ機能している」に置き換えます"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "challenge",
+        "update"
+      ]
     },
     {
       "id": "scale-detox",
@@ -2454,7 +2696,12 @@
             "体重より「体の機能・エネルギー」で体調を確認する練習を始めましょう"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "notice",
+        "challenge",
+        "experiment"
+      ]
     },
     {
       "id": "food-freedom",
@@ -2488,7 +2735,12 @@
             "食べた後の感情をすぐメモすることで「食べても大丈夫だった」記録が積み重なります"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "challenge",
+        "experiment",
+        "update"
+      ]
     },
     {
       "id": "trigger-list",
@@ -2522,7 +2774,10 @@
             "3ヶ月後に見直すと、新しいパターンや改善に気づけます"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "notice"
+      ]
     },
     {
       "id": "radical-acceptance",
@@ -2563,7 +2818,11 @@
             "完全に受け入れられなくてもOK。少しずつ繰り返すことで変化します"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "challenge",
+        "update"
+      ]
     },
     {
       "id": "improve-skill",
@@ -2600,7 +2859,11 @@
             "Vacationは5分間だけでも「別の自分」を生きる体験になります"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "experiment",
+        "update"
+      ]
     },
     {
       "id": "pros-cons-urge",
@@ -2636,7 +2899,11 @@
             "完成したリストをスマホに保存し、{{impulse}}が来たときに読み返します"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "notice",
+        "challenge"
+      ]
     },
     {
       "id": "check-the-facts",
@@ -2674,7 +2941,11 @@
             "解釈が正しくても、感情が正当化される場合もあります。それも認めましょう"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "notice",
+        "challenge"
+      ]
     },
     {
       "id": "build-positive",
@@ -2712,7 +2983,11 @@
             "体験後に「楽しさ0〜10・達成感0〜10」を記録すると変化が見えます"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "experiment",
+        "update"
+      ]
     },
     {
       "id": "cope-ahead",
@@ -2752,7 +3027,11 @@
             "イメージが難しければ、紙に「その場面でどうするか」を書くだけでも効果があります"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "experiment",
+        "update"
+      ]
     },
     {
       "id": "bus-passengers",
@@ -2789,7 +3068,11 @@
             "乗客がうるさくても、バスをどこへ向けるかは自分で決められます"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "challenge",
+        "update"
+      ]
     },
     {
       "id": "monster-tug-of-war",
@@ -2825,7 +3108,11 @@
             "何度でも繰り返せます。また綱を持ってしまっても、また放せばいいです"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "challenge",
+        "update"
+      ]
     },
     {
       "id": "tombstone-values",
@@ -2859,7 +3146,11 @@
             "書いた言葉を手帳に貼ると、迷ったときの羅針盤になります"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "notice",
+        "update"
+      ]
     },
     {
       "id": "expansion",
@@ -2900,7 +3191,12 @@
             "呼吸を使って感情の周りにスペースを作るイメージが効果的です"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "notice",
+        "experiment",
+        "update"
+      ]
     },
     {
       "id": "act-committed-experiment",
@@ -2935,7 +3231,11 @@
             "実験なので失敗してもOKです。観察して次に活かします"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "experiment",
+        "update"
+      ]
     },
     {
       "id": "behavioral-activation",
@@ -2975,7 +3275,11 @@
             "「義務」より「以前好きだったこと」から始めると取り組みやすいです"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "experiment",
+        "update"
+      ]
     },
     {
       "id": "downward-arrow",
@@ -3010,7 +3314,11 @@
             "発見した信念はただ認識するだけでOKです。すぐに変えようとしなくていいです"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "notice",
+        "challenge"
+      ]
     },
     {
       "id": "pie-chart",
@@ -3044,7 +3352,11 @@
             "完成したパイチャートを見て、体の感覚が変わるか観察します"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "challenge",
+        "update"
+      ]
     },
     {
       "id": "decatastrophize",
@@ -3080,7 +3392,11 @@
             "過去に似た状況を乗り越えた経験を思い出すことで、対処能力を実感できます"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "challenge",
+        "experiment"
+      ]
     },
     {
       "id": "body-image-diary",
@@ -3115,7 +3431,11 @@
             "記録を続けると「体への認知は状況によって大きく変わる」ことがわかります"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "notice",
+        "challenge"
+      ]
     },
     {
       "id": "tiny-habits",
@@ -3148,7 +3468,11 @@
             "「できた」体験が積み重なることで、{{impulse}}に対する自己効力感が育ちます"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "experiment",
+        "update"
+      ]
     },
     {
       "id": "implementation-intention",
@@ -3181,7 +3505,10 @@
             "複数の状況に対して複数のif-then文を作ると、より多くの{{situation}}をカバーできます"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "experiment"
+      ]
     },
     {
       "id": "temptation-bundling",
@@ -3214,7 +3541,10 @@
             "好きなことを「報酬」として後に置くより「同時進行」が効果的です"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "experiment"
+      ]
     },
     {
       "id": "environment-design",
@@ -3248,7 +3578,10 @@
             "良い行動のハードルを下げ、{{behavior}}のハードルを上げる環境を目指します"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "experiment"
+      ]
     },
     {
       "id": "two-minute-rule",
@@ -3283,7 +3616,11 @@
             "{{situation}}での2分行動を決めておくと、if-then計画として機能します"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "experiment",
+        "update"
+      ]
     },
     {
       "id": "if-then-planning",
@@ -3315,7 +3652,10 @@
             "うまくいかなかった日のif-then文は修正します。完璧を目指さず改善します"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "experiment"
+      ]
     },
     {
       "id": "halt-check",
@@ -3351,7 +3691,10 @@
             "H・A・L・Tは全部チェックする必要はなく、最も強く感じているものから対処します"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "notice"
+      ]
     },
     {
       "id": "urge-delay",
@@ -3386,7 +3729,10 @@
             "{{situation}}でのurge-delayを計画に入れておくと、咄嗟の場面でも使えます"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "experiment"
+      ]
     },
     {
       "id": "stimulus-control",
@@ -3419,7 +3765,11 @@
             "「見えない・近くにない」は意志力に頼らない最も確実な方法です"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "notice",
+        "experiment"
+      ]
     },
     {
       "id": "harm-reduction",
@@ -3454,7 +3804,11 @@
             "小さな「害の軽減」の積み重ねが、長期的な回復につながります"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "challenge",
+        "experiment"
+      ]
     },
     {
       "id": "behavioral-chain",
@@ -3488,7 +3842,11 @@
             "連鎖の最も早い段階で介入できるほど、{{impulse}}コントロールが楽になります"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "notice",
+        "experiment"
+      ]
     },
     {
       "id": "emotion-check-in",
@@ -3527,7 +3885,10 @@
             "{{situation}}の前後でチェックインすると、{{impulse}}の予兆を早期に察知できます"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "notice"
+      ]
     },
     {
       "id": "self-monitoring",
@@ -3560,7 +3921,10 @@
             "記録は自己批判のためでなく、{{impulse}}のパターンを学ぶためのデータです"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "notice"
+      ]
     },
     {
       "id": "problem-solving",
@@ -3595,7 +3959,11 @@
             "解決策が浮かばないときは「友人ならどうアドバイスするか」を考える"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "challenge",
+        "experiment"
+      ]
     },
     {
       "id": "reinforcement-management",
@@ -3629,7 +3997,11 @@
             "報酬が陳腐化したら定期的に変える"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "experiment",
+        "update"
+      ]
     },
     {
       "id": "behavioral-substitution",
@@ -3664,7 +4036,10 @@
             "うまくいかなかった代替行動は外して、別のものを試す"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "experiment"
+      ]
     },
     {
       "id": "decisional-balance",
@@ -3699,7 +4074,11 @@
             "②③を書くことで「変われない理由」が自然な防衛反応だと気づきやすくなる"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "notice",
+        "challenge"
+      ]
     },
     {
       "id": "reframing",
@@ -3738,7 +4117,11 @@
             "リフレーミングが難しいときは「この経験から何が学べる？」という問いだけでも十分"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "challenge",
+        "update"
+      ]
     },
     {
       "id": "strengths-use",
@@ -3776,7 +4159,11 @@
             "強みを使うと少し疲れが残る──使いすぎには注意"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "experiment",
+        "update"
+      ]
     },
     {
       "id": "gratitude-visit",
@@ -3815,7 +4202,11 @@
             "相手が照れると思うなら、短いメッセージから始めてもいい"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "experiment",
+        "update"
+      ]
     },
     {
       "id": "best-possible-self",
@@ -3852,7 +4243,11 @@
             "週1回繰り返すと楽観性への効果が長続きすることが研究で示されている"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "challenge",
+        "update"
+      ]
     },
     {
       "id": "emotional-granularity",
@@ -3892,7 +4287,10 @@
             "毎日1回続けるだけで感情粒度は数週間で上がることが研究で示されている"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "notice"
+      ]
     },
     {
       "id": "coping-anchor",
@@ -3928,7 +4326,11 @@
             "強い感情状態で行うと「負のアンカー」になるため、必ずリラックス時だけ練習する"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "experiment",
+        "update"
+      ]
     },
     {
       "id": "somatic-reset",
@@ -3968,7 +4370,11 @@
             "効果を感じにくければ大きく体を伸ばす（ストレッチ）を加えるとより効果的"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "experiment",
+        "update"
+      ]
     },
     {
       "id": "chain-break",
@@ -4005,7 +4411,11 @@
             "中断の選択肢を3つ事前に決めておくと衝動時でも使いやすい"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "notice",
+        "experiment"
+      ]
     },
     {
       "id": "nvc",
@@ -4043,7 +4453,11 @@
             "自分が批判されていると感じたとき、まず相手のニーズを聴こうとしてみる"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "notice",
+        "experiment"
+      ]
     },
     {
       "id": "assertion-training",
@@ -4080,7 +4494,11 @@
             "アサーティブな返答を事前にいくつか準備しておくと楽"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "experiment",
+        "update"
+      ]
     },
     {
       "id": "boundary-message",
@@ -4118,7 +4536,11 @@
             "セラピストやカウンセラーと一緒に練習すると安全"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "notice",
+        "experiment"
+      ]
     },
     {
       "id": "active-listening",
@@ -4155,7 +4577,11 @@
             "自分の話を聴いてほしいときは「今、話を聴いてほしい」と伝えてから"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "experiment",
+        "update"
+      ]
     },
     {
       "id": "repair-talk",
@@ -4192,7 +4618,11 @@
             "セラピストを交えた三者での会話も有効"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "experiment",
+        "update"
+      ]
     },
     {
       "id": "sensory-refuge",
@@ -4231,7 +4661,11 @@
             "避難所リストをスマホのメモに保存しておく"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "experiment",
+        "update"
+      ]
     },
     {
       "id": "social-script",
@@ -4267,7 +4701,10 @@
             "まず既知の人との会話で試してみる"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "experiment"
+      ]
     },
     {
       "id": "assertive-refusal",
@@ -4302,7 +4739,11 @@
             "低リスクな場面（メッセージでの断り）から練習を始める"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "challenge",
+        "experiment"
+      ]
     },
     {
       "id": "time-out-request",
@@ -4338,7 +4779,11 @@
             "パートナーや家族に事前にこのスキルを説明しておくと使いやすい"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "notice",
+        "experiment"
+      ]
     },
     {
       "id": "recovery-disclosure",
@@ -4373,7 +4818,11 @@
             "セラピストと一緒にロールプレイしてから本番に臨む方法もある"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "experiment",
+        "update"
+      ]
     },
     {
       "id": "gradual-sharing",
@@ -4408,7 +4857,11 @@
             "開示できた自分を毎回ねぎらう"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "experiment",
+        "update"
+      ]
     },
     {
       "id": "concrete-request",
@@ -4443,7 +4896,10 @@
             "小さなお願いから練習する"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "experiment"
+      ]
     },
     {
       "id": "emotion-signal",
@@ -4480,7 +4936,11 @@
             "日記に毎日の数値を記録すると回復の軌跡が見える"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "notice",
+        "experiment"
+      ]
     },
     {
       "id": "i-message",
@@ -4515,7 +4975,10 @@
             "相手に変化を求める前に、自分の感情を整理することが目的"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "experiment"
+      ]
     },
     {
       "id": "appreciation-express",
@@ -4550,7 +5013,11 @@
             "感謝を伝えられなかった過去の人へ、心の中だけで伝えるのもいい"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "experiment",
+        "update"
+      ]
     },
     {
       "id": "reflective-question",
@@ -4585,7 +5052,11 @@
             "答えが返ってきたら、さらに「それって？」と続けると自然に深まる"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "experiment",
+        "update"
+      ]
     },
     {
       "id": "online-boundary",
@@ -4621,7 +5092,11 @@
             "SNSから距離を置く期間を「デトックスデー」として設定してみる"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "experiment",
+        "update"
+      ]
     },
     {
       "id": "anger-iceberg",
@@ -4655,7 +5130,11 @@
             "怒りは悪い感情じゃない。大切なものを守ろうとしているサイン。"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "notice",
+        "challenge"
+      ]
     },
     {
       "id": "cognitive-reappraisal",
@@ -4689,7 +5168,12 @@
             "解釈を変えることは、現実を否定することではない。"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "notice",
+        "challenge",
+        "update"
+      ]
     },
     {
       "id": "pause-before-react",
@@ -4723,7 +5207,11 @@
             "1秒の停止が、1時間の後悔を防ぐ。"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "notice",
+        "experiment"
+      ]
     },
     {
       "id": "worry-time",
@@ -4756,7 +5244,11 @@
             "心配する権利を守ることで、心配に縛られる時間が減る。"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "experiment",
+        "update"
+      ]
     },
     {
       "id": "worry-tree",
@@ -4790,7 +5282,11 @@
             "コントロールできないことに抵抗するほど、苦しさが増す。"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "notice",
+        "challenge"
+      ]
     },
     {
       "id": "good-enough",
@@ -4824,7 +5320,11 @@
             "完成した70点は、完璧を目指した0点より価値がある。"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "challenge",
+        "experiment"
+      ]
     },
     {
       "id": "energy-audit",
@@ -4857,7 +5357,10 @@
             "休息は怠けではなく、回復への投資。"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "notice"
+      ]
     },
     {
       "id": "rest-types",
@@ -4890,7 +5393,11 @@
             "種類を間違えた休息は、疲れを癒さない。"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "notice",
+        "experiment"
+      ]
     },
     {
       "id": "strengths-inventory",
@@ -4923,7 +5430,11 @@
             "自分の強みは、もう持っている。気づくだけでいい。"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "notice",
+        "update"
+      ]
     },
     {
       "id": "connection-plan",
@@ -4956,7 +5467,10 @@
             "つながりは待つものじゃない。作るものだ。"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "experiment"
+      ]
     },
     {
       "id": "self-focus",
@@ -4990,7 +5504,11 @@
             "自分の人生の主役は、自分だけでいい。"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "challenge",
+        "update"
+      ]
     },
     {
       "id": "detachment",
@@ -5024,7 +5542,12 @@
             "距離感は、愛の欠如じゃない。愛の形の一つ。"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "challenge",
+        "experiment",
+        "update"
+      ]
     },
     {
       "id": "exposure-ladder",
@@ -5057,7 +5580,10 @@
             "逃げると不安は強くなる。留まると不安は必ず落ち着く。"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "experiment"
+      ]
     },
     {
       "id": "inner-critic",
@@ -5091,7 +5617,11 @@
             "批判者の声に気づけること自体が、もうその声から自由になっている証拠。"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "notice",
+        "challenge"
+      ]
     },
     {
       "id": "shame-resilience",
@@ -5125,7 +5655,11 @@
             "恥を語れるとき、恥はもう支配できない。"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "notice",
+        "update"
+      ]
     },
     {
       "id": "work-detach",
@@ -5156,7 +5690,11 @@
             "切り替えは才能じゃない。練習で身につくスキル。"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "experiment",
+        "update"
+      ]
     },
     {
       "id": "needs-inventory",
@@ -5190,7 +5728,11 @@
             "自分のニーズを知ることは、わがままじゃない。自分を尊重すること。"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "notice",
+        "update"
+      ]
     },
     {
       "id": "community-find",
@@ -5222,7 +5764,11 @@
             "居場所は最初から「完璧なフィット」じゃなくていい。まず入ってみること。"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "experiment",
+        "update"
+      ]
     },
     {
       "id": "self-distancing",
@@ -5256,7 +5802,12 @@
             "距離を置くことは、逃げることじゃない。より深く処理するための視点。"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "notice",
+        "challenge",
+        "update"
+      ]
     },
     {
       "id": "rumination-interrupt",
@@ -5289,7 +5840,11 @@
             "抑えようとすると増える。別のところに連れて行くのがコツ。"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "notice",
+        "experiment"
+      ]
     },
     {
       "id": "rain-meditation",
@@ -5324,7 +5879,11 @@
             "RAINは嵐を止めない。ただ、嵐の中で根を張る力をくれる。"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "notice",
+        "update"
+      ]
     },
     {
       "id": "three-minute-breathing",
@@ -5358,7 +5917,12 @@
             "完璧にやらなくていい。3分間、今ここにいるだけでいい。"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "notice",
+        "experiment",
+        "update"
+      ]
     },
     {
       "id": "savoring",
@@ -5392,7 +5956,10 @@
             "良いことを「通り過ぎさせない」だけで、世界の見え方が変わる。"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "update"
+      ]
     },
     {
       "id": "woop",
@@ -5425,7 +5992,11 @@
             "障害を直視することは、諦めることじゃない。準備すること。"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "notice",
+        "experiment"
+      ]
     },
     {
       "id": "core-beliefs",
@@ -5458,7 +6029,11 @@
             "コア信念は「真実」じゃない。長年信じてきた「仮説」にすぎない。"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "notice",
+        "challenge"
+      ]
     },
     {
       "id": "exception-finding",
@@ -5491,7 +6066,11 @@
             "解決策はゼロから作らなくていい。すでにある例外の中にある。"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "notice",
+        "challenge"
+      ]
     },
     {
       "id": "act-matrix",
@@ -5525,7 +6104,11 @@
             "遠ざかる動きに気づくだけで、近づく動きを選べるようになる。"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "notice",
+        "challenge"
+      ]
     },
     {
       "id": "fresh-start",
@@ -5556,7 +6139,11 @@
             "うまくいかなかった時期のことを「失敗」ではなく「前の章」と呼ぶだけで、再挑戦への抵抗が和らぎます"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "experiment",
+        "update"
+      ]
     },
     {
       "id": "identity-statement",
@@ -5589,7 +6176,10 @@
             "小さな行動でいい。アイデンティティは1回の大きな行動より、毎日の小さな証拠の積み重ねで作られます"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "update"
+      ]
     },
     {
       "id": "motivation-source",
@@ -5623,7 +6213,11 @@
             "内側の動機がすぐ見つからなくても大丈夫。「少しだけ自分に関係ある気がする」という感覚があれば、そこから育てることができます"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "notice",
+        "challenge"
+      ]
     },
     {
       "id": "pomodoro",
@@ -5657,7 +6251,10 @@
             "「ポモドーロを1個やる」が目標。完璧主義が和らぎます"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "experiment"
+      ]
     },
     {
       "id": "task-aversion-check",
@@ -5692,7 +6289,11 @@
             "「なぜ嫌なのか」を言語化するだけで、少し距離が取れることがあります"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "notice",
+        "challenge"
+      ]
     },
     {
       "id": "zeigarnik-start",
@@ -5725,7 +6326,10 @@
             "開いたループは脳が勝手に気にし続けます。席を離れても頭の中で整理が進んでいることが多い"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "experiment"
+      ]
     },
     {
       "id": "resentment-release",
@@ -5758,7 +6362,12 @@
             "深い傷には時間がかかります。今日少しだけ緩められれば、それで十分です"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "notice",
+        "challenge",
+        "update"
+      ]
     },
     {
       "id": "attention-redirect",
@@ -5791,7 +6400,11 @@
             "最初は難しくても、繰り返すほど自然になります。練習が必要なスキルです"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "notice",
+        "experiment"
+      ]
     },
     {
       "id": "freewriting",
@@ -5825,7 +6438,11 @@
             "毎朝続けると、頭のノイズが習慣的に排出され、日中の創造的な集中が深まります"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "notice",
+        "experiment"
+      ]
     },
     {
       "id": "quantity-first",
@@ -5859,7 +6476,11 @@
             "捨ててもいい。作ることの練習が目的なので、残す必要はありません"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "challenge",
+        "experiment"
+      ]
     },
     {
       "id": "creative-input",
@@ -5892,7 +6513,11 @@
             "一人でいくのがポイント。誰かに合わせなくていい時間が創造の井戸を満たします"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "experiment",
+        "update"
+      ]
     },
     {
       "id": "bad-art-day",
@@ -5926,7 +6551,11 @@
             "誰にも見せなくていい。作って、捨てていい"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "challenge",
+        "experiment"
+      ]
     },
     {
       "id": "reverse-brainstorm",
@@ -5960,7 +6589,11 @@
             "行き詰まったときほど有効です。「普通に考える」のをやめる許可を自分に与えましょう"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "challenge",
+        "experiment"
+      ]
     },
     {
       "id": "random-word",
@@ -5994,7 +6627,11 @@
             "子どもに「今見えてるもの言って」と頼むのもいいランダム刺激になります"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "challenge",
+        "experiment"
+      ]
     },
     {
       "id": "question-storming",
@@ -6028,7 +6665,11 @@
             "「こんなこと聞いていいの？」という問いこそ書き出してください"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "challenge",
+        "experiment"
+      ]
     },
     {
       "id": "mit-selection",
@@ -6060,7 +6701,10 @@
             "会議や急な依頼で3つが崩れても、「3つのうち何が生き残れるか」を考えると混乱しにくくなります"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "experiment"
+      ]
     },
     {
       "id": "deep-work-block",
@@ -6092,7 +6736,10 @@
             "「ディープワーク中」のサイン（付箋・ステータス設定）があると、周囲への説明が楽になります"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "experiment"
+      ]
     },
     {
       "id": "shutdown-ritual",
@@ -6125,7 +6772,11 @@
             "最初はぎこちなくても大丈夫。2週間続けると効果を感じ始める人が多いです"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "experiment",
+        "update"
+      ]
     },
     {
       "id": "task-batching",
@@ -6156,7 +6807,11 @@
             "最初は不安かもしれません。「緊急なら電話してくる」という前提を持つと楽になります"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "experiment",
+        "update"
+      ]
     },
     {
       "id": "role-switching-ritual",
@@ -6188,7 +6843,11 @@
             "毎日同じ順番で行うと1〜2週間で自動化される"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "experiment",
+        "update"
+      ]
     },
     {
       "id": "digital-sunset",
@@ -6219,7 +6878,11 @@
             "週末だけから始めてもOK。慣れたら平日に広げる"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "experiment",
+        "update"
+      ]
     },
     {
       "id": "ideal-week-design",
@@ -6251,7 +6914,11 @@
             "毎月見直して季節や状況に合わせて更新する"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "experiment",
+        "update"
+      ]
     },
     {
       "id": "off-identity",
@@ -6284,7 +6951,11 @@
             "新しいことを始めなくていい。すでに好きなことに少し時間を使うだけでOK"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "notice",
+        "update"
+      ]
     },
     {
       "id": "time-audit",
@@ -6317,7 +6988,10 @@
             "1週間が難しければ平日1日だけでも十分な気づきが得られる"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "notice"
+      ]
     },
     {
       "id": "eisenhower-matrix",
@@ -6349,7 +7023,11 @@
             "週次で行うと優先順位が整理されやすい"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "notice",
+        "challenge"
+      ]
     },
     {
       "id": "time-blocking",
@@ -6379,7 +7057,11 @@
             "ブロックが崩れた翌日はリセットして再設定。崩れること自体は普通"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "experiment",
+        "update"
+      ]
     },
     {
       "id": "parkinson-defense",
@@ -6410,7 +7092,11 @@
             "まず小さなタスクで試して感覚をつかむ"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "challenge",
+        "experiment"
+      ]
     },
     {
       "id": "10-10-10",
@@ -6445,7 +7131,11 @@
             "「10年後に後悔しない方」を選ぶと決めると迷いが減る"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "notice",
+        "challenge"
+      ]
     },
     {
       "id": "regret-minimization",
@@ -6478,7 +7168,11 @@
             "リスクより「やらなかった後悔」の方が長く続く、という認知を持つだけで決断が楽になる"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "challenge",
+        "update"
+      ]
     },
     {
       "id": "satisficing",
@@ -6510,7 +7204,11 @@
             "可逆な決断（後から変えられる）ほどサティスファイシングが向いている"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "challenge",
+        "update"
+      ]
     },
     {
       "id": "coin-flip-test",
@@ -6543,7 +7241,10 @@
             "反応が曖昧なときは、2択の差があまりない＝どちらでも大丈夫というサイン"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "notice"
+      ]
     },
     {
       "id": "decision-journal",
@@ -6575,7 +7276,11 @@
             "週1〜2回の大きな決断から始めると負担が少ない"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "notice",
+        "update"
+      ]
     },
     {
       "id": "option-reduction",
@@ -6605,7 +7310,11 @@
             "一度に全部変えず、1〜2個からルーティン化を始める"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "experiment",
+        "update"
+      ]
     },
     {
       "id": "grief-wave",
@@ -6641,7 +7350,11 @@
             "波の頻度や大きさは時間とともに変わる。変化しないように見えても、変わっている"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "notice",
+        "experiment"
+      ]
     },
     {
       "id": "continuing-bonds",
@@ -6674,7 +7387,11 @@
             "失った人が「自分の中に生きている」と感じる方法を自由に探す"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "challenge",
+        "update"
+      ]
     },
     {
       "id": "dual-process-grief",
@@ -6707,7 +7424,11 @@
             "割合は日によって違う。今日は9:1でも、来月は5:5になっていくかもしれない"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "notice",
+        "experiment"
+      ]
     },
     {
       "id": "loss-letter",
@@ -6740,7 +7461,12 @@
             "一度で全部書こうとしない。複数回に分けてもOK"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "notice",
+        "experiment",
+        "update"
+      ]
     },
     {
       "id": "grief-ritual",
@@ -6773,7 +7499,11 @@
             "誰かと一緒に行う儀式は、つながりの感覚も提供してくれる"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "experiment",
+        "update"
+      ]
     },
     {
       "id": "meaning-reconstruction",
@@ -6806,7 +7536,11 @@
             "答えが出るまでに、数ヶ月・数年かかることもある。プロセスを急がない"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "challenge",
+        "update"
+      ]
     },
     {
       "id": "safe-place",
@@ -6842,7 +7576,11 @@
             "圧倒されそうな感情が出てきたら、この場所に戻ることが最初のステップ"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "experiment",
+        "update"
+      ]
     },
     {
       "id": "window-of-tolerance",
@@ -6877,7 +7615,11 @@
             "トラウマ処理は最適ゾーンにいるときだけ行う"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "notice",
+        "experiment"
+      ]
     },
     {
       "id": "titration",
@@ -6910,7 +7652,11 @@
             "専門家（トラウマセラピスト）と一緒に行うと安全性が高まる"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "experiment",
+        "update"
+      ]
     },
     {
       "id": "pendulation",
@@ -6945,7 +7691,11 @@
             "慣れると「安全な感覚」へのアクセスが速くなる"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "experiment",
+        "update"
+      ]
     },
     {
       "id": "resource-installation",
@@ -6978,7 +7728,10 @@
             "記憶がない場合は、信頼できる存在（実在する人・架空の人物・動物）をイメージするだけでもいい"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "update"
+      ]
     },
     {
       "id": "tapping",
@@ -7015,7 +7768,11 @@
             "外出先でも、手の横だけをたたく簡易版が使える"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "experiment",
+        "update"
+      ]
     },
     {
       "id": "achievement-evidence",
@@ -7048,7 +7805,11 @@
             "週1回のペースで更新すると、成長の軌跡が可視化される"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "notice",
+        "challenge"
+      ]
     },
     {
       "id": "impostor-normalize",
@@ -7081,7 +7842,11 @@
             "高い基準を持つことと、実力がないことは別のこと"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "challenge",
+        "update"
+      ]
     },
     {
       "id": "competence-journal",
@@ -7113,7 +7878,11 @@
             "三日坊主になっても再開すればOK。継続より積み重ねが重要"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "notice",
+        "update"
+      ]
     },
     {
       "id": "feedback-portfolio",
@@ -7146,7 +7915,11 @@
             "月1回、全体を読み返す時間を作ると効果が高い"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "challenge",
+        "update"
+      ]
     },
     {
       "id": "luck-vs-skill",
@@ -7179,7 +7952,11 @@
             "失敗のときも同じ分解をすると、「全部自分のせい」という認知が緩む"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "notice",
+        "challenge"
+      ]
     },
     {
       "id": "functional-appreciation",
@@ -7212,7 +7989,11 @@
             "慢性痛や病気がある人は、まだ機能していることに感謝することから始められる"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "challenge",
+        "update"
+      ]
     },
     {
       "id": "media-fast",
@@ -7245,7 +8026,11 @@
             "完全にやめなくても「見る量を半分にする」だけでも効果がある"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "experiment",
+        "update"
+      ]
     },
     {
       "id": "mirror-exposure",
@@ -7276,7 +8061,11 @@
             "批判が強く出るときは、セラピストと一緒に行う方が安全"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "experiment",
+        "update"
+      ]
     },
     {
       "id": "size-diversity-exposure",
@@ -7308,7 +8097,11 @@
             "美化でも否定でもなく、「多様性が普通」というニュートラルな見方が目標"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "challenge",
+        "experiment"
+      ]
     },
     {
       "id": "body-story",
@@ -7340,7 +8133,11 @@
             "自分の子供や友人の体ならどう思うか——同じ優しさを自分に向ける練習"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "challenge",
+        "update"
+      ]
     },
     {
       "id": "pain-pacing",
@@ -7372,7 +8169,11 @@
             "タイマーを使って「時間が来たら終わり」にすると守りやすい"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "notice",
+        "experiment"
+      ]
     },
     {
       "id": "pain-diary",
@@ -7404,7 +8205,10 @@
             "専用アプリ（PainScale・Chronicなど）を使うとグラフ化が楽"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "notice"
+      ]
     },
     {
       "id": "pain-neuroscience",
@@ -7436,7 +8240,11 @@
             "ローリー・モズリーの書籍「Explain Pain」（邦訳あり）が参考になる"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "challenge",
+        "update"
+      ]
     },
     {
       "id": "activity-window",
@@ -7466,7 +8274,11 @@
             "窓の時間帯は日によって変わることがある。柔軟に調整する"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "notice",
+        "experiment"
+      ]
     },
     {
       "id": "pleasant-activity-plan",
@@ -7498,7 +8310,11 @@
             "楽しさを感じられなくても、活動後の気分をチェックする（うつで楽しさが麻痺している場合もある）"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "experiment",
+        "update"
+      ]
     },
     {
       "id": "ultradian-rhythm",
@@ -7529,7 +8345,11 @@
             "休憩中にSNSを見るのは回復ではなく消費。目と脳を休ませる"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "challenge",
+        "experiment"
+      ]
     },
     {
       "id": "energy-map",
@@ -7561,7 +8381,11 @@
             "自分のリズムを知ると、「なぜこの時間は集中できないのか」という自責が減る"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "notice",
+        "experiment"
+      ]
     },
     {
       "id": "drain-gain-list",
@@ -7594,7 +8418,11 @@
             "ゲイン活動は「やるべきこと」ではなく「やると元気になること」。義務感で選ばない"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "notice",
+        "update"
+      ]
     },
     {
       "id": "micro-recovery",
@@ -7626,7 +8454,11 @@
             "トイレに行くついでに窓の外を1分見るだけでもOK。完璧な休憩より習慣が大事"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "experiment",
+        "update"
+      ]
     },
     {
       "id": "cognitive-load-diet",
@@ -7657,7 +8489,11 @@
             "デフォルトを決めるだけで十分。「いつもこれ」という選択が脳を休ませる"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "notice",
+        "experiment"
+      ]
     },
     {
       "id": "diaphragm-breathing",
@@ -7692,7 +8528,11 @@
             "お腹が動かない場合は、手で軽く押しながら吸うと横隔膜の動きを感じやすい"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "experiment",
+        "update"
+      ]
     },
     {
       "id": "resonance-breathing",
@@ -7726,7 +8566,11 @@
             "毎日5〜10分続けると、安静時のHRVが改善されるという研究がある"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "experiment",
+        "update"
+      ]
     },
     {
       "id": "alternate-nostril",
@@ -7760,7 +8604,11 @@
             "めまいや不快感を感じたら止めて、通常呼吸に戻る"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "experiment",
+        "update"
+      ]
     },
     {
       "id": "physiological-sigh",
@@ -7795,7 +8643,11 @@
             "パニックや強い不安のとき・スピーチ前・大事な会議前に特に有効"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "experiment",
+        "update"
+      ]
     },
     {
       "id": "coherent-breathing",
@@ -7829,7 +8681,11 @@
             "毎朝または就寝前の10〜20分の実践で、数週間後に効果を感じる人が多い"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "experiment",
+        "update"
+      ]
     },
     {
       "id": "breath-counting",
@@ -7864,7 +8720,12 @@
             "思考が浮かんで数を忘れる頻度が減っていくのが、集中力向上のサイン"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "notice",
+        "experiment",
+        "update"
+      ]
     },
     {
       "id": "drama-triangle",
@@ -7902,7 +8763,11 @@
             "役割は固定されていない。同じ会話の中で何度も入れ替わることがある"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "notice",
+        "challenge"
+      ]
     },
     {
       "id": "locus-of-control",
@@ -7940,7 +8805,11 @@
             "最初は「反応を選ぶ」だけで十分。行動は後からついてくる"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "notice",
+        "challenge"
+      ]
     },
     {
       "id": "author-perspective",
@@ -7976,7 +8845,11 @@
             "毎日書く必要はない。大きな「損した」感覚の後に使うと効果的"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "challenge",
+        "update"
+      ]
     },
     {
       "id": "rejection-check",
@@ -8014,7 +8887,11 @@
             "「可能性を3つ」が難しければ、親友ならどう解釈するかを考える"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "notice",
+        "challenge"
+      ]
     },
     {
       "id": "borrowed-worth",
@@ -8050,7 +8927,11 @@
             "承認を完全にゼロにする必要はない。バランスを少しずつ変えることが目標"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "notice",
+        "challenge"
+      ]
     },
     {
       "id": "conditions-of-worth",
@@ -8086,7 +8967,12 @@
             "書き換えの文が「信じられない」と感じても、繰り返すうちに少しずつ変わってくる"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "notice",
+        "challenge",
+        "update"
+      ]
     },
     {
       "id": "loss-aversion-check",
@@ -8123,7 +9009,11 @@
             "「追い求めるコスト」は見落とされやすい。丁寧に書き出す価値がある"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "notice",
+        "challenge"
+      ]
     },
     {
       "id": "hedonic-treadmill",
@@ -8158,7 +9048,11 @@
             "「慣れることを前提」に手に入れたいものを考えると、本当に大切なものが見えやすくなる"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "notice",
+        "challenge"
+      ]
     },
     {
       "id": "enough-definition",
@@ -8194,7 +9088,11 @@
             "「十分」の先に何があるかを想像することが、追求の意味を問い直すきっかけになる"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "challenge",
+        "update"
+      ]
     },
     {
       "id": "circle-of-influence",
@@ -8232,7 +9130,12 @@
             "外側の円に集中し続けると、内側の円が萎縮していく。逆もまた然り"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "notice",
+        "challenge",
+        "experiment"
+      ]
     },
     {
       "id": "control-cost",
@@ -8268,7 +9171,11 @@
             "コントロールをやめることは「諦め」ではなく「賢い撤退」"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "notice",
+        "challenge"
+      ]
     },
     {
       "id": "autonomy-acknowledgment",
@@ -8305,7 +9212,11 @@
             "相手の自律性を承認するほど、逆説的に影響力が増すことが多い"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "challenge",
+        "experiment"
+      ]
     },
     {
       "id": "immunity-to-change",
@@ -8341,7 +9252,12 @@
             "最初は改善目標が漠然としていても、妨害行動を書くうちに自然と具体化してくる"
           ]
         }
-      }
+      },
+      "changePhase": [
+        "notice",
+        "challenge",
+        "experiment"
+      ]
     }
   ]
 }

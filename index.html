@@ -859,6 +859,7 @@
     currentTech: null,
     filterApproaches: new Set(),
     filterDuration: null,
+    filterPhases: new Set(),
   };
 
   // ── Storage ──
@@ -1048,6 +1049,11 @@
       if (df) pool = pool.filter(tc => df.test(tc.duration));
     }
 
+    // Apply phase filter (OR within selected phases)
+    if (STATE.filterPhases.size > 0) {
+      pool = pool.filter(tc => (tc.changePhase || []).some(p => STATE.filterPhases.has(p)));
+    }
+
     // Seen-based ordering: unseen first (shuffled), already-seen last (shuffled)
     const seen = getSeenCards(STATE.contextId || '_all');
     const shuffle = arr => arr.sort(() => Math.random() - 0.5);
@@ -1093,6 +1099,30 @@
       sep.className = 'filter-chip-sep';
       bar.appendChild(sep);
     }
+
+    // Phase chips
+    const PHASES = [
+      { id: 'notice',     label: '🔍 気づく' },
+      { id: 'challenge',  label: '💡 揺さぶる' },
+      { id: 'experiment', label: '🧪 試す' },
+      { id: 'update',     label: '🌱 更新する' },
+    ];
+    PHASES.forEach(ph => {
+      if (!pool.some(tc => (tc.changePhase || []).includes(ph.id))) return;
+      const chip = document.createElement('button');
+      chip.className = 'filter-chip' + (STATE.filterPhases.has(ph.id) ? ' active' : '');
+      chip.textContent = ph.label;
+      chip.addEventListener('click', () => {
+        if (STATE.filterPhases.has(ph.id)) STATE.filterPhases.delete(ph.id);
+        else STATE.filterPhases.add(ph.id);
+        applyFilters();
+      });
+      bar.appendChild(chip);
+    });
+
+    const sep2 = document.createElement('div');
+    sep2.className = 'filter-chip-sep';
+    bar.appendChild(sep2);
 
     // Duration chips — only show buckets that exist in pool
     DURATION_FILTERS.forEach(df => {
@@ -1668,6 +1698,7 @@
     STATE.contextId = id;
     STATE.filterApproaches = new Set();
     STATE.filterDuration = null;
+    STATE.filterPhases = new Set();
     STATE.cardIndex = 0;
     S.set('last_context', id);
     STATE.deck = buildDeck();
