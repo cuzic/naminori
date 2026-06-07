@@ -7,6 +7,9 @@ export default defineContext({
   icon: '🪞',
   sortOrder: 9.5,
   applicableTechniques: [
+    'rejection-check',
+    'borrowed-worth',
+    'conditions-of-worth',
     'needs-inventory',
     'core-beliefs',
     'self-compassion-3steps',
