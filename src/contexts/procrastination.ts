@@ -39,6 +39,7 @@ export default defineContext({
     'three-wins',
     'cognitive-reappraisal',
     'mit-selection',
+    'immunity-to-change',
   ],
   i18n: {
     ja: {

@@ -33,6 +33,7 @@ export default defineContext({
     'body-scan',
     'compassion-break',
     'behavioral-experiment',
+    'immunity-to-change',
   ],
   i18n: {
     ja: {

@@ -36,6 +36,7 @@ export default defineContext({
     'pause-before-react',
     'thought-record',
     'rain-meditation',
+    'immunity-to-change',
   ],
   i18n: {
     ja: {

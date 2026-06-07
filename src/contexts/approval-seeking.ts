@@ -31,6 +31,7 @@ export default defineContext({
     'wise-mind',
     'locus-of-control',
     'decatastrophize',
+    'immunity-to-change',
   ],
   i18n: {
     ja: {

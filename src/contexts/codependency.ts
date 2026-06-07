@@ -33,6 +33,7 @@ export default defineContext({
     'pause-before-react',
     'drama-triangle',
     'assertive-refusal',
+    'immunity-to-change',
   ],
   i18n: {
     ja: {

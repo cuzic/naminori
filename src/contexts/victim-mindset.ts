@@ -30,6 +30,7 @@ export default defineContext({
     'emotion-labeling',
     'wise-mind',
     'rumination-interrupt',
+    'immunity-to-change',
   ],
   i18n: {
     ja: {

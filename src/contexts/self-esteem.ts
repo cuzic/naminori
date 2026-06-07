@@ -36,6 +36,7 @@ export default defineContext({
     'achievement-evidence',
     'competence-journal',
     'impostor-normalize',
+    'immunity-to-change',
   ],
   i18n: {
     ja: {

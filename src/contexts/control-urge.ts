@@ -26,6 +26,7 @@ export default defineContext({
     'check-the-facts',
     'drama-triangle',
     'self-focus',
+    'immunity-to-change',
   ],
   i18n: {
     ja: {

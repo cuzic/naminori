@@ -39,6 +39,7 @@ export default defineContext({
     'motivation-source',
     'identity-statement',
     'build-positive',
+    'immunity-to-change',
   ],
   i18n: {
     ja: {

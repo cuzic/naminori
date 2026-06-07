@@ -25,6 +25,7 @@ export default defineContext({
     'check-the-facts',
     'perma-check',
     'giving-act',
+    'immunity-to-change',
   ],
   i18n: {
     ja: {
