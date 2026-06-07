@@ -1,0 +1,42 @@
+import { defineContext } from '../lib/context';
+import { mentalBase } from './_mental';
+
+export default defineContext({
+  ...mentalBase,
+  id: 'greed',
+  icon: '🏆',
+  sortOrder: 10.5,
+  applicableTechniques: [
+    'loss-aversion-check',
+    'hedonic-treadmill',
+    'enough-definition',
+    'values-compass',
+    'tombstone-values',
+    'defusion',
+    'radical-acceptance',
+    'decatastrophize',
+    'savoring',
+    'three-good-things',
+    'meaning-work',
+    'cognitive-distortions',
+    'reframing',
+    'self-compassion-3steps',
+    'rumination-interrupt',
+    'check-the-facts',
+    'perma-check',
+  ],
+  i18n: {
+    ja: {
+      label: 'もっと欲しくて苦しい',
+      description: '地位・名誉・お金への過剰な追求と、失うことへの恐怖をほぐす',
+      impulse: '「もっと手に入れなければ」「失ってはいけない」という強迫的な感覚',
+      behavior: '地位・名誉・金銭を過剰に追い求め続けること',
+      condition: '執着・強迫的追求・損失回避',
+      situation: '他人と比較したとき・現状に満足できないとき・何かを失いそうだと感じたとき',
+      goal: '「今の自分で十分だ」という感覚を取り戻すこと',
+      obstacle: '「もっと得れば満足できる」という錯覚・損失への過剰反応・アイデンティティの外在化',
+      trigger: '他者との比較・現状への不満・地位や財産の変動・他者の成功',
+      reward: '内側からの満足感・「十分」という感覚・本当の自由',
+    },
+  },
+});
