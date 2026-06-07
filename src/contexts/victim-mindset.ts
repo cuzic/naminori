@@ -7,6 +7,9 @@ export default defineContext({
   icon: '🌀',
   sortOrder: 2.5,
   applicableTechniques: [
+    'drama-triangle',
+    'locus-of-control',
+    'author-perspective',
     'anger-iceberg',
     'pie-chart',
     'check-the-facts',
