@@ -19,6 +19,9 @@ export const APPROACH_TECHNIQUES = [
   'reinforcement-management',
   'strengths-use',
   'best-possible-self',
+  'fresh-start',
+  'identity-statement',
+  'motivation-source',
   ...SHARED_TECHNIQUES,
 ] as const;
 

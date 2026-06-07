@@ -5,7 +5,8 @@ export default defineContext({
   ...substanceBase,
   id: 'smoking',
   icon: '🚬',
-  sortOrder: 4,
+  sortOrder: 24,
+  showCrisis: true,
   applicableTechniques: [...substanceBase.applicableTechniques],
   i18n: {
     ja: {

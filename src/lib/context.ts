@@ -1,4 +1,4 @@
-export type Direction = 'resist' | 'approach';
+export type Direction = 'resist' | 'approach' | 'mental';
 export type Lang = 'ja' | 'en';
 
 export interface ContextVars {
@@ -26,6 +26,7 @@ export interface Context {
   sortOrder: number;
   applicableTechniques: readonly string[];
   i18n: Partial<Record<Lang, ContextVars>>;
+  showCrisis?: boolean;
 }
 
 export function defineContext(ctx: Context): Context {

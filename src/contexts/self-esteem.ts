@@ -1,11 +1,11 @@
 import { defineContext } from '../lib/context';
-import { approachBase } from './_approach';
+import { mentalBase } from './_mental';
 
 export default defineContext({
-  ...approachBase,
+  ...mentalBase,
   id: 'self-esteem',
   icon: '🌱',
-  sortOrder: 19,
+  sortOrder: 9,
   applicableTechniques: [
     'strengths-inventory', 'inner-critic', 'shame-resilience', 'three-good-things', 'self-compassion-3steps',
     'best-possible-self', 'loving-kindness', 'gratitude-visit',
@@ -14,10 +14,11 @@ export default defineContext({
     'reframing', 'cognitive-reappraisal', 'emotional-granularity',
     'defusion', 'compassion-break', 'giving-act',
     'tiny-habits', 'behavioral-activation',
+    'identity-statement', 'motivation-source',
   ],
   i18n: {
     ja: {
-      label: '自己肯定感を育てる',
+      label: '自分に自信がない',
       description: '自分を認め、大切にする感覚を育てる',
       impulse: '自己肯定感を高めたい気持ち',
       behavior: '自分を認める行動をとること',

@@ -5,7 +5,7 @@ export default defineContext({
   ...substanceBase,
   id: 'caffeine',
   icon: '☕',
-  sortOrder: 5,
+  sortOrder: 23,
   applicableTechniques: [...substanceBase.applicableTechniques],
   i18n: {
     ja: {

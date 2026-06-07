@@ -5,7 +5,7 @@ export default defineContext({
   ...behavioralBase,
   id: 'shopping',
   icon: '🛍️',
-  sortOrder: 8,
+  sortOrder: 21,
   applicableTechniques: [...behavioralBase.applicableTechniques],
   i18n: {
     ja: {

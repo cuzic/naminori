@@ -1,11 +1,11 @@
 import { defineContext } from '../lib/context';
-import { behavioralBase } from './_behavioral';
+import { mentalBase } from './_mental';
 
 export default defineContext({
-  ...behavioralBase,
+  ...mentalBase,
   id: 'rumination',
   icon: '🌀',
-  sortOrder: 22,
+  sortOrder: 6,
   applicableTechniques: [
     'self-distancing',
     'rumination-interrupt',
@@ -37,7 +37,7 @@ export default defineContext({
   ],
   i18n: {
     ja: {
-      label: '反芻思考をおさえる',
+      label: '同じことをぐるぐる考えてしまう',
       description: '不快な記憶や考えが繰り返し浮かぶのをやわらげる',
       impulse: '嫌な記憶や考えが繰り返し浮かぶ',
       behavior: '思考に飲み込まれず、今に戻ること',

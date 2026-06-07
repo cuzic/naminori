@@ -1,11 +1,11 @@
 import { defineContext } from '../lib/context';
-import { approachBase } from './_approach';
+import { mentalBase } from './_mental';
 
 export default defineContext({
-  ...approachBase,
+  ...mentalBase,
   id: 'loneliness',
   icon: '🫂',
-  sortOrder: 20,
+  sortOrder: 4,
   applicableTechniques: [
     'connection-plan', 'community-find', 'nvc', 'social-script', 'active-listening',
     'gradual-sharing', 'recovery-disclosure', 'assertion-training',
@@ -17,7 +17,7 @@ export default defineContext({
   ],
   i18n: {
     ja: {
-      label: '孤独感をやわらげる',
+      label: 'ひとりが辛い',
       description: 'つながりを作り、孤独から抜け出す',
       impulse: 'つながりたい気持ち',
       behavior: '人とのつながりを作る行動をとること',

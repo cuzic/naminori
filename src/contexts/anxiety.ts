@@ -1,11 +1,11 @@
 import { defineContext } from '../lib/context';
-import { behavioralBase } from './_behavioral';
+import { mentalBase } from './_mental';
 
 export default defineContext({
-  ...behavioralBase,
+  ...mentalBase,
   id: 'anxiety',
   icon: '😰',
-  sortOrder: 17,
+  sortOrder: 1,
   applicableTechniques: [
     'worry-time', 'worry-tree', 'exposure-ladder', 'breathing-478', 'grounding-54321',
     'cognitive-reappraisal', 'defusion', 'body-scan', 'cope-ahead',
@@ -18,7 +18,7 @@ export default defineContext({
   ],
   i18n: {
     ja: {
-      label: '不安をやわらげる',
+      label: '不安で落ち着かない',
       description: '慢性的な心配・不安感をコントロールする',
       impulse: '不安・心配が止まらない感覚',
       behavior: '不安と上手につきあうこと',

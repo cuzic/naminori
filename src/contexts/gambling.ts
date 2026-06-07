@@ -5,7 +5,8 @@ export default defineContext({
   ...behavioralBase,
   id: 'gambling',
   icon: '🎰',
-  sortOrder: 6,
+  sortOrder: 26,
+  showCrisis: true,
   applicableTechniques: [...behavioralBase.applicableTechniques],
   i18n: {
     ja: {

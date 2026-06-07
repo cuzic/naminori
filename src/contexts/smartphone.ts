@@ -5,11 +5,11 @@ export default defineContext({
   ...behavioralBase,
   id: 'smartphone',
   icon: '📱',
-  sortOrder: 7,
+  sortOrder: 13,
   applicableTechniques: [...behavioralBase.applicableTechniques],
   i18n: {
     ja: {
-      label: 'スマホ・SNS・ゲーム',
+      label: 'スマホが手放せない',
       description: 'スマホ依存・SNS過剰利用・ゲーム依存',
       impulse: 'スマホを触りたい衝動',
       behavior: 'スマホを開くこと・SNSをチェックすること',

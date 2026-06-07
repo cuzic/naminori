@@ -1,11 +1,11 @@
 import { defineContext } from '../lib/context';
-import { behavioralBase } from './_behavioral';
+import { mentalBase } from './_mental';
 
 export default defineContext({
-  ...behavioralBase,
+  ...mentalBase,
   id: 'codependency',
   icon: '🔗',
-  sortOrder: 21,
+  sortOrder: 10,
   applicableTechniques: [
     'self-focus', 'detachment', 'needs-inventory', 'boundary-message', 'wise-mind',
     'nvc', 'values-compass', 'emotion-labeling', 'radical-acceptance',
@@ -17,7 +17,7 @@ export default defineContext({
   ],
   i18n: {
     ja: {
-      label: '共依存から抜け出す',
+      label: '誰かに頼りすぎてしまう',
       description: '自分の境界線を取り戻し、自立した関係を作る',
       impulse: '相手を助けずにはいられない衝動',
       behavior: '自分の問題と相手の問題を分けること',

@@ -140,49 +140,136 @@
     }
 
     /* ══════════════════════
-       S2: Direction
-    ══════════════════════ */
-    #sc-direction { flex-direction: column; align-items: center; }
-    .direction-grid {
-      width: 100%; max-width: 380px;
-      display: flex; flex-direction: column; gap: 16px;
-      padding: 0 24px 32px;
-    }
-    .direction-card {
-      background: var(--surface); border: 2px solid var(--border);
-      border-radius: 20px; padding: 28px 24px;
-      cursor: pointer; text-align: left;
-      display: flex; flex-direction: column; gap: 10px;
-      transition: all 0.18s; user-select: none;
-    }
-    .direction-card:hover { border-color: var(--primary); box-shadow: var(--shadow); transform: translateY(-2px); }
-    .direction-card:active { transform: scale(0.98); }
-    .direction-card:focus-visible { outline: 3px solid var(--primary); outline-offset: 3px; }
-    .dir-icon { font-size: 2.4rem; }
-    .dir-title { font-size: 1.1rem; font-weight: 700; color: var(--text); }
-    .dir-desc { font-size: 0.82rem; color: var(--text-muted); line-height: 1.5; }
-
-    /* ══════════════════════
        S3: Context
     ══════════════════════ */
     #sc-context { flex-direction: column; align-items: center; }
     .context-grid {
       width: 100%; max-width: 420px;
+      display: flex; flex-direction: column;
+      gap: 24px; padding: 0 24px 32px;
+    }
+    .context-section { display: flex; flex-direction: column; }
+    .context-section-header {
+      display: flex; align-items: center; gap: 8px;
+      padding: 10px 0 12px; border-bottom: 2px solid var(--border);
+      margin-bottom: 12px;
+    }
+    .ctx-section-icon { font-size: 1.3rem; }
+    .ctx-section-title { font-size: 0.95rem; font-weight: 700; color: var(--text); }
+    .context-section-grid {
       display: grid; grid-template-columns: repeat(2, 1fr);
-      gap: 12px; padding: 0 24px 32px;
+      gap: 12px;
     }
     .context-btn {
       background: var(--surface); border: 2px solid var(--border);
       border-radius: var(--radius-md); padding: 18px 12px;
       cursor: pointer; display: flex; flex-direction: row;
       align-items: center; gap: 12px;
-      transition: all 0.15s; user-select: none;
-      min-height: 64px;
+      transition: border-color 0.15s, background 0.15s, opacity 0.15s; user-select: none;
+      min-height: 64px; position: relative;
     }
     .context-btn:hover { border-color: var(--primary); background: var(--primary-light); }
     .context-btn:focus-visible { outline: 3px solid var(--primary); outline-offset: 3px; }
     .ctx-icon { font-size: 1.8rem; flex-shrink: 0; }
     .ctx-label { font-size: 0.86rem; font-weight: 600; color: var(--text); text-align: left; line-height: 1.35; }
+
+    /* ══════════════════════
+       S10: Favorites Edit
+    ══════════════════════ */
+    #sc-fav-edit { flex-direction: column; align-items: center; padding-top: 8px; }
+    .fav-edit-header {
+      width: 100%; display: flex; align-items: center;
+      justify-content: space-between; margin-bottom: 6px;
+    }
+    .fav-edit-title { font-size: 1rem; font-weight: 700; color: var(--text); }
+    .fav-edit-done-btn {
+      padding: 8px 20px; background: var(--primary); color: #fff;
+      border: none; border-radius: var(--radius-pill);
+      font-size: 0.9rem; font-weight: 700; cursor: pointer;
+    }
+    .fav-edit-hint {
+      font-size: 0.75rem; color: var(--text-muted);
+      margin-bottom: 16px; align-self: flex-start;
+    }
+    .fav-edit-list { width: 100%; display: flex; flex-direction: column; gap: 8px; }
+    .fav-edit-item {
+      display: flex; align-items: center; gap: 12px;
+      background: var(--surface); border: 1.5px solid var(--border);
+      border-radius: var(--radius-card); padding: 12px 14px;
+      user-select: none; touch-action: none;
+    }
+    .fav-edit-item.is-dragging { opacity: 0.3; border-style: dashed; }
+    .fav-edit-item.drag-over { border-color: var(--primary); background: var(--primary-light); }
+    .fav-edit-handle {
+      font-size: 1.2rem; color: var(--text-muted); cursor: grab;
+      padding: 4px 2px; flex-shrink: 0; line-height: 1;
+    }
+    .fav-edit-handle:active { cursor: grabbing; }
+    .fav-edit-icon { font-size: 1.5rem; flex-shrink: 0; }
+    .fav-edit-name { font-size: 0.88rem; font-weight: 600; color: var(--text); flex: 1; line-height: 1.4; }
+    .fav-edit-remove {
+      background: none; border: none; font-size: 1.1rem;
+      color: var(--text-muted); cursor: pointer; padding: 4px 6px;
+      flex-shrink: 0; transition: color 0.15s;
+    }
+    .fav-edit-remove:hover { color: #c04040; }
+    .fav-edit-empty { color: var(--text-muted); font-size: 0.88rem; line-height: 1.8; text-align: center; padding: 24px 0; }
+    /* ghost element while dragging */
+    .drag-ghost {
+      position: fixed; z-index: 9999; pointer-events: none;
+      opacity: 0.92; box-shadow: 0 8px 32px rgba(0,0,0,0.22);
+      border-radius: var(--radius-card); background: var(--surface);
+      border: 1.5px solid var(--primary);
+    }
+
+    /* ── Favorite button (card face) ── */
+    .card-fav-btn {
+      position: absolute; top: 14px; right: 14px; z-index: 5;
+      background: none; border: none; padding: 4px;
+      font-size: 1.2rem; line-height: 1; cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+      transition: transform 0.15s;
+    }
+    .card-fav-btn:active { transform: scale(1.3); }
+
+    /* ── Favorites entry in context screen ── */
+    .fav-entry-btn {
+      width: 100%; background: var(--primary-light);
+      border: 2px solid var(--primary); border-radius: var(--radius-md);
+      padding: 14px 18px; cursor: pointer;
+      display: flex; align-items: center; gap: 12px;
+      transition: all 0.15s; user-select: none;
+    }
+    .fav-entry-btn:hover { background: var(--primary); }
+    .fav-entry-btn:hover .fav-entry-label,
+    .fav-entry-btn:hover .fav-entry-count { color: #fff; }
+    .fav-entry-label { font-size: 0.9rem; font-weight: 700; color: var(--primary); }
+    .fav-entry-count { font-size: 0.78rem; color: var(--text-muted); margin-left: auto; }
+
+    /* ── Pin button ── */
+    .pin-toggle-btn {
+      position: absolute; top: 5px; right: 5px;
+      background: none; border: none; padding: 5px;
+      font-size: 0.85rem; line-height: 1; cursor: pointer;
+      opacity: 0.25; transition: opacity 0.15s;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .pin-toggle-btn.is-pinned { opacity: 1; }
+    .pin-toggle-btn:hover { opacity: 0.7; }
+
+    /* ── Pinned section ── */
+    .context-section--pinned .context-section-grid {
+      display: flex; flex-direction: column; gap: 8px;
+    }
+    .context-btn--pinned { padding-left: 40px; }
+    .pin-drag-handle {
+      position: absolute; left: 8px; top: 50%; transform: translateY(-50%);
+      color: var(--text-muted); font-size: 1.1rem;
+      cursor: grab; padding: 8px 4px;
+      touch-action: none; user-select: none;
+    }
+    .context-btn.is-dragging { opacity: 0.35; border-style: dashed; }
+    .context-btn.drag-over { border-color: var(--primary); background: var(--primary-light); }
 
     /* ══════════════════════
        S4: Cards (filter bar)
@@ -285,6 +372,27 @@
     .card-counter { font-size: 0.82rem; color: var(--text-muted); font-variant-numeric: tabular-nums; }
     .swipe-guide { margin-top: 6px; font-size: 0.7rem; color: var(--text-muted); text-align: center; }
 
+    /* ── Card tap zones ── */
+    .card-tap-hint-prev, .card-tap-hint-next {
+      position: absolute; top: 0; bottom: 0; width: 26%;
+      z-index: 3; display: flex; align-items: center;
+      pointer-events: none;
+      opacity: 0; transition: opacity 0.2s;
+    }
+    .card-tap-hint-prev { left: 0; justify-content: flex-start; padding-left: 10px;
+      background: linear-gradient(to right, rgba(0,0,0,0.04) 0%, transparent 100%); }
+    .card-tap-hint-next { right: 0; justify-content: flex-end; padding-right: 10px;
+      background: linear-gradient(to left, rgba(0,0,0,0.04) 0%, transparent 100%); }
+    .card-tap-hint-prev span, .card-tap-hint-next span {
+      font-size: 1.6rem; font-weight: 200; color: var(--text-muted); line-height: 1;
+    }
+    @media (hover: hover) {
+      .technique-card:hover .card-tap-hint-prev,
+      .technique-card:hover .card-tap-hint-next { opacity: 1; }
+    }
+    .technique-card.show-nav-hints .card-tap-hint-prev,
+    .technique-card.show-nav-hints .card-tap-hint-next { opacity: 1; }
+
     .no-more-cards {
       display: none; flex-direction: column; align-items: center;
       padding: 40px 24px; text-align: center;
@@ -327,6 +435,15 @@
       font-size: 0.85rem; font-weight: 600; cursor: pointer;
       padding: 6px 14px; display: flex; align-items: center; gap: 4px;
     }
+    .detail-fav-btn {
+      position: absolute; top: 12px; right: 12px; z-index: 20;
+      background: rgba(0,0,0,0.35);
+      backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+      border: none; border-radius: 20px;
+      font-size: 1.1rem; cursor: pointer; padding: 6px 10px;
+      transition: transform 0.15s;
+    }
+    .detail-fav-btn:active { transform: scale(1.25); }
     .detail-hero-overlay {
       position: absolute; inset: 0; z-index: 10;
       background: linear-gradient(to top, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.18) 55%, transparent 100%);
@@ -509,6 +626,9 @@
     @media (pointer: fine) {
       .swipe-guide::after { content: ' ／ キーボード ← →'; }
     }
+    @media (hover: hover) {
+      .swipe-guide { display: none; } /* desktop shows arrows on hover instead */
+    }
 
     /* Onboarding overlay */
     #onboarding-overlay {
@@ -586,32 +706,10 @@
     <p class="welcome-disclaimer">このアプリは軽度〜中等度の習慣・衝動の問題に取り組む方向けです。重篤な依存症・精神疾患のある方は専門家にご相談ください。</p>
   </section>
 
-  <!-- S2: Direction -->
-  <section id="sc-direction" style="display:none">
-    <div class="screen-inner" style="padding-top:0">
-      <p class="screen-label">今日はどちら？</p>
-    </div>
-    <div class="direction-grid">
-      <button class="direction-card" data-dir="resist">
-        <span class="dir-icon">🌊</span>
-        <span class="dir-title">なんか止めたい・減らしたい</span>
-        <span class="dir-desc">過食・飲酒・タバコ・スマホ・ゲーム・エナジードリンクなど、減らしたい・気になっている習慣</span>
-      </button>
-      <button class="direction-card" data-dir="approach">
-        <span class="dir-icon">🌱</span>
-        <span class="dir-title">習慣に近づきたい</span>
-        <span class="dir-desc">睡眠・運動・ダイエット・勉強・瞑想など、やりたいことを続けたい気持ち</span>
-      </button>
-    </div>
-  </section>
-
   <!-- S3: Context -->
   <section id="sc-context" style="display:none">
     <div class="screen-inner" style="padding-bottom:0">
-      <div class="screen-back">
-        <button class="back-link" data-to="direction">← 戻る</button>
-      </div>
-      <p class="screen-label" id="context-label">テーマを選ぶ</p>
+      <p class="screen-label">今日はどれ？</p>
     </div>
     <div class="context-grid" id="context-grid"></div>
   </section>
@@ -630,7 +728,7 @@
       <span class="card-counter" id="card-counter"></span>
       <button class="nav-btn btn-interactive" id="nav-next">次へ →</button>
     </div>
-    <p class="swipe-guide">スワイプで前後のカードへ</p>
+    <p class="swipe-guide">左右端タップ or スワイプで前後へ</p>
     <div class="no-more-cards" id="no-more-msg">
       <div class="big-emoji">✨</div>
       <p>今日のカードはここまで。<br>また来てね。</p>
@@ -646,7 +744,8 @@
   <!-- S7: Detail -->
   <section id="sc-detail" style="display:none">
     <div class="detail-hero" id="detail-hero">
-      <button class="detail-back detail-back-hero" id="detail-back-btn">← 戻る</button>
+      <button class="detail-back-hero" id="detail-back-btn">← 戻る</button>
+      <button class="detail-fav-btn" id="detail-fav-btn" aria-label="お気に入り">🤍</button>
       <img class="detail-hero-img" id="detail-hero-img" src="" alt="" loading="lazy" onerror="this.style.display='none'">
       <div class="detail-hero-overlay">
         <div class="detail-icon" id="detail-icon"></div>
@@ -701,6 +800,19 @@
     </div>
   </section>
 
+  <!-- S10: Favorites Edit -->
+  <section id="sc-fav-edit" style="display:none">
+    <div class="screen-inner" style="max-width:480px;width:100%">
+      <div class="fav-edit-header">
+        <span class="fav-edit-title">⭐ お気に入りの管理</span>
+        <button class="fav-edit-done-btn btn-interactive" id="fav-edit-done-btn">完了</button>
+      </div>
+      <p class="fav-edit-hint">≡ を長押し（またはドラッグ）して並べ替え</p>
+      <div id="fav-edit-list" class="fav-edit-list"></div>
+      <p class="fav-edit-empty" id="fav-edit-empty" style="display:none">お気に入りがまだありません。<br>技法カードの 🤍 をタップして追加できます。</p>
+    </div>
+  </section>
+
   <!-- S9: Done -->
   <section id="sc-done" style="display:none">
     <div class="done-emoji">🌱</div>
@@ -721,6 +833,7 @@
   const STEP_PREVIEW_LEN  = 55;       // max chars of first-step text on card face
   const JOURNAL_HIST_MAX  = 30;       // max journal entries stored in localStorage
   const STACK_DEPTH_SCALE = 0.95;     // scale factor for back-cards in the stack
+  const SEEN_MAX          = 80;       // max seen card IDs tracked per context
   document.documentElement.style.setProperty('--stack-depth-scale', STACK_DEPTH_SCALE);
 
   // ── Data ──
@@ -740,7 +853,6 @@
 
   // ── State ──
   const STATE = {
-    direction: null,
     contextId: null,
     deck: [],
     cardIndex: 0,
@@ -831,10 +943,10 @@
   }
 
   // ── Screen management ──
-  const ALL_SCREENS = ['sc-welcome', 'sc-direction', 'sc-context', 'sc-cards', 'sc-detail', 'sc-journal', 'sc-done'];
+  const ALL_SCREENS = ['sc-welcome', 'sc-context', 'sc-cards', 'sc-detail', 'sc-journal', 'sc-fav-edit', 'sc-done'];
 
   // Screens that should push a new history entry (not replace)
-  const PUSH_SCREENS = new Set(['sc-direction', 'sc-context', 'sc-cards', 'sc-detail', 'sc-journal']);
+  const PUSH_SCREENS = new Set(['sc-context', 'sc-cards', 'sc-detail', 'sc-journal']);
 
   let _suppressHashChange = false;
 
@@ -893,27 +1005,37 @@
     'つながり': '人とのつながりを育てる対人・コミュニケーション技法',
   };
 
+  // ── Seen-card tracking ──
+  function getSeenCards(ctxId) {
+    return new Set(S.get('seen_' + ctxId) || []);
+  }
+
+  function markCardSeen(ctxId, techId) {
+    const seen = S.get('seen_' + ctxId) || [];
+    if (!seen.includes(techId)) {
+      seen.push(techId);
+      S.set('seen_' + ctxId, seen.slice(-SEEN_MAX));
+    }
+  }
+
   // ── Deck building ──
   function buildDeck() {
+    // Favorites mode
+    if (STATE.contextId === '__favorites__') {
+      const favIds = getFavorites();
+      const favOrder = new Map(favIds.map((id, i) => [id, i]));
+      return techniques
+        .filter(tc => favOrder.has(tc.id))
+        .sort((a, b) => favOrder.get(a.id) - favOrder.get(b.id));
+    }
+
     const ctx = contextMap.get(STATE.contextId);
     const applicable = ctx ? new Set(ctx.applicableTechniques) : null;
     const slot = detectTimeSlot();
 
-    const order = ctx ? ctx.applicableTechniques : [];
     let pool = applicable
       ? techniques.filter(tc => applicable.has(tc.id))
       : [...techniques];
-
-    // First 5 stay in context order (most relevant first), rest shuffled
-    const STABLE = 5;
-    pool.sort((a, b) => {
-      const ia = order.indexOf(a.id);
-      const ib = order.indexOf(b.id);
-      if (ia < STABLE && ib < STABLE) return ia - ib;
-      if (ia < STABLE) return -1;
-      if (ib < STABLE) return 1;
-      return Math.random() - 0.5;
-    });
 
     // Apply approach filter (OR within selected approaches)
     if (STATE.filterApproaches.size > 0) {
@@ -926,12 +1048,18 @@
       if (df) pool = pool.filter(tc => df.test(tc.duration));
     }
 
-    // 深夜は短時間技法を先頭に
-    if (slot === 'midnight') {
-      pool = [...pool.filter(tc => tc.duration <= 5), ...pool.filter(tc => tc.duration > 5)];
-    }
+    // Seen-based ordering: unseen first (shuffled), already-seen last (shuffled)
+    const seen = getSeenCards(STATE.contextId || '_all');
+    const shuffle = arr => arr.sort(() => Math.random() - 0.5);
+    const unseen  = shuffle(pool.filter(tc => !seen.has(tc.id)));
+    const seenPool = shuffle(pool.filter(tc =>  seen.has(tc.id)));
 
-    return pool;
+    // 深夜は各グループ内で短時間技法を先頭に
+    const midnightSort = arr => slot === 'midnight'
+      ? [...arr.filter(tc => tc.duration <= 5), ...arr.filter(tc => tc.duration > 5)]
+      : arr;
+
+    return [...midnightSort(unseen), ...midnightSort(seenPool)];
   }
 
   function renderFilterChips() {
@@ -1015,6 +1143,26 @@
         <span class="card-duration">⏱ 約${tc.duration}分 · 全${steps.length}ステップ</span>
         <span class="card-tap-hint">詳しく見る →</span>
       </div>`;
+    // Tap-zone hint arrows (hidden by default, shown on hover/touch)
+    el.insertAdjacentHTML('afterbegin', `
+      <div class="card-tap-hint-prev" aria-hidden="true"><span>‹</span></div>
+      <div class="card-tap-hint-next" aria-hidden="true"><span>›</span></div>`);
+
+    const favBtn = document.createElement('button');
+    favBtn.className = 'card-fav-btn';
+    const syncFavUI = id => {
+      const fav = isFavorite(id);
+      favBtn.textContent = fav ? '❤️' : '🤍';
+      const detailFav = document.getElementById('detail-fav-btn');
+      if (detailFav && STATE.currentTech === id) detailFav.textContent = fav ? '❤️' : '🤍';
+    };
+    favBtn.textContent = isFavorite(tc.id) ? '❤️' : '🤍';
+    favBtn.addEventListener('click', e => {
+      e.stopPropagation();
+      toggleFavorite(tc.id);
+      syncFavUI(tc.id);
+    });
+    el.appendChild(favBtn);
     return el;
   }
 
@@ -1037,6 +1185,7 @@
 
     const tc = STATE.deck[STATE.cardIndex];
     if (!tc) return;
+    markCardSeen(STATE.contextId || '_all', tc.id);
     const card = buildCardEl(tc);
     if (enterDir) card.classList.add(enterDir === 'next' ? 'enter-from-right' : 'enter-from-left');
     stack.appendChild(card);
@@ -1070,6 +1219,10 @@
   function updateCardsMeta() {
     const meta = document.getElementById('cards-meta');
     if (!meta) return;
+    if (STATE.contextId === '__favorites__') {
+      meta.textContent = STATE.deck.length > 0 ? `お気に入り · ${STATE.deck.length}枚` : '';
+      return;
+    }
     const vars = getCtxVars(STATE.contextId);
     const ctxLabel = vars.label || STATE.contextId || '';
     meta.textContent = STATE.deck.length > 0 ? `${ctxLabel} · ${STATE.deck.length}枚` : '';
@@ -1079,7 +1232,16 @@
   function attachSwipe(card, onTap) {
     let sx = 0, sy = 0, dx = 0, dragging = false;
     let rafId = null;
-    const onStart = (x, y) => { sx = x; sy = y; dx = 0; dragging = true; card.classList.add('is-dragging'); };
+    const onStart = (x, y) => {
+      sx = x; sy = y; dx = 0; dragging = true;
+      card.classList.add('is-dragging');
+      // Brief hint flash on first touch (mobile discovery)
+      if (!card._hintShown) {
+        card._hintShown = true;
+        card.classList.add('show-nav-hints');
+        setTimeout(() => card.classList.remove('show-nav-hints'), 600);
+      }
+    };
     const onMove = (x, y) => {
       if (!dragging) return;
       dx = x - sx;
@@ -1096,8 +1258,15 @@
       card.classList.remove('is-dragging');
       card.style.transform = '';
       const swipeThreshold = Math.min(SWIPE_THRESHOLD, window.innerWidth * SWIPE_WIDTH_RATIO);
-      if (Math.abs(dx) >= swipeThreshold) navigate(dx < 0 ? 1 : -1);
-      else if (Math.abs(dx) < SWIPE_TAP_MAX && onTap) onTap();
+      if (Math.abs(dx) >= swipeThreshold) {
+        navigate(dx < 0 ? 1 : -1);
+      } else if (Math.abs(dx) < SWIPE_TAP_MAX) {
+        // Tap zone: left 26% → prev, right 26% → next, center → detail
+        const TAP_ZONE = card.offsetWidth * 0.26;
+        if (sx < TAP_ZONE)                  navigate(-1);
+        else if (sx > card.offsetWidth - TAP_ZONE) navigate(1);
+        else if (onTap)                     onTap();
+      }
     };
     card.addEventListener('touchstart', e => onStart(e.touches[0].clientX, e.touches[0].clientY), { passive: true });
     card.addEventListener('touchmove', e => { onMove(e.touches[0].clientX, e.touches[0].clientY); if (Math.abs(dx) > 10) e.preventDefault(); }, { passive: false });
@@ -1158,6 +1327,15 @@
     if (tips.length) { tipsEl.innerHTML = tips.map(tip => `<li>${tip}</li>`).join(''); tipsSec.style.display = ''; }
     else tipsSec.style.display = 'none';
 
+    const detailFavBtn = document.getElementById('detail-fav-btn');
+    detailFavBtn.textContent = isFavorite(id) ? '❤️' : '🤍';
+    detailFavBtn.onclick = () => {
+      toggleFavorite(id);
+      detailFavBtn.textContent = isFavorite(id) ? '❤️' : '🤍';
+      const cardFavBtn = document.querySelector('#card-stack .card-fav-btn');
+      if (cardFavBtn) cardFavBtn.textContent = isFavorite(id) ? '❤️' : '🤍';
+    };
+
     document.getElementById('sc-detail').scrollTop = 0;
     show('sc-detail');
   }
@@ -1184,6 +1362,10 @@
     const respEl = document.getElementById('journal-response');
     respEl.style.display = 'none';
     respEl.innerHTML = '';
+
+    const ctx = contextMap.get(STATE.contextId);
+    const crisisEl = document.querySelector('#sc-journal .crisis-footer');
+    if (crisisEl) crisisEl.style.display = ctx?.showCrisis ? '' : 'none';
 
     show('sc-journal');
   }
@@ -1276,7 +1458,7 @@
     setJournalUIState('loading');
     const tc = techniqueMap?.get(STATE.currentTech) ?? techniques.find(x => x.id === STATE.currentTech);
     const name = tc?.i18n?.ja?.name ?? STATE.currentTech;
-    const tagline = applyCtx(tc?.i18n?.ja?.tagline ?? '', STATE.context);
+    const tagline = applyCtx(tc?.i18n?.ja?.tagline ?? '', STATE.contextId);
     const history = loadJournalHistory().slice(0, 5);
 
     try {
@@ -1309,7 +1491,7 @@
     const overlay = document.getElementById('onboarding-overlay');
     if (overlay) overlay.style.display = 'none';
     S.set('onboarded', true);
-    show('sc-direction');
+    showContextScreen();
   }
 
   function showWelcomeBack(lastVisit) {
@@ -1340,11 +1522,7 @@
       const ctxLabel = lastCtx?.i18n?.ja?.label || lastCtxId;
       resumeBtn.textContent = `前回（${ctxLabel}）を続ける →`;
       resumeBtn.style.display = 'block';
-      resumeBtn.onclick = () => {
-        STATE.direction = lastCtx.direction;
-        STATE.contextId = lastCtxId;
-        showAkinator();
-      };
+      resumeBtn.onclick = () => goToCards(lastCtxId, lastCtx);
     } else {
       resumeBtn.style.display = 'none';
     }
@@ -1352,33 +1530,250 @@
     show('sc-welcome');
   }
 
+  // ── Favorite storage ──
+  function getFavorites() { return S.get('favorites') || []; }
+  function saveFavorites(ids) { S.set('favorites', ids); }
+  function isFavorite(techId) { return getFavorites().includes(techId); }
+  function toggleFavorite(techId) {
+    const favs = getFavorites();
+    const idx = favs.indexOf(techId);
+    if (idx >= 0) favs.splice(idx, 1); else favs.unshift(techId);
+    saveFavorites(favs);
+  }
+
+  // ── Drag-to-reorder (mouse + touch) ──
+  function makeDraggableList(listEl, onOrderChange) {
+    let dragging = null, ghost = null, ghostOffY = 0, snapshot = [];
+
+    function clientY(e) { return e.touches ? e.touches[0].clientY : e.clientY; }
+    function allItems() { return [...listEl.querySelectorAll('[data-drag-item]')]; }
+
+    function start(e, el) {
+      dragging = el;
+      snapshot = allItems();              // snapshot once — avoids per-frame DOM query
+      const rect = el.getBoundingClientRect();
+      ghostOffY = clientY(e) - rect.top;
+      ghost = el.cloneNode(true);
+      ghost.className = ghost.className + ' drag-ghost';
+      ghost.style.cssText += `;left:${rect.left}px;width:${rect.width}px;top:${rect.top}px;height:${rect.height}px`;
+      document.body.appendChild(ghost);
+      el.classList.add('is-dragging');
+      e.preventDefault();
+    }
+
+    function move(e) {
+      if (!dragging) return;
+      e.preventDefault();
+      const y = clientY(e);
+      ghost.style.top = (y - ghostOffY) + 'px';
+      let inserted = false;
+      snapshot.forEach(el => {
+        if (el === dragging) return;
+        const { top, height } = el.getBoundingClientRect();
+        if (!inserted && y < top + height / 2) {
+          listEl.insertBefore(dragging, el);
+          inserted = true;
+        }
+      });
+      if (!inserted) listEl.appendChild(dragging);
+    }
+
+    function end() {
+      if (!dragging) return;
+      dragging.classList.remove('is-dragging');
+      ghost.remove(); ghost = null;
+      onOrderChange(allItems().map(el => el.dataset.id));
+      dragging = null; snapshot = [];
+    }
+
+    listEl.addEventListener('mousedown', e => {
+      const h = e.target.closest('[data-drag-handle]');
+      if (h) start(e, h.closest('[data-drag-item]'));
+    });
+    listEl.addEventListener('touchstart', e => {
+      const h = e.target.closest('[data-drag-handle]');
+      if (h) start(e, h.closest('[data-drag-item]'));
+    }, { passive: false });
+    window.addEventListener('mousemove',  move);
+    window.addEventListener('touchmove',  move, { passive: false });
+    window.addEventListener('mouseup',    end);
+    window.addEventListener('touchend',   end);
+    window.addEventListener('touchcancel',end);
+
+    return function cleanup() {
+      window.removeEventListener('mousemove',   move);
+      window.removeEventListener('touchmove',   move);
+      window.removeEventListener('mouseup',     end);
+      window.removeEventListener('touchend',    end);
+      window.removeEventListener('touchcancel', end);
+    };
+  }
+
+  // ── Favorites edit screen ──
+  function showFavEdit() {
+    const listEl  = document.getElementById('fav-edit-list');
+    const emptyEl = document.getElementById('fav-edit-empty');
+    if (listEl._dragCleanup) { listEl._dragCleanup(); listEl._dragCleanup = null; }
+    listEl.innerHTML = '';
+
+    const favIds = getFavorites();
+    if (favIds.length === 0) {
+      emptyEl.style.display = '';
+    } else {
+      emptyEl.style.display = 'none';
+      favIds.forEach(id => {
+        const tc = techniqueMap.get(id);
+        if (!tc) return;
+        const name = tc.i18n?.ja?.name || id;
+        const item = document.createElement('div');
+        item.className = 'fav-edit-item';
+        item.dataset.dragItem = '';
+        item.dataset.id = id;
+        item.innerHTML = `
+          <span class="fav-edit-handle" data-drag-handle title="ドラッグで並べ替え">≡</span>
+          <span class="fav-edit-icon">${tc.icon}</span>
+          <span class="fav-edit-name">${name}</span>
+          <button class="fav-edit-remove" title="削除">×</button>`;
+        item.querySelector('.fav-edit-remove').addEventListener('click', () => {
+          toggleFavorite(id);
+          item.remove();
+          const remaining = getFavorites();
+          if (remaining.length === 0) emptyEl.style.display = '';
+        });
+        listEl.appendChild(item);
+      });
+
+      listEl._dragCleanup = makeDraggableList(listEl, newOrder => saveFavorites(newOrder));
+    }
+
+    show('sc-fav-edit');
+  }
+
+  // ── Pin storage ──
+  function getPinned() { return S.get('pinned') || []; }
+  function savePinned(ids) { S.set('pinned', ids); }
+  function togglePin(ctxId) {
+    const pinned = getPinned();
+    const idx = pinned.indexOf(ctxId);
+    if (idx >= 0) pinned.splice(idx, 1);
+    else pinned.push(ctxId);
+    savePinned(pinned);
+    showContextScreen();
+  }
+
   // ── Context screen ──
+  function goToCards(id, ctx) {
+    STATE.contextId = id;
+    STATE.filterApproaches = new Set();
+    STATE.filterDuration = null;
+    STATE.cardIndex = 0;
+    S.set('last_context', id);
+    STATE.deck = buildDeck();
+    renderStack();
+    updateCardsMeta();
+    renderFilterChips();
+    show('sc-cards');
+  }
+
+  function makePinBtn(id) {
+    const pinned = getPinned();
+    const isPinned = pinned.includes(id);
+    const btn = document.createElement('button');
+    btn.className = 'pin-toggle-btn' + (isPinned ? ' is-pinned' : '');
+    btn.title = isPinned ? 'ピン留めを外す' : 'ピン留め';
+    btn.textContent = '📌';
+    btn.addEventListener('click', e => { e.stopPropagation(); togglePin(id); });
+    return btn;
+  }
+
+  function makeContextBtn(id, ctx) {
+    const vars = ctx.i18n?.ja || {};
+    const btn = document.createElement('button');
+    btn.className = 'context-btn';
+    btn.innerHTML = `<span class="ctx-icon">${ctx.icon}</span><span class="ctx-label">${wbr(vars.label || id)}</span>`;
+    btn.appendChild(makePinBtn(id));
+    btn.addEventListener('click', () => goToCards(id, ctx));
+    return btn;
+  }
+
+  function makePinnedBtn(id, ctx) {
+    const btn = makeContextBtn(id, ctx);
+    btn.classList.add('context-btn--pinned');
+    btn.dataset.dragItem = '';
+    btn.dataset.id = id;
+    btn.insertAdjacentHTML('afterbegin', '<span class="pin-drag-handle" aria-hidden="true" data-drag-handle>⠿</span>');
+    return btn;
+  }
+
+
   function showContextScreen() {
-    document.getElementById('context-label').textContent =
-      STATE.direction === 'resist' ? '何に抵抗したい？' : 'どんな習慣を作りたい？';
     const grid = document.getElementById('context-grid');
     grid.innerHTML = '';
-    Object.entries(contexts)
-      .filter(([, ctx]) => ctx.direction === STATE.direction)
-      .forEach(([id, ctx]) => {
-        const vars = ctx.i18n?.ja || {};
-        const btn = document.createElement('button');
-        btn.className = 'context-btn';
-        btn.innerHTML = `<span class="ctx-icon">${ctx.icon}</span><span class="ctx-label">${wbr(vars.label || id)}</span>`;
-        btn.addEventListener('click', () => {
-          STATE.contextId = id;
-          STATE.filterApproaches = new Set();
-          STATE.filterDuration = null;
-          STATE.cardIndex = 0;
-          S.set('last_context', id);
-          STATE.deck = buildDeck();
-          renderStack();
-          updateCardsMeta();
-          renderFilterChips();
-          show('sc-cards');
-        });
-        grid.appendChild(btn);
+
+    // Favorites entry
+    const favIds = getFavorites();
+    if (favIds.length > 0) {
+      const favRow = document.createElement('div');
+      favRow.style.cssText = 'display:flex;gap:8px;align-items:stretch;width:100%';
+
+      const favBtn = document.createElement('button');
+      favBtn.className = 'fav-entry-btn';
+      favBtn.style.flex = '1';
+      favBtn.innerHTML = `<span style="font-size:1.4rem">⭐</span><span class="fav-entry-label">お気に入り</span><span class="fav-entry-count">${favIds.length}件</span>`;
+      favBtn.addEventListener('click', () => goToCards('__favorites__', {}));
+
+      const editBtn = document.createElement('button');
+      editBtn.className = 'fav-entry-btn';
+      editBtn.style.cssText = 'flex:0 0 auto;padding:14px 16px;font-size:0.82rem;font-weight:700';
+      editBtn.textContent = '編集';
+      editBtn.addEventListener('click', showFavEdit);
+
+      favRow.appendChild(favBtn);
+      favRow.appendChild(editBtn);
+      grid.appendChild(favRow);
+    }
+
+    // Pinned section
+    const pinned = getPinned();
+    if (pinned.length > 0) {
+      const section = document.createElement('div');
+      section.className = 'context-section context-section--pinned';
+      const header = document.createElement('div');
+      header.className = 'context-section-header';
+      header.innerHTML = `<span class="ctx-section-icon">📌</span><span class="ctx-section-title">よく使う</span>`;
+      section.appendChild(header);
+      const inner = document.createElement('div');
+      inner.className = 'context-section-grid';
+      pinned.forEach(id => {
+        const ctx = contextMap.get(id);
+        if (ctx) inner.appendChild(makePinnedBtn(id, ctx));
       });
+      section.appendChild(inner);
+      grid.appendChild(section);
+      requestAnimationFrame(() => makeDraggableList(inner, newOrder => { savePinned(newOrder); showContextScreen(); }));
+    }
+
+    // Regular sections
+    [
+      { dir: 'resist',   icon: '🌊', title: 'やめたい・減らしたい' },
+      { dir: 'mental',   icon: '🧠', title: 'こころをととのえたい' },
+      { dir: 'approach', icon: '🌱', title: '習慣に近づきたい' },
+    ].forEach(({ dir, icon, title }) => {
+      const section = document.createElement('div');
+      section.className = 'context-section';
+      const header = document.createElement('div');
+      header.className = 'context-section-header';
+      header.innerHTML = `<span class="ctx-section-icon">${icon}</span><span class="ctx-section-title">${title}</span>`;
+      section.appendChild(header);
+      const inner = document.createElement('div');
+      inner.className = 'context-section-grid';
+      Object.entries(contexts)
+        .filter(([, ctx]) => ctx.direction === dir)
+        .forEach(([id, ctx]) => inner.appendChild(makeContextBtn(id, ctx)));
+      section.appendChild(inner);
+      grid.appendChild(section);
+    });
+
     show('sc-context');
   }
 
@@ -1421,7 +1816,7 @@
     } else if (!S.get('onboarded')) {
       showOnboarding();
     } else {
-      show('sc-direction');
+      showContextScreen();
     }
 
     // ── Event listeners ──
@@ -1430,8 +1825,7 @@
     document.querySelectorAll('[data-to]').forEach(btn => {
       btn.addEventListener('click', () => {
         const to = btn.dataset.to;
-        if (to === 'direction') show('sc-direction');
-        else if (to === 'context') showContextScreen();
+        if (to === 'context') showContextScreen();
         else if (to === 'cards') show('sc-cards');
       });
     });
@@ -1440,21 +1834,13 @@
     document.getElementById('cards-back-btn').addEventListener('click', () => showContextScreen());
 
     // Welcome back
-    document.getElementById('wb-start').addEventListener('click', () => show('sc-direction'));
+    document.getElementById('wb-start').addEventListener('click', () => showContextScreen());
     document.getElementById('onboarding-start-btn').addEventListener('click', closeOnboarding);
-
-    // Direction
-    document.querySelectorAll('.direction-card').forEach(btn => {
-      btn.addEventListener('click', () => {
-        STATE.direction = btn.dataset.dir;
-        showContextScreen();
-      });
-    });
 
     // Cards
     document.getElementById('nav-skip').addEventListener('click', () => navigate(-1));
     document.getElementById('nav-next').addEventListener('click', () => navigate(1));
-    document.getElementById('retry-btn').addEventListener('click', () => show('sc-direction'));
+    document.getElementById('retry-btn').addEventListener('click', () => showContextScreen());
     document.addEventListener('keydown', e => {
       if (document.getElementById('sc-cards').style.display === 'none') return;
       if (e.key === 'ArrowLeft')  { e.preventDefault(); navigate(-1); }
@@ -1476,12 +1862,13 @@
 
     // Journal
     document.getElementById('journal-send-btn').addEventListener('click', submitJournal);
+    document.getElementById('fav-edit-done-btn').addEventListener('click', () => showContextScreen());
     document.getElementById('journal-done-btn').addEventListener('click', () => showDone());
 
     // Done
     document.getElementById('back-home-btn').addEventListener('click', () => {
       if (STATE.deck.length > 0) show('sc-cards');
-      else show('sc-direction');
+      else showContextScreen();
     });
   }
 

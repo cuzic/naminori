@@ -5,7 +5,8 @@ export default defineContext({
   ...substanceBase,
   id: 'drugs',
   icon: '💊',
-  sortOrder: 3,
+  sortOrder: 27,
+  showCrisis: true,
   applicableTechniques: [
     ...substanceBase.applicableTechniques,
     'harm-reduction',

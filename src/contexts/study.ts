@@ -5,11 +5,11 @@ export default defineContext({
   ...approachBase,
   id: 'study',
   icon: '📚',
-  sortOrder: 13,
+  sortOrder: 16,
   applicableTechniques: [...approachBase.applicableTechniques],
   i18n: {
     ja: {
-      label: '勉強・スキルアップ',
+      label: '勉強を続けたい',
       description: '学習習慣・読書・資格取得',
       impulse: '学びたい気持ち',
       behavior: '勉強すること・本を読むこと',

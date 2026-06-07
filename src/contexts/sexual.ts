@@ -6,7 +6,8 @@ export default defineContext({
   ...behavioralBase,
   id: 'sexual',
   icon: '💙',
-  sortOrder: 9,
+  sortOrder: 22,
+  showCrisis: true,
   applicableTechniques: [...behavioralBase.applicableTechniques],
   i18n: {
     ja: {

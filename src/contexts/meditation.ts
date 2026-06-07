@@ -5,11 +5,11 @@ export default defineContext({
   ...approachBase,
   id: 'meditation',
   icon: '🧘',
-  sortOrder: 14,
+  sortOrder: 17,
   applicableTechniques: [...approachBase.applicableTechniques],
   i18n: {
     ja: {
-      label: '瞑想・マインドフルネス',
+      label: 'ひと息ついて心を整えたい',
       description: '瞑想・マインドフルネスを日課にする',
       impulse: '静かに内省したい気持ち',
       behavior: '瞑想すること・呼吸に集中すること',

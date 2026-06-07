@@ -1,28 +1,24 @@
 import { defineContext } from '../lib/context';
-import { behavioralBase, BEHAVIORAL_TECHNIQUES } from './_behavioral';
+import { mentalBase } from './_mental';
+import { BEHAVIORAL_TECHNIQUES } from './_behavioral';
+
+const PRIORITY = [
+  'anger-iceberg', 'pause-before-react', 'cognitive-reappraisal',
+  'stop-skill', 'tipp', 'emotion-labeling', 'check-the-facts', 'box-breathing',
+] as const;
 
 export default defineContext({
-  ...behavioralBase,
+  ...mentalBase,
   id: 'emotional-reactivity',
   icon: '🌡️',
-  sortOrder: 15,
+  sortOrder: 8,
   applicableTechniques: [
-    'anger-iceberg',
-    'pause-before-react',
-    'cognitive-reappraisal',
-    'stop-skill',
-    'tipp',
-    'emotion-labeling',
-    'check-the-facts',
-    'box-breathing',
-    ...BEHAVIORAL_TECHNIQUES.filter(t => ![
-      'anger-iceberg', 'pause-before-react', 'cognitive-reappraisal',
-      'stop-skill', 'tipp', 'emotion-labeling', 'check-the-facts', 'box-breathing',
-    ].includes(t as string)),
+    ...PRIORITY,
+    ...BEHAVIORAL_TECHNIQUES.filter(t => !PRIORITY.includes(t as typeof PRIORITY[number])),
   ],
   i18n: {
     ja: {
-      label: '感情の爆発をおさえる',
+      label: '感情が爆発してしまう',
       description: '感情的な反応をコントロールする',
       impulse: '感情的な反応衝動',
       behavior: '落ち着いて反応すること',

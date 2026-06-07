@@ -5,11 +5,11 @@ export default defineContext({
   ...approachBase,
   id: 'sleep',
   icon: '😴',
-  sortOrder: 10,
+  sortOrder: 11,
   applicableTechniques: [...approachBase.applicableTechniques],
   i18n: {
     ja: {
-      label: '睡眠を整える',
+      label: '眠れない夜がある',
       description: '睡眠の質・量を改善する',
       impulse: '早く寝たい気持ち',
       behavior: '決まった時間に眠ること',

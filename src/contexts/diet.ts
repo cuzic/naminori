@@ -5,11 +5,11 @@ export default defineContext({
   ...approachBase,
   id: 'diet',
   icon: '🥗',
-  sortOrder: 12,
+  sortOrder: 15,
   applicableTechniques: [...approachBase.applicableTechniques],
   i18n: {
     ja: {
-      label: '食事を整える',
+      label: '食生活を整えたい',
       description: '健康的な食習慣・ダイエット',
       impulse: '食事を整えたい気持ち',
       behavior: 'バランスよく食べること',

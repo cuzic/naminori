@@ -1,11 +1,11 @@
 import { defineContext } from '../lib/context';
-import { behavioralBase } from './_behavioral';
+import { mentalBase } from './_mental';
 
 export default defineContext({
-  ...behavioralBase,
+  ...mentalBase,
   id: 'perfectionism',
   icon: '🎯',
-  sortOrder: 16,
+  sortOrder: 7,
   applicableTechniques: [
     'good-enough', 'inner-critic', 'shame-resilience', 'cognitive-reappraisal', 'self-compassion-3steps',
     'defusion', 'radical-acceptance', 'reframing', 'values-compass',
@@ -17,7 +17,7 @@ export default defineContext({
   ],
   i18n: {
     ja: {
-      label: '完璧主義をやわらげる',
+      label: '自分に厳しすぎてしまう',
       description: '「十分よい」を認められるようになる',
       impulse: '完璧にしなければという衝動',
       behavior: '完璧を手放して行動すること',

@@ -5,7 +5,7 @@ export default defineContext({
   ...behavioralBase,
   id: 'eating',
   icon: '🍽️',
-  sortOrder: 1,
+  sortOrder: 20,
   applicableTechniques: [
     ...BEHAVIORAL_TECHNIQUES,
     'mindful-eating',

@@ -1,11 +1,11 @@
 import { defineContext } from '../lib/context';
-import { approachBase } from './_approach';
+import { mentalBase } from './_mental';
 
 export default defineContext({
-  ...approachBase,
+  ...mentalBase,
   id: 'burnout',
   icon: '🔥',
-  sortOrder: 18,
+  sortOrder: 3,
   applicableTechniques: [
     'energy-audit', 'work-detach', 'rest-types', 'body-scan', 'values-compass',
     'self-compassion-3steps', 'boundary-message', 'please-check',
@@ -16,10 +16,11 @@ export default defineContext({
     'progressive-relaxation', 'grounding-54321', 'sensory-refuge',
     'emotional-granularity', 'somatic-reset', 'coping-anchor',
     'tiny-habits', 'behavioral-activation',
+    'fresh-start', 'motivation-source', 'identity-statement',
   ],
   i18n: {
     ja: {
-      label: '燃え尽きから回復する',
+      label: 'もう何もしたくない',
       description: '疲弊した状態からエネルギーを取り戻す',
       impulse: '回復したい気持ち',
       behavior: '意識的に休息と回復を取ること',

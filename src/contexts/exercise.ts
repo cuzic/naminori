@@ -5,11 +5,11 @@ export default defineContext({
   ...approachBase,
   id: 'exercise',
   icon: '🏃',
-  sortOrder: 11,
+  sortOrder: 14,
   applicableTechniques: [...approachBase.applicableTechniques],
   i18n: {
     ja: {
-      label: '運動を続ける',
+      label: '運動を続けたい',
       description: '運動習慣を作る・続ける',
       impulse: '体を動かしたい気持ち',
       behavior: '運動すること',
