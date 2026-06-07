@@ -34,6 +34,11 @@ export default defineContext({
     'worry-time',
     'body-scan',
     'breathing-478',
+    'emotion-diary',
+    'thought-record',
+    'downward-arrow',
+    'emotion-check-in',
+    'behavioral-chain',
   ],
   i18n: {
     ja: {
@@ -46,7 +51,7 @@ export default defineContext({
       goal: '不安があっても、大切な社交場面に踏み出せること',
       obstacle: '評価への恐れ・完璧主義・恥の感覚・回避',
       trigger: '注目を浴びるとき・自己紹介・プレゼン・食事会',
-      reward: 'つながりの感覚・自己効力感・避けなかった達成感',
+      alternative: '深呼吸・その場を離れる・信頼できる人に話す',      reward: 'つながりの感覚・自己効力感・避けなかった達成感',
       bodyEffect: '動悸・発汗・震え・回避行動による機会の喪失・疲弊感',    },
   },
 });

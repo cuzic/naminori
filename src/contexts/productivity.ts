@@ -41,6 +41,12 @@ export default defineContext({
     'time-audit',
     'parkinson-defense',
     'ideal-week-design',
+    'emotion-diary',
+    'emotion-check-in',
+    'thought-record',
+    'downward-arrow',
+    'behavioral-chain',
+    'trigger-review',
   ],
   i18n: {
     ja: {

@@ -90,6 +90,11 @@ export default defineContext({
     'pomodoro',
     'zeigarnik-start',
     'task-aversion-check',
+    'emotion-labeling',
+    'emotion-check-in',
+    'behavioral-chain',
+    'emotion-diary',
+    'cognitive-distortions',
   ],
   i18n: {
     ja: {

@@ -25,6 +25,11 @@ export default defineContext({
     'tell-someone',
     'rain-meditation',
     'behavioral-activation',
+    'emotion-diary',
+    'trigger-review',
+    'thought-record',
+    'downward-arrow',
+    'self-as-context',
   ],
   i18n: {
     ja: {

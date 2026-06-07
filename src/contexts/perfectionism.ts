@@ -34,6 +34,11 @@ export default defineContext({
     'compassion-break',
     'behavioral-experiment',
     'immunity-to-change',
+    'thought-record',
+    'cognitive-distortions',
+    'emotion-diary',
+    'downward-arrow',
+    'emotion-check-in',
   ],
   i18n: {
     ja: {

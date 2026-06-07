@@ -34,6 +34,11 @@ export default defineContext({
     'self-compassion-3steps',
     'loving-kindness',
     'thought-record',
+    'emotion-labeling',
+    'cognitive-distortions',
+    'emotion-diary',
+    'emotion-check-in',
+    'downward-arrow',
   ],
   i18n: {
     ja: {

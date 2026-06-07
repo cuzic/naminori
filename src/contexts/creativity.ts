@@ -7,38 +7,31 @@ export default defineContext({
   icon: '🎨',
   sortOrder: 18,
   applicableTechniques: [
-    // アイデア生成
     'question-storming',
     'reverse-brainstorm',
     'random-word',
-    // 創造的ブロック
     'freewriting',
     'quantity-first',
     'bad-art-day',
     'good-enough',
     'decatastrophize',
-    // 批判への恐れ
     'shame-resilience',
     'exposure-ladder',
     'best-friend-test',
     'gradual-sharing',
-    // インナークリティック
     'inner-critic',
     'defusion',
     'self-compassion-3steps',
     'self-distancing',
-    // 遊びとしての創造
     'flow-activity',
     'creative-input',
     'savoring',
-    // 習慣として続ける
     'tiny-habits',
     'habit-stacking',
     'implementation-intention',
     'identity-statement',
     'environment-design',
     'temptation-bundling',
-    // その他
     'growth-mindset',
     'values-compass',
     'meaning-work',
@@ -49,6 +42,12 @@ export default defineContext({
     'fresh-start',
     'rest-types',
     'motivation-source',
+    'emotion-diary',
+    'emotion-labeling',
+    'thought-record',
+    'cognitive-distortions',
+    'trigger-review',
+    'immunity-to-change',
   ],
   i18n: {
     ja: {

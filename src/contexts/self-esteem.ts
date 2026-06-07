@@ -37,6 +37,12 @@ export default defineContext({
     'competence-journal',
     'impostor-normalize',
     'immunity-to-change',
+    'emotion-labeling',
+    'emotion-diary',
+    'thought-record',
+    'cognitive-distortions',
+    'downward-arrow',
+    'self-as-context',
   ],
   i18n: {
     ja: {

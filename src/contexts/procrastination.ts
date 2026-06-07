@@ -40,6 +40,12 @@ export default defineContext({
     'cognitive-reappraisal',
     'mit-selection',
     'immunity-to-change',
+    'emotion-diary',
+    'emotion-labeling',
+    'thought-record',
+    'behavioral-chain',
+    'trigger-review',
+    'downward-arrow',
   ],
   i18n: {
     ja: {

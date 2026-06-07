@@ -88,6 +88,11 @@ export default defineContext({
     'exception-finding',
     'act-matrix',
     'morning-walk',
+    'emotion-labeling',
+    'emotion-diary',
+    'emotion-check-in',
+    'behavioral-chain',
+    'halt-check',
   ],
   i18n: {
     ja: {

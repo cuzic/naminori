@@ -26,6 +26,12 @@ export default defineContext({
     'sensory-refuge',
     'expansion',
     'rain-meditation',
+    'emotion-diary',
+    'emotion-labeling',
+    'trigger-review',
+    'behavioral-chain',
+    'thought-record',
+    'downward-arrow',
   ],
   i18n: {
     ja: {
@@ -38,7 +44,7 @@ export default defineContext({
       goal: '過去の体験に支配されず、今この瞬間を安全に生きられるようになること',
       obstacle: '回避行動・過覚醒・身体の緊張・孤立',
       trigger: '過去を思い出させる場所・音・匂い・人・出来事に遭遇したとき',
-      reward: '今ここにいる安心感・神経系の落ち着き・自分の回復力への信頼',
+      alternative: '安全な場所に移動する・深呼吸・信頼できる人に連絡する',      reward: '今ここにいる安心感・神経系の落ち着き・自分の回復力への信頼',
       bodyEffect: '過覚醒・睡眠障害・身体的緊張・集中力低下・感覚過敏',    },
   },
 });

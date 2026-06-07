@@ -90,6 +90,12 @@ export default defineContext({
     'mindful-eating',
     'hunger-scale',
     'food-freedom',
+    'emotion-labeling',
+    'emotion-diary',
+    'behavioral-chain',
+    'emotion-check-in',
+    'body-image-diary',
+    'halt-check',
   ],
   i18n: {
     ja: {

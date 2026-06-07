@@ -28,6 +28,12 @@ export default defineContext({
     'behavioral-activation',
     'flow-activity',
     'expansion',
+    'emotion-diary',
+    'emotion-labeling',
+    'check-the-facts',
+    'trigger-review',
+    'needs-inventory',
+    'self-as-context',
   ],
   i18n: {
     ja: {

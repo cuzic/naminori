@@ -93,6 +93,11 @@ export default defineContext({
     'box-breathing',
     'present-moment',
     'self-as-context',
+    'emotion-labeling',
+    'emotion-diary',
+    'emotion-check-in',
+    'self-compassion-3steps',
+    'halt-check',
   ],
   i18n: {
     ja: {
@@ -105,7 +110,7 @@ export default defineContext({
       goal: '毎朝○分瞑想すること',
       obstacle: '雑念・時間がない・効果が感じられない',
       trigger: '起床直後・同じ場所・同じクッション',
-      reward: '心の静けさ・感情の安定・集中力の向上',
+      bodyEffect: '慢性的な精神疲労・集中力低下・感情の不安定さ',      reward: '心の静けさ・感情の安定・集中力の向上',
       alternative: '深呼吸・軽い散歩・お茶を飲む・自然に触れる',    },
   },
 });

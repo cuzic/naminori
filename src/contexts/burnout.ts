@@ -40,6 +40,12 @@ export default defineContext({
     'identity-statement',
     'build-positive',
     'immunity-to-change',
+    'emotion-diary',
+    'emotion-check-in',
+    'thought-record',
+    'downward-arrow',
+    'trigger-review',
+    'behavioral-chain',
   ],
   i18n: {
     ja: {

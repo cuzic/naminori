@@ -92,6 +92,11 @@ export default defineContext({
     'digital-sunset',
     'progressive-relaxation',
     'box-breathing',
+    'emotion-diary',
+    'emotion-check-in',
+    'thought-record',
+    'behavioral-chain',
+    'trigger-review',
   ],
   i18n: {
     ja: {
