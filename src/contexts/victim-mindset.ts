@@ -1,0 +1,45 @@
+import { defineContext } from '../lib/context';
+import { mentalBase } from './_mental';
+
+export default defineContext({
+  ...mentalBase,
+  id: 'victim-mindset',
+  icon: '🌀',
+  sortOrder: 2.5,
+  applicableTechniques: [
+    'anger-iceberg',
+    'pie-chart',
+    'check-the-facts',
+    'cognitive-distortions',
+    'resentment-release',
+    'needs-inventory',
+    'i-message',
+    'nvc',
+    'defusion',
+    'reframing',
+    'cognitive-reappraisal',
+    'radical-acceptance',
+    'self-distancing',
+    'values-compass',
+    'growth-mindset',
+    'assertion-training',
+    'pause-before-react',
+    'emotion-labeling',
+    'wise-mind',
+    'rumination-interrupt',
+  ],
+  i18n: {
+    ja: {
+      label: 'だれかのせいで損している',
+      description: '他責・被害者意識・慢性的なイライラをほぐす',
+      impulse: '「自分だけ損している」「あの人のせいだ」という感覚',
+      behavior: '他責し続けること・怒りを抱え込むこと',
+      condition: '被害者マインドセット・他責思考',
+      situation: '不公平だと感じたとき・他人の言動に傷ついたとき・自分だけ割に合わないと感じたとき',
+      goal: '自分の人生の主導権を取り戻すこと',
+      obstacle: '他責の物語・無力感・「変えられない」という信念',
+      trigger: '他人の態度・不公平な状況・裏切られた感覚',
+      reward: '自己効力感・怒りからの自由・前に進める感覚',
+    },
+  },
+});
