@@ -19,6 +19,6 @@ export default defineContext({
       obstacle: '夜更かし・スマホ・眠れない不安',
       trigger: '就寝1時間前・アラームを設定したとき',
       reward: '朝の爽快感・集中力の向上',
-    },
+      alternative: '読書・軽いストレッチ・瞑想・深呼吸・ハーブティー',    },
   },
 });

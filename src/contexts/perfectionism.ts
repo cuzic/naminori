@@ -27,6 +27,6 @@ export default defineContext({
       obstacle: '全か無か思考・自己批判・先延ばし',
       trigger: '評価される場面・失敗したとき・人と比較したとき',
       reward: '行動できる喜び・自己批判の減少・完了の達成感',
-    },
+      bodyEffect: '慢性的なストレス・睡眠障害・燃え尽き・身体的緊張',    },
   },
 });

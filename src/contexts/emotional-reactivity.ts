@@ -28,6 +28,6 @@ export default defineContext({
       obstacle: '反射的な言動・感情の高ぶり',
       trigger: '批判されたとき・期待を裏切られたとき・不公平を感じたとき',
       reward: '落ち着いた対話・後悔のない言動・自己肯定感の向上',
-    },
+      alternative: '深呼吸・その場を離れる・冷水を飲む・手を動かす',    },
   },
 });

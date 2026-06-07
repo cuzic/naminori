@@ -19,6 +19,6 @@ export default defineContext({
       obstacle: '疲れ・面倒くさい・時間がない',
       trigger: '着替えるだけ・玄関を出るだけ',
       reward: '達成感・エンドルフィン・体の変化',
-    },
+      alternative: '短い散歩・ストレッチ・別の身体活動・エレベーターを使わない',    },
   },
 });

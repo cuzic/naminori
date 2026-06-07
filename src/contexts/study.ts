@@ -19,6 +19,6 @@ export default defineContext({
       obstacle: 'やる気・集中力・スマホの誘惑',
       trigger: '同じ場所・同じ時間・テキストを開くだけ',
       reward: '達成感・知識の蓄積・将来の選択肢',
-    },
+      alternative: '短い休憩・別の科目・ポモドーロ・環境を変える',    },
   },
 });

@@ -52,6 +52,6 @@ export default defineContext({
       trigger: '「あとでやろう」と思った瞬間・タスクリストを見たとき',
       alternative: 'まず2分だけ取り掛かること',
       reward: '達成感・自分への信頼感・締め切り前の余裕',
-    },
+      bodyEffect: '慢性的な罪悪感・集中力低下・締切ストレスによる身体症状',    },
   },
 });

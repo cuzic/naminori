@@ -43,6 +43,6 @@ export default defineContext({
       obstacle: '他責の物語・無力感・「変えられない」という信念',
       trigger: '他人の態度・不公平な状況・裏切られた感覚',
       reward: '自己効力感・怒りからの自由・前に進める感覚',
-    },
+      bodyEffect: '慢性的なストレス・怒りによる身体的緊張・消耗感',    },
   },
 });

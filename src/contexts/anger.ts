@@ -47,6 +47,6 @@ export default defineContext({
       obstacle: '反射的な言動・正当化・慢性的な恨み',
       trigger: '批判・期待外れ・不公平・無視されること',
       reward: '後悔のない言動・落ち着いた関係・自分への信頼',
-    },
+      bodyEffect: '血圧上昇・心拍数増加・慢性的な緊張・免疫機能への影響',    },
   },
 });

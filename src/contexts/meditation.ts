@@ -19,6 +19,6 @@ export default defineContext({
       obstacle: '雑念・時間がない・効果が感じられない',
       trigger: '起床直後・同じ場所・同じクッション',
       reward: '心の静けさ・感情の安定・集中力の向上',
-    },
+      alternative: '深呼吸・軽い散歩・お茶を飲む・自然に触れる',    },
   },
 });

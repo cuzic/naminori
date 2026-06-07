@@ -19,6 +19,6 @@ export default defineContext({
       obstacle: '忙しさ・食欲・外食の誘い',
       trigger: '食事の準備をするとき・お腹が空いてきたとき',
       reward: '体の軽さ・肌の変化・エネルギーの安定',
-    },
+      alternative: '水を飲む・散歩・野菜を先に食べる・別の食択',    },
   },
 });
